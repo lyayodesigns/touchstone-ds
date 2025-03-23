@@ -52,9 +52,9 @@ const Index = () => {
           <IntegrationSection />
         </div>
 
-        <div id="pricing">
+        {/* <div id="pricing">
           <PricingSection />
-        </div>
+        </div> */}
 
         <div id="contact">
           <HowItWorksSection />

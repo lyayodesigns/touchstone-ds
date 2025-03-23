@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const GlowingOrb: React.FC = () => {
@@ -35,17 +34,17 @@ const GlowingOrb: React.FC = () => {
   }, []);
   
   return (
-    <div className="relative w-full flex items-center justify-center pointer-events-none">
+    <div className="relative w-full flex items-center justify-center pointer-events-none mb-8">
       <div 
         ref={orbRef}
-        className="absolute w-[200px] h-[200px] rounded-full transition-transform duration-300 ease-out"
+        className="absolute w-[300px] h-[300px] rounded-full transition-transform duration-300 ease-out"
         style={{
-          background: 'radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(138, 43, 226, 0) 70%)',
-          boxShadow: '0 0 80px 40px rgba(138, 43, 226, 0.3)'
+          background: 'radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, rgba(138, 43, 226, 0) 70%)',
+          boxShadow: '0 0 100px 60px rgba(138, 43, 226, 0.3)'
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[80px] h-[80px] rounded-full border-4 border-purple-500 animate-pulse-glow">
+          <div className="w-[100px] h-[100px] rounded-full border-4 border-purple-500 animate-pulse-glow">
             <div className="w-full h-full rounded-full border-4 border-white/20 animate-spin-slow"></div>
           </div>
         </div>

@@ -1,78 +1,115 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 
 const PricingSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
-      {/* Animated rocket icon */}
+    <section className="py-24 relative overflow-hidden bg-background" id="pricing">
+      {/* Animated star icon */}
       <div className="absolute top-20 left-32 opacity-70 animate-float">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.6997 2.00214C12.9382 2.00214 12.2267 2.46157 11.7536 3.27407L6.26469 12.7304C5.43584 14.1652 5.84355 16.0542 7.24303 16.941L8.07188 17.4645C8.42073 17.6872 8.82844 17.799 9.2497 17.799H14.7386C16.3847 17.799 17.6885 16.4311 17.6885 14.7439V6.50386C17.6885 5.15842 17.269 3.92456 16.5325 3.27407C15.8694 2.4001 14.4728 2.00214 13.6997 2.00214Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M17.7001 7.05566C18.6 7.05566 19.125 6.55566 19.5 5.55566" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M9.24998 17.7988H14.7386C16.3848 17.7988 17.6886 16.4309 17.6886 14.7437V14.3542" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M10.5 21C12.1569 21 13.5 19.6569 13.5 18C13.5 16.3431 12.1569 15 10.5 15C8.84315 15 7.5 16.3431 7.5 18C7.5 19.6569 8.84315 21 10.5 21Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
       
-      {/* Animated rocket icon */}
+      {/* Animated trophy icon */}
       <div className="absolute top-40 right-52 opacity-70 animate-float">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.6997 2.00214C12.9382 2.00214 12.2267 2.46157 11.7536 3.27407L6.26469 12.7304C5.43584 14.1652 5.84355 16.0542 7.24303 16.941L8.07188 17.4645C8.42073 17.6872 8.82844 17.799 9.2497 17.799H14.7386C16.3847 17.799 17.6885 16.4311 17.6885 14.7439V6.50386C17.6885 5.15842 17.269 3.92456 16.5325 3.27407C15.8694 2.4001 14.4728 2.00214 13.6997 2.00214Z" stroke="#33C3F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M17.7001 7.05566C18.6 7.05566 19.125 6.55566 19.5 5.55566" stroke="#33C3F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M9.24998 17.7988H14.7386C16.3848 17.7988 17.6886 16.4309 17.6886 14.7437V14.3542" stroke="#33C3F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M10.5 21C12.1569 21 13.5 19.6569 13.5 18C13.5 16.3431 12.1569 15 10.5 15C8.84315 15 7.5 16.3431 7.5 18C7.5 19.6569 8.84315 21 10.5 21Z" stroke="#33C3F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M15.5 5.5V3C15.5 2.17157 14.8284 1.5 14 1.5H10C9.17157 1.5 8.5 2.17157 8.5 3V5.5" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M17 5.5H7C5.89543 5.5 5 6.39543 5 7.5C5 11.6421 8.35786 15 12.5 15H12.5C16.6421 15 20 11.6421 20 7.5C20 6.39543 19.1046 5.5 18 5.5H17Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
       
       <div className="container px-4 mx-auto text-center">
-        <p className="text-sm text-indigo-400 font-medium mb-2">One Price for Everything</p>
+        <p className="text-sm text-purple-400 font-medium mb-2">Simple, Transparent Pricing</p>
         
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          The simplest pricing in the industry.
+          Why Touchstone Digital Solutions?
         </h2>
         
         <p className="text-xl md:text-2xl mb-10">
-          You won't need a <span className="text-gray-400">calculator for this.</span>
+          The perfect solution for <span className="text-purple-400">schools, teams, and organizations</span>
         </p>
         
         <div className="flex justify-center mb-16">
-          <Button className="px-8 py-6 h-auto">Get Started</Button>
+          <Button className="px-8 py-6 h-auto bg-purple-500 hover:bg-purple-600">Schedule a Demo</Button>
         </div>
         
-        <div className="max-w-md mx-auto bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden">
-          {/* Small rocket decoration */}
-          <div className="absolute top-2 right-2 opacity-70">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6997 2.00214C12.9382 2.00214 12.2267 2.46157 11.7536 3.27407L6.26469 12.7304C5.43584 14.1652 5.84355 16.0542 7.24303 16.941L8.07188 17.4645C8.42073 17.6872 8.82844 17.799 9.2497 17.799H14.7386C16.3847 17.799 17.6885 16.4311 17.6885 14.7439V6.50386C17.6885 5.15842 17.269 3.92456 16.5325 3.27407C15.8694 2.4001 14.4728 2.00214 13.6997 2.00214Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M17.7001 7.05566C18.6 7.05566 19.125 6.55566 19.5 5.55566" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M9.24998 17.7988H14.7386C16.3848 17.7988 17.6886 16.4309 17.6886 14.7437V14.3542" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M10.5 21C12.1569 21 13.5 19.6569 13.5 18C13.5 16.3431 12.1569 15 10.5 15C8.84315 15 7.5 16.3431 7.5 18C7.5 19.6569 8.84315 21 10.5 21Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <div className="text-left mb-4">
-            <p className="text-sm">
-              Join thousands of successful entrepreneurs and businesses who rely on us to grow, optimize, and thrive.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Affordable */}
+          <div className="bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-2 right-2 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-purple-400">Affordable</h3>
+            <p className="text-sm mb-6">
+              Packages for K–12 schools, colleges, and community clubs. We offer solutions that fit every budget.
             </p>
           </div>
           
-          <div className="flex items-end gap-2 mb-6">
-            <span className="text-4xl font-bold">$25</span>
-            <div className="text-sm text-indigo-400 mb-1">
-              <div>/ Month</div>
-              <div>Billed Monthly</div>
+          {/* Yours */}
+          <div className="bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-2 right-2 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-purple-400">Yours</h3>
+            <p className="text-sm mb-6">
+              Custom colours, logos, and layouts to match your brand. Make it truly your own.
+            </p>
           </div>
           
-          <div className="text-left mb-6">
-            <p className="text-sm font-medium mb-3">What's included:</p>
-            <div className="flex items-start gap-2">
-              <Check className="h-5 w-5 text-indigo-400 mt-0.5" />
-              <p className="text-sm">Complete access to the platform and support</p>
+          {/* Scalable Solutions */}
+          <div className="bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-2 right-2 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-purple-400">Scalable Solutions</h3>
+            <p className="text-sm mb-6">
+              Start small with a Classroom Achievement Display or go big with a University-Wide Digital Hall of Fame. Grow with your needs.
+            </p>
           </div>
+          
+          {/* Future-Proof Tech */}
+          <div className="bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden">
+            <div className="absolute top-2 right-2 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-purple-400">Future-Proof Tech</h3>
+            <p className="text-sm mb-6">
+              Enjoy automated updates and AI-driven content suggestions. Stay ahead of the curve.
+            </p>
+          </div>
+          
+          {/* Unmatched Support */}
+          <div className="bg-card border border-white/10 rounded-xl p-8 relative overflow-hidden md:col-span-2 lg:col-span-1">
+            <div className="absolute top-2 right-2 opacity-70">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="#9b87f5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-purple-400">Unmatched Support</h3>
+            <p className="text-sm mb-6">
+              From installation to training, we're with you. Our team is always here to help.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <Button className="px-8 py-6 h-auto bg-purple-500 hover:bg-purple-600">Get Started Today</Button>
         </div>
       </div>
     </section>

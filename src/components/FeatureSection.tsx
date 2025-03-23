@@ -1,137 +1,318 @@
-
 import React from 'react';
-import { LineChart, BarChart } from 'recharts';
-import { Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Bar } from 'recharts';
-
-const revenueData = [
-  { name: 'Mar 26', value: 10 },
-  { name: 'Mar 30', value: 12 },
-  { name: 'Aug 4', value: 14 },
-  { name: 'Aug 8', value: 13 },
-  { name: 'Aug 12', value: 15 },
-  { name: 'Aug 16', value: 18 },
-  { name: 'Aug 20', value: 20 },
-  { name: 'Aug 24', value: 18 },
-  { name: 'Aug 28', value: 17 },
-];
-
-const stageData = [
-  { name: 'Prospecting', value: 0.05 },
-  { name: 'Qualification', value: 0.6 },
-  { name: 'Presentation', value: 0.38 },
-  { name: 'Negotiation', value: 0.45 },
-  { name: 'Closing', value: 0.15 },
-];
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="py-20 w-full">
+    <section className="py-32 w-full space-y-24">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="max-w-3xl mx-auto mb-12">
-          <div className="bg-glass text-purple-400 font-medium text-sm rounded-full px-6 py-2 inline-block mb-4 animate-fade-in">
-            Unlock Actionable Data with Interactive Analytics and AI-Driven Reports
+        {/* Header Section */}
+        <div className="max-w-3xl mx-auto mb-24 text-center space-y-8">
+          <div className="bg-glass text-purple-400 font-medium text-sm rounded-full px-8 py-3 inline-block animate-fade-in shadow-glow-sm">
+            Transform How You Celebrate Achievement
           </div>
           
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in [animation-delay:200ms]">
-            <span className="text-purple-400">Interactive & Customizable</span>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight animate-fade-in [animation-delay:200ms]">
+            <span className="text-purple-400 inline-flex items-center">
+              <svg className="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor"/>
+              </svg>
+              Create Your School's
+            </span>
             <br />
-            <span className="text-white">Sales Insights</span>
+            <span className="text-white bg-gradient-to-r from-purple-500/20 to-transparent px-4 py-2 rounded-lg">General Digital Hall of Fame</span>
           </h2>
           
-          <p className="text-white/70 text-lg animate-fade-in [animation-delay:400ms]">
-            Seamlessly track and manage external DealRoom activities with Michael,
-            ensuring complete visibility and control over every stage of the sales process
+          <p className="text-white/80 text-xl leading-relaxed max-w-2xl mx-auto animate-fade-in [animation-delay:400ms]">
+            Imagine a Digital Wall of Fame that captivates visitors the moment they step into your lobby, showcasing your school's rich history and achievements.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
-          <div className="space-y-8 animate-slide-in-left">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Sales Performance Tracking</h3>
-              <p className="text-white/70">
-                Gain deeper visibility into your sales operations with interactive charts that
-                showcase deal performance, rep activity, and overall pipeline health. These
-                dynamic visualizations allow sales teams to analyze trends, identify opportunities,
-                and track key performance metrics in real time.
-              </p>
+        {/* Features Grid */}
+        <div className="space-y-32">
+          {/* Introduction Cards */}
+          <div className="grid md:grid-cols-2 gap-12 animate-slide-in-left">
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+              <h3 className="text-2xl font-bold text-purple-400">Our Hall of Fame Display Solutions</h3>
+              <div className="space-y-6">
+                <p className="text-white/80">
+                  Showcase student profiles, alumni milestones, and historic moments on a modern,
+                  space-efficient Interactive Digital Trophy Case.
+                </p>
+                <p className="text-white/80">
+                  Replace static bulletin boards with a Dynamic Hall of Fame that updates in real-time.
+                </p>
+                <p className="text-white/80">
+                  Digital Walls of Fame with donor recognition and sponsor logos for universities.
+                </p>
+                <p className="text-white/80">
+                  Customizable Digital Halls of Fame for classrooms, sports teams, or entire campuses.
+                </p>
+              </div>
             </div>
             
-            <div>
-              <h3 className="text-xl font-bold mb-4">Customizable AI-Driven Reporting</h3>
-              <p className="text-white/70">
-                Tailor your sales reports to match different roles and business needs with fully
-                customizable reporting features. AI-powered recommendations are embedded
-                directly into reports, offering actionable insights that help sales leaders and reps
-                make data-driven decisions with confidence.
-              </p>
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm flex flex-col justify-between space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-purple-400">Your Legacy Deserves More</h3>
+                <p className="text-white/80 text-xl italic mt-4">
+                  Your legacy deserves more than a shelf—it deserves a spotlight.
+                </p>
+              </div>
+              <button className="bg-purple-500 text-white font-medium rounded-full px-8 py-3 text-lg transition-all hover:bg-purple-600 hover-lift w-full">
+                Learn More
+              </button>
             </div>
           </div>
           
-          <div className="space-y-8 animate-slide-in-right">
-            <div className="bg-card rounded-xl p-4 border border-white/10">
-              <div className="p-2 flex justify-between items-center mb-2">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-purple-500 rounded-sm mr-2"></div>
-                  <span className="text-sm text-white/70">Revenue & number of deals</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-xs text-white/70">Daily</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="ml-1">
-                    <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          {/* Interactive Displays Section */}
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/20 p-2 rounded-lg">
+                  <svg className="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 3H4C2.89543 3 2 3.89543 2 5V15C2 16.1046 2.89543 17 4 17H20C21.1046 17 22 16.1046 22 15V5C22 3.89543 21.1046 3 20 3Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M8 21H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 17V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
+                <h3 className="text-2xl font-bold text-purple-400">Interactive Displays That Captivate</h3>
               </div>
-              <div className="h-[200px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={revenueData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="name" stroke="rgba(255,255,255,0.5)" fontSize={10} />
-                    <YAxis stroke="rgba(255,255,255,0.5)" fontSize={10} />
-                    <Tooltip 
-                      contentStyle={{ background: 'rgba(22, 22, 26, 0.9)', border: '1px solid rgba(255,255,255,0.1)' }}
-                      labelStyle={{ color: 'white' }}
-                    />
-                    <Line 
-                      type="monotone" 
-                      dataKey="value" 
-                      stroke="#8884d8" 
-                      strokeWidth={2}
-                      dot={{ r: 4, strokeWidth: 2 }}
-                      activeDot={{ r: 6, strokeWidth: 2 }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-              <div className="mt-2 py-2 px-4 bg-white/5 rounded-md text-center">
-                <div className="text-xs text-white/70">Aug 10, 2023</div>
-                <div className="text-sm font-medium">25D - 1800.0$</div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Interactive School Displays for lobbies, gyms, or auditoriums.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Touchscreen Athletic HOF Displays with real-time stats updates.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    User-Friendly CMS – update content in minutes, no tech skills needed.
+                  </p>
+                </div>
               </div>
             </div>
             
-            <div className="bg-card rounded-xl p-4 border border-white/10">
-              <div className="p-2 flex justify-between items-center mb-2">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-purple-500 rounded-sm mr-2"></div>
-                  <span className="text-sm text-white/70">Stage And number of deals</span>
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/20 p-2 rounded-lg">
+                  <svg className="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-purple-400">Featured Hardware</h3>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Wall-Mounted Sports Recognition Displays (perfect for stadiums)
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Classroom Interactive Boards for student awards
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Durable, Multi-Touch Kiosks built for high-traffic areas
+                  </p>
                 </div>
               </div>
-              <div className="h-[200px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={stageData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="name" stroke="rgba(255,255,255,0.5)" fontSize={10} />
-                    <YAxis stroke="rgba(255,255,255,0.5)" fontSize={10} />
-                    <Tooltip 
-                      contentStyle={{ background: 'rgba(22, 22, 26, 0.9)', border: '1px solid rgba(255,255,255,0.1)' }}
-                      labelStyle={{ color: 'white' }}
-                    />
-                    <Bar dataKey="value" fill="#8884d8" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
+              <button className="bg-purple-500 text-white font-medium rounded-full px-8 py-3 text-lg transition-all hover:bg-purple-600 hover-lift w-full">
+                Explore Hardware + Software Bundles
+              </button>
+            </div>
+          </div>
+          
+          {/* Recognition Features Section */}
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/20 p-2 rounded-lg">
+                  <svg className="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15.5 5.5V3C15.5 2.17157 14.8284 1.5 14 1.5H10C9.17157 1.5 8.5 2.17157 8.5 3V5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M17 5.5H7C5.89543 5.5 5 6.39543 5 7.5C5 11.6421 8.35786 15 12.5 15H12.5C16.6421 15 20 11.6421 20 7.5C20 6.39543 19.1046 5.5 18 5.5H17Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-purple-400">School & Student Recognition</h3>
               </div>
-              <div className="mt-2 py-2 px-4 bg-white/5 rounded-md text-center">
-                <div className="text-sm text-white/70">0.5 Normalized number of deals</div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    User-friendly school recognition displays for academic awards, art shows, or STEM fairs.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Digital wall of fame with donor recognition to celebrate contributors alongside student stars.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Interactive touchscreen displays for elementary school awards—perfect for young learners.
+                  </p>
+                </div>
               </div>
+              <div className="space-y-4 bg-purple-500/10 p-6 rounded-lg">
+                <h4 className="text-lg font-bold text-purple-400">Why Schools Love Us:</h4>
+                <div className="space-y-3">
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Elementary-Friendly Interfaces
+                  </p>
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Cloud-Based Hall of Fame Software
+                  </p>
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Secure, FERPA-Compliant Data Storage
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/20 p-2 rounded-lg">
+                  <svg className="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-purple-400">Athletics & Sports Recognition</h3>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Build a customizable digital sports Hall of Fame for football programs, swim teams, or basketball leagues.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Display real-time stats updates during games with automated athlete stats displays.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-400 mt-1">•</div>
+                  <p className="text-white/80">
+                    Honour legends with touchscreen baseball stats display or interactive football achievement walls.
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-4 bg-purple-500/10 p-6 rounded-lg">
+                <h4 className="text-lg font-bold text-purple-400">Top Features for Sports Teams:</h4>
+                <div className="space-y-3">
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Real-Time Stats Update Displays
+                  </p>
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Multi-Sport Recognition System
+                  </p>
+                  <p className="text-white/80 flex items-center gap-3">
+                    <svg className="w-5 h-5 text-purple-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Stadium Hall of Fame Technology
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Software Section */}
+          <div className="bg-card rounded-2xl p-10 border border-white/10 shadow-glow-sm space-y-8">
+            <div className="flex items-center gap-4">
+              <div className="bg-purple-500/20 p-2 rounded-lg">
+                <svg className="w-6 h-6 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7L12 3L4 7M20 7L12 11M20 7V17L12 21M12 11L4 7M12 11V21M4 7V17L12 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-purple-400">Software & Platforms That Actually Get You</h3>
+            </div>
+            <div className="space-y-6">
+              <p className="text-white/80">
+                We get it—you're juggling lesson plans, game schedules, and fundraising drives. That's why our digital Hall of Fame software is built for real humans, not IT wizards.
+              </p>
+              <div className="bg-purple-500/10 p-6 rounded-lg space-y-6">
+                <p className="text-white font-medium text-lg">
+                  Here's the nitty-gritty:
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-500/20 p-1 rounded-lg mt-1">
+                        <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <p className="text-white/80">
+                        <span className="font-semibold">Drag, drop, done.</span> Import data from spreadsheets to create polished student or athlete profiles in minutes.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-500/20 p-1 rounded-lg mt-1">
+                        <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <p className="text-white/80">
+                        <span className="font-semibold">Go beyond text.</span> Our digital Hall of Fame software with video support lets you add roaring crowds and championship moments.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-500/20 p-1 rounded-lg mt-1">
+                        <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <p className="text-white/80">
+                        <span className="font-semibold">Control your data.</span> Export Hall of Fame records for backups, yearbooks, or to share with nostalgic alumni.
+                      </p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="bg-purple-500/20 p-1 rounded-lg mt-1">
+                        <svg className="w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <p className="text-white/80">
+                        <span className="font-semibold">No jargon.</span> Just simple school hall of fame software that everyone can master, regardless of technical skill.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-white/80 text-center text-lg italic">
+                Think of it like a digital scrapbook—but one that doesn't collect dust or require glue sticks.
+              </p>
             </div>
           </div>
         </div>

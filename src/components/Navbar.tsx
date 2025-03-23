@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -28,19 +27,19 @@ const Navbar: React.FC = () => {
               <div className="w-4 h-4 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
             </div>
           </div>
-          <span className="font-display text-lg font-medium">AGILEPITCH.IO</span>
+          <span className="font-display text-lg font-medium">TOUCHSTONE DIGITAL SOLUTIONS</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#products" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Products</a>
-          <a href="#solutions" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Solutions</a>
-          <a href="#pricing" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Pricing</a>
+          <a href="#about" className="text-sm opacity-80 hover:opacity-100 transition-opacity">About Us</a>
+          <a href="#services" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Services</a>
+          <a href="#portfolio" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Portfolio</a>
           <a href="#contact" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Contact Us</a>
         </nav>
         
         <div>
-          <button className="bg-white text-black font-medium rounded-full px-5 py-2 text-sm transition-all hover:bg-opacity-90">
-            LAUNCH APP
+          <button className="bg-purple-500 text-white font-medium rounded-full px-5 py-2 text-sm transition-all hover:bg-purple-600">
+            SCHEDULE A DEMO
           </button>
         </div>
       </div>

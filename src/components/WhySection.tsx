@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const FeatureCard: React.FC<{
@@ -30,7 +29,7 @@ const WhySection: React.FC = () => {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Why <span className="text-purple-400">Agilepitch</span>
+            Why <span className="text-purple-400">Touchstone Digital Solutions</span>
           </h2>
         </div>
         
@@ -38,36 +37,45 @@ const WhySection: React.FC = () => {
           <div>
             <FeatureCard 
               number="01"
-              title="Sales-Specific AI:"
-              subtitle="Michael was built specifically to support the goals of B2B Sales teams."
-              description="All functionalities are directed towards ensuring that your sales goals are met."
+              title="Affordable:"
+              subtitle="Packages for K–12 schools, colleges, and community clubs."
+              description="We offer solutions that fit every budget."
             />
           </div>
           
           <div>
             <FeatureCard 
               number="02"
-              title="Decision Intelligence (DI) AI:"
-              subtitle="Michael uses DI to provide smarter, data-backed insights for better"
-              description="decision-making."
+              title="Yours:"
+              subtitle="Custom colors, logos, and layouts to match your brand."
+              description="Make it truly your own."
             />
           </div>
           
           <div>
             <FeatureCard 
               number="03"
-              title="Built for your business:"
-              subtitle="Customize Agilepitch for your unique business needs."
-              description="Our sales automation tool produces results based on your business data."
+              title="Scalable Solutions:"
+              subtitle="Start small with a Classroom Achievement Display or go big with a University-Wide Digital Hall of Fame."
+              description="Grow with your needs."
             />
           </div>
           
           <div>
             <FeatureCard 
               number="04"
-              title="Trusted for Growth-Focused:"
-              subtitle="Agilepitch is the preferred choice for VC-backed tech companies."
-              description="Our customers see valuable improvements in productivity, pipeline accuracy, and conversion rates."
+              title="Future-Proof Tech:"
+              subtitle="Enjoy automated updates and AI-driven content suggestions."
+              description="Stay ahead of the curve."
+            />
+          </div>
+          
+          <div>
+            <FeatureCard 
+              number="05"
+              title="Unmatched Support:"
+              subtitle="From installation to training, we're with you."
+              description="Our team is always here to help."
             />
           </div>
         </div>
