@@ -3,7 +3,7 @@ import React from 'react';
 const AwardItem = ({ type, color, label, year }: { type: string; color: string; label: string; year?: string }) => {
   if (type === 'circle') {
     return (
-      <div className="flex flex-col items-center mx-8">
+      <div className="flex flex-col items-center mx-16">
         <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-1">
           <div className={`w-full h-full ${color} rounded-full flex items-center justify-center p-1`}>
             <div className="w-full h-full bg-white rounded-full flex items-center justify-center">
@@ -18,7 +18,7 @@ const AwardItem = ({ type, color, label, year }: { type: string; color: string; 
   
   if (type === 'square') {
     return (
-      <div className="flex flex-col items-center mx-8">
+      <div className="flex flex-col items-center mx-16">
         <div className="w-24 h-24 bg-gradient-to-r from-teal-500 to-green-500 rounded-lg flex items-center justify-center p-1">
           <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-1">
             <div className="w-full h-full bg-teal-500 rounded-lg flex flex-col items-center justify-center">
@@ -33,7 +33,7 @@ const AwardItem = ({ type, color, label, year }: { type: string; color: string; 
   
   if (type === 'diamond') {
     return (
-      <div className="flex flex-col items-center mx-8">
+      <div className="flex flex-col items-center mx-16">
         <div className="w-24 h-24 bg-gradient-to-r from-orange-400 to-red-500 transform rotate-45 flex items-center justify-center p-1">
           <div className="w-full h-full bg-white flex items-center justify-center p-1">
             <div className="w-full h-full bg-orange-400 flex items-center justify-center transform -rotate-45">
@@ -55,8 +55,6 @@ const AwardsSlider: React.FC = () => {
     { type: 'square', color: '', label: 'TOP PERFORMER', year: 'WINTER 2024' },
     { type: 'diamond', color: '', label: 'USERS CHOICE', year: 'WINTER 2024' },
     { type: 'circle', color: 'bg-gradient-to-r from-red-500 to-orange-500', label: 'HIGH PERFORMER', year: '2024' },
-    { type: 'circle', color: 'bg-gradient-to-r from-teal-500 to-green-500', label: 'USERS LOVE US', year: '2024' },
-    { type: 'circle', color: 'bg-gradient-to-r from-red-500 to-orange-500', label: 'USERS LOVE US', year: '' },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import GlowingOrb from './GlowingOrb';
+import TouchIcon from './TouchIcon';
 import AwardsSlider from './AwardsSlider';
 
 const HeroSection: React.FC = () => {
@@ -30,6 +30,13 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-grid opacity-30 -z-10"></div>
       <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vmin] h-[90vmin] max-w-[900px] max-h-[900px] bg-gradient-spotlight -z-10 transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}></div>
       
+      {/* Border lines - only in upper portion */}
+      <div className="absolute top-0 left-12 w-[1px] h-48 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+      <div className="absolute top-12 left-0 h-[1px] w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+      
+      <div className="absolute top-0 right-12 w-[1px] h-48 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+      <div className="absolute top-12 right-0 h-[1px] w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+      
       {/* Plus symbols as decorative elements - responsive positioning */}
       <div className="absolute top-[10%] left-[10%] md:top-40 md:left-40 text-white/10 text-3xl">+</div>
       <div className="absolute bottom-[10%] right-[10%] md:bottom-40 md:right-40 text-white/10 text-3xl">+</div>
@@ -37,9 +44,11 @@ const HeroSection: React.FC = () => {
       
       {/* Main content */}
       <div className={`container px-4 md:px-6 z-10 flex flex-col items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <GlowingOrb />
+        <div className="mt-8 md:mt-12">
+          <TouchIcon />
+        </div>
         
-        <div className={`max-w-4xl mx-auto text-center mt-6 md:mt-8 space-y-4 md:space-y-6 ${orientation === 'landscape' ? 'landscape-mode' : ''}`}>
+        <div className={`max-w-4xl mx-auto text-center mt-2 md:mt-4 space-y-4 md:space-y-6 ${orientation === 'landscape' ? 'landscape-mode' : ''}`}>
           <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tighter transition-all duration-700 delay-[100ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Welcome to Touchstone Digital Solutions
           </h1>

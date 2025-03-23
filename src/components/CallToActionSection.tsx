@@ -1,16 +1,8 @@
 import React from 'react';
 
-const IntegrationLogo: React.FC<{ name: string }> = ({ name }) => {
+const CallToActionSection: React.FC = () => {
   return (
-    <div className="bg-card hover:bg-white/10 transition-colors rounded-lg px-6 py-4 flex items-center justify-center border border-white/10">
-      <span className="text-white/70">{name}</span>
-    </div>
-  );
-};
-
-const IntegrationSection: React.FC = () => {
-  return (
-    <section className="py-20 w-full" id="integrations">
+    <section className="py-20 w-full" id="cta">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -39,4 +31,4 @@ const IntegrationSection: React.FC = () => {
   );
 };
 
-export default IntegrationSection;
+export default CallToActionSection;

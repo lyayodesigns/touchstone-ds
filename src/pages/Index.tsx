@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
 import WhySection from '@/components/WhySection';
-import IntegrationSection from '@/components/IntegrationSection';
+import CallToActionSection from '@/components/CallToActionSection';
 import PricingSection from '@/components/PricingSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import Footer from '@/components/Footer';
@@ -64,8 +64,8 @@ const Index = () => {
         <div id="contact">
           <HowItWorksSection />
         </div>
-        <div id="integrations">
-          <IntegrationSection />
+        <div id="cta">
+          <CallToActionSection />
         </div>
       </main>
       

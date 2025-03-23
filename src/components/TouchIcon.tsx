@@ -18,7 +18,7 @@ const TouchIcon: React.FC = () => {
       const distY = (clientY - centerY) * 0.03;
       
       // Limit movement
-      const maxDist = 15;
+      const maxDist = 10;
       const moveX = Math.max(-maxDist, Math.min(maxDist, distX));
       const moveY = Math.max(-maxDist, Math.min(maxDist, distY));
       
@@ -34,32 +34,39 @@ const TouchIcon: React.FC = () => {
   }, []);
   
   return (
-    <div className="relative w-full flex items-center justify-center pointer-events-none mb-8">
+    <div className="relative w-full flex items-center justify-center pointer-events-none pt-12 pb-20 my-4">
       <div 
         ref={iconRef}
-        className="absolute w-[300px] h-[300px] rounded-full transition-transform duration-300 ease-out"
+        className="absolute w-[200px] h-[200px] rounded-full transition-transform duration-300 ease-out"
         style={{
           background: 'radial-gradient(circle, rgba(0, 174, 239, 0.15) 0%, rgba(0, 174, 239, 0) 70%)',
-          boxShadow: '0 0 100px 60px rgba(0, 174, 239, 0.3)'
+          boxShadow: '0 0 60px 30px rgba(0, 174, 239, 0.2)'
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-[120px] h-[120px] flex items-center justify-center">
-            {/* Outer circle */}
-            <div className="absolute w-full h-full rounded-full border-4 border-cyan-400 animate-pulse-glow opacity-80"></div>
+          {/* Main circle container */}
+          <div className="relative w-[90px] h-[90px] flex items-center justify-center">
+            {/* Dark circle background */}
+            <div className="absolute w-full h-full rounded-full bg-black"></div>
             
-            {/* Inner circle */}
-            <div className="absolute w-[70%] h-[70%] rounded-full border-3 border-cyan-300 animate-pulse-slow opacity-90"></div>
+            {/* Cyan border */}
+            <div className="absolute w-full h-full rounded-full border border-cyan-400"></div>
             
-            {/* Touch finger icon */}
-            <div className="absolute w-[40%] h-[70%] bottom-[15%] right-[15%]">
-              <div className="w-full h-[40%] bg-cyan-300 rounded-t-full"></div>
-              <div className="w-[60%] h-[60%] bg-cyan-300 rounded-b-lg ml-[20%]"></div>
+            {/* Touch icon image */}
+            <div className="relative w-[60%] h-[60%] flex items-center justify-center">
+              <img 
+                src="/icons8-touch-100.png" 
+                alt="Touch Icon" 
+                className="w-full h-full object-contain"
+                style={{
+                  filter: 'brightness(0) saturate(100%) invert(79%) sepia(71%) saturate(4948%) hue-rotate(155deg) brightness(99%) contrast(101%)'
+                }}
+              />
             </div>
             
-            {/* Ripple effect */}
-            <div className="absolute w-full h-full rounded-full border-2 border-cyan-200/50 animate-ripple"></div>
-            <div className="absolute w-full h-full rounded-full border-2 border-cyan-200/30 animate-ripple-delayed"></div>
+            {/* Ripple effects - smaller size */}
+            <div className="absolute w-[130%] h-[130%] rounded-full border border-cyan-400/50 animate-ripple"></div>
+            <div className="absolute w-[130%] h-[130%] rounded-full border border-cyan-400/30 animate-ripple-delayed"></div>
           </div>
         </div>
       </div>
