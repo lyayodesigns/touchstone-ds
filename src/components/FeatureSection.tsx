@@ -1,9 +1,11 @@
 import React from 'react';
 import SchoolRecognitionSection from './SchoolRecognitionSection';
 import AthleticsRecognitionSection from './AthleticsRecognitionSection';
+import SoftwarePlatformsSection from './SoftwarePlatformsSection';
 
 const FeatureSection: React.FC = () => {
   return (
+    
     <section className="py-24 w-full bg-card">
       <div className="container px-4 md:px-6 mx-auto">
         {/* Header Section */}
@@ -169,6 +171,8 @@ const FeatureSection: React.FC = () => {
           {/* Athletics & Sports Recognition - Image Left, Content Right */}
           <AthleticsRecognitionSection />
         </div>
+        
+     
       </div>
     </section>
   );

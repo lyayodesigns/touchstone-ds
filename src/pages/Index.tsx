@@ -11,6 +11,10 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import Footer from '@/components/Footer';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
+import SoftwarePlatformsSection from '@/components/SoftwarePlatformsSection';
+import SchoolRecognitionSection from '@/components/SchoolRecognitionSection';
+import AthleticsRecognitionSection from '@/components/AthleticsRecognitionSection';
+import PhotoCarouselSection from '@/components/PhotoCarouselSection';
 
 const Index = () => {
   // Add smooth scroll effect
@@ -47,8 +51,14 @@ const Index = () => {
         
         <InteractiveDisplaysSection />
         
-        <div id="products">
-          <FeatureSection />
+        <SoftwarePlatformsSection />
+        
+        <SchoolRecognitionSection />
+        
+        <AthleticsRecognitionSection />
+        
+        <div id="gallery">
+          <PhotoCarouselSection />
         </div>
         
         <div id="solutions">
