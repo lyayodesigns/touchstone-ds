@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -8,6 +7,8 @@ import IntegrationSection from '@/components/IntegrationSection';
 import PricingSection from '@/components/PricingSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import Footer from '@/components/Footer';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import FAQSection from '@/components/FAQSection';
 
 const Index = () => {
   // Add smooth scroll effect
@@ -48,16 +49,23 @@ const Index = () => {
           <WhySection />
         </div>
         
-        <div id="integrations">
-          <IntegrationSection />
+        <div id="testimonials">
+          <TestimonialsSection />
         </div>
 
         {/* <div id="pricing">
           <PricingSection />
         </div> */}
 
+        <div id="faq">
+          <FAQSection />
+        </div>
+
         <div id="contact">
           <HowItWorksSection />
+        </div>
+        <div id="integrations">
+          <IntegrationSection />
         </div>
       </main>
       

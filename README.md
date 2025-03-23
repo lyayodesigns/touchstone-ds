@@ -1,69 +1,83 @@
-# Welcome to your Lovable project
+# Touchstone Digital Solutions - Interactive Digital Recognition Platform
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/07c93439-e1bd-475e-9a49-c15edde72246
+This project is a modern, responsive web application for Touchstone Digital Solutions, a company specializing in interactive digital recognition systems for schools, including digital Halls of Fame, touchscreen displays, and cloud-based recognition platforms.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Interactive UI Components**: Animated and responsive components optimized for all devices including tablets
+- **Tablet-Optimized Experience**: Special focus on horizontal screen layouts and touch interactions
+- **Modern Design System**: Using a purple-themed design system with glowing effects and gradients
+- **Responsive Layouts**: Fully responsive design that works on all screen sizes
 
-**Use Lovable**
+## Key Components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/07c93439-e1bd-475e-9a49-c15edde72246) and start prompting.
+- **Hero Section**: Dynamic, animated introduction with responsive sizing
+- **Feature Section**: Showcase of key product features with consistent card layouts
+- **FAQ Section**: Interactive accordion with smooth animations and tablet-friendly touch targets
+- **Testimonials Section**: Customer testimonials with hover effects and proper border handling
+- **Why Section**: Feature cards with staggered animations optimized for tablet devices
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+This project is built with:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React
+- TypeScript
+- Tailwind CSS
+- CSS Animations and Transitions
+- Responsive Design Principles
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+Follow these steps to run the project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone https://github.com/prabishkhanal/touchstone.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd react-patterns-mosaic
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install the necessary dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Development Notes
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Responsive Design
 
-**Use GitHub Codespaces**
+- The application uses responsive breakpoints to adapt to different screen sizes
+- Special attention has been given to tablet devices in both portrait and landscape orientations
+- Touch interactions are optimized with appropriate feedback and sizing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Animation System
 
-## What technologies are used for this project?
+- CSS transitions are used for smooth, performance-optimized animations
+- React state is used to control animation timing and sequencing
+- Animations are designed to work well on lower-powered devices like tablets
 
-This project is built with .
+## Browser Compatibility
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application has been tested and optimized for:
 
-## How can I deploy this project?
+- Chrome (latest)
+- Safari (latest)
+- Firefox (latest)
+- Edge (latest)
+- iOS Safari
+- Android Chrome
 
-Simply open [Lovable](https://lovable.dev/projects/07c93439-e1bd-475e-9a49-c15edde72246) and click on Share -> Publish.
+## Contributing
 
-## I want to use a custom domain - is that possible?
+To contribute to this project:
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const Navbar: React.FC = () => {
@@ -21,20 +22,21 @@ const Navbar: React.FC = () => {
         : "py-5 bg-transparent"
     )}>
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
             <div className="w-6 h-6 rounded-full bg-background flex items-center justify-center">
               <div className="w-4 h-4 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
             </div>
           </div>
           <span className="font-display text-lg font-medium">TOUCHSTONE DIGITAL SOLUTIONS</span>
-        </div>
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-sm opacity-80 hover:opacity-100 transition-opacity">About Us</a>
-          <a href="#services" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Services</a>
-          <a href="#portfolio" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Portfolio</a>
-          <a href="#contact" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Contact Us</a>
+          <a href="#products" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Products</a>
+          <a href="#solutions" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Solutions</a>
+          <a href="#testimonials" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Testimonials</a>
+          <a href="#contact" className="text-sm opacity-80 hover:opacity-100 transition-opacity">Contact</a>
         </nav>
         
         <div>

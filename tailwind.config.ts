@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -126,6 +125,10 @@ export default {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-5px)' }
 				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(calc(-33.33%))' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -141,6 +144,7 @@ export default {
 				'slide-in-top': 'slide-in-top 0.5s ease-out',
 				'spin-slow': 'spin-slow 15s linear infinite',
 				'float': 'float 3s ease-in-out infinite',
+				'marquee': 'marquee 30s linear infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
