@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
+import DigitalHallOfFameSection from '@/components/DigitalHallOfFameSection';
+import InteractiveDisplaysSection from '@/components/InteractiveDisplaysSection';
 import FeatureSection from '@/components/FeatureSection';
 import WhySection from '@/components/WhySection';
 import CallToActionSection from '@/components/CallToActionSection';
@@ -40,6 +42,10 @@ const Index = () => {
       
       <main className="overflow-hidden">
         <HeroSection />
+        
+        <DigitalHallOfFameSection />
+        
+        <InteractiveDisplaysSection />
         
         <div id="products">
           <FeatureSection />
