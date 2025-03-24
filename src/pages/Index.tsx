@@ -15,6 +15,11 @@ import SoftwarePlatformsSection from '@/components/SoftwarePlatformsSection';
 import SchoolRecognitionSection from '@/components/SchoolRecognitionSection';
 import AthleticsRecognitionSection from '@/components/AthleticsRecognitionSection';
 import PhotoCarouselSection from '@/components/PhotoCarouselSection';
+import CustomPlatformSection from '@/components/CustomPlatformSection';
+import AlumniRecognitionSection from '@/components/AlumniRecognitionSection';
+import OnboardingSection from '@/components/OnboardingSection';
+import DigitalDisplayFeaturesSection from '@/components/DigitalDisplayFeaturesSection';
+import AthleticAchievementsContactSection from '@/components/AthleticAchievementsContactSection';
 
 const Index = () => {
   // Add smooth scroll effect
@@ -49,13 +54,23 @@ const Index = () => {
         
         <DigitalHallOfFameSection />
         
+        <CustomPlatformSection />
+
         <InteractiveDisplaysSection />
+
+        <AlumniRecognitionSection />
+
+        <OnboardingSection />
+
+        <DigitalDisplayFeaturesSection />
+
+        <AthleticAchievementsContactSection />
+
+        {/* <SoftwarePlatformsSection /> */}
         
-        <SoftwarePlatformsSection />
+        {/* <SchoolRecognitionSection /> */}
         
-        <SchoolRecognitionSection />
-        
-        <AthleticsRecognitionSection />
+        {/* <AthleticsRecognitionSection /> */}
         
         <div id="gallery">
           <PhotoCarouselSection />
