@@ -7,12 +7,12 @@ const HowItWorksSection = () => {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <p className="text-sm text-purple-400 font-medium mb-2">
+            <p className="text-sm text-gradient-purple-blue font-medium mb-2">
               How it works
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              <span className="text-purple-400">Transforming</span> Your
+              <span className="text-gradient-purple-blue">Transforming</span> Your
               Recognition System
             </h2>
 
@@ -24,7 +24,7 @@ const HowItWorksSection = () => {
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 text-sm font-medium">
+                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-gradient-purple-blue text-sm font-medium">
                     01
                   </div>
                 </div>
@@ -39,7 +39,7 @@ const HowItWorksSection = () => {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 text-sm font-medium">
+                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-gradient-purple-blue text-sm font-medium">
                     02
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const HowItWorksSection = () => {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-purple-400 text-sm font-medium">
+                  <div className="h-8 w-8 rounded-full bg-purple-400/20 flex items-center justify-center text-gradient-purple-blue text-sm font-medium">
                     03
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const HowItWorksSection = () => {
             <div className="mt-10">
               <Button
                 variant="outline"
-                className="border-purple-400/30 hover:border-purple-400/70"
+                className="border-gradient-purple-blue/30 hover:border-gradient-purple-blue/70"
               >
                 SCHEDULE A DEMO
               </Button>

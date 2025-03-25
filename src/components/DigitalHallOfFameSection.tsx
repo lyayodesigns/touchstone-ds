@@ -7,7 +7,7 @@ const DigitalHallOfFameSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Left side - Image/Visual */}
           <div className="relative order-2 md:order-1 mt-2 sm:mt-0">
-            <div className="aspect-[3/4] md:aspect-[16/10] bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg sm:rounded-xl overflow-hidden border border-white/10 shadow-glow-sm relative">
+            <div className="aspect-[3/4] md:aspect-[16/10] bg-glass rounded-lg sm:rounded-xl overflow-hidden border border-white/10 shadow-glow-sm relative">
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full bg-grid opacity-30"></div>
 
@@ -25,7 +25,7 @@ const DigitalHallOfFameSection: React.FC = () => {
             
             {/* Spotlight text below image */}
             <div className="mt-4 text-center">
-              <p className="text-lg font-medium text-white">
+              <p className="text-lg font-medium text-foreground">
                 Your school's story deserves more than a plaque—it deserves a spotlight.
               </p>
             </div>
@@ -34,13 +34,13 @@ const DigitalHallOfFameSection: React.FC = () => {
           {/* Right side - Content */}
           <div className="space-y-3 sm:space-y-6 order-1 md:order-2">
             <h2 className="text-lg sm:text-3xl md:text-4xl font-bold leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+              <span className="text-gradient-purple-blue">
                 ✨ Elevate Your School's Legacy
               </span>{" "}
               with a Digital Hall of Fame
             </h2>
 
-            <p className="text-base sm:text-lg text-white/80">
+            <p className="text-base sm:text-lg text-foreground/80">
               Turn your school's rich history and proud achievements into an
               immersive digital experience. Our state-of-the-art Interactive
               Hall of Fame brings student success, alumni milestones, and
@@ -49,7 +49,7 @@ const DigitalHallOfFameSection: React.FC = () => {
 
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start">
-                <div className="mr-2 sm:mr-3 mt-1 text-purple-400">
+                <div className="mr-2 sm:mr-3 mt-1 text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -65,9 +65,9 @@ const DigitalHallOfFameSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-sm sm:text-base text-white/70">
+                <p className="text-sm sm:text-base text-foreground/70">
                   Showcase records, rosters, and historic highlights with a{" "}
-                  <span className="text-white font-medium">
+                  <span className="text-foreground font-medium">
                     dynamic, real-time platform
                   </span>
                   .
@@ -75,7 +75,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </li>
 
               <li className="flex items-start">
-                <div className="mr-3 mt-1 text-purple-400">
+                <div className="mr-3 mt-1 text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -90,10 +90,10 @@ const DigitalHallOfFameSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
+                <p className="text-foreground/70">
                   Replace outdated bulletin boards and static trophy cases with
                   a{" "}
-                  <span className="text-white font-medium">
+                  <span className="text-foreground font-medium">
                     space-saving digital solution
                   </span>
                   .
@@ -101,7 +101,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </li>
 
               <li className="flex items-start">
-                <div className="mr-3 mt-1 text-purple-400">
+                <div className="mr-3 mt-1 text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -116,9 +116,9 @@ const DigitalHallOfFameSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
+                <p className="text-foreground/70">
                   Recognize donors, sponsors, and outstanding achievements with{" "}
-                  <span className="text-white font-medium">
+                  <span className="text-foreground font-medium">
                     customizable branding
                   </span>
                   .
@@ -126,7 +126,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </li>
 
               <li className="flex items-start">
-                <div className="mr-3 mt-1 text-purple-400">
+                <div className="mr-3 mt-1 text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -141,9 +141,9 @@ const DigitalHallOfFameSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
+                <p className="text-foreground/70">
                   Engage students, faculty, and alumni with an{" "}
-                  <span className="text-white font-medium">
+                  <span className="text-foreground font-medium">
                     interactive experience
                   </span>{" "}
                   that preserves your legacy.

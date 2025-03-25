@@ -1,76 +1,64 @@
 export const colors = {
   primary: {
-    main: '#022255', // Deeper Midnight Sky
-    light: '#033177', // Original Midnight Sky
-    dark: '#011133', // Darkest Midnight Sky
-    transparent: 'rgba(2, 34, 85, 0.1)',
+    main: '#6ea8fe', // Blue gradient start
+    light: '#9fcdfd', // Lighter shade of blue
+    dark: '#447df5', // Blue gradient end
+    transparent: 'rgba(110, 168, 254, 0.1)',
   },
   secondary: {
-    main: '#0645a5', // Brighter Navy Blue
-    light: '#0356c7',
-    dark: '#033877',
-    transparent: 'rgba(6, 69, 165, 0.1)',
+    main: '#447df5', // Blue gradient end
+    light: '#6ea8fe',
+    dark: '#265bd6',
+    transparent: 'rgba(68, 125, 245, 0.1)',
   },
   accent: {
-    main: '#033177', // Midnight Sky as Accent
-    light: '#0645a5',
-    dark: '#022255',
-    transparent: 'rgba(3, 49, 119, 0.1)',
+    main: '#6ea8fe', // Blue gradient start
+    light: '#9fcdfd',
+    dark: '#447df5',
+    transparent: 'rgba(110, 168, 254, 0.1)',
   },
   background: {
-    main: '#011133', // Deepest Midnight Sky
-    light: '#022255',
-    dark: '#000A22',
-    transparent: 'rgba(1, 17, 51, 0.9)',
+    main: '#ffffff', // White background
+    light: '#f9f9f9', // Slightly off-white
+    dark: '#f1f1f1',
+    transparent: 'rgba(255, 255, 255, 0.9)',
   },
   text: {
-    primary: '#F8F1E5', // Soft Ivory (unchanged)
-    secondary: '#D4AF37', // Champagne Gold (unchanged)
-    accent: '#FFFFFF',
-    muted: 'rgba(248, 241, 229, 0.7)',
+    primary: '#000000', // Black text for high contrast
+    secondary: '#3b3b3b', // Dark gray for secondary text
+    accent: '#447df5', // Accent blue
+    muted: 'rgba(0, 0, 0, 0.6)', // Muted black
   },
   gradients: {
-    primary: 'linear-gradient(to right, #011133, #022255)', // Deep Midnight Sky gradient
-    accent: 'linear-gradient(to right, #022255, #0645a5)', // Midnight Sky variations
-    background: 'linear-gradient(to bottom, rgba(1, 17, 51, 0.9), #011133)', // Deep Midnight Sky gradient
-    luxury: 'linear-gradient(45deg, #022255, #0645a5)', // Midnight Sky blue variations
+    primary: 'linear-gradient(to right, #6ea8fe, #447df5)', // Updated blue gradient
+    accent: 'linear-gradient(to right, #447df5, #6ea8fe)', // Reverse blue gradient
+    background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.9), #ffffff)', // Subtle white gradient
+    luxury: 'linear-gradient(45deg, #6ea8fe, #447df5)', // Diagonal blue gradient
   },
 } as const;
 
 // CSS Custom Properties for Tailwind
 export const cssVariables = {
-  '--background': '220 94% 10%', // Deepest Midnight Sky
-  '--foreground': '43 67% 94%', // Soft Ivory
-  '--card': '220 94% 12%',
-  '--card-foreground': '43 67% 94%',
-  '--popover': '220 94% 8%',
-  '--popover-foreground': '43 67% 94%',
-  '--primary': '220 95% 15%', // Even Deeper Midnight Sky
-  '--primary-foreground': '0 0% 100%',
-  '--secondary': '220 93% 35%', // Navy Blue
-  '--secondary-foreground': '0 0% 100%',
-  '--muted': '220 94% 12%',
-  '--muted-foreground': '43 67% 94%',
-  '--accent': '220 95% 23%', // Midnight Sky as Accent
-  '--accent-foreground': '0 0% 100%',
-  '--destructive': '0 84.2% 60.2%',
-  '--destructive-foreground': '0 0% 100%',
-  '--border': '220 93% 35%', // Navy Blue for borders
-  '--input': '220 94% 12%',
-  '--ring': '220 93% 35%', // Navy Blue for focus rings
+  '--background': '0 0% 100%', // White
+  '--foreground': '0 0% 0%', // Black
+  '--card': '0 0% 98%', // Slightly off-white
+  '--card-foreground': '0 0% 0%', // Black
+  '--popover': '0 0% 100%', // White
+  '--popover-foreground': '0 0% 0%', // Black
+  '--primary': '220 75% 60%', // Blue gradient
+  '--primary-foreground': '0 0% 100%', // White
+  '--secondary': '220 60% 70%', // Light blue
+  '--secondary-foreground': '0 0% 100%', // White
+  '--muted': '0 0% 96%', // Very light gray
+  '--muted-foreground': '0 0% 30%', // Dark gray
+  '--accent': '220 75% 70%', // Blue
+  '--accent-foreground': '0 0% 100%', // White
+  '--destructive': '0 84.2% 60.2%', // Red
+  '--destructive-foreground': '0 0% 100%', // White
+  '--border': '0 0% 90%', // Light gray border
+  '--input': '0 0% 98%', // Very light gray input
+  '--ring': '220 75% 60%', // Blue focus ring
 } as const;
 
 // Utility function to get CSS variable
 export const getCssVar = (variable: keyof typeof cssVariables) => `hsl(${cssVariables[variable]})`;
-
-// Example usage:
-// import { colors, getCssVar } from '@/styles/colors';
-//
-// // Direct color usage
-// backgroundColor: colors.primary.main
-//
-// // CSS Variable usage
-// backgroundColor: getCssVar('--primary')
-//
-// // Tailwind usage remains the same
-// className="bg-primary text-accent"

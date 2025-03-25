@@ -8,10 +8,10 @@ const InteractiveDisplaysSection: React.FC = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
             🖥️ Interactive Displays
           </span>
-          <span className="text-white">{" That Captivate"}</span>
+          <span className="text-foreground">{" That Captivate"}</span>
         </h2>
         
-        <p className="text-lg text-white/70 text-center max-w-2xl mx-auto mb-6">
+        <p className="text-lg text-foreground/70 text-center max-w-2xl mx-auto mb-6">
           Engage students, athletes, and visitors with cutting-edge touchscreen technology. Our accessibility-compliant displays and interactive recognition software make every interaction seamless and memorable.
         </p>
 
@@ -51,8 +51,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Athletic Program Showcase
                   </span> – Honor team success with dynamic rosters, championship highlights, records, player spotlights, and so much more.
                 </p>
@@ -74,8 +74,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Touchscreen HOF Displays
                   </span> – Celebrate legends with real-time updates and rich multimedia content.
                 </p>
@@ -97,8 +97,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Interactive School Displays
                   </span> – Perfect for locker rooms, lobbies, gyms, and auditoriums, bringing history and achievements to life.
                 </p>
@@ -120,8 +120,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Virtual Trophy Case
                   </span> – A modern way to display championships and school pride—without the dust.
                 </p>
@@ -143,8 +143,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Digital Record Boards
                   </span> – Keep alumni records up to date automatically, ensuring every milestone is captured.
                 </p>
@@ -166,8 +166,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Interactive Yearbooks
                   </span> – Relive school memories with digital pages that feature photos, videos, and student stories.
                 </p>
@@ -189,8 +189,8 @@ const InteractiveDisplaysSection: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </div>
-                <p className="text-white/70">
-                  <span className="text-white font-medium">
+                <p className="text-foreground/70">
+                  <span className="text-foreground font-medium">
                     Digital Donor Walls
                   </span> – Celebrate the contributors who make a difference with a dynamic, engaging display.
                 </p>

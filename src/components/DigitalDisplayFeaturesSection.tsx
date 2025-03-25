@@ -91,9 +91,9 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
       <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-tr from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
       
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-[10%] left-[5%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[10%] right-[5%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute top-[40%] right-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[10%] left-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[10%] right-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[40%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         {/* Header */}
@@ -103,7 +103,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 block sm:inline">💻 Seamless, High-Performance</span>
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">💻 Seamless, High-Performance</span>
             <span className="block sm:inline mt-2 sm:mt-0">{" Digital Displays"}</span>
           </h2>
         </div>
@@ -113,7 +113,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 transform ${
+              className={`bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10 hover:bg-background/10 transition-all duration-500 transform ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${200 + (index * 150)}ms` }}
@@ -123,11 +123,11 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
                   {feature.icon}
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-white">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-foreground">
                   {feature.title}
                 </h3>
                 
-                <p className="text-white/70 leading-relaxed flex-grow">
+                <p className="text-foreground/70 leading-relaxed flex-grow">
                   {feature.description}
                 </p>
                 
@@ -144,7 +144,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
         
         {/* Visual element at the bottom */}
         {/* <div 
-          className={`mt-12 sm:mt-16 w-full max-w-4xl mx-auto h-16 sm:h-20 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-xl backdrop-blur-sm border border-white/10 flex items-center justify-center transition-all duration-1000 ${
+          className={`mt-12 sm:mt-16 w-full max-w-4xl mx-auto h-16 sm:h-20 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-xl backdrop-blur-sm border border-foreground/10 flex items-center justify-center transition-all duration-1000 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
           style={{ transitionDelay: "800ms" }}

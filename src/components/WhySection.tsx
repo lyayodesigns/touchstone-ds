@@ -11,7 +11,7 @@ const FeatureCard: React.FC<{
 }> = ({ number, title, subtitle, description, additionalInfo, delay, isVisible }) => {
   return (
     <div
-      className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 
+      className={`bg-background/5 backdrop-blur-sm border border-foreground/10 rounded-lg p-6 
       hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
       hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
       hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
@@ -20,12 +20,12 @@ const FeatureCard: React.FC<{
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="flex gap-4 items-start">
-        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 text-sm font-medium group-hover:bg-purple-500/40 group-hover:text-white transition-all duration-300">{number}</div>
+        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/20 text-foreground text-sm font-medium group-hover:bg-purple-500/40 group-hover:text-foreground transition-all duration-300">{number}</div>
         <div className="flex-1">
-          <div className="text-purple-400 text-sm font-medium mb-2">{title}</div>
-          <h3 className="text-white text-xl font-medium mb-3">{subtitle}</h3>
-          <p className="text-white/70">
-            {description} <span className="text-white">{additionalInfo}</span>
+          <div className="text-foreground text-sm font-medium mb-2">{title}</div>
+          <h3 className="text-foreground text-xl font-medium mb-3">{subtitle}</h3>
+          <p className="text-foreground/70">
+            {description} <span className="text-foreground">{additionalInfo}</span>
           </p>
         </div>
       </div>
@@ -79,17 +79,17 @@ const WhySection: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             Why{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+            <span className="text-transparent text-gradient-purple-blue">
               Touchstone Digital Solutions
             </span>
             ?
           </h2>
-          <p className="text-white/70 mt-4 max-w-2xl mx-auto">
+          <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
             We're not just another tech company. We're your partners in preserving and celebrating your institution's legacy.
           </p>
         </div>
 
-        <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
+        <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <FeatureCard
               number="01"

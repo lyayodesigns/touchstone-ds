@@ -24,7 +24,7 @@ const AthleticsRecognitionSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-purple-400">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-gradient-purple-blue">
                 🏅 Athletics & Sports Recognition That Wows Crowds
               </h3>
             </div>

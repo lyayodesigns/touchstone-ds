@@ -37,20 +37,20 @@ const HeroSection: React.FC = () => {
       ></div>
 
       {/* Border lines - only in upper portion */}
-      <div className="absolute top-16 left-8 sm:left-12 w-[1px] h-32 sm:h-48 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
-      <div className="absolute top-24 sm:top-28 left-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+      <div className="absolute top-16 left-8 sm:left-12 w-[1px] h-32 sm:h-48 bg-gradient-to-b from-transparent via-foreground/40 to-transparent"></div>
+      <div className="absolute top-24 sm:top-28 left-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-foreground/40 to-transparent"></div>
 
-      <div className="absolute top-16 right-8 sm:right-12 w-[1px] h-32 sm:h-48 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
-      <div className="absolute top-24 sm:top-28 right-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+      <div className="absolute top-16 right-8 sm:right-12 w-[1px] h-32 sm:h-48 bg-gradient-to-b from-transparent via-foreground/40 to-transparent"></div>
+      <div className="absolute top-24 sm:top-28 right-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-foreground/40 to-transparent"></div>
 
       {/* Plus symbols as decorative elements - responsive positioning */}
-      <div className="absolute top-[10%] left-[10%] md:top-40 md:left-40 text-white/10 text-2xl sm:text-3xl">
+      <div className="absolute top-[10%] left-[10%] md:top-40 md:left-40 text-foreground/10 text-2xl sm:text-3xl">
         +
       </div>
-      <div className="absolute bottom-[10%] right-[10%] md:bottom-40 md:right-40 text-white/10 text-2xl sm:text-3xl">
+      <div className="absolute bottom-[10%] right-[10%] md:bottom-40 md:right-40 text-foreground/10 text-2xl sm:text-3xl">
         +
       </div>
-      <div className="absolute top-1/4 right-1/4 text-white/10 text-2xl sm:text-3xl">
+      <div className="absolute top-1/4 right-1/4 text-foreground/10 text-2xl sm:text-3xl">
         +
       </div>
 
@@ -70,7 +70,7 @@ const HeroSection: React.FC = () => {
           }`}
         >
           <h1
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter transition-all duration-700 delay-[100ms] ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-[100ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
             Welcome to Touchstone Digital Solutions
           </h1>
           <h2
-            className={`text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tighter transition-all duration-700 delay-[300ms] ${
+            className={`text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-[300ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
           </h2>
 
           <p
-            className={`text-sm sm:text-base md:text-lg text-white/70 max-w-3xl mx-auto transition-all duration-700 delay-[500ms] ${
+            className={`text-sm sm:text-base md:text-lg text-foreground/70 max-w-3xl mx-auto transition-all duration-700 delay-[500ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -105,39 +105,39 @@ const HeroSection: React.FC = () => {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
-              hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-purple-400 text-xl group-hover:text-purple-300">✅</span>
+              <span className="text-primary text-xl group-hover:text-primary/80">✅</span>
               <div>
-                <h3 className="text-white font-medium text-sm sm:text-base">Fully Customizable</h3>
-                <p className="text-white/60 text-xs sm:text-sm mt-1">Tailored to reflect your school's identity.</p>
+                <h3 className="text-foreground font-medium text-sm sm:text-base">Fully Customizable</h3>
+                <p className="text-foreground/60 text-xs sm:text-sm mt-1">Tailored to reflect your school's identity.</p>
               </div>
             </div>
             
-            <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
-              hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-purple-400 text-xl group-hover:text-purple-300">💰</span>
+              <span className="text-primary text-xl group-hover:text-primary/80">💰</span>
               <div>
-                <h3 className="text-white font-medium text-sm sm:text-base">No Cost to Build or Maintain</h3>
-                <p className="text-white/60 text-xs sm:text-sm mt-1">A stress-free solution.</p>
+                <h3 className="text-foreground font-medium text-sm sm:text-base">No Cost to Build or Maintain</h3>
+                <p className="text-foreground/60 text-xs sm:text-sm mt-1">A stress-free solution.</p>
               </div>
             </div>
             
-            <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
-              hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-purple-400 text-xl group-hover:text-purple-300">🌟</span>
+              <span className="text-primary text-xl group-hover:text-primary/80">🌟</span>
               <div>
-                <h3 className="text-white font-medium text-sm sm:text-base">Stunning Visuals</h3>
-                <p className="text-white/60 text-xs sm:text-sm mt-1">Emmy-nominated UI/UX graphic design.</p>
+                <h3 className="text-foreground font-medium text-sm sm:text-base">Stunning Visuals</h3>
+                <p className="text-foreground/60 text-xs sm:text-sm mt-1">Emmy-nominated UI/UX graphic design.</p>
               </div>
             </div>
           </div>

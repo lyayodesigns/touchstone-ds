@@ -42,12 +42,12 @@ const AthleticAchievementsContactSection: React.FC = () => {
       <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full blur-3xl -z-10"></div>
       
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-[20%] left-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[20%] right-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[20%] left-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[20%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div 
-          className={`max-w-4xl mx-auto bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 md:p-12 border border-white/10 shadow-glow-sm transition-all duration-1000 ${
+          className={`max-w-4xl mx-auto bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 md:p-12 border border-foreground/10 shadow-glow-sm transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -68,7 +68,7 @@ const AthleticAchievementsContactSection: React.FC = () => {
               style={{ transitionDelay: "300ms" }}
             >
               Let us help you bring your school's athletic achievements to life with 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 ml-2">
+              <span className="text-transparent bg-clip-text text-gradient-purple-blue to-blue-400 ml-2">
                 cutting-edge digital technology
               </span>
             </h2>
@@ -79,10 +79,10 @@ const AthleticAchievementsContactSection: React.FC = () => {
               }`}
               style={{ transitionDelay: "500ms" }}
             >
-              <button className="group relative inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-medium rounded-full px-8 py-4 text-lg transition-all duration-300 shadow-glow-md overflow-hidden">
-                <span className="relative z-10">Contact Us Today</span>
+              <button className="group relative inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-foreground font-medium rounded-full px-8 py-4 text-lg transition-all duration-300 shadow-glow-md overflow-hidden">
+                <span className="relative z-10">Contact Us</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute right-0 w-12 h-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/10">
+                <div className="absolute right-0 w-12 h-full flex items-center justify-center transition-all duration-300 group-hover:bg-foreground/10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

@@ -42,10 +42,10 @@ const AlumniRecognitionSection: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] max-w-[800px] max-h-[800px] bg-gradient-spotlight opacity-30 -z-10"></div>
       
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-[15%] left-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[15%] right-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute top-[40%] right-[15%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[40%] left-[15%] text-white/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[15%] left-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[15%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[40%] right-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[40%] left-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
@@ -58,7 +58,7 @@ const AlumniRecognitionSection: React.FC = () => {
           </h2>
           
           <h3 
-            className={`text-xl sm:text-2xl font-medium text-white/90 mt-4 sm:mt-6 transition-all duration-700 delay-[200ms] ${
+            className={`text-xl sm:text-2xl font-medium text-foreground/90 mt-4 sm:mt-6 transition-all duration-700 delay-[200ms] ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -87,13 +87,13 @@ const AlumniRecognitionSection: React.FC = () => {
               className="h-full"
             >
               <div 
-                className={`flex items-start space-x-3 bg-white/5 backdrop-blur-sm p-4 rounded-lg hover:bg-white/10 transition-all duration-300 transform h-full ${
+                className={`flex items-start space-x-3 bg-background/5 backdrop-blur-sm p-4 rounded-lg hover:bg-background/10 transition-all duration-300 transform h-full ${
                   isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
                 style={{ transitionDelay: `${300 + (index * 70)}ms` }}
               >
-                <span className="text-purple-400 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
-                <span className="text-white/80 text-sm sm:text-base">{feature}</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
+                <span className="text-foreground/80 text-sm sm:text-base">{feature}</span>
               </div>
             </div>
           ))}
@@ -101,13 +101,13 @@ const AlumniRecognitionSection: React.FC = () => {
           {/* Center the last feature */}
           <div className="col-span-1 sm:col-span-2 md:col-span-3 flex justify-center">
             <div 
-              className={`flex items-start space-x-3 bg-white/5 backdrop-blur-sm p-4 rounded-lg hover:bg-white/10 transition-all duration-300 transform w-full max-w-xs ${
+              className={`flex items-start space-x-3 bg-background/5 backdrop-blur-sm p-4 rounded-lg hover:bg-background/10 transition-all duration-300 transform w-full max-w-xs ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
               style={{ transitionDelay: `${300 + (9 * 70)}ms` }}
             >
-              <span className="text-purple-400 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
-              <span className="text-white/80 text-sm sm:text-base">Robust security</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
+              <span className="text-foreground/80 text-sm sm:text-base">Robust security</span>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const AlumniRecognitionSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <button className="group inline-flex items-center bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 font-medium rounded-full px-6 py-2.5 transition-all duration-300">
+          <button className="group inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full px-6 py-2.5 transition-all duration-300 shadow-blue hover:shadow-blue-lg">
             Explore All Features
             <svg
               xmlns="http://www.w3.org/2000/svg"

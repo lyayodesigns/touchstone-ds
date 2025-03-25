@@ -26,28 +26,28 @@ const FAQItem: React.FC<FAQItemProps> = ({
 
   return (
     <div
-      className={`border border-white/10 rounded-lg overflow-hidden transform transition-all duration-300 ${
+      className={`border border-foreground/10 rounded-lg overflow-hidden transform transition-all duration-300 ${
         isOpen ? "shadow-lg shadow-purple-500/10" : ""
       }`}
     >
       <button
         className={`w-full p-4 md:p-5 text-left flex items-center justify-between transition-all duration-300 ${
           isOpen
-            ? "bg-gradient-to-r from-purple-500/20 to-card"
-            : "bg-card hover:bg-card/80 active:bg-card/60"
+            ? "bg-gradient-to-r from-purple-500/20 to-background"
+            : "bg-background hover:bg-background/80 active:bg-background/60"
         }`}
         onClick={onClick}
         aria-expanded={isOpen}
       >
         <span
           className={`font-medium transition-all duration-300 ${
-            isOpen ? "text-purple-400" : "text-white"
+            isOpen ? "text-gradient-purple-blue" : "text-foreground"
           }`}
         >
           {question}
         </span>
         <svg
-          className={`w-5 h-5 md:w-6 md:h-6 text-purple-400 transform transition-transform duration-300 ${
+          className={`w-5 h-5 md:w-6 md:h-6 text-gradient-purple-blue transform transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"
@@ -68,9 +68,9 @@ const FAQItem: React.FC<FAQItemProps> = ({
       >
         <div
           ref={contentRef}
-          className="p-4 md:p-6 bg-card/50 border-t border-white/10"
+          className="p-4 md:p-6 bg-background/50 border-t border-foreground/10"
         >
-          <p className="text-white/80 md:text-base">{answer}</p>
+          <p className="text-foreground/80 md:text-base">{answer}</p>
         </div>
       </div>
     </div>
@@ -127,17 +127,17 @@ const FAQSection: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-spotlight -z-10"></div>
 
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-40 left-40 text-white/10 text-3xl">+</div>
-      <div className="absolute bottom-40 right-40 text-white/10 text-3xl">
+      <div className="absolute top-40 left-40 text-foreground/10 text-3xl">+</div>
+      <div className="absolute bottom-40 right-40 text-foreground/10 text-3xl">
         +
       </div>
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             Frequently Asked Questions
           </h2>
-          <p className="text-white/80 mt-4 max-w-2xl mx-auto">
+          <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">
             Answers to some of the most common questions
           </p>
         </div>

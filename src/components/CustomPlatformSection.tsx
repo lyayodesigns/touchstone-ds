@@ -44,14 +44,14 @@ const CustomPlatformSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-foreground">
             A Fully Custom Platform, Designed Just for You
           </h2>
         </div>
 
-        <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
+        <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
           <p
-            className={`text-base sm:text-lg text-white/80 mb-8 transition-all duration-700 delay-[200ms] ${
+            className={`text-base sm:text-lg text-foreground/80 mb-8 transition-all duration-700 delay-[200ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -93,7 +93,7 @@ const CustomPlatformSection: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className={`bg-white/5 border border-white/10 rounded-lg p-5 sm:p-6 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 group transition-all duration-700 ${
+                className={`bg-background/5 border border-foreground/10 rounded-lg p-5 sm:p-6 hover:bg-background/10 hover:border-purple-500/30 transition-all duration-300 group transition-all duration-700 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -103,10 +103,10 @@ const CustomPlatformSection: React.FC = () => {
                 <div className="flex items-start gap-4">
                   <span className="text-2xl sm:text-3xl">{item.icon}</span>
                   <div>
-                    <h3 className="text-white font-semibold text-base sm:text-lg mb-2">
+                    <h3 className="text-foreground font-semibold text-base sm:text-lg mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-white/70 text-sm sm:text-base">
+                    <p className="text-foreground/70 text-sm sm:text-base">
                       {item.description}
                     </p>
                   </div>
@@ -122,10 +122,10 @@ const CustomPlatformSection: React.FC = () => {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-white/80 text-base sm:text-lg mb-2">
+            <p className="text-foreground/80 text-base sm:text-lg mb-2">
               From concept to completion, we create a one-of-a-kind Hall of Fame that feels like a natural extension of your school—not just another display.
             </p>
-            <p className="text-white font-medium text-lg sm:text-xl">
+            <p className="text-foreground font-medium text-lg sm:text-xl">
               Let's build something unforgettable.
             </p>
           </div>

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Company Info - Takes more space */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-sm font-semibold text-purple-400">
+              <span className="text-sm font-semibold text-gradient-purple-blue">
                 TOUCHSTONE DIGITAL SOLUTIONS
               </span>
             </div>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-3 mb-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-gray-400 hover:text-gradient-purple-blue transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
               <p>
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                  className="flex items-center gap-2 text-gradient-purple-blue hover:text-purple-300 transition-colors"
                 >
                   <span>🔗</span> Schedule a Demo
                 </a>

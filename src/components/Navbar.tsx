@@ -22,50 +22,35 @@ const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? `py-3 ${colors.background.transparent} backdrop-blur-md border-b ${colors.text.muted}`
+          ? `py-3 bg-glass border-b border-white/10 shadow-sm`
           : "py-5 bg-transparent"
       )}
     >
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
           <img
-            src="/logo/white-logo.png"
+            src="/logo/logo-dark.png"
             alt="Touchstone Digital Solutions"
             className="h-8 lg:h-10 w-auto"
           />
-          {/* <span className="font-display text-sm md:text-base lg:text-lg font-medium truncate max-w-[150px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-none">
-            TOUCHSTONE DIGITAL SOLUTIONS
-          </span> */}
         </Link>
 
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
           <a
             href="#about"
-            className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
+            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
             About Us
           </a>
           <a
             href="#products"
-            className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
+            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
-            Feature
+            Features
           </a>
-          {/* <a
-            href="#solutions"
-            className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
-          >
-            Solutions
-          </a>
-          <a
-            href="#testimonials"
-            className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
-          >
-            Testimonials
-          </a> */}
           <a
             href="#contact"
-            className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
+            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
             Contact
           </a>
@@ -73,13 +58,13 @@ const Navbar: React.FC = () => {
 
         <div className="flex items-center space-x-4">
           <button
-            className={`hidden md:block ${colors.primary.main} ${colors.text.primary} font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base transition-all hover:${colors.primary.light} whitespace-nowrap border-2 border-current`}
+            className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
           >
             SCHEDULE A DEMO
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white/80 hover:text-white"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -93,13 +78,13 @@ const Navbar: React.FC = () => {
         {/* Mobile menu overlay */}
         <div
           className={cn(
-            `fixed inset-0 ${colors.background.dark}/95 z-50 md:hidden transition-transform duration-300`,
+            `fixed inset-0 bg-background/95 z-50 md:hidden transition-transform duration-300`, 
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className={`absolute top-4 right-4 p-2 ${colors.text.primary} hover:opacity-80 transition-opacity`}
+            className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors"
             aria-label="Close menu"
           >
             <X className="h-6 w-6" />
@@ -107,41 +92,27 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             <a
               href="#about"
-              className={`text-xl font-medium ${colors.text.muted} hover:${colors.text.primary} transition-opacity`}
+              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </a>
             <a
               href="#products"
-              className={`text-xl font-medium ${colors.text.muted} hover:${colors.text.primary} transition-opacity`}
+              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Products
-            </a>
-            <a
-              href="#solutions"
-              className={`text-xl font-medium ${colors.text.muted} hover:${colors.text.primary} transition-opacity`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Solutions
-            </a>
-            <a
-              href="#testimonials"
-              className={`text-xl font-medium ${colors.text.muted} hover:${colors.text.primary} transition-opacity`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Testimonials
+              Features
             </a>
             <a
               href="#contact"
-              className={`text-xl font-medium ${colors.text.muted} hover:${colors.text.primary} transition-opacity`}
+              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </a>
             <button
-              className={`${colors.primary.main} ${colors.text.primary} font-medium rounded-full px-6 py-3 text-lg transition-all hover:${colors.primary.light}`}
+              className="btn-gradient hover-lift font-medium rounded-full px-6 py-3 text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               SCHEDULE A DEMO

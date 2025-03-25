@@ -96,10 +96,10 @@ const PhotoCarouselSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold leading-tight whitespace-nowrap">
-            <span className="text-purple-400">Our Stunning</span>{" Digital Displays in Action"}
+            <span className="text-gradient-purple-blue">Our Stunning</span>{" Digital Displays in Action"}
           </h2>
 
-          <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">
             See how our interactive displays transform spaces and celebrate
             achievements across schools and athletic facilities.
           </p>
@@ -143,8 +143,8 @@ const PhotoCarouselSection: React.FC = () => {
                       onLoad={() => handleImageLoad(index % firstRow.length)}
                       onError={() => handleImageError(index % firstRow.length)}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-4 text-white">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 text-foreground">
                         <h3 className="text-lg font-bold">
                           {imageDescriptions[index % firstRow.length]}
                         </h3>
@@ -205,8 +205,8 @@ const PhotoCarouselSection: React.FC = () => {
                         )
                       }
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-4 text-white">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 text-foreground">
                         <h3 className="text-lg font-bold">
                           {
                             imageDescriptions[
@@ -226,7 +226,7 @@ const PhotoCarouselSection: React.FC = () => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-background/80 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <img

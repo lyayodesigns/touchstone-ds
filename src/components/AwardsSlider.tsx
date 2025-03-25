@@ -3,8 +3,8 @@ import React from "react";
 const AwardItem = ({ text }: { text: string }) => {
   return (
     <div className="flex items-center justify-center mx-2 sm:mx-4 md:mx-6 w-[200px] sm:w-[250px] md:w-[300px] py-4">
-      <div className="h-[80px] sm:h-[90px] md:h-[100px] w-full px-6 py-3 border-2 border-white/20 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 hover:border-white/40 hover:bg-white/5 flex items-center justify-center overflow-visible">
-        <h3 className="text-white/90 text-sm sm:text-base md:text-lg font-medium text-center line-clamp-2">
+      <div className="h-[80px] sm:h-[90px] md:h-[100px] w-full px-6 py-3 border-2 border-foreground/20 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 hover:border-foreground/40 hover:bg-background/5 flex items-center justify-center overflow-visible">
+        <h3 className="text-foreground/90 text-sm sm:text-base md:text-lg font-medium text-center line-clamp-2">
           {text}
         </h3>
       </div>
@@ -27,7 +27,7 @@ const AwardsSlider: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-4 overflow-hidden  backdrop-blur-sm">
+    <div className="w-full py-4 overflow-hidden backdrop-blur-sm">
       <div className="w-full overflow-hidden">
         <div
           className="flex animate-marquee-slow whitespace-nowrap will-change-transform backface-visibility-hidden -webkit-backface-visibility-hidden transform-gpu group"

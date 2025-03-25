@@ -38,11 +38,11 @@ const OnboardingSection: React.FC = () => {
       
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-72 h-72 text-gradient-purple-blue rounded-full blur-3xl -z-10"></div>
       
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-[20%] right-[15%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[20%] left-[15%] text-white/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[20%] right-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[20%] left-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -53,7 +53,7 @@ const OnboardingSection: React.FC = () => {
             }`}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Onboarding</span> made simple
+              <span className="text-transparent bg-clip-text text-gradient-purple-blue">Onboarding</span> made simple
             </h2>
             
             <div className="space-y-6">
@@ -73,7 +73,7 @@ const OnboardingSection: React.FC = () => {
                     {item.step}
                   </div>
                   <div className="pt-2">
-                    <h3 className="text-lg sm:text-xl font-medium text-white">{item.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-medium text-foreground">{item.title}</h3>
                   </div>
                 </div>
               ))}
@@ -111,9 +111,9 @@ const OnboardingSection: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10">
+            <div className="bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">We Handle It All</span>
+                <span className="text-transparent text-gradient-purple-blue">We Handle It All</span>
               </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -133,7 +133,7 @@ const OnboardingSection: React.FC = () => {
                     }`}
                     style={{ transitionDelay: `${300 + (index * 100)}ms` }}
                   >
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br text-gradient-purple-blue flex items-center justify-center mt-0.5">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="12" 
@@ -144,12 +144,12 @@ const OnboardingSection: React.FC = () => {
                         strokeWidth="3" 
                         strokeLinecap="round" 
                         strokeLinejoin="round" 
-                        className="text-white"
+                        className="text-foreground"
                       >
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <span className="text-white/80">{feature}</span>
+                    <span className="text-foreground/80">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -159,7 +159,7 @@ const OnboardingSection: React.FC = () => {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <button className="group inline-flex items-center text-purple-400 hover:text-purple-300 font-medium transition-colors">
+                <button className="group inline-flex items-center text-foreground hover:text-foreground/80 font-medium transition-colors">
                   Explore Our Software + Hardware Bundles
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

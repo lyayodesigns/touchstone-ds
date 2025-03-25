@@ -53,24 +53,24 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   return (
     <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[350px] bg-card rounded-lg shadow-xl group relative">
       {/* Single border that changes on hover */}
-      <div className="absolute inset-0 rounded-lg border border-white/10 group-hover:border-purple-500/30 transition-colors duration-300"></div>
+      <div className="absolute inset-0 rounded-lg border border-foreground/10 group-hover:border-purple-500/30 transition-colors duration-300"></div>
 
       <div className="p-4 sm:p-5 md:p-6 flex flex-col items-center text-center transform transition-all duration-500 ease-in-out group-hover:scale-[1.02] relative z-10">
         {/* Avatar */}
-        <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white/10 shadow-md mb-3 sm:mb-4">
-          <div className="w-full h-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center text-white text-lg sm:text-xl font-bold">
+        <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-foreground/10 shadow-md mb-3 sm:mb-4">
+          <div className="w-full h-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center text-foreground text-lg sm:text-xl font-bold">
             {author.charAt(0)}
           </div>
         </div>
 
         {/* Name and Role */}
-        <h3 className="text-white font-bold text-base sm:text-lg">{author}</h3>
+        <h3 className="text-foreground font-bold text-base sm:text-lg">{author}</h3>
         <p className="text-purple-400 text-xs sm:text-sm mb-3 sm:mb-4">
           {role}, {company}
         </p>
 
         {/* Quote */}
-        <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
+        <p className="text-foreground/80 text-xs sm:text-sm leading-relaxed">
           {quote}
         </p>
 
@@ -78,7 +78,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
         <div className="flex space-x-2 sm:space-x-3 mt-3 sm:mt-4">
           <a
             href="#"
-            className="text-white/50 hover:text-purple-400 transition-colors"
+            className="text-foreground/50 hover:text-purple-400 transition-colors"
           >
             <svg
               className="w-3 h-3 sm:w-4 sm:h-4"
@@ -90,7 +90,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
           </a>
           <a
             href="#"
-            className="text-white/50 hover:text-purple-400 transition-colors"
+            className="text-foreground/50 hover:text-purple-400 transition-colors"
           >
             <svg
               className="w-3 h-3 sm:w-4 sm:h-4"
@@ -102,7 +102,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
           </a>
           <a
             href="#"
-            className="text-white/50 hover:text-purple-400 transition-colors"
+            className="text-foreground/50 hover:text-purple-400 transition-colors"
           >
             <svg
               className="w-3 h-3 sm:w-4 sm:h-4"
@@ -114,7 +114,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
           </a>
           <a
             href="#"
-            className="text-white/50 hover:text-purple-400 transition-colors"
+            className="text-foreground/50 hover:text-purple-400 transition-colors"
           >
             <svg
               className="w-3 h-3 sm:w-4 sm:h-4"
@@ -181,12 +181,12 @@ const TestimonialsSection: React.FC = () => {
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold">
             What{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+            <span className="text-transparent text-gradient-purple-blue">
               Our Clients
             </span>{" "}
             Say
           </h2>
-          <p className="text-white/70 mt-4 max-w-2xl mx-auto">
+          <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
             Hear from schools and organizations that have transformed their recognition displays with Touchstone.
           </p>
         </div>
@@ -195,7 +195,7 @@ const TestimonialsSection: React.FC = () => {
           {/* Navigation Arrows - Adjusted for touch targets */}
           <button
             onClick={handlePrev}
-            className="flex-shrink-0 -ml-2 sm:-ml-3 z-20 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-card/80 backdrop-blur border border-white/10 shadow-lg text-white hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 touch-manipulation"
+            className="flex-shrink-0 -ml-2 sm:-ml-3 z-20 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-background/80 backdrop-blur border border-foreground/10 shadow-lg text-foreground hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 touch-manipulation"
             aria-label="Previous testimonials"
             disabled={startIndex === 0}
           >
@@ -224,7 +224,7 @@ const TestimonialsSection: React.FC = () => {
 
           <button
             onClick={handleNext}
-            className="flex-shrink-0 -mr-2 sm:-mr-3 z-20 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-card/80 backdrop-blur border border-white/10 shadow-lg text-white hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 touch-manipulation"
+            className="flex-shrink-0 -mr-2 sm:-mr-3 z-20 w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-background/80 backdrop-blur border border-foreground/10 shadow-lg text-foreground hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 touch-manipulation"
             aria-label="Next testimonials"
             disabled={startIndex >= testimonials.length - visibleCount}
           >
