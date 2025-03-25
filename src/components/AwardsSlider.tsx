@@ -23,6 +23,7 @@ const AwardsSlider: React.FC = () => {
     "Digital Trophy Case",
     "Interactive Displays",
     "Digital Donor Wall",
+    "Yearbooks",
   ];
 
   return (
