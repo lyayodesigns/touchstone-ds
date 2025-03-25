@@ -49,9 +49,9 @@ const Navbar: React.FC = () => {
             href="#products"
             className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
           >
-            Products
+            Feature
           </a>
-          <a
+          {/* <a
             href="#solutions"
             className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
           >
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
             className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
           >
             Testimonials
-          </a>
+          </a> */}
           <a
             href="#contact"
             className={`text-sm lg:text-base ${colors.text.muted} hover:${colors.text.primary} transition-opacity whitespace-nowrap`}
