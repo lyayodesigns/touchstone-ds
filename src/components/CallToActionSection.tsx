@@ -1,26 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const CallToActionSection: React.FC = () => {
+  const words = ["imagine", "design", "transform", "inspire"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setIsAnimating(true);
+      }, 100);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 w-full bg-gradient-to-b from-background/90 to-background relative overflow-hidden" id="cta">
+    <section
+      className="py-8 sm:py-12 md:py-16 lg:py-20 w-full bg-gradient-to-b from-background/90 to-background relative overflow-hidden"
+      id="cta"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-purple-500/10 to-transparent rounded-bl-full blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-blue-500/10 to-transparent rounded-tr-full blur-3xl -z-10"></div>
-      
+
       {/* Plus symbols as decorative elements */}
-      <div className="absolute top-[10%] left-[5%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[10%] right-[5%] text-white/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute top-[40%] right-[10%] text-white/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[10%] left-[5%] text-white/10 text-2xl sm:text-3xl">
+        +
+      </div>
+      <div className="absolute bottom-[10%] right-[5%] text-white/10 text-2xl sm:text-3xl">
+        +
+      </div>
+      <div className="absolute top-[40%] right-[10%] text-white/10 text-2xl sm:text-3xl">
+        +
+      </div>
 
       <div className="container px-3 sm:px-4 md:px-6 mx-auto relative">
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-            Ready to Replace{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">"Remember When"</span>
+            We{" "}
+            <div
+              className="inline-block"
+              style={{ width: "120px", textAlign: "left" }}
+            >
+              <span
+                className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 inline-block transition-all duration-100 ${
+                  isAnimating
+                    ? "opacity-100 transform-none"
+                    : "opacity-0 -translate-y-2"
+                }`}
+              >
+                {words[currentWordIndex]}
+              </span>
+            </div>
             <br className="hidden sm:block" />
-            with{" "}
-            <span className="font-bold text-white">"Look What We Did"</span>?
+            your legacy into{" "}
+            <span className="font-bold text-white">digital excellence</span>
           </h2>
 
           <p className="text-white/70 text-base sm:text-lg mt-4 sm:mt-6">

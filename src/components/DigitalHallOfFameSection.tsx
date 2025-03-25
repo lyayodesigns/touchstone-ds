@@ -7,39 +7,28 @@ const DigitalHallOfFameSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Left side - Image/Visual */}
           <div className="relative order-2 md:order-1 mt-2 sm:mt-0">
-            <div className="aspect-[4/3] md:aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg sm:rounded-xl overflow-hidden border border-white/10 shadow-glow-sm">
+            <div className="aspect-[3/4] md:aspect-[16/10] bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg sm:rounded-xl overflow-hidden border border-white/10 shadow-glow-sm relative">
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full bg-grid opacity-30"></div>
 
-              {/* Mockup content */}
-              <div className="absolute inset-0 flex flex-col p-6">
-                <div className="text-center mb-4">
-                  <h3 className="text-xl font-bold text-white">
-                    Digital Hall of Fame
-                  </h3>
-                  <p className="text-sm text-white/70">
-                    Touchstone Interactive Display
-                  </p>
-                </div>
-
-                <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-1.5 sm:gap-3">
-                  {[1, 2, 3, 4, 5, 6].map((i) => (
-                    <div
-                      key={i}
-                      className="bg-white/5 rounded-lg p-2 flex flex-col items-center justify-center border border-white/10 hover:bg-white/10 transition-colors"
-                    >
-                      <div className="w-8 sm:w-12 h-8 sm:h-12 rounded-full bg-purple-500/30 mb-1 sm:mb-2"></div>
-                      <div className="w-full h-1.5 sm:h-2 bg-white/20 rounded-full"></div>
-                      <div className="w-2/3 h-1.5 sm:h-2 bg-white/20 rounded-full mt-1"></div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Image */}
+              <img
+                src="/TDS Cover - 1.jpg"
+                alt="Digital Hall of Fame Display"
+                className="absolute inset-0 w-full h-full object-cover opacity-90 z-0"
+              />
             </div>
 
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-500/10 rounded-full blur-xl"></div>
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
+            
+            {/* Spotlight text below image */}
+            <div className="mt-4 text-center">
+              <p className="text-lg font-medium text-white">
+                Your school's story deserves more than a plaque—it deserves a spotlight.
+              </p>
+            </div>
           </div>
 
           {/* Right side - Content */}
@@ -52,7 +41,10 @@ const DigitalHallOfFameSection: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-white/80">
-              Turn your school's rich history and proud achievements into an immersive digital experience. Our state-of-the-art Interactive Hall of Fame brings student success, alumni milestones, and championship moments to life—all in a sleek, modern display.
+              Turn your school's rich history and proud achievements into an
+              immersive digital experience. Our state-of-the-art Interactive
+              Hall of Fame brings student success, alumni milestones, and
+              championship moments to life—all in a sleek, modern display.
             </p>
 
             <ul className="space-y-3 sm:space-y-4">
@@ -77,7 +69,8 @@ const DigitalHallOfFameSection: React.FC = () => {
                   Showcase records, rosters, and historic highlights with a{" "}
                   <span className="text-white font-medium">
                     dynamic, real-time platform
-                  </span>.
+                  </span>
+                  .
                 </p>
               </li>
 
@@ -98,10 +91,12 @@ const DigitalHallOfFameSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-white/70">
-                  Replace outdated bulletin boards and static trophy cases with a{" "}
+                  Replace outdated bulletin boards and static trophy cases with
+                  a{" "}
                   <span className="text-white font-medium">
                     space-saving digital solution
-                  </span>.
+                  </span>
+                  .
                 </p>
               </li>
 
@@ -125,7 +120,8 @@ const DigitalHallOfFameSection: React.FC = () => {
                   Recognize donors, sponsors, and outstanding achievements with{" "}
                   <span className="text-white font-medium">
                     customizable branding
-                  </span>.
+                  </span>
+                  .
                 </p>
               </li>
 
@@ -154,11 +150,6 @@ const DigitalHallOfFameSection: React.FC = () => {
                 </p>
               </li>
             </ul>
-
-            <p className="text-lg font-medium text-white">
-              Your school's story deserves more than a plaque—it deserves a spotlight.
-            </p>
-
           </div>
         </div>
       </div>

@@ -72,7 +72,9 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <button className={`hidden md:block ${colors.primary.main} ${colors.text.primary} font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base transition-all hover:${colors.primary.light} whitespace-nowrap`}>
+          <button
+            className={`hidden md:block ${colors.primary.main} ${colors.text.primary} font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base transition-all hover:${colors.primary.light} whitespace-nowrap border-2 border-current`}
+          >
             SCHEDULE A DEMO
           </button>
           <button

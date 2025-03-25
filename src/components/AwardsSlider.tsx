@@ -26,7 +26,7 @@ const AwardsSlider: React.FC = () => {
   ];
 
   return (
-    <div className="w-full py-4 overflow-hidden bg-black/10 backdrop-blur-sm">
+    <div className="w-full py-4 overflow-hidden  backdrop-blur-sm">
       <div className="w-full overflow-hidden">
         <div
           className="flex animate-marquee-slow whitespace-nowrap will-change-transform backface-visibility-hidden -webkit-backface-visibility-hidden transform-gpu group"
