@@ -31,7 +31,7 @@ const AlumniRecognitionSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-background to-background/90 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
@@ -50,11 +50,14 @@ const AlumniRecognitionSection: React.FC = () => {
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight transition-all duration-700 ${
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight whitespace-nowrap transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Alumni Recognition, Made Simple with Touchstone
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+              Alumni Recognition,
+            </span>
+            <span className="text-foreground"> Made Simple with Touchstone</span>
           </h2>
           
           <h3 
@@ -87,7 +90,12 @@ const AlumniRecognitionSection: React.FC = () => {
               className="h-full"
             >
               <div 
-                className={`flex items-start space-x-3 bg-background/5 backdrop-blur-sm p-4 rounded-lg hover:bg-background/10 transition-all duration-300 transform h-full ${
+                className={`flex items-start space-x-3 p-4 rounded-lg h-full 
+                  border border-foreground/10 bg-background/5 backdrop-blur-sm
+                  hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
+                  hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
+                  hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
+                  transition-all duration-300 ease-out cursor-pointer ${
                   isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
                 style={{ transitionDelay: `${300 + (index * 70)}ms` }}
@@ -101,7 +109,12 @@ const AlumniRecognitionSection: React.FC = () => {
           {/* Center the last feature */}
           <div className="col-span-1 sm:col-span-2 md:col-span-3 flex justify-center">
             <div 
-              className={`flex items-start space-x-3 bg-background/5 backdrop-blur-sm p-4 rounded-lg hover:bg-background/10 transition-all duration-300 transform w-full max-w-xs ${
+              className={`flex items-start space-x-3 p-4 rounded-lg w-full max-w-xs
+                border border-foreground/10 bg-background/5 backdrop-blur-sm
+                hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
+                hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
+                hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
+                transition-all duration-300 ease-out cursor-pointer ${
                 isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
               style={{ transitionDelay: `${300 + (9 * 70)}ms` }}

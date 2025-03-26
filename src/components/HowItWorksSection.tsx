@@ -16,7 +16,7 @@ const HowItWorksSection = () => {
               Recognition System
             </h2>
 
-            <p className="text-sm text-gray-400 mb-10">
+            <p className="text-sm text-gray-600 mb-10">
               Our simple process makes it easy to implement a digital Hall of
               Fame that celebrates achievements and inspires your community.
             </p>
@@ -30,7 +30,7 @@ const HowItWorksSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Consultation</h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600">
                     We'll discuss your needs, space, and vision to create a
                     custom digital recognition solution.
                   </p>
@@ -47,7 +47,7 @@ const HowItWorksSection = () => {
                   <h3 className="text-lg font-semibold mb-2">
                     Design & Implementation
                   </h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600">
                     Our team handles everything from hardware installation to
                     software setup, creating a seamless digital Hall of Fame
                     experience.
@@ -65,7 +65,7 @@ const HowItWorksSection = () => {
                   <h3 className="text-lg font-semibold mb-2">
                     Training & Support
                   </h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600">
                     We'll train your staff on our user-friendly content
                     management system and provide ongoing support to ensure your
                     success.

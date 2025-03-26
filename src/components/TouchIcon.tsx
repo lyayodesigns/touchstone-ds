@@ -40,18 +40,18 @@ const TouchIcon: React.FC = () => {
         className="absolute w-[200px] h-[200px] rounded-full transition-transform duration-300 ease-out"
         style={{
           background:
-            "radial-gradient(circle, rgba(0, 174, 239, 0.15) 0%, rgba(0, 174, 239, 0) 70%)",
-          boxShadow: "0 0 60px 30px rgba(0, 174, 239, 0.2)",
+            "radial-gradient(circle, rgba(108, 166, 254, 0.15) 0%, rgba(108, 166, 254, 0) 70%)",
+          boxShadow: "0 0 60px 30px rgba(108, 166, 254, 0.2)",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           {/* Main circle container */}
           <div className="relative w-[90px] h-[90px] flex items-center justify-center">
-            {/* Dark circle background */}
-            <div className="absolute w-full h-full rounded-full bg-black"></div>
+            {/* Background circle */}
+            <div className="absolute w-full h-full rounded-full bg-[#6CA6FE]"></div>
 
-            {/* Cyan border */}
-            <div className="absolute w-full h-full rounded-full border border-cyan-400"></div>
+            {/* Border */}
+            <div className="absolute w-full h-full rounded-full border border-[#6CA6FE]"></div>
 
             {/* Touch icon image */}
             <div className="relative w-[60%] h-[60%] flex items-center justify-center">
@@ -62,15 +62,15 @@ const TouchIcon: React.FC = () => {
                   className="w-full h-full object-contain"
                   style={{
                     filter:
-                      "brightness(0) saturate(100%) invert(79%) sepia(71%) saturate(4948%) hue-rotate(155deg) brightness(99%) contrast(101%)",
+                      "brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
                   }}
                 />
               </div>
             </div>
 
             {/* Ripple effects - smaller size */}
-            <div className="absolute w-[130%] h-[130%] rounded-full border border-cyan-400/50 animate-ripple"></div>
-            <div className="absolute w-[130%] h-[130%] rounded-full border border-cyan-400/30 animate-ripple-delayed"></div>
+            <div className="absolute w-[130%] h-[130%] rounded-full border border-[#6CA6FE]/50 animate-ripple"></div>
+            <div className="absolute w-[130%] h-[130%] rounded-full border border-[#6CA6FE]/30 animate-ripple-delayed"></div>
           </div>
         </div>
       </div>

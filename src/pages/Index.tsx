@@ -64,7 +64,7 @@ const Index = () => {
 
         <DigitalDisplayFeaturesSection />
 
-        <AthleticAchievementsContactSection />
+        {/* <AthleticAchievementsContactSection /> */}
 
         {/* <SoftwarePlatformsSection /> */}
         

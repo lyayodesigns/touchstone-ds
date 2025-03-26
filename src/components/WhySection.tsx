@@ -64,7 +64,7 @@ const WhySection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-8 sm:py-12 md:py-16 w-full bg-gradient-to-b from-background/90 to-background relative overflow-hidden"
+      className="py-8 sm:py-12 md:py-16 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>

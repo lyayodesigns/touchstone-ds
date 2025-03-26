@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 const PricingSection = () => {
   return (
     <section
-      className="py-8 sm:py-16 md:py-24 relative overflow-hidden bg-background"
+      className="py-8 sm:py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10"
       id="pricing"
     >
       {/* Animated star icon */}

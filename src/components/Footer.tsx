@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-6 sm:py-8 md:py-12 border-t border-white/10 bg-card">
+    <footer className="py-6 sm:py-8 md:py-12 border-t border-purple-500/20 bg-gradient-to-b from-background/90 to-background">
       {/* About Section */}
-      <div className="container px-2 md:px-6 mx-auto  border-white/10 pt-8">
+      <div className="container px-2 md:px-6 mx-auto pt-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Company Info - Takes more space */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-sm font-semibold text-gradient-purple-blue">
+              <span className="text-sm font-bold text-transparent bg-clip-text text-gradient-purple-blue">
                 TOUCHSTONE DIGITAL SOLUTIONS
               </span>
             </div>
-            <p className="text-sm text-gray-400 max-w-md mb-6">
+            <p className="text-sm text-foreground/70 max-w-md mb-6">
               Dynamic. Interactive. Unforgettable. - Creating digital Halls of
               Fame for schools, teams, and communities nationwide.
             </p>
             <div className="flex space-x-3 mb-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-gradient-purple-blue transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Twitter"
               >
                 <svg
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Instagram"
               >
                 <svg
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Dribbble"
               >
                 <svg
@@ -88,11 +88,11 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
-            <div className="space-y-3 text-sm text-gray-400">
+            <div className="space-y-3 text-sm text-foreground/70">
               <p>
                 <a
                   href="#demo"
-                  className="flex items-center gap-2 text-gradient-purple-blue hover:text-purple-300 transition-colors"
+                  className="flex items-center gap-2 text-transparent bg-clip-text text-gradient-purple-blue hover:text-purple-300 transition-colors"
                 >
                   <span>🔗</span> Schedule a Demo
                 </a>
@@ -102,14 +102,14 @@ const Footer: React.FC = () => {
 
           {/* Quick Links - Takes less space */}
           <div className="md:col-span-2">
-            <h4 className="text-sm font-semibold mb-4 text-white">
+            <h4 className="text-sm font-bold mb-4 text-foreground">
               Quick Links
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#products"
-                  className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-sm text-foreground/70 hover:text-purple-400 transition-colors"
                 >
                   About Us
                 </a>
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#solutions"
-                  className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-sm text-foreground/70 hover:text-purple-400 transition-colors"
                 >
                   Features
                 </a>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#testimonials"
-                  className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-sm text-foreground/70 hover:text-purple-400 transition-colors"
                 >
                   Contact Us
                 </a>
@@ -135,12 +135,12 @@ const Footer: React.FC = () => {
 
           {/* Legal - Takes less space */}
           <div className="md:col-span-2">
-            <h4 className="text-sm font-semibold mb-4 text-white">Legal</h4>
+            <h4 className="text-sm font-bold mb-4 text-foreground">Legal</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/privacy/"
-                  className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-sm text-foreground/70 hover:text-purple-400 transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/terms/"
-                  className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-sm text-foreground/70 hover:text-purple-400 transition-colors"
                 >
                   Terms & Conditions
                 </Link>
@@ -158,13 +158,13 @@ const Footer: React.FC = () => {
 
           {/* Connect section - Social and Contact */}
           <div className="md:col-span-3">
-            <h4 className="text-sm font-semibold mb-4 text-white">Connect</h4>
+            <h4 className="text-sm font-bold mb-4 text-foreground">Connect</h4>
             
             {/* Social icons in a row */}
             {/* <div className="flex space-x-3 mb-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Twitter"
               >
                 <svg
@@ -196,7 +196,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Instagram"
               >
                 <svg
@@ -214,7 +214,7 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-foreground/50 hover:text-purple-400 transition-colors"
                 aria-label="Dribbble"
               >
                 <svg
@@ -233,7 +233,7 @@ const Footer: React.FC = () => {
             </div> */}
             
             {/* Contact information as a list */}
-            <ul className="space-y-3 text-sm text-gray-400">
+            <ul className="space-y-3 text-sm text-foreground/70">
               <li className="flex items-start gap-2">
                 <span className="text-purple-400 flex-shrink-0">📍</span>
                 <span>Serving Schools, Teams, and Communities Nationwide</span>
@@ -250,8 +250,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-6 text-center">
-          <p className="text-xs text-gray-400">
+        <div className="border-t border-purple-500/20 mt-10 pt-6 text-center">
+          <p className="text-xs text-foreground/50">
             &copy; 2025 Touchstone Digital Solutions. All rights reserved.
           </p>
         </div>

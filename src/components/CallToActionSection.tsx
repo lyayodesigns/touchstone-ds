@@ -18,7 +18,7 @@ const CallToActionSection: React.FC = () => {
   }, []);
   return (
     <section
-      className="py-8 sm:py-12 md:py-16 lg:py-20 w-full bg-gradient-to-b from-background/90 to-background relative overflow-hidden"
+      className="py-8 sm:py-12 md:py-16 lg:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
       id="cta"
     >
       {/* Background elements */}

@@ -121,7 +121,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-8 sm:py-16 md:py-24 w-full bg-background relative overflow-hidden">
+    <section className="py-8 sm:py-16 md:py-24 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-grid opacity-30 -z-10"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-spotlight -z-10"></div>

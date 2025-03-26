@@ -31,7 +31,7 @@ const AthleticAchievementsContactSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-background/90 to-background relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
@@ -47,7 +47,7 @@ const AthleticAchievementsContactSection: React.FC = () => {
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div 
-          className={`max-w-4xl mx-auto bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 md:p-12 border border-foreground/10 shadow-glow-sm transition-all duration-1000 ${
+          className={`max-w-4xl mx-auto bg-gradient-to-br from-purple-500/20 via-indigo-500/15 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 sm:p-10 md:p-12 border border-foreground/10 shadow-glow-sm transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

@@ -81,7 +81,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-background to-background/90 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
@@ -99,12 +99,14 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight transition-all duration-700 ${
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center whitespace-nowrap transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">💻 Seamless, High-Performance</span>
-            <span className="block sm:inline mt-2 sm:mt-0">{" Digital Displays"}</span>
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+              💻 Seamless, High-Performance
+            </span>
+            <span className="text-foreground"> Digital Displays</span>
           </h2>
         </div>
         
