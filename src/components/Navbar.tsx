@@ -126,76 +126,72 @@ const Navbar: React.FC = () => {
         {/* Mobile menu overlay */}
         <div
           className={cn(
-            `fixed inset-0 bg-white/95 backdrop-blur-md z-50 md:hidden transition-all duration-500`, 
+            `fixed inset-0 bg-white z-50 md:hidden transition-all duration-300`, 
             isMobileMenuOpen 
-              ? "opacity-100 translate-y-0" 
-              : "opacity-0 translate-y-8 pointer-events-none"
+              ? "opacity-100 top-0" 
+              : "opacity-0 top-[-100%] pointer-events-none"
           )}
+          style={{ backgroundColor: '#ffffff' }}
         >
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-white"></div>
           
-          <button
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-6 right-6 p-2 text-black/70 hover:text-black transition-colors rounded-full hover:bg-gray-100"
-            aria-label="Close menu"
-          >
-            <X className="h-6 w-6" />
-          </button>
+          <div className="container px-4 pt-6 pb-4 flex justify-between items-center border-b border-gray-100 bg-white">
+            <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
+              <img
+                src="/logo/logo-light.png"
+                alt="Touchstone Digital Solutions"
+                className="h-8 w-auto"
+              />
+            </Link>
+            
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 text-black/70 hover:text-black transition-colors rounded-full hover:bg-gray-100"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
           
-          <div className="flex flex-col items-center justify-center h-full max-w-md mx-auto px-8">
-            <div className="w-full space-y-6">
-              {[
-                { name: "Home", href: "/" },
-                { name: "About Us", href: "/about/" },
-                { name: "Features", href: "#products" },
-                { name: "Contact", href: "#contact" }
-              ].map((item, index) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "block w-full py-3 text-lg font-medium border-b border-gray-100 transition-all hover:pl-2",
-                    item.href.startsWith('#') 
-                      ? "text-black/80 hover:text-black hover:text-gradient-purple-blue" 
-                      : isActive(item.href)
+          <div className="bg-white">
+            <div className="container px-4 py-8 bg-white">
+              <div className="w-full space-y-0">
+                {[
+                  { name: "Home", href: "/" },
+                  { name: "About Us", href: "/about/" },
+                  { name: "Features", href: "/features/" },
+                  { name: "Contact", href: "/contact/" },
+                  { name: "FAQ", href: "/faq/" }
+                ].map((item, index) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
+                      isActive(item.href)
                         ? "text-gradient-purple-blue"
-                        : "text-black/80 hover:text-black hover:text-gradient-purple-blue"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  style={{ 
-                    transitionDelay: `${index * 50}ms`,
-                    opacity: isMobileMenuOpen ? 1 : 0,
-                    transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)'
-                  }}
-                >
-                  {item.name}
-                </a>
-              ))}
-              
-              <div 
-                className="pt-8 w-full"
-                style={{ 
-                  transitionDelay: '250ms',
-                  opacity: isMobileMenuOpen ? 1 : 0,
-                  transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)'
-                }}
-              >
-                <button
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span>SCHEDULE A DEMO</span>
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </button>
+                        : "text-gray-800 hover:text-gradient-purple-blue"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+                
+                <div className="pt-8 w-full bg-white">
+                  <button
+                    className="w-full btn-gradient hover-lift font-medium rounded-full px-4 py-2 text-sm md:text-base whitespace-nowrap"
+                    onClick={() => {
+                      window.open('https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website', '_blank');
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    SCHEDULE A DEMO
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          
-          {/* Decorative elements */}
-          <div className="absolute bottom-8 left-8 text-gray-200 text-5xl font-bold opacity-20">TDS</div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 to-purple-500/10 rounded-full blur-2xl"></div>
         </div>
       </div>
     </div>
