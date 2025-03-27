@@ -111,7 +111,7 @@ export const TeamSection = () => {
                 whileHover={{ y: -5, boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.2)" }}
               >
                 <img 
-                  src="/public/About Us.avif" 
+                  src="/About Us.avif" 
                   alt="Touchstone team" 
                   className="w-full h-auto object-cover"
                   onError={(e) => {

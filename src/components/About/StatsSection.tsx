@@ -68,7 +68,7 @@ export const AboutStatsSection = () => {
           >
             <div className="relative">
               <img 
-                src="/public/hero-banner.jpg" 
+                src="/hero-banner.jpg" 
                 alt="Our Story" 
                 className="w-full h-48 object-cover"
               />

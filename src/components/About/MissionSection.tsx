@@ -76,7 +76,7 @@ export const AboutMissionSection = () => {
         >
           <div className="relative">
             <img 
-              src="/public/About Us.avif" 
+              src="/About Us.avif" 
               alt="Our Story" 
               className="w-full h-48 object-cover"
             />
@@ -343,7 +343,7 @@ export const AboutMissionSection = () => {
           whileHover={{ y: -5, boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.2)" }}
         >
           <img 
-            src="/public/About Us.avif" 
+            src="/About Us.avif" 
             alt="Touchstone team" 
             className="w-full h-auto object-cover"
           />
