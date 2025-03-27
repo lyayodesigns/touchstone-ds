@@ -69,20 +69,35 @@ const Navbar: React.FC = () => {
           </a>
          
           <a
-            href="#products"
-            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+            href="/features/"
+            className={cn(
+              "text-sm lg:text-base transition-colors whitespace-nowrap",
+              isActive('/features/') 
+                ? "text-gradient-purple-blue font-medium" 
+                : "hover:text-gradient-purple-blue"
+            )}
           >
             Features
           </a>
           <a
             href="/contact/"
-            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+            className={cn(
+              "text-sm lg:text-base transition-colors whitespace-nowrap",
+              isActive('/contact/') 
+                ? "text-gradient-purple-blue font-medium" 
+                : "hover:text-gradient-purple-blue"
+            )}
           >
             Contact
           </a>
           <a
             href="/faq/"
-            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+            className={cn(
+              "text-sm lg:text-base transition-colors whitespace-nowrap",
+              isActive('/faq/') 
+                ? "text-gradient-purple-blue font-medium" 
+                : "hover:text-gradient-purple-blue"
+            )}
           >
             FAQ
           </a>
