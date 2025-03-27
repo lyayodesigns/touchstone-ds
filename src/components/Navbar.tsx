@@ -22,8 +22,8 @@ const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? `py-3 bg-glass border-b border-white/10 shadow-sm`
-          : "py-5 bg-transparent"
+          ? `py-3 bg-white border-b border-gray-200 shadow-sm`
+          : "py-5 bg-white/80 backdrop-blur-sm"
       )}
     >
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
         {/* Mobile menu overlay */}
         <div
           className={cn(
-            `fixed inset-0 bg-background/95 z-50 md:hidden transition-transform duration-300`, 
+            `fixed inset-0 bg-white z-50 md:hidden transition-transform duration-300`, 
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >

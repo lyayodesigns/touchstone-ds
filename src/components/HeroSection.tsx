@@ -27,15 +27,15 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[80svh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-32">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-grid opacity-30 -z-10"></div>
-      <div
-        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vmin] h-[90vmin] max-w-[900px] max-h-[900px] bg-gradient-spotlight -z-10 transition-all duration-700 ${
-          isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-        }`}
-      ></div>
-
+    <section 
+      className="relative min-h-[80svh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-32"
+      style={{
+        backgroundImage: "url('/hero-bg-1.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
       {/* Border lines - only in upper portion */}
       <div className="absolute top-16 left-8 sm:left-12 w-[1px] h-32 sm:h-48 bg-gradient-to-b from-transparent via-foreground/40 to-transparent"></div>
       <div className="absolute top-24 sm:top-28 left-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-foreground/40 to-transparent"></div>
