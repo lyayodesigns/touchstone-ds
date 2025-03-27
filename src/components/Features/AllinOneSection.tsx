@@ -25,7 +25,7 @@ const AllinOneSection = () => {
   };
 
   return (
-    <section className="py-6 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/5 via-purple-500/3 to-blue-500/5 -z-10"></div>
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
@@ -52,8 +52,8 @@ const AllinOneSection = () => {
       <div className="absolute top-[15%] left-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
       <div className="absolute bottom-[15%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
       
-      <Container>
-        <div className="max-w-6xl mx-auto">
+      <Container className="pt-0 mt-0">
+        <div className="max-w-6xl mx-auto pt-0 mt-0">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left side content */}
             <motion.div 

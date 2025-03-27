@@ -9,9 +9,8 @@ const FeaturesHeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground ">
       <section 
-        className="relative pt-6 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-2 sm:pt-8 sm:pb-6 md:pt-16 md:pb-12"
+        className="relative pt-6 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -124,7 +123,6 @@ const FeaturesHeroSection = () => {
           </div>
         </Container>
       </section>
-    </div>
   );
 };
 

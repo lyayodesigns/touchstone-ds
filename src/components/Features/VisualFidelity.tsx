@@ -252,7 +252,7 @@ const VisualFidelity = () => {
   const filteredSections = allSections.filter(section => section.category === activeTab);
 
   return (
-    <section className="py-12 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10"></div>
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>

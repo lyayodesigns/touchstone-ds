@@ -106,6 +106,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4">
           <button
             className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
+            onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website', '_blank')}
           >
             SCHEDULE A DEMO
           </button>
