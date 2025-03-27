@@ -5,30 +5,22 @@ import { Container } from '../ui/container';
 export const WhatMakeUsDifferent = () => {
   return (
     <section className="py-24 relative overflow-hidden">
-    {/* Creative background with animated shapes */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 opacity-70"></div>
+    {/* Background with subtle gradient similar to AlumniRecognitionSection */}
+    <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10"></div>
     
-    {/* Animated background shapes */}
-    <div className="absolute inset-0 overflow-hidden">
-      <motion.div 
-        className="absolute top-0 right-[15%] w-64 h-64 rounded-full bg-blue-200 mix-blend-multiply opacity-20"
-        animate={{ 
-          y: [0, 50, 0],
-          x: [0, -30, 0],
-          scale: [1, 1.1, 1]
-        }}
-        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-      />
-      <motion.div 
-        className="absolute bottom-[10%] left-[5%] w-80 h-80 rounded-full bg-purple-200 mix-blend-multiply opacity-20"
-        animate={{ 
-          y: [0, -40, 0],
-          x: [0, 40, 0],
-          scale: [1, 1.2, 1]
-        }}
-        transition={{ duration: 25, repeat: Infinity, repeatType: "reverse" }}
-      />
-    </div>
+    {/* Background grid pattern */}
+    <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
+    
+    {/* Decorative elements */}
+    <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
+    <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"></div>
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] max-w-[800px] max-h-[800px] bg-gradient-spotlight opacity-30 -z-10"></div>
+    
+    {/* Plus symbols as decorative elements */}
+    <div className="absolute top-[15%] left-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+    <div className="absolute bottom-[15%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+    <div className="absolute top-[40%] right-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+    <div className="absolute bottom-[40%] left-[15%] text-foreground/10 text-2xl sm:text-3xl">+</div>
     
     <Container className="relative z-10">
       <div className="max-w-6xl mx-auto">
@@ -92,7 +84,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:mr-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:mr-8 h-full hover:bg-gradient-to-br hover:from-blue-500/5 hover:to-blue-500/0 hover:border-blue-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-blue-500 to-blue-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">
@@ -135,7 +127,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:ml-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:ml-8 h-full hover:bg-gradient-to-br hover:from-purple-500/5 hover:to-purple-500/0 hover:border-purple-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-purple-500 to-purple-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">
@@ -181,7 +173,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:mr-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:mr-8 h-full hover:bg-gradient-to-br hover:from-blue-500/5 hover:to-blue-500/0 hover:border-blue-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-blue-500 to-blue-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">
@@ -224,7 +216,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:ml-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:ml-8 h-full hover:bg-gradient-to-br hover:from-purple-500/5 hover:to-purple-500/0 hover:border-purple-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-purple-500 to-purple-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">
@@ -270,7 +262,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.9 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:mr-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:mr-8 h-full hover:bg-gradient-to-br hover:from-blue-500/5 hover:to-blue-500/0 hover:border-blue-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-blue-500 to-blue-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">
@@ -313,7 +305,7 @@ export const WhatMakeUsDifferent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 md:ml-8 h-full">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-foreground/10 md:ml-8 h-full hover:bg-gradient-to-br hover:from-purple-500/5 hover:to-purple-500/0 hover:border-purple-500/20 transition-all duration-300">
                   <div className="h-3 bg-gradient-to-r from-purple-500 to-purple-600"></div>
                   <div className="p-8">
                     <div className="flex items-center mb-6">

@@ -33,6 +33,7 @@ export const AboutStatsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          className="mb-12"
         >
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -53,15 +54,6 @@ export const AboutStatsSection = () => {
               transition={{ duration: 1, delay: 0.3 }}
             />
           </motion.div>
-          <motion.p
-            className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg text-center mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            Key facts about Touchstone Digital Solutions
-          </motion.p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -76,7 +68,7 @@ export const AboutStatsSection = () => {
           >
             <div className="relative">
               <img 
-                src="/public/About Us.avif" 
+                src="/public/hero-banner.jpg" 
                 alt="Our Story" 
                 className="w-full h-48 object-cover"
               />
@@ -138,7 +130,7 @@ export const AboutStatsSection = () => {
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
               <div className="h-1 w-12 bg-blue-500 rounded-full mb-4"></div>
               <p className="text-gray-700">
-                To help high school and college administrators better recognize student, alumni, and community achievements
+              We create custom digital experiences that celebrate the legacies of students, alumni, and communities, going all in to honor each school's unique story.
               </p>
             </motion.div>
           </motion.div>
@@ -239,7 +231,7 @@ export const AboutStatsSection = () => {
 
           {/* Built With Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 relative overflow-hidden"
+            className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 relative overflow-hidden flex flex-col items-center justify-center text-center"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -256,10 +248,10 @@ export const AboutStatsSection = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative z-10"
+              className="relative z-10 flex flex-col items-center"
             >
               <h3 className="text-2xl font-bold mb-4">Built With</h3>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 <motion.span 
                   className="text-blue-600 text-5xl"
                   animate={{ 
@@ -328,40 +320,6 @@ export const AboutStatsSection = () => {
             </motion.p>
           </motion.div>
         </div>
-
-        {/* Team Photo */}
-        <motion.div 
-          className="mt-12"
-          id="team"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
-        >
-          <motion.div 
-            className="bg-white rounded-xl overflow-hidden shadow-xl border border-gray-100 relative"
-            whileHover={{ y: -5, boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.2)" }}
-          >
-            <img 
-              src="/public/About Us.avif" 
-              alt="Touchstone team" 
-              className="w-full h-auto object-cover"
-            />
-            <motion.div 
-              className="p-6 bg-gradient-to-r from-blue-50 to-purple-50"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h3 className="text-xl font-bold text-center mb-2">Meet Our Team</h3>
-              <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 mx-auto"></div>
-              <p className="text-center text-gray-700">
-                Our team at a recent industry conference, showcasing our latest digital recognition solutions
-              </p>
-            </motion.div>
-          </motion.div>
-        </motion.div>
       </Container>
     </section>
   );

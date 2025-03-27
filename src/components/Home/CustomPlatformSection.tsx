@@ -44,8 +44,11 @@ const CustomPlatformSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-foreground">
-            A Fully Custom Platform, Designed Just for You
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+              A Fully Custom Platform,
+            </span>
+            <span className="text-foreground"> Designed Just for You</span>
           </h2>
         </div>
 

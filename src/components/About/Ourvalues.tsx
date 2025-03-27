@@ -64,7 +64,7 @@ export const OurValues = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          The principles that guide everything we do
+          At Touchstone Digital Solutions, our business is rooted in core values that have guided us from the start:
         </motion.p>
       </motion.div>
       
@@ -271,54 +271,6 @@ export const OurValues = () => {
             </div>
           </motion.div>
         </div>
-        
-        {/* Values Statement */}
-        <motion.div
-          className="mt-16 bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-2xl shadow-xl overflow-hidden text-foreground relative"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          whileHover={{ 
-            boxShadow: "0 25px 50px -12px rgba(79, 70, 229, 0.4)",
-            scale: 1.02,
-            transition: { duration: 0.3 }
-          }}
-        >
-          <motion.div 
-            className="absolute top-0 left-0 right-0 h-full w-full bg-gradient-to-r from-blue-600/10 to-purple-600/10"
-            animate={{ 
-              x: [0, 100, 0],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-          />
-          
-          <div className="relative z-10 p-8 md:p-10">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-                <motion.div 
-                  className="w-20 h-20 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </motion.div>
-              </div>
-              <div className="md:w-3/4 md:pl-8 text-center md:text-left">
-                <blockquote className="text-lg md:text-xl font-light">
-                  "Our values aren't just words on a page—they're the foundation of every interaction, every design decision, and every relationship we build. They guide us as we create digital legacies that honor achievements and inspire future generations."
-                </blockquote>
-                <div className="mt-4 flex items-center justify-center md:justify-start">
-                  <div className="h-px w-8 bg-foreground/50 mr-3"></div>
-                  <p className="font-medium">The Touchstone Team</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </Container>
   </section>

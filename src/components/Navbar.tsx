@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
 
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
           <a
-            href="/home/"
+            href="/"
             className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
             Home
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-white/80 hover:text-white"
+            className="md:hidden p-2 text-black hover:text-black/80"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -84,46 +84,69 @@ const Navbar: React.FC = () => {
         {/* Mobile menu overlay */}
         <div
           className={cn(
-            `fixed inset-0 bg-white z-50 md:hidden transition-transform duration-300`, 
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            `fixed inset-0 bg-white/95 backdrop-blur-md z-50 md:hidden transition-all duration-500`, 
+            isMobileMenuOpen 
+              ? "opacity-100 translate-y-0" 
+              : "opacity-0 translate-y-8 pointer-events-none"
           )}
         >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+          
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors"
+            className="absolute top-6 right-6 p-2 text-black/70 hover:text-black transition-colors rounded-full hover:bg-gray-100"
             aria-label="Close menu"
           >
             <X className="h-6 w-6" />
           </button>
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            <a
-              href="/about/"
-              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About Us
-            </a>
-            <a
-              href="#products"
-              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Features
-            </a>
-            <a
-              href="#contact"
-              className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
-            </a>
-            <button
-              className="btn-gradient hover-lift font-medium rounded-full px-6 py-3 text-lg"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              SCHEDULE A DEMO
-            </button>
+          
+          <div className="flex flex-col items-center justify-center h-full max-w-md mx-auto px-8">
+            <div className="w-full space-y-6">
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about/" },
+                { name: "Features", href: "#products" },
+                { name: "Contact", href: "#contact" }
+              ].map((item, index) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block w-full py-3 text-lg font-medium text-black/80 hover:text-black border-b border-gray-100 transition-all hover:pl-2 hover:text-gradient-purple-blue"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  style={{ 
+                    transitionDelay: `${index * 50}ms`,
+                    opacity: isMobileMenuOpen ? 1 : 0,
+                    transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)'
+                  }}
+                >
+                  {item.name}
+                </a>
+              ))}
+              
+              <div 
+                className="pt-8 w-full"
+                style={{ 
+                  transitionDelay: '250ms',
+                  opacity: isMobileMenuOpen ? 1 : 0,
+                  transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)'
+                }}
+              >
+                <button
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span>SCHEDULE A DEMO</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute bottom-8 left-8 text-gray-200 text-5xl font-bold opacity-20">TDS</div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-blue-500/10 to-purple-500/10 rounded-full blur-2xl"></div>
         </div>
       </div>
     </div>
