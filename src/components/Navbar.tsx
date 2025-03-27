@@ -37,7 +37,13 @@ const Navbar: React.FC = () => {
 
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
           <a
-            href="#about"
+            href="/home/"
+            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+          >
+            Home
+          </a>
+          <a
+            href="/about/"
             className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
             About Us
@@ -91,7 +97,7 @@ const Navbar: React.FC = () => {
           </button>
           <div className="flex flex-col items-center justify-center h-full space-y-8">
             <a
-              href="#about"
+              href="/about/"
               className="text-xl font-medium text-white/80 hover:text-white transition-colors hover:text-gradient-purple-blue"
               onClick={() => setIsMobileMenuOpen(false)}
             >
