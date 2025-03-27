@@ -33,7 +33,7 @@ const AwardsSlider: React.FC = () => {
           className="flex animate-marquee-slow whitespace-nowrap will-change-transform backface-visibility-hidden -webkit-backface-visibility-hidden transform-gpu group"
           style={{ touchAction: "pan-y pinch-zoom" }}
         >
-          <style jsx>{`
+          <style>{`
             .animate-marquee-slow {
               animation: marquee 30s linear infinite;
             }

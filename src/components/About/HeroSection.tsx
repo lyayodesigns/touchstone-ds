@@ -4,11 +4,18 @@ import { Container } from '../ui/container';
 
 export const AboutHeroSection = () => {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section 
+    className="relative min-h-[80svh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-32"
+    style={{
+        backgroundImage: "url('/hero-bg-1.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}>
       {/* Background with animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-blue-50 to-purple-50 opacity-50">
+      <div className="absolute inset-0  ">
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"
+          className="absolute inset-0 "
           animate={{ 
             opacity: [0.5, 0.7, 0.5],
             scale: [1, 1.05, 1]
@@ -18,6 +25,7 @@ export const AboutHeroSection = () => {
             repeat: Infinity,
             repeatType: "reverse" 
           }}
+          
         />
       </div>
       
