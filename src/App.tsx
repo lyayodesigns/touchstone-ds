@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
-import Features from "./components/Features/Features";
+import Features from "./pages/Features";
 
 const queryClient = new QueryClient();
 

@@ -25,7 +25,7 @@ const AllinOneSection = () => {
   };
 
   return (
-    <section className="py-8 relative overflow-hidden">
+    <section className="py-6 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/5 via-purple-500/3 to-blue-500/5 -z-10"></div>
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>

@@ -56,8 +56,8 @@ const FullCustomization = () => {
   return (
     <section className="py-16 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/3 to-indigo-500/5 -z-10"></div>
-      <div className="absolute inset-0 bg-grid opacity-10 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10"></div>
+      <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
       
       {/* Decorative elements */}
       <motion.div 
