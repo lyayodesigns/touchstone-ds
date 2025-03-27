@@ -57,7 +57,7 @@ export const AboutStatsSection = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Our Story Card with Video */}
+          {/* Our Story Card */}
           <motion.div 
             className="bg-[#0e2b4d] rounded-xl overflow-hidden shadow-xl text-white relative border border-blue-900"
             whileHover={{ y: -8, scale: 1.02 }}
@@ -72,26 +72,6 @@ export const AboutStatsSection = () => {
                 alt="Our Story" 
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 flex items-center justify-center">
-                <motion.button 
-                  className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center z-10"
-                  whileHover={{ scale: 1.15, backgroundColor: "#4f46e5" }}
-                  whileTap={{ scale: 0.95 }}
-                  animate={{ 
-                    boxShadow: ["0px 0px 0px 0px rgba(59, 130, 246, 0.5)", "0px 0px 0px 12px rgba(59, 130, 246, 0)", "0px 0px 0px 0px rgba(59, 130, 246, 0.5)"]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop"
-                  }}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </motion.button>
-              </div>
             </div>
             <motion.div 
               className="p-6"
@@ -102,13 +82,12 @@ export const AboutStatsSection = () => {
             >
               <h3 className="text-2xl font-bold mb-2">Our Story</h3>
               <div className="h-1 w-12 bg-blue-500 rounded-full mb-3"></div>
-              <p className="text-blue-100/80 text-sm">Click to watch our journey</p>
             </motion.div>
           </motion.div>
 
           {/* Our Mission Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 relative overflow-hidden"
+            className="bg-white rounded-xl shadow-xl p-6 border-2 border-blue-300 relative overflow-hidden flex flex-col items-center justify-center h-full"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,10 +104,10 @@ export const AboutStatsSection = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative z-10"
+              className="relative z-10 text-center w-full"
             >
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
-              <div className="h-1 w-12 bg-blue-500 rounded-full mb-4"></div>
+              <div className="h-1 w-12 bg-blue-500 rounded-full mb-4 mx-auto"></div>
               <p className="text-gray-700">
               We create custom digital experiences that celebrate the legacies of students, alumni, and communities, going all in to honor each school's unique story.
               </p>
@@ -137,7 +116,7 @@ export const AboutStatsSection = () => {
 
           {/* Years Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 relative overflow-hidden"
+            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border-2 border-purple-300 relative overflow-hidden"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +140,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              7
+              67
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -177,7 +156,7 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Years of Profitable Operations
+              The combined experience in years of our UI/UX designers have in the gaming industry, bringing unmatched expertise to every display.
             </motion.p>
           </motion.div>
         </div>
@@ -185,7 +164,7 @@ export const AboutStatsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           {/* Employees Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 relative overflow-hidden"
+            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border-2 border-purple-300 relative overflow-hidden"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +188,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              30+
+              2
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -225,13 +204,13 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              Driven Employees
+              The minimum number of hands it takes for our team to draw a hand-designed layout, meticulously crafted for your school.
             </motion.p>
           </motion.div>
 
           {/* Built With Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 relative overflow-hidden flex flex-col items-center justify-center text-center"
+            className="bg-white rounded-xl shadow-xl p-6 border-2 border-blue-300 relative overflow-hidden flex flex-col items-center justify-center"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -250,33 +229,43 @@ export const AboutStatsSection = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="relative z-10 flex flex-col items-center"
             >
-              <h3 className="text-2xl font-bold mb-4">Built With</h3>
-              <div className="flex items-center justify-center">
-                <motion.span 
-                  className="text-blue-600 text-5xl"
-                  animate={{ 
-                    scale: [1, 1.3, 1],
-                    rotate: [0, 5, 0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse"
-                  }}
-                >
-                  ❤
-                </motion.span>
-                <span className="text-2xl font-bold mx-2">in</span>
-              </div>
-              <h3 className="text-2xl font-bold">Boston</h3>
-              <div className="h-1 w-12 bg-blue-500 rounded-full my-3"></div>
-              <p className="text-gray-700">Fully Bootstrapped & Founder Owned</p>
+              <h3 className="text-2xl font-bold mb-4"></h3>
+              <motion.h2 
+                className="text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+                initial={{ scale: 0.5, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  duration: 0.7, 
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 100
+                }}
+              >
+                10
+              </motion.h2>
+              <motion.div 
+                className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
+                initial={{ width: 0 }}
+                whileInView={{ width: 48 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              />
+              <motion.p 
+                className="text-gray-700 relative z-10"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                The average number of cups of coffee brewed by our team members daily, fueling the creativity and passion that go into every custom display
+              </motion.p>
             </motion.div>
           </motion.div>
 
           {/* Clients Card */}
           <motion.div 
-            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border border-gray-100 relative overflow-hidden"
+            className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center justify-center text-center border-2 border-purple-300 relative overflow-hidden"
             whileHover={{ y: -8, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -300,7 +289,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              700+
+              ∞
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -316,7 +305,7 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              Clients Across the Country
+              The number of possibilities to create a custom build-out, ensuring each project is as unique as the school it represents
             </motion.p>
           </motion.div>
         </div>

@@ -34,19 +34,19 @@ const TouchIcon: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full flex items-center justify-center pointer-events-none pt-12 pb-20 my-4">
+    <div className="relative w-full flex items-center justify-center pointer-events-none pt-12 pb-16 sm:pt-12 sm:pb-20 my-6 sm:my-4">
       <div
         ref={iconRef}
-        className="absolute w-[200px] h-[200px] rounded-full transition-transform duration-300 ease-out"
+        className="absolute w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] rounded-full transition-transform duration-300 ease-out"
         style={{
           background:
             "radial-gradient(circle, rgba(108, 166, 254, 0.15) 0%, rgba(108, 166, 254, 0) 70%)",
-          boxShadow: "0 0 60px 30px rgba(108, 166, 254, 0.2)",
+          boxShadow: "0 0 40px 20px rgba(108, 166, 254, 0.2) sm:0 0 60px 30px rgba(108, 166, 254, 0.2)",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           {/* Main circle container */}
-          <div className="relative w-[90px] h-[90px] flex items-center justify-center">
+          <div className="relative w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] flex items-center justify-center">
             {/* Background circle */}
             <div className="absolute w-full h-full rounded-full bg-[#6CA6FE]"></div>
 

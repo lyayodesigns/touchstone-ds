@@ -101,9 +101,9 @@ export const WhoWeAreSection = () => {
               {/* Feature highlights */}
               <div className="grid grid-cols-3 gap-3 mt-12">
                 {[
-                  { title: "Customized", icon: "🎨", delay: 1.0 },
-                  { title: "Innovative", icon: "💡", delay: 1.1 },
-                  { title: "Excellence", icon: "🏆", delay: 1.2 }
+                  { title: "Custom", icon: "🎨", delay: 1.0 },
+                  { title: "Hands-On", icon: "✋", delay: 1.1 },
+                  { title: "Collaborative", icon: "🤝", delay: 1.2 }
                 ].map((item, index) => (
                   <motion.div
                     key={index}

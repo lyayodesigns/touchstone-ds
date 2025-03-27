@@ -99,14 +99,14 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center whitespace-nowrap transition-all duration-700 ${
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">
               💻 Seamless, High-Performance
             </span>
-            <span className="text-foreground"> Digital Displays</span>
+            <span className="text-foreground block sm:inline"> Digital Displays</span>
           </h2>
         </div>
         
