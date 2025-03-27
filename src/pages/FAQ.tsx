@@ -322,7 +322,7 @@ const FAQ = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-16 relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700">
+        <section className="py-16 relative overflow-hidden" style={{ backgroundColor: '#3B82F6' }}>
           {/* Background with animated gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700"></div>
           
