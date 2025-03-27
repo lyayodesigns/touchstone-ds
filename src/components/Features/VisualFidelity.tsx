@@ -81,6 +81,11 @@ const VisualFidelity = () => {
       description: ""
     },
     { 
+      name: "Engaging Media", 
+      icon: <Film className="h-5 w-5" />,
+      description: ""
+    },
+    { 
       name: "Integration & Access", 
       icon: <Settings className="h-5 w-5" />,
       description: ""
@@ -141,7 +146,7 @@ const VisualFidelity = () => {
     {
       title: "Engaging Media & Interactive Features",
       description: "Bring content to life with professional enhancements.",
-      category: 1,
+      category: 2,
       features: [
         {
           icon: <Film className="h-5 w-5" />,
@@ -173,7 +178,7 @@ const VisualFidelity = () => {
     {
       title: "Seamless Integration & Effortless Access",
       description: "Expand your platform's capabilities with built-in integrations.",
-      category: 2,
+      category: 3,
       features: [
         {
           icon: <Link className="h-5 w-5" />,
@@ -195,7 +200,7 @@ const VisualFidelity = () => {
     {
       title: "Ever-Evolving Updates & Data Security",
       description: "Stay ahead with a secure and continuously updated system.",
-      category: 3,
+      category: 4,
       features: [
         {
           icon: <Cloud className="h-5 w-5" />,
@@ -222,7 +227,7 @@ const VisualFidelity = () => {
     {
       title: "Flexible Pricing & Unmatched Support",
       description: "We provide tailored pricing and ongoing assistance to ensure a worry-free experience.",
-      category: 4,
+      category: 5,
       features: [
         {
           icon: <DollarSign className="h-5 w-5" />,
@@ -306,22 +311,31 @@ const VisualFidelity = () => {
           </motion.div>
           
           {/* Category tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-2 mb-6">
+          <div className="mb-8 py-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 max-w-5xl mx-auto mb-8">
               {categories.map((category, index) => (
                 <motion.button
                   key={index}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
+                  className={`flex flex-col items-center justify-center gap-2 px-3 py-6 rounded-xl border transition-all duration-300 min-h-[120px] ${
                     activeTab === index 
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent' 
-                      : 'bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border-white/10 hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10'
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent shadow-glow-sm' 
+                      : 'bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10'
                   }`}
                   onClick={() => setActiveTab(index)}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.03, y: -3 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  {category.icon}
-                  <span>{category.name}</span>
+                  <div className={`p-2 rounded-full ${activeTab === index ? 'bg-white/20' : 'bg-gradient-to-br from-purple-600/10 to-blue-600/10'}`}>
+                    {category.icon}
+                  </div>
+                  <span className="text-sm font-medium text-center">{category.name}</span>
+                  {activeTab === index && (
+                    <motion.div 
+                      className="h-1 w-8 bg-white rounded-full mt-1"
+                      layoutId="activeTabIndicator"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
                 </motion.button>
               ))}
             </div>

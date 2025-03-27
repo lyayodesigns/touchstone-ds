@@ -228,6 +228,21 @@ const FullCustomization = () => {
                   transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
                 />
               </div>
+              
+              {/* Closing statement */}
+              <motion.div 
+                className="mt-8 bg-gradient-to-br from-purple-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-5"
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.02, 
+                  boxShadow: "0 0 20px rgba(139, 92, 246, 0.2)",
+                  transition: { duration: 0.3 } 
+                }}
+              >
+                <p className="text-foreground/80 italic">
+                  From Hall of Fame layouts to Record Boards and Donor Walls, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
+                </p>
+              </motion.div>
             </motion.div>
             
             {/* Right side - Features */}
@@ -264,21 +279,6 @@ const FullCustomization = () => {
                   </motion.div>
                 ))}
               </div>
-              
-              {/* Closing statement */}
-              <motion.div 
-                className="mt-8 bg-gradient-to-br from-purple-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-5"
-                variants={itemVariants}
-                whileHover={{ 
-                  scale: 1.02, 
-                  boxShadow: "0 0 20px rgba(139, 92, 246, 0.2)",
-                  transition: { duration: 0.3 } 
-                }}
-              >
-                <p className="text-foreground/80 italic">
-                  From Hall of Fame layouts to Record Boards and Donor Walls, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
-                </p>
-              </motion.div>
             </motion.div>
           </div>
           

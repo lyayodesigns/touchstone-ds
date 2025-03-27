@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 import { Flame, Paintbrush, Search } from 'lucide-react';
+
 const BuiltByGaming = () => {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -127,29 +128,42 @@ const BuiltByGaming = () => {
             {features.map((feature, index) => (
               <motion.div 
                 key={index}
-                className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 h-full group hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300"
+                className="bg-white rounded-xl shadow-xl p-6 flex-1 h-full border-2 border-purple-300 relative overflow-hidden group hover:bg-gradient-to-br hover:from-purple-600/5 hover:to-blue-600/5 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300 cursor-pointer"
                 variants={itemVariants}
                 whileHover={{ 
-                  scale: 1.02, 
-                  boxShadow: "0 0 20px rgba(139, 92, 246, 0.2)",
-                  transition: { duration: 0.3 } 
+                  y: -8, 
+                  boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)",
+                  transition: { duration: 0.3, type: "spring", stiffness: 100 } 
                 }}
+                whileTap={{ scale: 0.98, y: 2 }}
               >
-                <div className="flex flex-col h-full">
+                <motion.div
+                  className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-purple-100 opacity-50"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 5, repeat: Infinity }}
+                />
+                <div className="flex flex-col h-full relative z-10">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="relative flex-shrink-0">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
-                      <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-3 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
+                      <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-3 rounded-full text-white z-10 group-hover:shadow-glow-sm group-hover:text-purple-300 transition-all duration-300">
                         {feature.icon}
                       </div>
                     </div>
-                    <h3 className="font-semibold text-xl text-foreground">
+                    <h3 className="font-semibold text-xl text-gray-800">
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-foreground/70 flex-grow">
+                  <p className="text-gray-700 flex-grow">
                     {feature.description}
                   </p>
+                  <motion.div 
+                    className="h-1 w-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-4 mx-auto"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: 48 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  />
                 </div>
               </motion.div>
             ))}
