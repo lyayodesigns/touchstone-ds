@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { colors } from "@/styles/colors";
@@ -7,6 +7,15 @@ import { colors } from "@/styles/colors";
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Check if the current path matches the link
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/' || location.pathname === '/home/';
+    }
+    return location.pathname.startsWith(path);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +38,7 @@ const Navbar: React.FC = () => {
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
           <img
-            src="/logo/logo-dark.png"
+            src="/logo/logo-light.png"
             alt="Touchstone Digital Solutions"
             className="h-8 lg:h-10 w-auto"
           />
@@ -38,16 +47,27 @@ const Navbar: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
           <a
             href="/"
-            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+            className={cn(
+              "text-sm lg:text-base transition-colors whitespace-nowrap",
+              isActive('/') 
+                ? "text-gradient-purple-blue font-medium" 
+                : "hover:text-gradient-purple-blue"
+            )}
           >
             Home
           </a>
           <a
             href="/about/"
-            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+            className={cn(
+              "text-sm lg:text-base transition-colors whitespace-nowrap",
+              isActive('/about/') 
+                ? "text-gradient-purple-blue font-medium" 
+                : "hover:text-gradient-purple-blue"
+            )}
           >
             About Us
           </a>
+         
           <a
             href="#products"
             className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
@@ -55,10 +75,16 @@ const Navbar: React.FC = () => {
             Features
           </a>
           <a
-            href="#contact"
+            href="/contact/"
             className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
           >
             Contact
+          </a>
+          <a
+            href="/faq/"
+            className="text-sm lg:text-base transition-colors whitespace-nowrap hover:text-gradient-purple-blue"
+          >
+            FAQ
           </a>
         </nav>
 
@@ -111,7 +137,14 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block w-full py-3 text-lg font-medium text-black/80 hover:text-black border-b border-gray-100 transition-all hover:pl-2 hover:text-gradient-purple-blue"
+                  className={cn(
+                    "block w-full py-3 text-lg font-medium border-b border-gray-100 transition-all hover:pl-2",
+                    item.href.startsWith('#') 
+                      ? "text-black/80 hover:text-black hover:text-gradient-purple-blue" 
+                      : isActive(item.href)
+                        ? "text-gradient-purple-blue"
+                        : "text-black/80 hover:text-black hover:text-gradient-purple-blue"
+                  )}
                   onClick={() => setIsMobileMenuOpen(false)}
                   style={{ 
                     transitionDelay: `${index * 50}ms`,
