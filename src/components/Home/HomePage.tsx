@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import HeroSection from '@/components/HeroSection';
-import DigitalHallOfFameSection from '@/components/DigitalHallOfFameSection';
-import InteractiveDisplaysSection from '@/components/InteractiveDisplaysSection';
-import WhySection from '@/components/WhySection';
-import CallToActionSection from '@/components/CallToActionSection';
-import HowItWorksSection from '@/components/HowItWorksSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import FAQSection from '@/components/FAQSection';
-import PhotoCarouselSection from '@/components/PhotoCarouselSection';
-import CustomPlatformSection from '@/components/CustomPlatformSection';
-import AlumniRecognitionSection from '@/components/AlumniRecognitionSection';
-import OnboardingSection from '@/components/OnboardingSection';
-import DigitalDisplayFeaturesSection from '@/components/DigitalDisplayFeaturesSection';
+import HeroSection from '@/components/Home/HeroSection';
+import DigitalHallOfFameSection from '@/components/Home/DigitalHallOfFameSection';
+import InteractiveDisplaysSection from '@/components/Home/InteractiveDisplaysSection';
+import WhySection from '@/components/Home/WhySection';
+import CallToActionSection from '@/components/Home/CallToActionSection';
+import HowItWorksSection from '@/components/Home/HowItWorksSection';
+import TestimonialsSection from '@/components/Home/TestimonialsSection';
+import FAQSection from '@/components/Home/FAQSection';
+import PhotoCarouselSection from '@/components/Home/PhotoCarouselSection';
+import CustomPlatformSection from '@/components/Home/CustomPlatformSection';
+import AlumniRecognitionSection from '@/components/Home/AlumniRecognitionSection';
+import OnboardingSection from '@/components/Home/OnboardingSection';
+import DigitalDisplayFeaturesSection from '@/components/Home/DigitalDisplayFeaturesSection';
 
 const HomePage = () => {
   // Add smooth scroll effect
@@ -53,13 +53,7 @@ const HomePage = () => {
 
       <DigitalDisplayFeaturesSection />
 
-      {/* <AthleticAchievementsContactSection /> */}
-
-      {/* <SoftwarePlatformsSection /> */}
-      
-      {/* <SchoolRecognitionSection /> */}
-      
-      {/* <AthleticsRecognitionSection /> */}
+     
       
       <div id="gallery">
         <PhotoCarouselSection />
@@ -72,10 +66,6 @@ const HomePage = () => {
       <div id="testimonials">
         <TestimonialsSection />
       </div>
-
-      {/* <div id="pricing">
-        <PricingSection />
-      </div> */}
 
       <div id="faq">
         <FAQSection />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import HomePage from '@/components/HomePage';
+import HomePage from '@/components/Home/HomePage';
 
 const Index = () => {
   return (

@@ -113,7 +113,7 @@ const OnboardingSection: React.FC = () => {
           >
             <div className="bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                <span className="text-transparent text-gradient-purple-blue">We Handle It All</span>
+                <span className="text-transparent text-gradient-purple-blue">Affordable Pricing For Any Budget</span>
               </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
