@@ -99,13 +99,13 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div 
-            className={`flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 max-w-3xl mx-auto transition-all duration-700 delay-[600ms] ${
+            className={`flex flex-col items-center sm:items-end sm:flex-row sm:justify-end gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 w-full px-4 sm:pr-4 md:pr-8 transition-all duration-700 delay-[600ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
               hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
               hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
@@ -129,7 +129,7 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 flex-1 flex items-start space-x-3 
+            <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
               hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 

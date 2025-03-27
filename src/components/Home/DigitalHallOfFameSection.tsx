@@ -3,7 +3,7 @@ import React from "react";
 const DigitalHallOfFameSection: React.FC = () => {
   return (
     <section className="py-2 sm:py-12 md:py-16 lg:py-24 w-full bg-gradient-to-b from-background to-background/90">
-      <div className="container px-1 sm:px-4 md:px-6 lg:px-8 mx-auto">
+      <div className="container px-4 sm:px-6 md:px-8 lg:px-10 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Left side - Image/Visual */}
           <div className="relative order-2 md:order-1 mt-2 sm:mt-0">

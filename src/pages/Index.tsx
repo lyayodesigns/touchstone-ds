@@ -8,7 +8,6 @@ import WhySection from '@/components/Home/WhySection';
 import CallToActionSection from '@/components/Home/CallToActionSection';
 import HowItWorksSection from '@/components/Home/HowItWorksSection';
 import TestimonialsSection from '@/components/Home/TestimonialsSection';
-import FAQSection from '@/components/Home/FAQSection';
 import PhotoCarouselSection from '@/components/Home/PhotoCarouselSection';
 import CustomPlatformSection from '@/components/Home/CustomPlatformSection';
 import AlumniRecognitionSection from '@/components/Home/AlumniRecognitionSection';
@@ -67,10 +66,6 @@ const Index = () => {
         
         <div id="testimonials">
           <TestimonialsSection />
-        </div>
-
-        <div id="faq">
-          <FAQSection />
         </div>
 
         <div id="contact">

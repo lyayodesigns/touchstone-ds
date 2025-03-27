@@ -97,29 +97,6 @@ const FeaturesHeroSection = () => {
                 Touchstone Digital Solutions transforms traditional recognition into a fully interactive, immersive experience. From Digital Halls of Fame to Donor Walls, Record Boards, and more, our platform empowers schools, colleges, and organizations to celebrate excellence with cutting-edge technology.
               </p>
             </motion.div>
-            
-            {/* Interactive buttons */}
-            <motion.div 
-              className="flex flex-wrap justify-center gap-2 md:gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <motion.a 
-                href="#digital-hall-of-fame" 
-                className="px-4 py-2 md:px-6 md:py-3 bg-white border border-blue-200 rounded-lg shadow-sm text-blue-700 text-sm md:text-base font-medium hover:shadow-md transition-all duration-300"
-                whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.1)" }}
-              >
-                Digital Hall of Fame
-              </motion.a>
-              <motion.a 
-                href="#interactive-displays" 
-                className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-sm text-white text-sm md:text-base font-medium hover:shadow-md transition-all duration-300"
-                whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.3)" }}
-              >
-                Interactive Displays
-              </motion.a>
-            </motion.div>
           </div>
         </Container>
       </section>

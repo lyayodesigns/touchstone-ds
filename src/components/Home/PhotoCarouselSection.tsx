@@ -95,8 +95,9 @@ const PhotoCarouselSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight whitespace-nowrap">
-            <span className="text-gradient-purple-blue">Our Stunning</span>{" Digital Displays in Action"}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
+            <span className="text-gradient-purple-blue block sm:inline">Our Stunning</span>
+            <span className="block sm:inline">{" Digital Displays in Action"}</span>
           </h2>
 
           <p className="text-foreground/80 text-lg leading-relaxed max-w-2xl mx-auto">

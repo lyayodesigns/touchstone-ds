@@ -50,14 +50,14 @@ const AlumniRecognitionSection: React.FC = () => {
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight whitespace-nowrap transition-all duration-700 ${
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">
               Alumni Recognition,
             </span>
-            <span className="text-foreground"> Made Simple with Touchstone</span>
+            <span className="text-foreground block sm:inline"> Made Simple with Touchstone</span>
           </h2>
           
           <h3 
