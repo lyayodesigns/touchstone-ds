@@ -70,13 +70,13 @@ const HeroSection: React.FC = () => {
           }`}
         >
           <h1
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-[100ms] ${
+            className={`text-[2rem] md:text-[2.5rem] font-bold transition-all duration-700 delay-[100ms] ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            Welcome to Touchstone Digital Solutions
+            Welcome to <span className='text-accent'>Touchstone Digital Solutions</span>
           </h1>
           <h2
             className={`text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-[300ms] ${

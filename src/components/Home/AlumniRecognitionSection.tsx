@@ -84,6 +84,9 @@ const AlumniRecognitionSection: React.FC = () => {
             "Seamless over-the-air software updates",
             "Accessible everywhere, on any device",
             "Unlimited 24/7 customer support",
+            "AI integration",
+            "ADA WCAG 2.1 Accessibility",
+            "Robust security",
           ].map((feature, index) => (
             <div 
               key={index} 
@@ -105,24 +108,6 @@ const AlumniRecognitionSection: React.FC = () => {
               </div>
             </div>
           ))}
-          
-          {/* Center the last feature */}
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 flex justify-center">
-            <div 
-              className={`flex items-start space-x-3 p-4 rounded-lg w-full max-w-xs
-                border border-foreground/10 bg-background/5 backdrop-blur-sm
-                hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
-                hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
-                hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
-                transition-all duration-300 ease-out cursor-pointer ${
-                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              }`}
-              style={{ transitionDelay: `${300 + (9 * 70)}ms` }}
-            >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
-              <span className="text-foreground/80 text-sm sm:text-base">Robust security</span>
-            </div>
-          </div>
         </div>
         
         <div 
@@ -130,7 +115,7 @@ const AlumniRecognitionSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <button className="group inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full px-6 py-2.5 transition-all duration-300 shadow-blue hover:shadow-blue-lg">
+          <button onClick={() => window.location.href = `${window.location.origin}/features/`} className="group inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full px-6 py-2.5 transition-all duration-300 shadow-blue hover:shadow-blue-lg">
             Explore All Features
             <svg
               xmlns="http://www.w3.org/2000/svg"

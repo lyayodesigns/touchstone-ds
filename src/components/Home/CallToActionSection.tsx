@@ -40,10 +40,10 @@ const CallToActionSection: React.FC = () => {
       <div className="container px-3 sm:px-4 md:px-6 mx-auto relative">
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            We{" "}
+            We{" "}{" "}{" "}
             <div
               className="inline-block"
-              style={{ width: "120px", textAlign: "left" }}
+              style={{ width: "150px", textAlign: "left" }}
             >
               <span
                 className={`text-transparent text-gradient-purple-blue inline-block transition-all duration-100 ${
@@ -67,7 +67,10 @@ const CallToActionSection: React.FC = () => {
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-12 text-center">
-          <button className="bg-gradient-to-r from-purple-400 to-blue-500 text-foreground font-medium rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg transition-all hover:shadow-glow hover:scale-105 active:scale-95 touch-manipulation">
+          <button 
+            onClick={() => window.location.href = `${window.location.origin}/contact/`}
+            className="bg-gradient-to-r from-purple-400 to-blue-500 text-foreground font-medium rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg transition-all hover:shadow-glow hover:scale-105 active:scale-95 touch-manipulation"
+          >
             Book Your Free Demo
           </button>
         </div>

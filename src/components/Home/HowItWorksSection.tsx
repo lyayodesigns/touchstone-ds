@@ -11,7 +11,7 @@ const HowItWorksSection = () => {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="text-center mb-16">
           <motion.p 
-            className="text-sm text-gradient-purple-blue font-medium mb-3"
+            className="text-lg md:text-xl lg:text-2xl text-gradient-purple-blue font-medium mb-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -85,7 +85,7 @@ const HowItWorksSection = () => {
             <div className="pt-8">
               <h3 className="text-xl font-semibold mb-4 text-center">Design & Implementation</h3>
               <p className="text-black text-center">
-                Our team handles everything from hardware installation to
+                Our team handles everything from custom wall wraps to
                 software setup, creating a seamless digital Hall of Fame
                 experience that impresses visitors.
               </p>

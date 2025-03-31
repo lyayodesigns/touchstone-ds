@@ -59,7 +59,7 @@ const OnboardingSection: React.FC = () => {
             <div className="space-y-6">
               {[
                 { step: "01", title: "Schedule a demo", delay: 100 },
-                { step: "02", title: "Custom design session", delay: 200 },
+                { step: "02", title: "Personalized design session", delay: 200 },
                 { step: "03", title: "Go live & inspire", delay: 300 }
               ].map((item, index) => (
                 <div 
@@ -84,7 +84,7 @@ const OnboardingSection: React.FC = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <button className="group inline-flex items-center bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-full px-6 py-3 transition-all duration-300 shadow-glow-sm">
+              <button onClick={() => window.location.href = `${window.location.origin}/contact/`} className="group inline-flex items-center bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-full px-6 py-3 transition-all duration-300 shadow-glow-sm">
                 Schedule a Free Demo
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,9 +112,13 @@ const OnboardingSection: React.FC = () => {
             }`}
           >
             <div className="bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                <span className="text-transparent text-gradient-purple-blue">Affordable Pricing For Any Budget</span>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
+                We Handle It All
               </h2>
+              
+              <h3 className="text-xl sm:text-2xl font-bold mb-6">
+                <span className="text-transparent text-gradient-purple-blue">Affordable Pricing For Any Budget</span>
+              </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -159,7 +163,7 @@ const OnboardingSection: React.FC = () => {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <button className="group inline-flex items-center text-foreground hover:text-foreground/80 font-medium transition-colors">
+                <button onClick={() => window.location.href = `${window.location.origin}/features/`} className="group inline-flex items-center text-foreground hover:text-foreground/80 font-medium transition-colors">
                   Explore Our Software + Hardware Bundles
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

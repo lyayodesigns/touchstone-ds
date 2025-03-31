@@ -2,28 +2,16 @@ import React from "react";
 
 const DigitalHallOfFameSection: React.FC = () => {
   return (
-    <section className="py-2 sm:py-12 md:py-16 lg:py-24 w-full bg-gradient-to-b from-background to-background/90">
+    <section className="py-1 sm:py-8 md:py-12 lg:py-16 w-full bg-gradient-to-b from-background to-background/90">
       <div className="container px-4 sm:px-6 md:px-8 lg:px-10 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Left side - Image/Visual */}
           <div className="relative order-2 md:order-1 mt-2 sm:mt-0">
-            <div className="aspect-[3/4] md:aspect-[16/10] bg-glass rounded-lg sm:rounded-xl overflow-hidden border border-white/10 shadow-glow-sm relative">
-              {/* Decorative elements */}
-              <div className="absolute top-0 left-0 w-full h-full bg-grid opacity-30"></div>
-
-              {/* Image */}
-              <img
-                src="/TDS Cover - 1.jpg"
-                alt="Digital Hall of Fame Display"
-                className="absolute inset-0 w-full h-full object-cover opacity-90 z-0"
-              />
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-500/10 rounded-full blur-xl"></div>
-            <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
-            
-            {/* Spotlight text below image */}
+            <img
+              src="/TDS Cover - 1.jpg"
+              alt="Digital Hall of Fame Display"
+              className="w-[85%] mx-auto rounded-lg sm:rounded-xl object-contain"
+            />
             <div className="mt-4 text-center">
               <p className="text-lg font-medium text-foreground">
                 Your school's story deserves more than a plaque—it deserves a spotlight.

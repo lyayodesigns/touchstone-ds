@@ -6,40 +6,36 @@ interface TestimonialProps {
   role: string;
   company: string;
   image?: string;
+  logo?: string;
 }
 
 const testimonials: TestimonialProps[] = [
   {
     quote:
       "Touchstone Digital Solutions transformed our athletics hall of fame. The interactive displays have brought our sports history to life in ways we never imagined.",
-    author: "Michael Johnson",
+    author: "Brown University (RI)",
     role: "Athletic Director",
     company: "Westfield High School",
     image: "/testimonial-1.jpg",
+    logo: "/clients/SHP.png"
   },
   {
     quote:
       "Our students are incredibly proud of our new digital recognition wall. It's become a focal point of our campus tours and has significantly boosted school spirit.",
-    author: "Sarah Thompson",
+    author: "Seton Hall Prep (NJ)",
     role: "Principal",
     company: "Lincoln Academy",
     image: "/testimonial-2.jpg",
+    logo: "/clients/brown.png"
   },
   {
     quote:
       "The team at Touchstone was exceptional from start to finish. They understood our vision and delivered a hall of fame solution that exceeded our expectations.",
-    author: "Robert Chen",
+    author: "Mooresville High School (IN)",
     role: "Alumni Relations",
     company: "Eastwood University",
     image: "/testimonial-3.jpg",
-  },
-  {
-    quote:
-      "Our community loves the new interactive hall of fame. It's not just a display, it's a storytelling platform that honors our history and inspires future generations.",
-    author: "Jennifer Martinez",
-    role: "Community Director",
-    company: "Oakridge Foundation",
-    image: "/testimonial-4.jpg",
+    logo: "/clients/mooresville.png"
   },
 ];
 
@@ -49,6 +45,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   role,
   company,
   image,
+  logo,
 }) => {
   return (
     <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[350px] bg-card rounded-lg shadow-xl group relative">
@@ -56,12 +53,18 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
       <div className="absolute inset-0 rounded-lg border border-foreground/10 group-hover:border-purple-500/30 transition-colors duration-300"></div>
 
       <div className="p-4 sm:p-5 md:p-6 flex flex-col items-center text-center transform transition-all duration-500 ease-in-out group-hover:scale-[1.02] relative z-10">
-        {/* Avatar */}
-        <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-foreground/10 shadow-md mb-3 sm:mb-4">
-          <div className="w-full h-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center text-foreground text-lg sm:text-xl font-bold">
-            {author.charAt(0)}
+        {/* Logo or Avatar */}
+        {logo ? (
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mb-3 sm:mb-4 flex items-center justify-center">
+            <img src={logo} alt={`${company} logo`} className="max-w-full max-h-full object-contain" />
           </div>
-        </div>
+        ) : (
+          <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-foreground/10 shadow-md mb-3 sm:mb-4">
+            <div className="w-full h-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center text-foreground text-lg sm:text-xl font-bold">
+              {author.charAt(0)}
+            </div>
+          </div>
+        )}
 
         {/* Name and Role */}
         <h3 className="text-foreground font-bold text-base sm:text-lg">{author}</h3>
@@ -165,7 +168,6 @@ const TestimonialsSection: React.FC = () => {
               <TestimonialCard
                 key={startIndex + index}
                 {...testimonial}
-                className="w-full sm:w-[350px] flex-shrink-0"
               />
             ))}
           </div>
