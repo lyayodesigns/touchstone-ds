@@ -29,7 +29,7 @@ const testimonials: TestimonialProps[] = [
     quote:
       "This is more than just a display—it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
     author: "Mooresville High School (IN)",
-    role: "Athletic Director for Mooresville",
+    role: "Athletic Director",
     image: "/testimonial-3.jpg",
     logo: "/clients/mooresville.png"
   },
