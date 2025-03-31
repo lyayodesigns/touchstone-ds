@@ -59,9 +59,9 @@ export const AboutHeroSection = () => {
             viewport={{ once: true }}
           >
             <span className="text-transparent bg-clip-text text-gradient-purple-blue">
-              About Touchstone
+              About
             </span>
-            <span className="text-foreground"> Digital Solutions</span>
+            <span className="text-foreground"> Touchstone Digital Solutions</span>
           </motion.h1>
           
           <motion.div

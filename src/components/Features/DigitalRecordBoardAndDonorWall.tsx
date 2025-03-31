@@ -298,7 +298,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/TDS Cover - 6.jpg" 
+                      src="/Donor-Wall-Layout.jpg" 
                       alt="Digital Donor Wall" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
