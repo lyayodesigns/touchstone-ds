@@ -4,7 +4,6 @@ interface TestimonialProps {
   quote: string;
   author: string;
   role: string;
-  company: string;
   image?: string;
   logo?: string;
 }
@@ -12,28 +11,25 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     quote:
-      "Touchstone Digital Solutions transformed our athletics hall of fame. The interactive displays have brought our sports history to life in ways we never imagined.",
-    author: "Brown University (RI)",
+      "Alumni love staying connected with our programs, and our digital Hall of Fame makes it easy. Whether they're across the country or in the stands, they can relive their glory days and see how their legacy continues.",
+    author: "Seton Hall Prep (NJ)",
     role: "Athletic Director",
-    company: "Westfield High School",
     image: "/testimonial-1.jpg",
     logo: "/clients/SHP.png"
   },
   {
     quote:
-      "Our students are incredibly proud of our new digital recognition wall. It's become a focal point of our campus tours and has significantly boosted school spirit.",
-    author: "Seton Hall Prep (NJ)",
-    role: "Principal",
-    company: "Lincoln Academy",
+      "When recruits visit our facilities, they don't just see trophies--they experience the history of our program in a dynamic, interactive way. It makes an impact that a traditional display never could.",
+    author: "Brown University (RI)",
+    role: "Associate Director of Athletics",
     image: "/testimonial-2.jpg",
     logo: "/clients/brown.png"
   },
   {
     quote:
-      "The team at Touchstone was exceptional from start to finish. They understood our vision and delivered a hall of fame solution that exceeded our expectations.",
+      "This is more than just a display--it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
     author: "Mooresville High School (IN)",
     role: "Alumni Relations",
-    company: "Eastwood University",
     image: "/testimonial-3.jpg",
     logo: "/clients/mooresville.png"
   },
@@ -43,7 +39,6 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   quote,
   author,
   role,
-  company,
   image,
   logo,
 }) => {
@@ -56,7 +51,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
         {/* Logo or Avatar */}
         {logo ? (
           <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mb-3 sm:mb-4 flex items-center justify-center">
-            <img src={logo} alt={`${company} logo`} className="max-w-full max-h-full object-contain" />
+            <img src={logo} alt={`${author} logo`} className="max-w-full max-h-full object-contain" />
           </div>
         ) : (
           <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-foreground/10 shadow-md mb-3 sm:mb-4">
@@ -69,7 +64,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
         {/* Name and Role */}
         <h3 className="text-foreground font-bold text-base sm:text-lg">{author}</h3>
         <p className="text-purple-400 text-xs sm:text-sm mb-3 sm:mb-4">
-          {role}, {company}
+          {role}
         </p>
 
         {/* Quote */}

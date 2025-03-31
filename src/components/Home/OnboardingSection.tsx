@@ -112,16 +112,14 @@ const OnboardingSection: React.FC = () => {
             }`}
           >
             <div className="bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-black">
-                We Handle It All
-              </h2>
-              
+          
               <h3 className="text-xl sm:text-2xl font-bold mb-6">
-                <span className="text-transparent text-gradient-purple-blue">Affordable Pricing For Any Budget</span>
+                <span className="text-transparent text-gradient-purple-blue">We Handle It All</span>
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
+                  "Affordable pricing for any budget",
                   "Custom software development",
                   "Premium hardware packages",
                   "Complete brand integration",
@@ -153,7 +151,9 @@ const OnboardingSection: React.FC = () => {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <span className="text-foreground/80">{feature}</span>
+                    <span className="text-foreground/80 text-sm">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
