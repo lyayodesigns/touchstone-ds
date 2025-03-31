@@ -84,7 +84,7 @@ const OnboardingSection: React.FC = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <button onClick={() => window.location.href = `${window.location.origin}/contact/`} className="group inline-flex items-center bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-full px-6 py-3 transition-all duration-300 shadow-glow-sm">
+              <button onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website&month=2025-03', '_blank')} className="group inline-flex items-center bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-full px-6 py-3 transition-all duration-300 shadow-glow-sm">
                 Schedule a Free Demo
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
