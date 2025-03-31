@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import FeaturesHeroSection from '../components/Features/HeroSection';
 import AllinOneSection from '../components/Features/AllinOneSection';
 import CustomizableSolutions from '../components/Features/CustomizableSolutions';
@@ -17,8 +18,12 @@ const Features = () => {
   }, []);
 
   return (
-   
-      <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Features | Touchstone Digital Solutions"
+        description="Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration."
+        canonical="/features/"
+      />
       <Navbar />
       <main className="overflow-hidden">
         <FeaturesHeroSection />

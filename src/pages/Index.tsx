@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import HeroSection from '@/components/Home/HeroSection';
 import DigitalHallOfFameSection from '@/components/Home/DigitalHallOfFameSection';
 import InteractiveDisplaysSection from '@/components/Home/InteractiveDisplaysSection';
@@ -40,6 +41,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Touchstone Digital Solutions - Interactive Digital Halls of Fame"
+        description="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities."
+        canonical="/"
+      />
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />

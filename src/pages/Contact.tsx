@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -69,6 +70,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Contact Us | Touchstone Digital Solutions"
+        description="Get in touch with the Touchstone team to discuss your digital recognition system needs, request a demo, or learn more about our services."
+        canonical="/contact/"
+      />
       <Navbar />
       
       {/* Hero Section */}

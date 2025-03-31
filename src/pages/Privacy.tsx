@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import { Container } from '@/components/ui/container';
 
 const Privacy = () => {
@@ -12,6 +13,11 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Privacy Policy | Touchstone Digital Solutions"
+        description="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information."
+        canonical="/privacy/"
+      />
       <Navbar />
       
       {/* Hero Section */}

@@ -15,7 +15,7 @@ const testimonials: TestimonialProps[] = [
     author: "Seton Hall Prep (NJ)",
     role: "Athletic Director",
     image: "/testimonial-1.jpg",
-    logo: "/clients/SHP.png"
+    logo: "/clients/SHP.jpg"
   },
   {
     quote:
@@ -23,7 +23,7 @@ const testimonials: TestimonialProps[] = [
     author: "Brown University (RI)",
     role: "Associate Director of Athletics",
     image: "/testimonial-2.jpg",
-    logo: "/clients/brown.png"
+    logo: "/clients/brown.jpg"
   },
   {
     quote:
@@ -31,7 +31,7 @@ const testimonials: TestimonialProps[] = [
     author: "Mooresville High School (IN)",
     role: "Alumni Relations",
     image: "/testimonial-3.jpg",
-    logo: "/clients/mooresville.png"
+    logo: "/clients/mooresville.jpg"
   },
 ];
 
