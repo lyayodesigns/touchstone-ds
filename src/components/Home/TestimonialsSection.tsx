@@ -15,7 +15,7 @@ const testimonials: TestimonialProps[] = [
     author: "Seton Hall Prep (NJ)",
     role: "Athletic Director",
     image: "/testimonial-1.jpg",
-    logo: "/clients/SHP.jpg"
+    logo: "/clients/SHP.png"
   },
   {
     quote:
@@ -23,15 +23,15 @@ const testimonials: TestimonialProps[] = [
     author: "Brown University (RI)",
     role: "Associate Director of Athletics",
     image: "/testimonial-2.jpg",
-    logo: "/clients/brown.jpg"
+    logo: "/clients/brown.png"
   },
   {
     quote:
       "This is more than just a display—it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
     author: "Mooresville High School (IN)",
-    role: "Alumni Relations",
+    role: "Athletic Director for Mooresville",
     image: "/testimonial-3.jpg",
-    logo: "/clients/mooresville.jpg"
+    logo: "/clients/mooresville.png"
   },
   {
     quote:
@@ -39,7 +39,7 @@ const testimonials: TestimonialProps[] = [
     author: "Bishop Guertin High School (NH)",
     role: "Men's Varsity Lacrosse Coach",
     image: "/testimonial-4.jpg",
-    logo: "/clients/bishop.jpg"
+    logo: "/clients/bishop.png"
   },
   {
     quote:
@@ -47,7 +47,7 @@ const testimonials: TestimonialProps[] = [
     author: "The Whitfield School (MO)",
     role: "Director of Athletics",
     image: "/testimonial-5.jpg",
-    logo: "/clients/whitefield.jpg"
+    logo: "/clients/whitefield.png"
   },
   {
     quote:
@@ -55,7 +55,7 @@ const testimonials: TestimonialProps[] = [
     author: "New Bedford High School (MA)",
     role: "Athletic Director",
     image: "/testimonial-6.jpg",
-    logo: "/clients/bedford.jpg"
+    logo: "/clients/bedford.png"
   },
 ];
 
