@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 import { Medal, Mail, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BuiltForInstitutionAndExperience = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background elements */}
@@ -180,23 +182,22 @@ const BuiltForInstitutionAndExperience = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="relative z-10"
               >
-                <a href="#contact" className="inline-flex items-center">
-                  <motion.button
-                    className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:shadow-glow-md group"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
+                <motion.button
+                  className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:shadow-glow-md group"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => navigate('/contact/')}
+                >
+                  <Mail className="h-5 w-5" />
+                  <span>Contact Us Now to schedule a demo!</span>
+                  <motion.div
+                    className="ml-1"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
                   >
-                    <Mail className="h-5 w-5" />
-                    <span>Contact Us Now to schedule a demo!</span>
-                    <motion.div
-                      className="ml-1"
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                    >
-                      <ArrowRight className="h-5 w-5" />
-                    </motion.div>
-                  </motion.button>
-                </a>
+                    <ArrowRight className="h-5 w-5" />
+                  </motion.div>
+                </motion.button>
               </motion.div>
             </motion.div>
           </div>

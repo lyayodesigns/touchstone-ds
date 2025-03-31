@@ -100,7 +100,7 @@ const Terms = () => {
         <div className="prose prose-invert max-w-none">
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <p>
-              Welcome to Touchstone Digital Solutions, managed by Touchstone Digital Solutions LLC, located at 8 Powder Hill Road Bedford, NH 03110. By accessing our website at Touchstone-ds.com, any other domains directly owned and managed by Touchstone Digital Solutions, the corresponding mobile site, and the mobile app (together referred to as the "Websites"), you consent to abide by these Terms of Service (referred to herein as "Terms of Service" or "Agreement"). This agreement applies whether you are just visiting or if you register as a member of Touchstone Digital Solutions ("Member"). Should you decide to register as a Member and engage with our services (the "Service"), you need to review and agree to this Agreement. Should any part of this Agreement or the Touchstone Digital Solutions Privacy Policy be unacceptable to you, you should refrain from using the Service.
+              Welcome to Touchstone Digital Solutions, managed by Touchstone Digital Solutions LLC. By accessing our website at Touchstone-ds.com, any other domains directly owned and managed by Touchstone Digital Solutions, the corresponding mobile site, and the mobile app (together referred to as the "Websites"), you consent to abide by these Terms of Service (referred to herein as "Terms of Service" or "Agreement"). This agreement applies whether you are just visiting or if you register as a member of Touchstone Digital Solutions ("Member"). Should you decide to register as a Member and engage with our services (the "Service"), you need to review and agree to this Agreement. Should any part of this Agreement or the Touchstone Digital Solutions Privacy Policy be unacceptable to you, you should refrain from using the Service.
             </p>
             <p className="my-6">
               This Agreement is dynamic and may be updated by Touchstone Digital Solutions at any time, with changes taking effect immediately upon their posting on the site. Your ongoing use of the Websites and Service after any amendments signifies your definite acceptance of and agreement to the updated terms.
@@ -280,9 +280,10 @@ const Terms = () => {
             <p className="mb-4">
               Touchstone Digital Solutions actively prohibits the submission or posting of any content that infringes upon or violates the copyright or other intellectual property rights of any person or entity. Should you believe that your copyright or intellectual property rights have been infringed upon by any content on the Site, please send a notification of claimed infringement to our designated address.
             </p>
-            <p className="mb-4">
+            {/* POBOX ADDRESS HERE */}
+            {/* <p className="mb-4">
               8 Powder Hill Road Bedford, NH 03110
-            </p>
+            </p> */}
             <p className="mb-4">
               Your notification should include clear identification of the copyrighted work or intellectual property right claimed to be infringed, a description of the infringing material, and your contact details. We will process and respond to notices of alleged infringement in accordance with the Digital Millennium Copyright Act (DMCA) and applicable laws. Penalties for false claims are severe.
             </p>
@@ -379,7 +380,7 @@ const Terms = () => {
               I HAVE CAREFULLY READ AND FULLY AGREE TO ALL THE PROVISIONS OUTLINED IN THIS AGREEMENT.
             </p>
             <p className="mb-4 text-center">
-              Please do not hesitate to reach out if you have any questions about the Terms of Service!
+              Please do not hesitate to reach out if you have any questions about the Terms of Service.
             </p>
           </section>
         </div>

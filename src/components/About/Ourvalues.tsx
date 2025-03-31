@@ -64,7 +64,7 @@ export const OurValues = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          At Touchstone Digital Solutions, our business is rooted in core values that have guided us from the start:
+          At Touchstone Digital Solutions, our business is rooted in core values that have guided us from the start.
         </motion.p>
       </motion.div>
       
