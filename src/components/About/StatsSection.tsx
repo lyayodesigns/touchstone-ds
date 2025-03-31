@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
+// Add CSS for flip card effect
+const flipCardStyles = `
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+`;
+
 export const AboutStatsSection = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <section className="py-16 bg-background relative" id="mission">
+      {/* Apply flip card styles */}
+      <style dangerouslySetInnerHTML={{ __html: flipCardStyles }} />
+      
       {/* Background decorative elements */}
       <motion.div 
         className="absolute top-20 left-10 w-64 h-64 rounded-full bg-blue-500/5"
@@ -57,33 +81,63 @@ export const AboutStatsSection = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Our Story Card */}
-          <motion.div 
-            className="bg-[#0e2b4d] rounded-xl overflow-hidden shadow-xl text-white relative border border-blue-900"
-            whileHover={{ y: -8, scale: 1.02 }}
-            initial={{ opacity: 0, y: 50, rotateY: 15 }}
-            whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+          {/* Our Story Card - Flip Card Implementation */}
+          <div 
+            className="bg-[#0e2b4d] rounded-xl overflow-hidden shadow-xl text-white relative border border-blue-900 h-[300px] cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-blue-600"
+            onClick={() => setIsFlipped(!isFlipped)}
           >
-            <div className="relative">
-              <img 
-                src="/hero-banner.jpg" 
-                alt="Our Story" 
-                className="w-full h-48 object-cover"
-              />
+            <div className="relative w-full h-full">
+              {/* Front of card */}
+              <div 
+                className={`absolute inset-0 w-full h-full transition-all duration-500 ease-in-out ${
+                  isFlipped ? 'opacity-0' : 'opacity-100'
+                }`}
+              >
+                <div className="h-full flex flex-col">
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src="/hero-banner.jpg" 
+                      alt="Our Story" 
+                      className="w-full h-[220px] object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-blue-900/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="p-4 pt-2 flex-grow flex flex-col justify-center">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-blue-300 transition-colors duration-300">Our Story</h3>
+                    <div className="h-1 w-10 bg-blue-500 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-blue-400"></div>
+                    <p className="text-white/70 text-xs flex items-center gap-1">
+                      Click to learn more
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                      </svg>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Back of card */}
+              <div 
+                className={`absolute inset-0 w-full h-full bg-[#0e2b4d] rounded-xl p-6 flex items-center transition-all duration-500 ease-in-out ${
+                  isFlipped ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-blue-300">Our Story</h3>
+                  <div className="h-1 w-16 bg-blue-500 rounded-full mb-5"></div>
+                  <p className="text-white/90 leading-relaxed">
+                    After years in the industry, we saw an opportunity to do more. While others rush through the process, Touchstone takes the time to listen. We are a relationship-first company that happens to deliver exceptional software.
+                  </p>
+                  <div className="mt-4 text-blue-300 text-sm flex items-center gap-2">
+                    Click to flip back
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-pulse">
+                      <path d="M9 10l-5 5 5 5"/>
+                      <path d="M20 4v7a4 4 0 0 1-4 4H4"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
-            <motion.div 
-              className="p-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h3 className="text-2xl font-bold mb-2">Our Story</h3>
-              <div className="h-1 w-12 bg-blue-500 rounded-full mb-3"></div>
-            </motion.div>
-          </motion.div>
+          </div>
 
           {/* Our Mission Card */}
           <motion.div 
