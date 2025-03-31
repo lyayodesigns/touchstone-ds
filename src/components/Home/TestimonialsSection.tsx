@@ -19,7 +19,7 @@ const testimonials: TestimonialProps[] = [
   },
   {
     quote:
-      "When recruits visit our facilities, they don't just see trophies--they experience the history of our program in a dynamic, interactive way. It makes an impact that a traditional display never could.",
+      "When recruits visit our facilities, they don't just see trophies—they experience the history of our program in a dynamic, interactive way. It makes an impact that a traditional display never could.",
     author: "Brown University (RI)",
     role: "Associate Director of Athletics",
     image: "/testimonial-2.jpg",
@@ -27,11 +27,35 @@ const testimonials: TestimonialProps[] = [
   },
   {
     quote:
-      "This is more than just a display--it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
+      "This is more than just a display—it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
     author: "Mooresville High School (IN)",
     role: "Alumni Relations",
     image: "/testimonial-3.jpg",
     logo: "/clients/mooresville.jpg"
+  },
+  {
+    quote:
+      "Touchstone took the time to understand our program's legacy and built a system that truly honors our athletes, past and present. It's more than software—it's a living tribute to our team's championship history.",
+    author: "Bishop Guertin High School (NH)",
+    role: "Men's Varsity Lacrosse Coach",
+    image: "/testimonial-4.jpg",
+    logo: "/clients/bishop.jpg"
+  },
+  {
+    quote:
+      "I love how Touchstone allows our alumni to stay connected. They can revisit their achievements anytime, from anywhere—it's like our school spirit lives on forever.",
+    author: "The Whitfield School (MO)",
+    role: "Director of Athletics",
+    image: "/testimonial-5.jpg",
+    logo: "/clients/whitefield.jpg"
+  },
+  {
+    quote:
+      "Touchstone went above and beyond to deliver their platform for us. With our digital Trophy Case and Hall of Fame, we no longer worry about space limitations. Every achievement, past and present, is preserved and easily accessible for future generations.",
+    author: "New Bedford High School (MA)",
+    role: "Athletic Director",
+    image: "/testimonial-6.jpg",
+    logo: "/clients/bedford.jpg"
   },
 ];
 
@@ -43,11 +67,11 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   logo,
 }) => {
   return (
-    <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[350px] bg-card rounded-lg shadow-xl group relative">
+    <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[350px] h-[380px] bg-card rounded-lg shadow-xl group relative">
       {/* Single border that changes on hover */}
       <div className="absolute inset-0 rounded-lg border border-foreground/10 group-hover:border-purple-500/30 transition-colors duration-300"></div>
 
-      <div className="p-4 sm:p-5 md:p-6 flex flex-col items-center text-center transform transition-all duration-500 ease-in-out group-hover:scale-[1.02] relative z-10">
+      <div className="p-4 sm:p-5 md:p-6 flex flex-col items-center text-center transform transition-all duration-500 ease-in-out group-hover:scale-[1.02] relative z-10 h-full">
         {/* Logo or Avatar */}
         {logo ? (
           <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 mb-3 sm:mb-4 flex items-center justify-center">
@@ -68,7 +92,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
         </p>
 
         {/* Quote */}
-        <p className="text-foreground/80 text-xs sm:text-sm leading-relaxed">
+        <p className="text-foreground/80 text-xs sm:text-sm leading-relaxed flex-grow">
           {quote}
         </p>
       </div>

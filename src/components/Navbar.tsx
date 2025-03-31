@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
       <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
           <img
-            src="/logo/logo-light.png"
+            src="/logo/logo-midnight.png"
             alt="Touchstone Digital Solutions"
             className="h-8 lg:h-10 w-auto"
           />
@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
           <div className="container px-4 pt-6 pb-4 flex justify-between items-center border-b border-gray-100 bg-white">
             <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
               <img
-                src="/logo/logo-light.png"
+                src="/logo/logo-midnight.png"
                 alt="Touchstone Digital Solutions"
                 className="h-8 w-auto"
               />
