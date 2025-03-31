@@ -356,9 +356,9 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-xl mb-1">Location</h3>
-                        <p className="text-foreground/70">Boston, MA</p>
+                        <p className="text-foreground/70">Bedford, NH</p>
                         <p className="text-foreground/70">United States</p>
-                        <p className="text-foreground/70">Massachusetts</p>
+                        <p className="text-foreground/70">New Hampshire</p>
                       </div>
                     </div>
                   </div>
@@ -381,7 +381,7 @@ const Contact = () => {
                   <ul className="space-y-4">
                     <li className="flex justify-between items-center pb-3 border-b border-foreground/10">
                       <span className="font-medium">Monday - Friday:</span>
-                      <span className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm font-medium">9:00 AM - 6:00 PM</span>
+                      <span className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm font-medium">7:00 AM - 7:00 PM</span>
                     </li>
                     <li className="flex justify-between items-center pb-3 border-b border-foreground/10">
                       <span className="font-medium">Saturday:</span>
@@ -389,7 +389,7 @@ const Contact = () => {
                     </li>
                     <li className="flex justify-between items-center">
                       <span className="font-medium">Sunday:</span>
-                      <span className="bg-pink-500/10 text-pink-500 px-3 py-1 rounded-full text-sm font-medium">Closed</span>
+                      <span className="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-sm font-medium">Available if needed</span>
                     </li>
                   </ul>
                 </div>

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
 export const CallToAction = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background with animated gradient */}
@@ -81,8 +83,8 @@ export const CallToAction = () => {
                 achievements, and future.
               </motion.p>
               
-              <motion.a 
-                href="#contact" 
+              <motion.button 
+                onClick={() => navigate('/contact/')}
                 className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-medium text-center hover:bg-opacity-90 transition-all shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +94,7 @@ export const CallToAction = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 Contact Us
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
           

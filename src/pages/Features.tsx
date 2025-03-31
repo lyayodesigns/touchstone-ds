@@ -23,10 +23,10 @@ const Features = () => {
       <main className="overflow-hidden">
         <FeaturesHeroSection />
         <AllinOneSection />
+        <BuiltByGaming />
+        <FullCustomization />
         <CustomizableSolutions />
         <DigitalRecordBoardAndDonorWall />
-        <FullCustomization />
-        <BuiltByGaming />
         <VisualFidelity />
         <BuiltForInstitutionAndExperience />
       </main>

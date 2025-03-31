@@ -188,7 +188,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              2
+              1
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -204,7 +204,7 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              The minimum number of hands it takes for our team to draw a hand-designed layout, meticulously crafted for your school.
+              The one-of-a-kind design your school deserves—crafted with precision and purpose.
             </motion.p>
           </motion.div>
 
@@ -289,7 +289,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              ∞
+              <span className="inline-block pt-2">∞</span>
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"

@@ -113,7 +113,7 @@ const BuiltByGaming = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              We bring AAA gaming technology to digital school recognition, ensuring every element is visually stunning and deeply immersive.
+              We are the first and only to bring AAA gaming technology to digital school recognition, ensuring every element is visually stunning and deeply immersive.
             </motion.p>
           </motion.div>
           
