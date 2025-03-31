@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={cn(
               "text-sm lg:text-base transition-colors whitespace-nowrap",
               isActive('/') 
@@ -55,9 +55,9 @@ const Navbar: React.FC = () => {
             )}
           >
             Home
-          </a>
-          <a
-            href="/about/"
+          </Link>
+          <Link
+            to="/about/"
             className={cn(
               "text-sm lg:text-base transition-colors whitespace-nowrap",
               isActive('/about/') 
@@ -66,10 +66,10 @@ const Navbar: React.FC = () => {
             )}
           >
             About Us
-          </a>
+          </Link>
          
-          <a
-            href="/features/"
+          <Link
+            to="/features/"
             className={cn(
               "text-sm lg:text-base transition-colors whitespace-nowrap",
               isActive('/features/') 
@@ -78,9 +78,9 @@ const Navbar: React.FC = () => {
             )}
           >
             Features
-          </a>
-          <a
-            href="/contact/"
+          </Link>
+          <Link
+            to="/contact/"
             className={cn(
               "text-sm lg:text-base transition-colors whitespace-nowrap",
               isActive('/contact/') 
@@ -89,9 +89,9 @@ const Navbar: React.FC = () => {
             )}
           >
             Contact
-          </a>
-          <a
-            href="/faq/"
+          </Link>
+          <Link
+            to="/faq/"
             className={cn(
               "text-sm lg:text-base transition-colors whitespace-nowrap",
               isActive('/faq/') 
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
             )}
           >
             FAQ
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-4">
@@ -163,9 +163,9 @@ const Navbar: React.FC = () => {
                   { name: "Contact", href: "/contact/" },
                   { name: "FAQ", href: "/faq/" }
                 ].map((item, index) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className={cn(
                       "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
                       isActive(item.href)
@@ -175,7 +175,7 @@ const Navbar: React.FC = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
                 
                 <div className="pt-8 w-full bg-white">

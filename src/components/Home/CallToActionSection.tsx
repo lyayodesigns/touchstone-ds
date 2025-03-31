@@ -68,7 +68,7 @@ const CallToActionSection: React.FC = () => {
 
         <div className="mt-8 sm:mt-10 md:mt-12 text-center">
           <button 
-            onClick={() => window.location.href = `${window.location.origin}/contact/`}
+            onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website&month=2025-03', '_blank')}
             className="bg-gradient-to-r from-purple-400 to-blue-500 text-foreground font-medium rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg transition-all hover:shadow-glow hover:scale-105 active:scale-95 touch-manipulation"
           >
             Book Your Free Demo

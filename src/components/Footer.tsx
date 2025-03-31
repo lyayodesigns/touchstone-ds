@@ -89,28 +89,28 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about/"
                   className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">About Us</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/features"
+                <Link
+                  to="/features/"
                   className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Features</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact/"
                   className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Contact Us</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
