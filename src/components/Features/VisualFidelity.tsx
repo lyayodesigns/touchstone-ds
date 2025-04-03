@@ -111,12 +111,12 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <Smartphone className="h-5 w-5" />,
-          title: "📱 Mobile-Friendly Access",
+          title: "Mobile-Friendly Access",
           description: "View and interact with content on smartphones, tablets, and kiosks."
         },
         {
           icon: <QrCode className="h-5 w-5" />,
-          title: "🔗 QR Code & Link Sharing",
+          title: "QR Code & Link Sharing",
           description: "Share profiles, records, and highlights with ease."
         }
       ]
@@ -128,17 +128,17 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <FolderOpen className="h-5 w-5" />,
-          title: "📂 All-in-One Content Manager",
+          title: "All-in-One Content Manager",
           description: "Edit photos, videos, and text in an intuitive interface."
         },
         {
           icon: <Palette className="h-5 w-5" />,
-          title: "🎨 Custom Branding",
+          title: "Custom Branding",
           description: "Match your school's identity with tailored fonts, colors, and layouts."
         },
         {
           icon: <BarChart3 className="h-5 w-5" />,
-          title: "📊 Site Analytics",
+          title: "Site Analytics",
           description: "Track engagement and content performance in real time."
         }
       ]
@@ -150,27 +150,27 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <Film className="h-5 w-5" />,
-          title: "🎬 Enhanced \"Hype\" Support",
+          title: "Enhanced \"Hype\" Support",
           description: "Elevate visuals with expert-designed graphics, animations, and video editing."
         },
         {
           icon: <FileText className="h-5 w-5" />,
-          title: "📜 PDF Integration",
+          title: "PDF Integration",
           description: "Seamlessly upload yearbooks, pamphlets, and playbills."
         },
         {
           icon: <LayoutTemplate className="h-5 w-5" />,
-          title: "🎞 Curated Templates",
+          title: "Curated Templates",
           description: "Showcase records, banners, trophies, and halls of fame with polished designs."
         },
         {
           icon: <Search className="h-5 w-5" />,
-          title: "🔍 Site-Wide Search",
+          title: "Site-Wide Search",
           description: "Instantly locate profiles, images, and videos across the platform."
         },
         {
           icon: <Sparkles className="h-5 w-5" />,
-          title: "✨ Engaging Animations",
+          title: "Engaging Animations",
           description: "Smooth transitions enhance user experience."
         }
       ]
@@ -182,17 +182,17 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <Link className="h-5 w-5" />,
-          title: "🔗 Easy Content Integration",
+          title: "Easy Content Integration",
           description: "Embed YouTube, Hudl, Vimeo, and Facebook videos."
         },
         {
           icon: <Calendar className="h-5 w-5" />,
-          title: "📅 Even More Integrations",
+          title: "Even More Integrations",
           description: "Sync calendars, display local weather, and connect to your existing website."
         },
         {
           icon: <Key className="h-5 w-5" />,
-          title: "🔑 Effortless Single Sign-On",
+          title: "Effortless Single Sign-On",
           description: "Secure login with Google, Microsoft, or Apple accounts."
         }
       ]
@@ -204,22 +204,22 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <Cloud className="h-5 w-5" />,
-          title: "☁ Ever-Evolving Updates",
+          title: "Ever-Evolving Updates",
           description: "Over-the-air software updates keep your platform cutting-edge."
         },
         {
           icon: <Shield className="h-5 w-5" />,
-          title: "🛡 Comprehensive Data Security",
+          title: "Comprehensive Data Security",
           description: "Encryption, AWS infrastructure, and consistent backups protect your data."
         },
         {
           icon: <Accessibility className="h-5 w-5" />,
-          title: "♿ Accessible by Design",
+          title: "Accessible by Design",
           description: "Built to meet ADA WCAG 2.1 standards, ensuring inclusivity for all users."
         },
         {
           icon: <HardDrive className="h-5 w-5" />,
-          title: "📂 Unlimited Data Capacity",
+          title: "Unlimited Data Capacity",
           description: "Upload decades' worth of images, videos, and yearbooks without compromising speed."
         }
       ]
@@ -231,17 +231,17 @@ const VisualFidelity = () => {
       features: [
         {
           icon: <DollarSign className="h-5 w-5" />,
-          title: "💰 Custom Packages",
+          title: "Custom Packages",
           description: "Affordable, scalable solutions that grow with your school."
         },
         {
           icon: <RefreshCw className="h-5 w-5" />,
-          title: "🛠 Regular Updates & Maintenance",
+          title: "Regular Updates & Maintenance",
           description: "Stay ahead with the latest technology and features."
         },
         {
           icon: <PhoneCall className="h-5 w-5" />,
-          title: "📞 Dedicated Customer Support",
+          title: "Dedicated Customer Support",
           description: "Our team is always ready to assist."
         }
       ]

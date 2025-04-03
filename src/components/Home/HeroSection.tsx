@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
+import { CheckCircle, DollarSign, Sparkles } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -106,11 +107,16 @@ const HeroSection: React.FC = () => {
             }`}
           >
             <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-primary text-xl group-hover:text-primary/80">✅</span>
+              <div className="relative flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
+                <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
+                  <CheckCircle className="h-5 w-5" />
+                </div>
+              </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm sm:text-base">Fully Customizable</h3>
                 <p className="text-foreground/60 text-xs sm:text-sm mt-1">Tailored to reflect your school's identity.</p>
@@ -118,11 +124,16 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-primary text-xl group-hover:text-primary/80">💰</span>
+              <div className="relative flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
+                <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
+                  <DollarSign className="h-5 w-5" />
+                </div>
+              </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm sm:text-base">No Cost to Build or Maintain</h3>
                 <p className="text-foreground/60 text-xs sm:text-sm mt-1">A stress-free solution.</p>
@@ -130,11 +141,16 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-5 w-full sm:w-[30%] flex items-start space-x-3 
-              hover:bg-gradient-to-br hover:from-primary/20 hover:to-secondary/10 
+              hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 
               hover:border-primary/50 hover:shadow-glow-sm hover:scale-[1.02] 
               hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
               transition-all duration-300 ease-out cursor-pointer">
-              <span className="text-primary text-xl group-hover:text-primary/80">🌟</span>
+              <div className="relative flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
+                <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+              </div>
               <div>
                 <h3 className="text-foreground font-medium text-sm sm:text-base">Stunning Visuals</h3>
                 <p className="text-foreground/60 text-xs sm:text-sm mt-1">Emmy-nominated UI/UX graphic design.</p>
