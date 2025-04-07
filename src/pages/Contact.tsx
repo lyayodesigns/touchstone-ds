@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import emailjs from '@emailjs/browser';
+
 import { Loader2, CheckCircle, AlertCircle, Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -50,13 +50,23 @@ const Contact = () => {
     setSubmitStatus('idle');
     
     try {
-      // Using environment variables for EmailJS credentials
-      await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
-        formRef.current as HTMLFormElement,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string
-      );
+      const formData = new FormData();
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('subject', values.subject);
+      formData.append('message', values.message);
+      formData.append('_subject', 'New Contact Form Submission');
+      formData.append('_template', 'table');
+      formData.append('_captcha', 'false');
+
+      const response = await fetch('https://formsubmit.co/d6494e93d993a930e148f6e40a07ad0b', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       
       setSubmitStatus('success');
       form.reset();
@@ -215,7 +225,7 @@ const Contact = () => {
                 )}
                 
                 <Form {...form}>
-                  <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
