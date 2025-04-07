@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Palette, School, Lightbulb, Monitor } from "lucide-react";
 
 const CustomPlatformSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,28 +67,28 @@ const CustomPlatformSection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {[
               {
-                icon: "🎨",
+                icon: <Palette className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "Design-First Approach",
                 description:
                   "We start with pen to paper, carefully mapping out your Hall of Fame to be as impactful, engaging, and intuitive as possible. From layout to branding, every element is thoughtfully crafted before a single line of code is written.",
                 delay: "300ms",
               },
               {
-                icon: "🏫",
+                icon: <School className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "Built for Your School, Not Just Any School",
                 description:
                   "No two institutions are the same—so why should their recognition platforms be? Whether you need a sleek, interactive athletic showcase or a donor wall that commands attention, we build a fully customized experience from the ground up.",
                 delay: "400ms",
               },
               {
-                icon: "💡",
+                icon: <Lightbulb className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "No Stone Unturned",
                 description:
                   "Our process ensures that every record, milestone, and moment is captured flawlessly. We work closely with you to make sure nothing gets left behind—because your school's legacy deserves nothing less.",
                 delay: "500ms",
               },
               {
-                icon: "🖥️",
+                icon: <Monitor className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "Seamless Software Meets Stunning Design",
                 description:
                   "The difference isn't just in our technology—it's in the details. Our software is powerful, but it's the premium look and feel that makes our platform truly stand out.",
@@ -104,7 +105,9 @@ const CustomPlatformSection: React.FC = () => {
                 style={{ transitionDelay: item.delay }}
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-2xl sm:text-3xl">{item.icon}</span>
+                  <div className="bg-purple-500/10 p-3 rounded-lg text-purple-400 transition-all duration-300 group-hover:text-purple-300 group-hover:bg-purple-500/20">
+                    {item.icon}
+                  </div>
                   <div>
                     <h3 className="text-foreground font-semibold text-base sm:text-lg mb-2">
                       {item.title}
