@@ -67,7 +67,7 @@ export const AboutStatsSection = () => {
             className="inline-block relative text-center w-full"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-6 relative z-10 inline-block pb-1">
-              Our Company at a Glance
+              Why Touchstone
             </h2>
             <motion.div 
               className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full -z-10 mb-2 mt-1"

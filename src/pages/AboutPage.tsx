@@ -26,9 +26,9 @@ const AboutPage = () => {
         
         <WhatMakeUsDifferent />
 
-        <WhoWeAreSection />
-        
         <TeamSection />
+
+        <WhoWeAreSection />
         
         <OurValues />
 

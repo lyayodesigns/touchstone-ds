@@ -140,7 +140,7 @@ export const WhoWeAreSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <span className="text-xl font-medium text-blue-600">Touchstone Digital Solutions</span> is the industry leader in fully customized interactive touchscreen recognition software. Founded by two brothers with years of experience in the field, we saw an opportunity to do more—delivering bespoke digital recognition solutions that go beyond the standard offerings of our competitors.
+                  <span className="text-xl font-medium text-blue-600">Touchstone Digital Solutions</span> is an industry leader in fully customized interactive touchscreen recognition software. Founded by two brothers with years of experience in the field, we saw an opportunity to do more—delivering bespoke digital recognition solutions that go beyond the standard offerings of our competitors.
                 </motion.p>
                 
                 <motion.p 

@@ -256,7 +256,7 @@ And best of all—there’s no cost to build or maintain your platform. We offer
       faqs: [
         {
           question: "How can small schools afford a digital Wall of Fame?",
-          answer: "STouchstone offers flexible, budget-friendly packages designed specifically for small schools and tight budgets. With no cost to build or maintain, our Digital Wall of Fame is an affordable way for even the smallest schools to celebrate students, athletes, and alumni. Whether you’re a rural high school, a small private academy, or a charter school, we make digital recognition accessible—with pricing that scales to your size and needs.",
+          answer: "Touchstone offers flexible, budget-friendly packages designed specifically for small schools and tight budgets. With no cost to build or maintain, our Digital Wall of Fame is an affordable way for even the smallest schools to celebrate students, athletes, and alumni. Whether you’re a rural high school, a small private academy, or a charter school, we make digital recognition accessible—with pricing that scales to your size and needs.",
         },
         {
           question: "Can we use our existing screens or displays?",

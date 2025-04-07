@@ -329,14 +329,15 @@ const Contact = () => {
             </div>
             
             {/* Contact Information */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-5 flex">
               {/* Contact Info Card */}
-              <div className="bg-background/80 backdrop-blur-md p-8 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden">
+              <div className="bg-background/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden flex-1 flex flex-col justify-between h-full">
                 {/* Background gradient */}
                 <div className="absolute -top-24 -left-24 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
                 
-                <div className="relative z-10">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <div className="relative z-10 flex flex-col h-full">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
                     <span className="bg-gradient-to-r from-blue-500 to-purple-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -345,13 +346,13 @@ const Contact = () => {
                     Contact Information
                   </h2>
                   
-                  <div className="space-y-6">
+                  <div className="space-y-8 flex-grow">
                     <div className="flex items-start">
                       <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-4 rounded-2xl shadow-md mr-4">
                         <Mail className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-xl mb-1">Email</h3>
+                        <h3 className="font-semibold text-xl mb-2">Email</h3>
                         <a href="mailto:info@touchstone-ds.com" className="text-foreground/70 hover:text-blue-500 transition-colors duration-200 block">info@touchstone-ds.com</a>
                       </div>
                     </div>
@@ -361,7 +362,7 @@ const Contact = () => {
                         <Phone className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-xl mb-1">Phone</h3>
+                        <h3 className="font-semibold text-xl mb-2">Phone</h3>
                         <a href="tel:6033617541" className="text-foreground/70 hover:text-blue-500 transition-colors duration-200">(603) 361-7541</a>
                       </div>
                     </div>
@@ -371,43 +372,25 @@ const Contact = () => {
                         <MapPin className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-xl mb-1">Location</h3>
+                        <h3 className="font-semibold text-xl mb-2">Location</h3>
                         <p className="text-foreground/70">Bedford, NH</p>
                         <p className="text-foreground/70">United States</p>
                         <p className="text-foreground/70">New Hampshire</p>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              
-              {/* Business Hours Card */}
-              <div className="bg-background/80 backdrop-blur-md p-8 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden">
-                {/* Background gradient */}
-                <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
-                
-                <div className="relative z-10">
-                  <h2 className="text-2xl font-bold mb-6 flex items-center">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-                      <Clock className="h-5 w-5 text-white" />
-                    </span>
-                    Business Hours
-                  </h2>
                   
-                  <ul className="space-y-4">
-                    <li className="flex justify-between items-center pb-3 border-b border-foreground/10">
-                      <span className="font-medium">Monday - Friday:</span>
-                      <span className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm font-medium">7:00 AM - 7:00 PM</span>
-                    </li>
-                    <li className="flex justify-between items-center pb-3 border-b border-foreground/10">
-                      <span className="font-medium">Saturday:</span>
-                      <span className="bg-purple-500/10 text-purple-500 px-3 py-1 rounded-full text-sm font-medium">10:00 AM - 4:00 PM</span>
-                    </li>
-                    <li className="flex justify-between items-center">
-                      <span className="font-medium">Sunday:</span>
-                      <span className="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-sm font-medium">Available if needed</span>
-                    </li>
-                  </ul>
+                  <div className="mt-8 pt-6 border-t border-foreground/10">
+                    <a 
+                      href="tel:6033617541" 
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      Call Us Now
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -40,7 +40,7 @@ export const WhatMakeUsDifferent = () => {
             className="inline-block relative"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-2 relative z-10">
-              What Makes Us Different
+              The Touchstone Difference
             </h2>
             <motion.div 
               className="absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full -z-10"
