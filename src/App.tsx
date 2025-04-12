@@ -12,6 +12,8 @@ import AboutPage from "./pages/AboutPage";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Features from "./pages/Features";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/faq/" element={<FAQ />} />
             <Route path="/contact/" element={<Contact />} />
             <Route path="/features/" element={<Features />} />
+            <Route path="/blog/" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             
             <Route path="/about/" element={<AboutPage />} />
             <Route path="/privacy/" element={<Privacy />} />
