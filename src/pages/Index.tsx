@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import HeroSection from '@/components/Home/HeroSection';
 import DigitalHallOfFameSection from '@/components/Home/DigitalHallOfFameSection';
 import InteractiveDisplaysSection from '@/components/Home/InteractiveDisplaysSection';
@@ -41,11 +41,27 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="Touchstone Digital Solutions - Interactive Digital Halls of Fame"
-        description="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities."
-        canonical="/"
-      />
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>Touchstone Digital Solutions - Interactive Digital Halls of Fame</title>
+        <meta name="description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
+        <link rel="canonical" href={`${window.location.origin}/`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Touchstone Digital Solutions - Interactive Digital Halls of Fame" />
+        <meta property="og:description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
+        <meta property="og:url" content={`${window.location.origin}/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:site_name" content="Touchstone Digital Solutions" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@touchstone_ds" />
+        <meta name="twitter:title" content="Touchstone Digital Solutions - Interactive Digital Halls of Fame" />
+        <meta name="twitter:description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
+        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+      </Helmet>
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />

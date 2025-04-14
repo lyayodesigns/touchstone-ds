@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogHeroSection from "@/components/Blog/BlogHeroSection";
-import BlogSeo from "@/components/Blog/BlogSeo";
 import { postsQuery } from "@/lib/sanity/queries";
 import { SeoType } from "@/lib/sanity/types";
 
@@ -62,13 +61,27 @@ const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
-      {/* SEO Component - using default values for blog listing page */}
-      <BlogSeo 
-        seo={null} 
-        slug="/blog"
-        defaultTitle="Blog | Touchstone Digital Solutions"
-        defaultDescription="Latest news, insights, and updates from Touchstone Digital Solutions."
-      />
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>Blog | Touchstone Digital Solutions</title>
+        <meta name="description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
+        <link rel="canonical" href={`${window.location.origin}/blog`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Blog | Touchstone Digital Solutions" />
+        <meta property="og:description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
+        <meta property="og:url" content={`${window.location.origin}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:site_name" content="Touchstone Digital Solutions" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@touchstone_ds" />
+        <meta name="twitter:title" content="Blog | Touchstone Digital Solutions" />
+        <meta name="twitter:description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
+        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+      </Helmet>
 
       <BlogHeroSection 
         title="Our Blog" 

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import { Container } from '@/components/ui/container';
 
 const Privacy = () => {
@@ -13,11 +13,27 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="Privacy Policy | Touchstone Digital Solutions"
-        description="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information."
-        canonical="/privacy/"
-      />
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>Privacy Policy | Touchstone Digital Solutions</title>
+        <meta name="description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
+        <link rel="canonical" href={`${window.location.origin}/privacy/`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Privacy Policy | Touchstone Digital Solutions" />
+        <meta property="og:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
+        <meta property="og:url" content={`${window.location.origin}/privacy/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:site_name" content="Touchstone Digital Solutions" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@touchstone_ds" />
+        <meta name="twitter:title" content="Privacy Policy | Touchstone Digital Solutions" />
+        <meta name="twitter:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
+        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

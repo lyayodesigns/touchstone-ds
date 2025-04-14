@@ -1,7 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
 import { AboutHeroSection } from '@/components/About/HeroSection';
 import { AboutStatsSection } from '@/components/About/StatsSection';
 import { WhatMakeUsDifferent } from '@/components/About/WhatMakeUsDifferent';
@@ -13,11 +13,27 @@ import { CallToAction } from '@/components/About/CallToAction';
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
-        title="About Us | Touchstone Digital Solutions"
-        description="Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems."
-        canonical="/about/"
-      />
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>About Us | Touchstone Digital Solutions</title>
+        <meta name="description" content="Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems." />
+        <link rel="canonical" href={`${window.location.origin}/about/`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="About Us | Touchstone Digital Solutions" />
+        <meta property="og:description" content="Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems." />
+        <meta property="og:url" content={`${window.location.origin}/about/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:site_name" content="Touchstone Digital Solutions" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@touchstone_ds" />
+        <meta name="twitter:title" content="About Us | Touchstone Digital Solutions" />
+        <meta name="twitter:description" content="Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems." />
+        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+      </Helmet>
       <Navbar />
       <main className="overflow-hidden">
         <AboutHeroSection />

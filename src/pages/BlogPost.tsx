@@ -10,7 +10,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogHeroSection from "@/components/Blog/BlogHeroSection";
 import PortableTextComponents from "@/components/Blog/PortableTextComponents";
-import BlogSeo from "@/components/Blog/BlogSeo";
 import { postQuery } from "@/lib/sanity/queries";
 import { SeoType } from "@/lib/sanity/types";
 
@@ -113,13 +112,47 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
-      {/* SEO Component */}
-      <BlogSeo 
-        seo={post.seo || null} 
-        slug={`/blog/${post.slug.current}`}
-        defaultTitle={`${post.title} | Touchstone Digital Solutions Blog`}
-        defaultDescription={`Read about ${post.title} on the Touchstone Digital Solutions blog.`}
-      />
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`}</title>
+        <meta name="description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
+        <link rel="canonical" href={`${window.location.origin}/blog/${post.slug.current}`} />
+        
+        {/* Keywords if available */}
+        {post.seo?.seoKeywords && post.seo.seoKeywords.length > 0 && (
+          <meta name="keywords" content={post.seo.seoKeywords.join(', ')} />
+        )}
+        
+        {/* Robots meta if nofollow is set */}
+        {post.seo?.nofollowAttributes && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={post.seo?.openGraph?.title || post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`} />
+        <meta property="og:description" content={post.seo?.openGraph?.description || post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
+        <meta property="og:url" content={`${window.location.origin}/blog/${post.slug.current}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : `${window.location.origin}/og-image.jpg`} />
+        {post.seo?.openGraph?.siteName && (
+          <meta property="og:site_name" content={post.seo.openGraph.siteName} />
+        )}
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content={post.seo?.twitter?.cardType || "summary_large_image"} />
+        {post.seo?.twitter?.site && (
+          <meta name="twitter:site" content={post.seo.twitter.site} />
+        )}
+        {post.seo?.twitter?.creator && (
+          <meta name="twitter:creator" content={post.seo.twitter.creator} />
+        )}
+        {post.seo?.twitter?.handle && (
+          <meta name="twitter:handle" content={post.seo.twitter.handle} />
+        )}
+        <meta name="twitter:title" content={post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`} />
+        <meta name="twitter:description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
+        <meta name="twitter:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : `${window.location.origin}/og-image.jpg`} />
+      </Helmet>
 
       <BlogHeroSection 
         title={post.title}

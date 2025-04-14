@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Container } from '@/components/ui/container';
@@ -11,6 +12,27 @@ const Terms = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>Terms of Service | Touchstone Digital Solutions</title>
+        <meta name="description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
+        <link rel="canonical" href={`${window.location.origin}/terms/`} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Terms of Service | Touchstone Digital Solutions" />
+        <meta property="og:description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
+        <meta property="og:url" content={`${window.location.origin}/terms/`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:site_name" content="Touchstone Digital Solutions" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@touchstone_ds" />
+        <meta name="twitter:title" content="Terms of Service | Touchstone Digital Solutions" />
+        <meta name="twitter:description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
+        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}
