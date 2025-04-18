@@ -54,7 +54,7 @@ const PortableTextComponents = {
       </h4>
     ),
     normal: ({ children }: any) => (
-      <p className="mb-6 text-gray-700 leading-relaxed text-lg">{children}</p>
+      <p className="mb-6 text-gray-700 leading-relaxed text-lg text-justify">{children}</p>
     ),
     blockquote: ({ children }: any) => (
       <blockquote className="border-l-4 border-gradient-to-b from-blue-500 to-purple-500 pl-6 py-1 my-8 bg-gray-50 rounded-r-lg shadow-sm italic text-gray-700">

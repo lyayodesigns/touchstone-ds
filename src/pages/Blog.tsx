@@ -86,11 +86,10 @@ const Blog = () => {
       <BlogHeroSection 
         title="Our Blog" 
         subtitle="Insights, updates, and stories from Touchstone Digital Solutions" 
-        description="Stay informed about the latest innovations in digital recognition systems, success stories, and expert insights from the Touchstone team." 
       />
 
       {/* Blog Posts */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="py-8 sm:py-10 lg:py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="flex justify-center items-center h-64">
@@ -109,14 +108,14 @@ const Blog = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="flex flex-col h-full bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+                  className="flex flex-col h-full bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden border-b border-gray-100">
                     {post.mainImage && (
                       <img
                         src={urlFor(post.mainImage).width(600).height(400).url()}
                         alt={post.title}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-300 hover:scale-105 hover:brightness-105"
                       />
                     )}
                   </div>
@@ -145,7 +144,7 @@ const Blog = () => {
                       </Link>
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-100">
+                    <div className="mt-auto pt-4 px-6 py-3 flex items-center justify-between border-t border-gray-200 bg-gray-50">
                       <div className="flex items-center">
                         {post.author?.image && (
                           <img

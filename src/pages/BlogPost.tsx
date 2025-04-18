@@ -157,31 +157,13 @@ const BlogPost = () => {
       <BlogHeroSection 
         title={post.title}
         isPost={true}
+        publishedDate={formatDate(post.publishedAt)}
+        author={post.author?.name}
+        categories={post.categories?.map(cat => cat.title).join(', ')}
       />
       
-      {/* Post metadata */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-gray-600 mb-8">
-            <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2 text-blue-500" />
-              <time>{formatDate(post.publishedAt)}</time>
-            </div>
-            
-            {post.author && (
-              <div className="flex items-center">
-                <User className="w-4 h-4 mr-2 text-blue-500" />
-                <span>{post.author.name}</span>
-              </div>
-            )}
-            
-            {post.categories && post.categories.length > 0 && (
-              <div className="flex items-center">
-                <Tag className="w-4 h-4 mr-2 text-blue-500" />
-                <span>{post.categories.map(cat => cat.title).join(', ')}</span>
-              </div>
-            )}
-          </div>
+        <div className="max-w-4xl mx-auto">
           
           {/* Featured Image */}
           {post.mainImage && (
@@ -199,13 +181,13 @@ const BlogPost = () => {
       {/* Content Section */}
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <Link to="/blog" className="inline-flex items-center text-blue-600 hover:underline mb-8">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
             
-            <article className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-purple-600 hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
+            <article className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-justify prose-a:text-blue-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-purple-600 hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
               <PortableText value={post.body} components={PortableTextComponents} />
             </article>
             

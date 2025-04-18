@@ -1,19 +1,26 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { Calendar, User, Tag } from 'lucide-react';
 
 interface BlogHeroSectionProps {
   title: string;
   subtitle?: string;
   description?: string;
   isPost?: boolean;
+  publishedDate?: string;
+  author?: string;
+  categories?: string;
 }
 
 const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({ 
   title, 
   subtitle, 
   description,
-  isPost = false
+  isPost = false,
+  publishedDate,
+  author,
+  categories
 }) => {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -22,7 +29,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
 
   return (
     <section 
-      className={`relative pt-6 ${isPost ? 'min-h-[50svh]' : 'min-h-[70svh]'} w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0`}
+      className={`relative ${isPost ? 'min-h-[40svh]' : 'min-h-[50svh]'} w-full flex flex-col items-center justify-center overflow-hidden pt-2 pb-0 sm:pt-4 sm:pb-0 md:pt-8 md:pb-0`}
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
         backgroundSize: "cover",
@@ -66,9 +73,9 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
       />
       
       <Container className="relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-5xl mx-auto">
           <motion.h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -82,12 +89,12 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
           
           {subtitle && (
             <motion.div
-              className="relative mb-4 md:mb-8"
+              className="relative mb-2 md:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-gray-700 mb-2 md:mb-3 max-w-3xl mx-auto">
                 {subtitle}
               </p>
               
@@ -103,7 +110,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
           
           {description && (
             <motion.div
-              className="relative mb-6"
+              className="relative mb-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -111,6 +118,37 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
                 {description}
               </p>
+            </motion.div>
+          )}
+          
+          {/* Post metadata - only shown for blog posts */}
+          {isPost && (publishedDate || author || categories) && (
+            <motion.div 
+              className="flex flex-wrap items-center justify-center gap-4 text-gray-600 mt-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              {publishedDate && (
+                <div className="flex items-center">
+                  <Calendar className="w-4 h-4 mr-2 text-blue-500" />
+                  <time>{publishedDate}</time>
+                </div>
+              )}
+              
+              {author && (
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2 text-blue-500" />
+                  <span>{author}</span>
+                </div>
+              )}
+              
+              {categories && (
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2 text-blue-500" />
+                  <span>{categories}</span>
+                </div>
+              )}
             </motion.div>
           )}
         </div>
