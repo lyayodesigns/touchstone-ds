@@ -29,7 +29,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
 
   return (
     <section 
-      className={`relative ${isPost ? 'min-h-[40svh]' : 'min-h-[50svh]'} w-full flex flex-col items-center justify-center overflow-hidden pt-2 pb-0 sm:pt-4 sm:pb-0 md:pt-8 md:pb-0`}
+      className={`relative ${isPost ? 'min-h-[50svh]' : 'min-h-[60svh]'} w-full flex flex-col items-center justify-center overflow-hidden pt-16 pb-10 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24`}
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
         backgroundSize: "cover",
@@ -75,7 +75,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
       <Container className="relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           <motion.h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-2"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -94,7 +94,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <p className="text-base md:text-lg text-gray-700 mb-2 md:mb-3 max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6 max-w-3xl mx-auto">
                 {subtitle}
               </p>
               
@@ -124,7 +124,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
           {/* Post metadata - only shown for blog posts */}
           {isPost && (publishedDate || author || categories) && (
             <motion.div 
-              className="flex flex-wrap items-center justify-center gap-4 text-gray-600 mt-4"
+              className="flex flex-wrap items-center justify-center gap-6 text-gray-600 mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
