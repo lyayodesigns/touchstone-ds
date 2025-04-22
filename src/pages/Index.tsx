@@ -45,14 +45,14 @@ const Index = () => {
         {/* Basic Meta Tags */}
         <title>Touchstone Digital Solutions - Interactive Digital Halls of Fame</title>
         <meta name="description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
-        <link rel="canonical" href={`${window.location.origin}/`} />
+        <link rel="canonical" href="https://touchstone-ds.com/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Touchstone Digital Solutions - Interactive Digital Halls of Fame" />
         <meta property="og:description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
-        <meta property="og:url" content={`${window.location.origin}/`} />
+        <meta property="og:url" content="https://touchstone-ds.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -60,7 +60,7 @@ const Index = () => {
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="Touchstone Digital Solutions - Interactive Digital Halls of Fame" />
         <meta name="twitter:description" content="Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       <main className="overflow-hidden">

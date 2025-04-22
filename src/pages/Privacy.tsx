@@ -17,14 +17,14 @@ const Privacy = () => {
         {/* Basic Meta Tags */}
         <title>Privacy Policy | Touchstone Digital Solutions</title>
         <meta name="description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <link rel="canonical" href={`${window.location.origin}/privacy/`} />
+        <link rel="canonical" href="https://touchstone-ds.com/privacy/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Privacy Policy | Touchstone Digital Solutions" />
         <meta property="og:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <meta property="og:url" content={`${window.location.origin}/privacy/`} />
+        <meta property="og:url" content="https://touchstone-ds.com/privacy/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -32,7 +32,7 @@ const Privacy = () => {
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="Privacy Policy | Touchstone Digital Solutions" />
         <meta name="twitter:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       
@@ -123,14 +123,14 @@ const Privacy = () => {
         <div className="prose prose-invert max-w-none">
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <p className="mb-4">
-              At Touchstone Digital Solutions LLC ("we", "us", "our"), we prioritize the privacy and security of our users' ("you", "your") personal information. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your information as you interact with our websites (touchstone-ds.com), associated mobile website, and mobile application (collectively, the "Websites"), as well as the services provided therein (the "Service").
+              At <a href="https://touchstone-ds.com/about/" className="text-blue-400 hover:text-blue-300 underline">Touchstone Digital Solutions LLC</a> ("we", "us", "our"), we prioritize the privacy and security of our users' ("you", "your") personal information. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of your information as you interact with our <a href="https://touchstone-ds.com" className="text-blue-400 hover:text-blue-300 underline">websites</a> (touchstone-ds.com), associated mobile website, and mobile application (collectively, the "Websites"), as well as the services provided therein (the "Service").
             </p>
           </section>
 
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h2 className="text-2xl font-semibold mb-4">Acceptance of the Policy</h2>
             <p className="mb-4">
-              By accessing and using the Websites and the Service, you acknowledge and consent to the collection, use, and disclosure of your personal information in accordance with this Privacy Policy. If you do not agree with any aspect of this policy, please discontinue use of our Services.
+              By accessing and using the Websites and the Service, you acknowledge and consent to the collection, use, and disclosure of your personal information in accordance with this Privacy Policy. If you do not agree with any aspect of this policy, please discontinue use of our Services. For more information about how we use your data with our products, please review our <a href="https://touchstone-ds.com/terms/" className="text-blue-400 hover:text-blue-300 underline">Terms of Service</a>.
             </p>
           </section>
 
@@ -233,14 +233,14 @@ const Privacy = () => {
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h2 className="text-2xl font-semibold mb-4">Child Protection Policy</h2>
             <p className="mb-4">
-              We do not knowingly collect personal information from children under 13 and comply with the Children's Online Privacy Protection Act (COPPA). If we become aware of such collection without parental consent, we will take steps to remove the information promptly.
+              We do not knowingly collect personal information from children under 13 and comply with the Children's Online Privacy Protection Act (COPPA). If we become aware of such collection without parental consent, we will take steps to remove the information promptly. Learn more about our <a href="https://touchstone-ds.com/features/" className="text-blue-400 hover:text-blue-300 underline">features</a> designed for educational institutions.
             </p>
           </section>
 
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h2 className="text-2xl font-semibold mb-4">External Links and Third-Party Services</h2>
             <p className="mb-4">
-              Our Service may include links to third-party services, which operate under their own privacy policies. We encourage you to review their policies before engaging with these services.
+              Our Service may include links to third-party services, which operate under their own privacy policies. We encourage you to review their policies before engaging with these services. For the latest updates from our team, check our <a href="https://touchstone-ds.com/blog/" className="text-blue-400 hover:text-blue-300 underline">blog</a>.
             </p>
           </section>
 
@@ -275,7 +275,7 @@ const Privacy = () => {
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <p className="mb-4">
-              For questions or concerns about this policy, please contact us at support@touchstone-ds.com.
+              For questions or concerns about this policy, please <a href="https://touchstone-ds.com/contact/" className="text-blue-400 hover:text-blue-300 underline">contact us</a> at support@touchstone-ds.com.
             </p>
           </section>
 

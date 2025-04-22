@@ -359,14 +359,14 @@ The result? A powerful tool that pays for itself—through saved costs, new fund
         {/* Basic Meta Tags */}
         <title>FAQ | Touchstone Digital Solutions</title>
         <meta name="description" content="Find answers to frequently asked questions about Touchstone's digital recognition systems, implementation process, pricing, and technical specifications." />
-        <link rel="canonical" href={`${window.location.origin}/faq/`} />
+        <link rel="canonical" href="https://touchstone-ds.com/faq/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="FAQ | Touchstone Digital Solutions" />
         <meta property="og:description" content="Find answers to frequently asked questions about Touchstone's digital recognition systems, implementation process, pricing, and technical specifications." />
-        <meta property="og:url" content={`${window.location.origin}/faq/`} />
+        <meta property="og:url" content="https://touchstone-ds.com/faq/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -374,7 +374,7 @@ The result? A powerful tool that pays for itself—through saved costs, new fund
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="FAQ | Touchstone Digital Solutions" />
         <meta name="twitter:description" content="Find answers to frequently asked questions about Touchstone's digital recognition systems, implementation process, pricing, and technical specifications." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
       <Navbar />
 

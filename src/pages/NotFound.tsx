@@ -140,7 +140,7 @@ const NotFound = () => {
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Page Not Found | Touchstone Digital Solutions" />
         <meta property="og:description" content="The page you are looking for does not exist or has been moved." />
-        <meta property="og:url" content={`${window.location.origin}${location.pathname}`} />
+        <meta property="og:url" content={`https://touchstone-ds.com${location.pathname}`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
       </Helmet>

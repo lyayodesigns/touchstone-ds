@@ -116,7 +116,7 @@ const BlogPost = () => {
         {/* Basic Meta Tags */}
         <title>{post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`}</title>
         <meta name="description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
-        <link rel="canonical" href={`${window.location.origin}/blog/${post.slug.current}`} />
+        <link rel="canonical" href={`https://touchstone-ds.com/blog/${post.slug.current}`} />
         
         {/* Keywords if available */}
         {post.seo?.seoKeywords && post.seo.seoKeywords.length > 0 && (
@@ -131,9 +131,9 @@ const BlogPost = () => {
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={post.seo?.openGraph?.title || post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`} />
         <meta property="og:description" content={post.seo?.openGraph?.description || post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
-        <meta property="og:url" content={`${window.location.origin}/blog/${post.slug.current}`} />
+        <meta property="og:url" content={`https://touchstone-ds.com/blog/${post.slug.current}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : `${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : "https://touchstone-ds.com/og-image.jpg"} />
         {post.seo?.openGraph?.siteName && (
           <meta property="og:site_name" content={post.seo.openGraph.siteName} />
         )}
@@ -151,7 +151,7 @@ const BlogPost = () => {
         )}
         <meta name="twitter:title" content={post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`} />
         <meta name="twitter:description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
-        <meta name="twitter:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : `${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content={post.seo?.openGraph?.image?.asset?.url || post.mainImage ? urlFor(post.mainImage).width(1200).height(675).url() : "https://touchstone-ds.com/og-image.jpg"} />
       </Helmet>
 
       <BlogHeroSection 

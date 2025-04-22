@@ -90,18 +90,10 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/about/"
+                  to="/faq/"
                   className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group"
                 >
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">About Us</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/features/"
-                  className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group"
-                >
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">Features</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">FAQ</span>
                 </Link>
               </li>
               <li>

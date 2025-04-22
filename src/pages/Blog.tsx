@@ -65,14 +65,14 @@ const Blog = () => {
         {/* Basic Meta Tags */}
         <title>Blog | Touchstone Digital Solutions</title>
         <meta name="description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
-        <link rel="canonical" href={`${window.location.origin}/blog`} />
+        <link rel="canonical" href="https://touchstone-ds.com/blog" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Blog | Touchstone Digital Solutions" />
         <meta property="og:description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
-        <meta property="og:url" content={`${window.location.origin}/blog`} />
+        <meta property="og:url" content="https://touchstone-ds.com/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -80,7 +80,7 @@ const Blog = () => {
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="Blog | Touchstone Digital Solutions" />
         <meta name="twitter:description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
 
       <BlogHeroSection 

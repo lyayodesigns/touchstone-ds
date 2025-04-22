@@ -84,14 +84,14 @@ const Contact = () => {
         {/* Basic Meta Tags */}
         <title>Contact Us | Touchstone Digital Solutions</title>
         <meta name="description" content="Get in touch with the Touchstone team to discuss your digital recognition system needs, request a demo, or learn more about our services." />
-        <link rel="canonical" href={`${window.location.origin}/contact/`} />
+        <link rel="canonical" href="https://touchstone-ds.com/contact/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Contact Us | Touchstone Digital Solutions" />
         <meta property="og:description" content="Get in touch with the Touchstone team to discuss your digital recognition system needs, request a demo, or learn more about our services." />
-        <meta property="og:url" content={`${window.location.origin}/contact/`} />
+        <meta property="og:url" content="https://touchstone-ds.com/contact/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -99,7 +99,7 @@ const Contact = () => {
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="Contact Us | Touchstone Digital Solutions" />
         <meta name="twitter:description" content="Get in touch with the Touchstone team to discuss your digital recognition system needs, request a demo, or learn more about our services." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       
@@ -165,7 +165,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-xl md:text-2xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
-                Have questions about our digital recognition solutions? Our team is ready to create an unforgettable experience for your institution.  
+                Have questions about our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"><a href="https://touchstone-ds.com/features/" className="hover:opacity-80 transition-opacity">digital recognition solutions</a></span>? Our team is ready to create an unforgettable experience for your institution.
               </p>
             </motion.div>
             
@@ -206,6 +206,42 @@ const Contact = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Get in Touch</span>
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">We'd love to hear from you. Fill out the form below and our team will get back to you as soon as possible.</p>
+            
+            {/* Stylish navigation links */}
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4">
+              <a href="https://touchstone-ds.com/about/" className="text-sm group flex items-center">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">About Us</span>
+              </a>
+              <a href="https://touchstone-ds.com/blog/" className="text-sm group flex items-center">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  </svg>
+                </span>
+                <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Blog</span>
+              </a>
+              <a href="https://touchstone-ds.com/privacy/" className="text-sm group flex items-center">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </span>
+                <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Privacy Policy</span>
+              </a>
+              <a href="https://touchstone-ds.com/terms/" className="text-sm group flex items-center">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </span>
+                <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Terms of Service</span>
+              </a>
+            </div>
           </div>
           
           {/* Contact Form and Info */}
@@ -392,11 +428,45 @@ const Contact = () => {
                         <p className="text-foreground/70">Bedford, NH</p>
                         <p className="text-foreground/70">United States</p>
                         <p className="text-foreground/70">New Hampshire</p>
+                        <a href="https://touchstone-ds.com" className="mt-3 inline-flex items-center group">
+                          <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                          </span>
+                          <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Visit our homepage</span>
+                        </a>
                       </div>
                     </div>
                   </div>
                   
                   <div className="mt-8 pt-6 border-t border-foreground/10">
+                    <div className="flex flex-wrap gap-4 mb-6 justify-center">
+                      <a href="https://touchstone-ds.com/features/" className="text-sm group flex items-center">
+                        <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-6 h-6 rounded-full flex items-center justify-center mr-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                          </svg>
+                        </span>
+                        <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Features</span>
+                      </a>
+                      <a href="https://touchstone-ds.com/about/" className="text-sm group flex items-center">
+                        <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-6 h-6 rounded-full flex items-center justify-center mr-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </span>
+                        <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">About</span>
+                      </a>
+                      <a href="https://touchstone-ds.com/blog/" className="text-sm group flex items-center">
+                        <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-6 h-6 rounded-full flex items-center justify-center mr-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                          </svg>
+                        </span>
+                        <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Blog</span>
+                      </a>
+                    </div>
                     <a 
                       href="tel:6033617541" 
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"

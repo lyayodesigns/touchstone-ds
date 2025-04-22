@@ -16,14 +16,14 @@ const Terms = () => {
         {/* Basic Meta Tags */}
         <title>Terms of Service | Touchstone Digital Solutions</title>
         <meta name="description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
-        <link rel="canonical" href={`${window.location.origin}/terms/`} />
+        <link rel="canonical" href="https://touchstone-ds.com/terms/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Terms of Service | Touchstone Digital Solutions" />
         <meta property="og:description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
-        <meta property="og:url" content={`${window.location.origin}/terms/`} />
+        <meta property="og:url" content="https://touchstone-ds.com/terms/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
 
         {/* Twitter Card Meta Tags */}
@@ -31,7 +31,7 @@ const Terms = () => {
         <meta name="twitter:site" content="@touchstone_ds" />
         <meta name="twitter:title" content="Terms of Service | Touchstone Digital Solutions" />
         <meta name="twitter:description" content="Read Touchstone Digital Solutions' terms of service to understand the rules and regulations governing the use of our services." />
-        <meta name="twitter:image" content={`${window.location.origin}/og-image.jpg`} />
+        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
       </Helmet>
       <Navbar />
       
@@ -122,7 +122,7 @@ const Terms = () => {
         <div className="prose prose-invert max-w-none">
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <p>
-              Welcome to Touchstone Digital Solutions, managed by Touchstone Digital Solutions LLC. By accessing our website at Touchstone-ds.com, any other domains directly owned and managed by Touchstone Digital Solutions, the corresponding mobile site, and the mobile app (together referred to as the "Websites"), you consent to abide by these Terms of Service (referred to herein as "Terms of Service" or "Agreement"). This agreement applies whether you are just visiting or if you register as a member of Touchstone Digital Solutions ("Member"). Should you decide to register as a Member and engage with our services (the "Service"), you need to review and agree to this Agreement. Should any part of this Agreement or the Touchstone Digital Solutions Privacy Policy be unacceptable to you, you should refrain from using the Service.
+              Welcome to <a href="https://touchstone-ds.com" className="text-blue-400 hover:text-blue-300 underline">Touchstone Digital Solutions</a>, managed by Touchstone Digital Solutions LLC. By accessing our website at <a href="https://touchstone-ds.com" className="text-blue-400 hover:text-blue-300 underline">Touchstone-ds.com</a>, any other domains directly owned and managed by Touchstone Digital Solutions, the corresponding mobile site, and the mobile app (together referred to as the "Websites"), you consent to abide by these Terms of Service (referred to herein as "Terms of Service" or "Agreement"). This agreement applies whether you are just visiting or if you register as a member of Touchstone Digital Solutions ("Member"). Should you decide to register as a Member and engage with our services (the "Service"), you need to review and agree to this Agreement. Should any part of this Agreement or the <a href="https://touchstone-ds.com/privacy/" className="text-blue-400 hover:text-blue-300 underline">Touchstone Digital Solutions Privacy Policy</a> be unacceptable to you, you should refrain from using the Service.
             </p>
             <p className="my-6">
               This Agreement is dynamic and may be updated by Touchstone Digital Solutions at any time, with changes taking effect immediately upon their posting on the site. Your ongoing use of the Websites and Service after any amendments signifies your definite acceptance of and agreement to the updated terms.
@@ -346,13 +346,13 @@ const Terms = () => {
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h3 className="text-xl font-bold mb-4">17. Parental or Guardian Permission</h3>
             <p className="mb-4">
-              Some content on the Websites may not be suitable for children under the age of 17. We require that children under this age use the service only in the presence of a parent or guardian who agrees to be bound by these Terms of Service.
+              Some content on the Websites may not be suitable for children under the age of 17. We require that children under this age use the service only in the presence of a parent or guardian who agrees to be bound by these Terms of Service. Learn more about our <a href="https://touchstone-ds.com/features/" className="text-blue-400 hover:text-blue-300 underline">features</a> and how they're designed for educational environments.
             </p>
           </section>
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h3 className="text-xl font-bold mb-4">18. Privacy</h3>
             <p className="mb-4">
-              Your use of the Websites and Services is also subject to our Privacy Policy, which is incorporated by reference into these Terms of Service. The Privacy Policy is available on the Touchstone Digital Solutions website.
+              Your use of the Websites and Services is also subject to our <a href="https://touchstone-ds.com/privacy/" className="text-blue-400 hover:text-blue-300 underline">Privacy Policy</a>, which is incorporated by reference into these Terms of Service. The Privacy Policy is available on the Touchstone Digital Solutions website.
             </p>
           </section>
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
@@ -370,7 +370,7 @@ const Terms = () => {
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <h3 className="text-xl font-bold mb-4">21. No Third Party Beneficiaries</h3>
             <p className="mb-4">
-              This Agreement is between you and Touchstone Digital Solutions; there are no third-party beneficiaries.
+              This Agreement is between you and <a href="https://touchstone-ds.com/about/" className="text-blue-400 hover:text-blue-300 underline">Touchstone Digital Solutions</a>; there are no third-party beneficiaries.
             </p>
           </section>
           <section className="mb-8 p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
@@ -402,7 +402,7 @@ const Terms = () => {
               I HAVE CAREFULLY READ AND FULLY AGREE TO ALL THE PROVISIONS OUTLINED IN THIS AGREEMENT.
             </p>
             <p className="mb-4 text-center">
-              Please do not hesitate to reach out if you have any questions about the Terms of Service.
+              Please do not hesitate to <a href="https://touchstone-ds.com/contact/" className="text-blue-400 hover:text-blue-300 underline">reach out</a> if you have any questions about the Terms of Service.
             </p>
           </section>
         </div>

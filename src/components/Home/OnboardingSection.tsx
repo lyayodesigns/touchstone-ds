@@ -80,7 +80,7 @@ const OnboardingSection: React.FC = () => {
             </div>
             
             <div 
-              className={`mt-8 transition-all duration-700 delay-[400ms] ${
+              className={`mt-8 transition-all duration-700 delay-400 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
@@ -107,7 +107,7 @@ const OnboardingSection: React.FC = () => {
           
           {/* Right side - We Handle It All */}
           <div 
-            className={`w-full lg:w-1/2 transition-all duration-700 delay-[200ms] ${
+            className={`w-full lg:w-1/2 transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -159,7 +159,7 @@ const OnboardingSection: React.FC = () => {
               </div>
               
               <div 
-                className={`mt-8 transition-all duration-700 delay-[1000ms] ${
+                className={`mt-8 transition-all duration-700 delay-1000 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >

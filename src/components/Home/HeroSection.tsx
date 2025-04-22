@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
           }`}
         >
           <h1
-            className={`text-[2rem] md:text-[2.5rem] font-bold transition-all duration-700 delay-[100ms] ${
+            className={`text-[2rem] md:text-[2.5rem] font-bold transition-all duration-700 delay-100 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
             Welcome to <span className='text-accent'>Touchstone Digital Solutions</span>
           </h1>
           <h2
-            className={`text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-[300ms] ${
+            className={`text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-tighter text-foreground transition-all duration-700 delay-300 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
           </h2>
 
           <p
-            className={`text-sm sm:text-base md:text-lg text-foreground/70 max-w-3xl mx-auto transition-all duration-700 delay-[500ms] ${
+            className={`text-sm sm:text-base md:text-lg text-foreground/70 max-w-3xl mx-auto transition-all duration-700 delay-500 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -100,7 +100,7 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div 
-            className={`flex flex-col items-center sm:items-end sm:flex-row sm:justify-end gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 w-full px-4 sm:pr-4 md:pr-8 transition-all duration-700 delay-[600ms] ${
+            className={`flex flex-col items-center sm:items-end sm:flex-row sm:justify-end gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8 w-full px-4 sm:pr-4 md:pr-8 transition-all duration-700 delay-600 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -163,7 +163,7 @@ const HeroSection: React.FC = () => {
 
       {/* Awards Slider - responsive positioning */}
       <div
-        className={`w-full mt-6 sm:mt-8 md:mt-16 transition-all duration-700 delay-[900ms] ${
+        className={`w-full mt-6 sm:mt-8 md:mt-16 transition-all duration-700 delay-900 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >

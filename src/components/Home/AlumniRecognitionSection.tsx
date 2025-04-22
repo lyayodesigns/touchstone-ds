@@ -61,7 +61,7 @@ const AlumniRecognitionSection: React.FC = () => {
           </h2>
           
           <h3 
-            className={`text-xl sm:text-2xl font-medium text-foreground/90 mt-4 sm:mt-6 transition-all duration-700 delay-[200ms] ${
+            className={`text-xl sm:text-2xl font-medium text-foreground/90 mt-4 sm:mt-6 transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -70,7 +70,7 @@ const AlumniRecognitionSection: React.FC = () => {
         </div>
         
         <div 
-          className={`max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 transition-all duration-700 delay-[300ms] ${
+          className={`max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 transition-all duration-700 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -111,7 +111,7 @@ const AlumniRecognitionSection: React.FC = () => {
         </div>
         
         <div 
-          className={`text-center mt-8 sm:mt-10 transition-all duration-700 delay-[900ms] ${
+          className={`text-center mt-8 sm:mt-10 transition-all duration-700 delay-900 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

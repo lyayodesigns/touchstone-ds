@@ -55,7 +55,7 @@ const CustomPlatformSection: React.FC = () => {
 
         <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
           <p
-            className={`text-base sm:text-lg text-foreground/80 mb-8 transition-all duration-700 delay-[200ms] ${
+            className={`text-base sm:text-lg text-foreground/80 mb-8 transition-all duration-700 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
@@ -122,7 +122,7 @@ const CustomPlatformSection: React.FC = () => {
           </div>
 
           <div
-            className={`mt-8 sm:mt-10 text-center transition-all duration-700 delay-[700ms] ${
+            className={`mt-8 sm:mt-10 text-center transition-all duration-700 delay-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
