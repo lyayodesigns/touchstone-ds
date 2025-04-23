@@ -255,7 +255,7 @@ const HeroSection: React.FC = () => {
                   {/* Screen content with carousel */}
                   <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden">
                     {/* Image Carousel */}
-                    <div className="relative w-full aspect-[16/10] overflow-hidden">
+                    <div className="relative w-full aspect-[16/10] overflow-hidden select-none">
                       <div
                         className={`flex h-full transition-transform ${isTransitioning ? 'duration-1000 ease-in-out' : 'duration-0'}`}
                         style={{
@@ -284,7 +284,7 @@ const HeroSection: React.FC = () => {
                             <img
                               src={image.src}
                               alt={image.alt}
-                              className="w-full h-full object-cover rounded-md"
+                              className="w-full h-full object-cover rounded-md select-none"
                             />
                           </div>
                         ))}
