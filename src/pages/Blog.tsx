@@ -65,12 +65,12 @@ const Blog = () => {
         {/* Basic Meta Tags */}
         <title>Blog | Touchstone Digital Solutions</title>
         <meta name="description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
-        <link rel="canonical" href="https://touchstone-ds.com/blog" />
+        <link rel="canonical" href="https://touchstone-ds.com/blog/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Blog | Touchstone Digital Solutions" />
         <meta property="og:description" content="Latest news, insights, and updates from Touchstone Digital Solutions." />
-        <meta property="og:url" content="https://touchstone-ds.com/blog" />
+        <meta property="og:url" content="https://touchstone-ds.com/blog/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
         <meta property="og:site_name" content="Touchstone Digital Solutions" />
@@ -137,7 +137,7 @@ const Blog = () => {
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
                       <Link
-                        to={`/blog/${post.slug.current}`}
+                        to={`/blog/${post.slug.current}/`}
                         className="hover:text-blue-600 transition-colors"
                       >
                         {post.title}
