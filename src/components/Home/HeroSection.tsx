@@ -244,11 +244,8 @@ const HeroSection: React.FC = () => {
               <div 
                 className="relative" 
                 style={{ 
-                  transform: 'rotateY(-12deg)', 
-                  transition: 'transform 700ms ease-out' 
+                  transform: 'rotateY(-12deg)'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'rotateY(0deg)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'rotateY(-12deg)'}
               >
                 {/* Monitor bezel */}
                 <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-4 pt-3 rounded-xl border border-gray-700 shadow-2xl overflow-hidden">
@@ -289,22 +286,6 @@ const HeroSection: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                      
-                      {/* Navigation buttons */}
-                      <button 
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-1 backdrop-blur-sm transition-all duration-300"
-                        aria-label="Previous image"
-                      >
-                        <ChevronLeft size={20} />
-                      </button>
-                      <button 
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-1 backdrop-blur-sm transition-all duration-300"
-                        aria-label="Next image"
-                      >
-                        <ChevronRight size={20} />
-                      </button>
                       
 
                     </div>
