@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
 import { CheckCircle, DollarSign, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,6 +8,7 @@ const HeroSection: React.FC = () => {
   const [orientation, setOrientation] = useState<"portrait" | "landscape">(
     window.innerWidth > window.innerHeight ? "landscape" : "portrait"
   );
+  const monitorFrameRef = useRef<HTMLDivElement>(null);
 
   // Title animation state
   const titleWords = ["Touchscreen", "Touchstone"];
@@ -236,26 +237,38 @@ const HeroSection: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative w-full max-w-xl lg:max-w-2xl mx-auto transform scale-110 md:scale-125 lg:scale-110" style={{ perspective: '1000px' }}>
+            <div 
+              className="relative w-full max-w-xl lg:max-w-2xl mx-auto transform scale-110 md:scale-125 lg:scale-110" 
+              style={{ perspective: '1000px' }}
+              onMouseEnter={() => {
+                if (monitorFrameRef.current) {
+                  monitorFrameRef.current.style.transform = 'rotateY(0deg)';
+                }
+              }}
+              onMouseLeave={() => {
+                if (monitorFrameRef.current) {
+                  monitorFrameRef.current.style.transform = 'rotateY(-12deg)';
+                }
+              }}
+            >
               {/* Decorative glow effect */}
-              <div className="absolute -inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-xl blur-xl opacity-70"></div>
+              <div className="absolute -inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-xl blur-xl opacity-70 pointer-events-none"></div>
               
               {/* Monitor frame with 3D rotation */}
               <div 
-                className="relative" 
+                ref={monitorFrameRef}
+                className="relative pointer-events-none touch-none" 
                 style={{ 
-                  transform: 'rotateY(-12deg)', 
-                  transition: 'transform 700ms ease-out' 
+                  transform: 'rotateY(-12deg)',
+                  transition: 'transform 700ms ease-out'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'rotateY(0deg)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'rotateY(-12deg)'}
               >
                 {/* Monitor bezel */}
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-4 pt-3 rounded-xl border border-gray-700 shadow-2xl overflow-hidden">
+                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-4 pt-3 rounded-xl border border-gray-700 shadow-2xl overflow-hidden pointer-events-none touch-none">
                   {/* Screen content with carousel */}
-                  <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden">
+                  <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden pointer-events-none touch-none">
                     {/* Image Carousel */}
-                    <div className="relative w-full aspect-[16/10] overflow-hidden">
+                    <div className="relative w-full aspect-[16/10] overflow-hidden select-none pointer-events-none touch-none">
                       <div
                         className={`flex h-full transition-transform ${isTransitioning ? 'duration-1000 ease-in-out' : 'duration-0'}`}
                         style={{
@@ -278,33 +291,17 @@ const HeroSection: React.FC = () => {
                         {extendedImages.map((image, index) => (
                           <div
                             key={index}
-                            className="flex-shrink-0 w-full h-full"
+                            className="flex-shrink-0 w-full h-full pointer-events-none touch-none"
                             style={{ width: `${100 / extendedImages.length}%` }}
                           >
                             <img
                               src={image.src}
                               alt={image.alt}
-                              className="w-full h-full object-cover rounded-md"
+                              className="w-full h-full object-cover rounded-md select-none pointer-events-none touch-none"
                             />
                           </div>
                         ))}
                       </div>
-                      
-                      {/* Navigation buttons */}
-                      <button 
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-1 backdrop-blur-sm transition-all duration-300"
-                        aria-label="Previous image"
-                      >
-                        <ChevronLeft size={20} />
-                      </button>
-                      <button 
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-1 backdrop-blur-sm transition-all duration-300"
-                        aria-label="Next image"
-                      >
-                        <ChevronRight size={20} />
-                      </button>
                       
 
                     </div>
@@ -315,12 +312,12 @@ const HeroSection: React.FC = () => {
                   </div>
                   
                   {/* Monitor stand */}
-                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-gradient-to-b from-gray-700 to-gray-800 rounded-t-md"></div>
-                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-gradient-to-b from-gray-800 to-gray-900 rounded-md"></div>
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-gradient-to-b from-gray-700 to-gray-800 rounded-t-md pointer-events-none"></div>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-gradient-to-b from-gray-800 to-gray-900 rounded-md pointer-events-none"></div>
                 </div>
                 
                 {/* Subtle shadow under the monitor */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-black/20 blur-xl rounded-full"></div>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-black/20 blur-xl rounded-full pointer-events-none"></div>
                 
                 {/* Reflection effect on the side */}
                 <div className="absolute top-0 bottom-0 left-0 w-[10%] bg-gradient-to-r from-white/10 to-transparent pointer-events-none"></div>
