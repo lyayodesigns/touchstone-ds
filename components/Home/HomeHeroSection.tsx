@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
 import { CheckCircle, DollarSign, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -18,12 +20,36 @@ const carouselImages = [
 
 const HeroSection: React.FC = () => {
   // SSR: Always render as visible, landscape orientation, first title word, first image
-  const orientation = "landscape";
-  const currentTitleWordIndex = 0;
-  const isTitleAnimating = true;
-  const isVisible = true;
-  const currentImageIndex = 0;
-  const isTransitioning = false;
+  const [orientation, setOrientation] = useState<"portrait" | "landscape">("landscape");
+  const [currentTitleWordIndex, setCurrentTitleWordIndex] = useState(0);
+  const [isTitleAnimating, setIsTitleAnimating] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at first real image
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const monitorFrameRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setOrientation(
+      window.innerWidth > window.innerHeight ? "landscape" : "portrait"
+    );
+    const handleResize = () => {
+      setOrientation(
+        window.innerWidth > window.innerHeight ? "landscape" : "portrait"
+      );
+    };
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+    };
+  }, []);
+
+  const extendedImages = [
+    carouselImages[carouselImages.length - 1],
+    ...carouselImages,
+    carouselImages[0]
+  ];
 
   return (
     <section 
@@ -157,7 +183,8 @@ const HeroSection: React.FC = () => {
               
               {/* Monitor frame with 3D rotation */}
               <div 
-                className="relative pointer-events-none touch-none" 
+                ref={monitorFrameRef}
+                className="relative touch-none" 
                 style={{ 
                   transform: 'rotateY(-12deg)',
                   transition: 'transform 700ms ease-out'
@@ -171,8 +198,8 @@ const HeroSection: React.FC = () => {
                     <div className="relative w-full aspect-[16/10] overflow-hidden select-none pointer-events-none touch-none">
                       <div className="relative w-full h-full">
                         <Image
-                          src={carouselImages[currentImageIndex].src}
-                          alt={carouselImages[currentImageIndex].alt}
+                          src={extendedImages[currentImageIndex].src}
+                          alt={extendedImages[currentImageIndex].alt}
                           className="select-none pointer-events-none touch-none object-cover rounded-md"
                           fill
                           priority

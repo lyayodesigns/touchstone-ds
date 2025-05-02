@@ -16,8 +16,35 @@ import HeroSection from '../components/Home/HomeHeroSection';
 
 export const dynamic = 'force-static';
 
-// Metadata is now handled in layout.tsx with the metadata export
-// No need for Head component in App Router
+// Per-page metadata for SEO and social sharing
+export const metadata = {
+  title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
+  description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
+    description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",
+    url: 'https://touchstone-ds.com/',
+    siteName: 'Touchstone Digital Solutions',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@touchstone_ds',
+    title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
+    description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",
+    images: ['/og-image.jpg'],
+  },
+};
 
 const Index = () => {
   return (
