@@ -23,6 +23,7 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  metadataBase: new URL('https://touchstone-ds.com'),
   openGraph: {
     title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
     description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",

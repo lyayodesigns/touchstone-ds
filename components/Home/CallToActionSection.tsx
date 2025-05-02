@@ -15,7 +15,7 @@ const CallToActionSection: React.FC = () => {
       }, 100);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
   return (
     <section

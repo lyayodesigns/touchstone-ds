@@ -1,5 +1,6 @@
+// Converted to ESM for Next.js compatibility
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: ["class"],
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -17,7 +18,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Inter', 'sans-serif'],
+        display: [
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -79,5 +85,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [import("tailwindcss-animate")],
 }

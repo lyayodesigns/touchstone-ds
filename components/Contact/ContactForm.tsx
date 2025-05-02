@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useEffect, useState, useRef } from 'react';
 
@@ -6,7 +5,6 @@ import { useForm, FormProvider, useForm as useFormHook } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Loader2, CheckCircle, AlertCircle, Mail, Phone, MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from 'components/ui/form';
 import { Input } from 'components/ui/input';
 import { Textarea } from 'components/ui/textarea';

@@ -177,6 +177,16 @@ const HeroSection: React.FC = () => {
             <div 
               className="relative w-full max-w-xl lg:max-w-2xl mx-auto transform scale-110 md:scale-125 lg:scale-110" 
               style={{ perspective: '1000px' }}
+              onMouseEnter={() => {
+                if (monitorFrameRef.current) {
+                  monitorFrameRef.current.style.transform = 'rotateY(0deg)';
+                }
+              }}
+              onMouseLeave={() => {
+                if (monitorFrameRef.current) {
+                  monitorFrameRef.current.style.transform = 'rotateY(-12deg)';
+                }
+              }}
             >
               {/* Decorative glow effect */}
               <div className="absolute -inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30 rounded-xl blur-xl opacity-70 pointer-events-none"></div>
