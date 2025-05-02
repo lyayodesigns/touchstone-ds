@@ -5,13 +5,12 @@ import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 import Link from 'next/link';
 
-// SSR/SSG compatible: No useEffect, useRef, or browser-only APIs. All framer-motion usage is SSR safe.
-
 export const CallToAction = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700"></div>
+      
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
@@ -33,6 +32,7 @@ export const CallToAction = () => {
           transition={{ duration: 22, repeat: Infinity, repeatType: "reverse" }}
         />
       </div>
+      
       {/* Content with glass effect */}
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -40,48 +40,66 @@ export const CallToAction = () => {
             <motion.div 
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 Ready to Create Your Digital Legacy?
               </motion.h2>
+              
               <motion.div 
                 className="h-1 w-20 bg-white rounded-full mb-6 mx-auto"
                 initial={{ width: 0 }}
-                animate={{ width: 80 }}
+                whileInView={{ width: 80 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               />
+              
               <motion.p 
                 className="text-lg mb-6 text-white/90 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 Unlock the transformative power of digital recognition with Touchstone Digital Solutions. 
                 Our commitment to innovation, quality, and fully customized service sets us apart.
               </motion.p>
+              
               <motion.p 
                 className="text-lg mb-10 text-white/90 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 Let's create something remarkable together that celebrates your institution's heritage, 
                 achievements, and future.
               </motion.p>
+              
               <Link href="/contact/">
-                <span className="inline-block w-full text-center py-3 px-8 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                <motion.span 
+                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-medium text-center hover:bg-opacity-90 transition-all shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0, 0, 0, 0.2)" }}
+                  whileTap={{ scale: 0.98 }}
+                >
                   Contact Us
-                </span>
+                </motion.span>
               </Link>
             </motion.div>
           </div>
+          
           {/* Decorative elements */}
           <motion.div 
             className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full border-4 border-white/10 z-0"

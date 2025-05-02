@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container } from '../ui/container';
 import { 
@@ -31,6 +31,26 @@ import {
   CreditCard,
   Search
 } from 'lucide-react';
+
+interface FeatureItem {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface FeatureSection {
+  title: string;
+  description: string;
+  category: number;
+  features: FeatureItem[];
+}
+
+interface CategoryItem {
+  name: string;
+  icon: React.ReactNode;
+  description: string;
+}
+
 const VisualFidelity = () => {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -39,10 +59,26 @@ const VisualFidelity = () => {
 
   // State for active tab and expanded sections
   const [activeTab, setActiveTab] = useState(0);
-  const [expandedSections, setExpandedSections] = useState([0]);
+  const [expandedSections, setExpandedSections] = useState<number[]>([0]);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Handle tab change
+  const handleTabChange = (index: number) => {
+    setActiveTab(index);
+    setExpandedSections([0]); // Reset expanded sections when tab changes
+    
+    // Optional: Scroll to content area if needed
+    setTimeout(() => {
+      if (contentRef.current) {
+        const yOffset = -100; // Adjust offset as needed
+        const y = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   // Toggle section expansion
-  const toggleSection = (index) => {
+  const toggleSection = (index: number) => {
     if (expandedSections.includes(index)) {
       setExpandedSections(expandedSections.filter(i => i !== index));
     } else {
@@ -71,7 +107,7 @@ const VisualFidelity = () => {
   };
 
   // Feature categories for tabs
-  const categories = [
+  const categories: CategoryItem[] = [
     { 
       name: "Device Compatibility", 
       icon: <Smartphone className="h-5 w-5" />,
@@ -105,7 +141,7 @@ const VisualFidelity = () => {
   ];
 
   // Feature sections with their respective features
-  const allSections = [
+  const allSections: FeatureSection[] = [
     {
       title: "Universal Device Compatibility",
       description: "Our responsive design ensures flawless performance on any device.",
@@ -287,15 +323,13 @@ const VisualFidelity = () => {
           <motion.div 
             className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
               className="text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
@@ -306,8 +340,7 @@ const VisualFidelity = () => {
             <motion.div 
               className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"
               initial={{ width: 0 }}
-              whileInView={{ width: 96 }}
-              viewport={{ once: true }}
+              animate={{ width: 96 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
           </motion.div>
@@ -323,7 +356,7 @@ const VisualFidelity = () => {
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent shadow-glow-sm' 
                       : 'bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10'
                   }`}
-                  onClick={() => setActiveTab(index)}
+                  onClick={() => handleTabChange(index)}
                   whileHover={{ scale: 1.03, y: -3 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -353,92 +386,93 @@ const VisualFidelity = () => {
           </div>
           
           {/* Feature sections */}
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-6"
-            >
-              {filteredSections.map((section, sectionIndex) => (
-                <motion.div 
-                  key={sectionIndex}
-                  className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                >
-                  {/* Section header - clickable */}
-                  <div 
-                    className="p-5 cursor-pointer flex justify-between items-center"
-                    onClick={() => toggleSection(sectionIndex)}
+          <div ref={contentRef}>
+            <AnimatePresence mode="wait">
+              <motion.div 
+                key={activeTab}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6"
+              >
+                {filteredSections.map((section, sectionIndex) => (
+                  <motion.div 
+                    key={sectionIndex}
+                    className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
                   >
-                    <div>
-                      <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
-                        {section.title}
-                      </h2>
-                      <p className="text-foreground/70 text-sm">{section.description}</p>
+                    {/* Section header - clickable */}
+                    <div 
+                      className="p-5 cursor-pointer flex justify-between items-center"
+                      onClick={() => toggleSection(sectionIndex)}
+                    >
+                      <div>
+                        <h2 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
+                          {section.title}
+                        </h2>
+                        <p className="text-foreground/70 text-sm">{section.description}</p>
+                      </div>
+                      <div className="flex-shrink-0 ml-4">
+                        {expandedSections.includes(sectionIndex) ? (
+                          <ChevronUp className="h-5 w-5 text-foreground/70" />
+                        ) : (
+                          <ChevronDown className="h-5 w-5 text-foreground/70" />
+                        )}
+                      </div>
                     </div>
-                    <div className="flex-shrink-0 ml-4">
-                      {expandedSections.includes(sectionIndex) ? (
-                        <ChevronUp className="h-5 w-5 text-foreground/70" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-foreground/70" />
-                      )}
-                    </div>
-                  </div>
-                  
-                  {/* Section content - expandable */}
-                  <AnimatePresence>
-                    {expandedSections.includes(sectionIndex) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-5 pb-5">
-                          <motion.div 
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                            variants={containerVariants}
-                            initial="hidden"
-                            animate="visible"
-                          >
-                            {section.features.map((feature, featureIndex) => (
-                              <motion.div 
-                                key={featureIndex}
-                                className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 h-full group hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300 cursor-pointer"
-                                variants={itemVariants}
-                              >
-                                <div className="flex items-start gap-3">
-                                  <div className="relative flex-shrink-0">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
-                                    <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
-                                      {feature.icon}
+                    
+                    {/* Section content - expandable */}
+                    <AnimatePresence>
+                      {expandedSections.includes(sectionIndex) && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-5 pb-5">
+                            <motion.div 
+                              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                              variants={containerVariants}
+                              initial="hidden"
+                              animate="visible"
+                            >
+                              {section.features.map((feature, featureIndex) => (
+                                <motion.div 
+                                  key={featureIndex}
+                                  className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 h-full group hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300 cursor-pointer"
+                                  variants={itemVariants}
+                                >
+                                  <div className="flex items-start gap-3">
+                                    <div className="relative flex-shrink-0">
+                                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
+                                      <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 group-hover:shadow-glow-sm transition-all duration-300">
+                                        {feature.icon}
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <h3 className="font-semibold text-foreground mb-1 flex items-center">
+                                        {feature.title}
+                                      </h3>
+                                      <p className="text-foreground/70 text-sm">{feature.description}</p>
                                     </div>
                                   </div>
-                                  <div>
-                                    <h3 className="font-semibold text-foreground mb-1 flex items-center">
-                                      {feature.title}
-                                    </h3>
-                                    <p className="text-foreground/70 text-sm">{feature.description}</p>
-                                  </div>
-                                </div>
-                              </motion.div>
-                            ))}
-                          </motion.div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+                                </motion.div>
+                              ))}
+                            </motion.div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </Container>
     </section>
