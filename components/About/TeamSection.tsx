@@ -25,12 +25,14 @@ export const TeamSection = () => {
       <Container className="relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
           <motion.div
             initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
             className="inline-block relative text-center w-full mb-16"
           >
@@ -44,7 +46,8 @@ export const TeamSection = () => {
               className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full -z-10 mb-2 mt-1"
               style={{ width: '80%', maxWidth: '500px' }}
               initial={{ width: 0 }}
-              animate={{ width: '80%' }}
+              whileInView={{ width: '80%' }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1, delay: 0.3 }}
             />
           </motion.div>
@@ -55,7 +58,8 @@ export const TeamSection = () => {
           <motion.div
             className="order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-3xl font-bold mb-6">
@@ -84,14 +88,16 @@ export const TeamSection = () => {
           <motion.div 
             className="order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
             <div className="relative">
               <motion.div
                 className="absolute -top-6 -left-6 w-full h-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 -z-10"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 0.7, scale: 1 }}
+                whileInView={{ opacity: 0.7, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               />
               <motion.div 
@@ -106,7 +112,8 @@ export const TeamSection = () => {
                 <motion.div 
                   className="p-6 bg-gradient-to-r from-blue-500/5 to-purple-500/5 backdrop-blur-sm"
                   initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <p className="text-center text-gray-700">

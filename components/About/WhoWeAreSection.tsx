@@ -35,12 +35,14 @@ export const WhoWeAreSection = () => {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
           >
             <motion.div
               initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
               className="inline-block relative"
             >
@@ -53,7 +55,8 @@ export const WhoWeAreSection = () => {
               <motion.div 
                 className="absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full -z-10"
                 initial={{ width: 0 }}
-                animate={{ width: "100%" }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 1, delay: 0.3 }}
               />
             </motion.div>
@@ -64,7 +67,8 @@ export const WhoWeAreSection = () => {
             <motion.div 
               className="lg:col-span-5 relative flex flex-col justify-center"
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
             >
               <div className="relative mb-10">
@@ -72,7 +76,8 @@ export const WhoWeAreSection = () => {
                 <motion.div
                   className="absolute -bottom-4 -right-4 w-full h-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 -z-10"
                   initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 0.7, scale: 1 }}
+                  whileInView={{ opacity: 0.7, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 />
                 {/* Main Image */}
@@ -98,7 +103,8 @@ export const WhoWeAreSection = () => {
                     key={index}
                     className="bg-white rounded-xl p-4 shadow-md border border-gray-200 flex flex-col items-center justify-center text-center relative overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5, delay: item.delay }}
                     whileHover={{ y: -5, boxShadow: "0 15px 30px -5px rgba(0, 0, 0, 0.15)" }}
                   >
@@ -115,14 +121,16 @@ export const WhoWeAreSection = () => {
             <motion.div 
               className="lg:col-span-7"
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
                 <motion.p 
                   className="text-gray-700 text-lg mb-6 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
                   <span className="text-xl font-medium text-blue-600">Touchstone Digital Solutions</span> is an industry leader in fully customized interactive touchscreen recognition software. Founded by two brothers with years of experience in the field, we saw an opportunity to do more—delivering bespoke digital recognition solutions that go beyond the standard offerings of our competitors.
@@ -130,7 +138,8 @@ export const WhoWeAreSection = () => {
                 <motion.p 
                   className="text-gray-700 text-lg mb-6 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   At Touchstone, every project is a unique opportunity to craft a one-of-a-kind experience, tailored to the institution's identity and vision. We take a meticulous step-by-step approach, ensuring seamless integration and stunning design that transforms traditional Wall of Fame displays into dynamic, immersive showcases.
@@ -138,7 +147,8 @@ export const WhoWeAreSection = () => {
                 <motion.p 
                   className="text-gray-700 text-lg leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
                 >
                   Our unwavering focus on customization and innovation sets us apart. We don't offer generic, one-size-fits-all solutions; we create beautifully integrated, institution-specific experiences that celebrate history, achievements, and legacies in a powerful, engaging way. At TDS, we are pioneering the future of interactive recognition by blending cutting-edge technology with artistic excellence.

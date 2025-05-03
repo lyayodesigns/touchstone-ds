@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 
 const FeatureCard: React.FC<{
   number: string;
@@ -16,7 +18,7 @@ const FeatureCard: React.FC<{
       hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
       hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
       transition-all duration-300 ease-out cursor-pointer 
-      opacity-100 translate-y-0`}
+      ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="flex gap-4 items-start">
@@ -34,10 +36,36 @@ const FeatureCard: React.FC<{
 };
 
 const WhySection: React.FC = () => {
-  // SSR: Always visible
-  const isVisible = true;
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       className="py-8 sm:py-12 md:py-16 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
@@ -48,7 +76,7 @@ const WhySection: React.FC = () => {
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div
           className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-700 
-          opacity-100 translate-y-0`}
+          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             Why{" "}

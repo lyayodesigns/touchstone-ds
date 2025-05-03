@@ -4,8 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
-// SSR/SSG compatible: No useEffect, useRef, or browser-only APIs. All framer-motion usage is SSR safe.
-
 export const OurValues = () => {
   return (
     <section className="py-24 relative overflow-hidden">
@@ -37,12 +35,14 @@ export const OurValues = () => {
       <motion.div
         className="text-center mb-16"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7 }}
       >
         <motion.div
           initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className="inline-block relative"
         >
@@ -52,14 +52,16 @@ export const OurValues = () => {
           <motion.div 
             className="absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full -z-10"
             initial={{ width: 0 }}
-            animate={{ width: "100%" }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 1, delay: 0.3 }}
           />
         </motion.div>
         <motion.p
           className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
           At Touchstone Digital Solutions, our business is rooted in core values that have guided us from the start.
@@ -72,7 +74,8 @@ export const OurValues = () => {
           <motion.div
             className="relative overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="bg-white rounded-2xl shadow-lg border border-foreground/10 h-full overflow-hidden">
@@ -116,7 +119,8 @@ export const OurValues = () => {
           <motion.div
             className="relative overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="bg-white rounded-2xl shadow-lg border border-foreground/10 h-full overflow-hidden">
@@ -160,7 +164,8 @@ export const OurValues = () => {
           <motion.div
             className="relative overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="bg-white rounded-2xl shadow-lg border border-foreground/10 h-full overflow-hidden">
@@ -204,7 +209,8 @@ export const OurValues = () => {
           <motion.div
             className="relative overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="bg-white rounded-2xl shadow-lg border border-foreground/10 h-full overflow-hidden">

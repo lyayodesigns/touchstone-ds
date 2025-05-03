@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 import { CheckCircle } from 'lucide-react';
@@ -31,7 +31,6 @@ const AllinOneSection = () => {
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/5 via-purple-500/3 to-blue-500/5 -z-10"></div>
       <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
-      
       {/* Decorative elements */}
       <motion.div 
         className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"
@@ -49,11 +48,9 @@ const AllinOneSection = () => {
         }}
         transition={{ duration: 10, repeat: Infinity }}
       />
-      
       {/* Plus symbols as decorative elements */}
       <div className="absolute top-[15%] left-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
       <div className="absolute bottom-[15%] right-[10%] text-foreground/10 text-2xl sm:text-3xl">+</div>
-      
       <Container className="pt-0 mt-0">
         <div className="max-w-6xl mx-auto pt-0 mt-0">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -62,7 +59,7 @@ const AllinOneSection = () => {
               className="lg:w-1/2"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={containerVariants}
             >
               <motion.h2 
@@ -73,29 +70,25 @@ const AllinOneSection = () => {
                   All-in-One
                 </span> Digital Recognition Platform
               </motion.h2>
-              
               <motion.div 
                 className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"
                 initial={{ width: 0 }}
                 whileInView={{ width: 80 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               />
-              
               <motion.p 
                 className="text-lg mb-8 text-foreground/80"
                 variants={itemVariants}
               >
                 Unify your institution's history, achievements, and contributions into one seamless touchscreen experience.
               </motion.p>
-              
               <motion.h3 
                 className="text-xl font-semibold mb-4"
                 variants={itemVariants}
               >
                 Key Advantages:
               </motion.h3>
-              
               <div className="space-y-4">
                 <motion.div 
                   className="flex items-start gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 hover:border-blue-500/20 transition-all duration-300"
@@ -108,7 +101,6 @@ const AllinOneSection = () => {
                     <p className="text-foreground/70">Replace static plaques, bulletin boards, and outdated record boards with sleek digital screens.</p>
                   </div>
                 </motion.div>
-                
                 <motion.div 
                   className="flex items-start gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 hover:border-blue-500/20 transition-all duration-300"
                   variants={itemVariants}
@@ -120,7 +112,6 @@ const AllinOneSection = () => {
                     <p className="text-foreground/70">Strengthen connections with students, alumni, and donors through dynamic, interactive content.</p>
                   </div>
                 </motion.div>
-                
                 <motion.div 
                   className="flex items-start gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 hover:border-blue-500/20 transition-all duration-300"
                   variants={itemVariants}
@@ -134,13 +125,12 @@ const AllinOneSection = () => {
                 </motion.div>
               </div>
             </motion.div>
-            
             {/* Right side illustration */}
             <motion.div 
               className="lg:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="relative perspective">
@@ -163,7 +153,6 @@ const AllinOneSection = () => {
                         <div className="w-3 h-3 rounded-full bg-green-400"></div>
                       </div>
                     </div>
-                    
                     <div className="grid grid-cols-3 gap-3 mb-4">
                       {[1, 2, 3, 4, 5, 6].map((item) => (
                         <motion.div 
@@ -177,21 +166,17 @@ const AllinOneSection = () => {
                         </motion.div>
                       ))}
                     </div>
-                    
                     <div className="space-y-2">
                       <div className="h-3 bg-white/20 rounded-full w-full"></div>
                       <div className="h-3 bg-white/20 rounded-full w-3/4"></div>
                       <div className="h-3 bg-white/20 rounded-full w-1/2"></div>
                     </div>
                   </div>
-                  
                   {/* Reflective surface */}
                   <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-20 pointer-events-none"></div>
                 </motion.div>
-                
                 {/* Shadow */}
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-4 bg-black/20 blur-xl rounded-full"></div>
-                
                 {/* Decorative elements */}
                 <motion.div 
                   className="absolute -top-4 -right-4 w-12 h-12 bg-purple-500 rounded-full blur-xl"

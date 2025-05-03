@@ -1,9 +1,38 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
 
 const AlumniRecognitionSection: React.FC = () => {
-  // SSR-compatible: No client-only logic or event handlers
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
@@ -20,7 +49,9 @@ const AlumniRecognitionSection: React.FC = () => {
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight opacity-100 translate-y-0 transition-all duration-700"
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
             <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">
               Alumni Recognition
@@ -28,13 +59,17 @@ const AlumniRecognitionSection: React.FC = () => {
             <span className="text-foreground block sm:inline"> Made Simple with Touchstone</span>
           </h2>
           <h3 
-            className="text-xl sm:text-2xl font-medium text-foreground/90 mt-4 sm:mt-6 transition-all duration-700 delay-200 opacity-100 translate-y-0"
+            className={`text-xl sm:text-2xl font-medium text-foreground/90 mt-4 sm:mt-6 transition-all duration-700 delay-200 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
             Why Leading Schools Are Choosing Us:
           </h3>
         </div>
         <div 
-          className="max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 transition-all duration-700 delay-300 opacity-100 translate-y-0"
+          className={`max-w-5xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 transition-all duration-700 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
           {[
             "Fully customizable",
@@ -60,7 +95,9 @@ const AlumniRecognitionSection: React.FC = () => {
                   hover:bg-gradient-to-br hover:from-purple-500/20 hover:to-blue-500/10 
                   hover:border-purple-500/50 hover:shadow-glow-sm hover:scale-[1.02] 
                   hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
-                  transition-all duration-300 ease-out cursor-pointer opacity-100 scale-100`}
+                  transition-all duration-300 ease-out cursor-pointer ${
+                  isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                }`}
                 style={{ transitionDelay: `${300 + (index * 70)}ms` }}
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-bold text-lg mt-0.5 flex-shrink-0">✔️</span>
@@ -70,9 +107,10 @@ const AlumniRecognitionSection: React.FC = () => {
           ))}
         </div>
         <div 
-          className="text-center mt-8 sm:mt-10 transition-all duration-700 delay-900 opacity-100 translate-y-0"
+          className={`text-center mt-8 sm:mt-10 transition-all duration-700 delay-900 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
-          {/* SSR: Use a static link, not a button with onClick */}
           <a 
             href="/features/"
             className="group inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full px-6 py-2.5 transition-all duration-300 shadow-blue hover:shadow-blue-lg"

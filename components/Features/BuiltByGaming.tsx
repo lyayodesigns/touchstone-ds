@@ -55,7 +55,6 @@ const BuiltByGaming = () => {
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/3 to-indigo-500/5 -z-10"></div>
       <div className="absolute inset-0 bg-grid opacity-10 -z-10"></div>
-      
       {/* Decorative elements */}
       <motion.div 
         className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"
@@ -73,11 +72,9 @@ const BuiltByGaming = () => {
         }}
         transition={{ duration: 10, repeat: Infinity }}
       />
-      
       {/* Plus symbols as decorative elements */}
       <div className="absolute top-[10%] left-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
       <div className="absolute bottom-[10%] right-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
-      
       <Container>
         <div className="max-w-7xl mx-auto">
           {/* Section heading */}
@@ -85,47 +82,44 @@ const BuiltByGaming = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h2 
               className="text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
                 Built by Gaming Industry Developers
               </span> for Unmatched Visual Fidelity
             </motion.h2>
-            
             <motion.div 
               className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
-            
             <motion.p 
               className="text-foreground/80 max-w-3xl mx-auto text-lg"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               We are the first and only to bring AAA gaming technology to digital school recognition, ensuring every element is visually stunning and deeply immersive.
             </motion.p>
           </motion.div>
-          
           {/* Features */}
           <motion.div 
             className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {features.map((feature, index) => (
               <motion.div 
@@ -163,14 +157,13 @@ const BuiltByGaming = () => {
                     className="h-1 w-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-4 mx-auto"
                     initial={{ width: 0 }}
                     whileInView={{ width: 48 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                   />
                 </div>
               </motion.div>
             ))}
           </motion.div>
-          
           {/* Decorative element at bottom */}
           <div className="mt-16 flex justify-center">
             <motion.div 

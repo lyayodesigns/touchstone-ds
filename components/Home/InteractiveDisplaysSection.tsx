@@ -1,20 +1,49 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
 
 const InteractiveDisplaysSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-8 sm:py-16 md:py-24 w-full bg-background">
+    <section ref={sectionRef} className="py-8 sm:py-16 md:py-24 w-full bg-background">
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center mb-4">
+        <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 block sm:inline">
             🖥️ Interactive Displays
           </span>
           <span className="text-foreground block sm:inline">{" That Captivate"}</span>
         </h2>
-        <p className="text-lg text-foreground/70 text-center max-w-2xl mx-auto mb-6">
+        <p className={`text-lg text-foreground/70 text-center max-w-2xl mx-auto mb-6 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           Engage students, athletes, and visitors with cutting-edge touchscreen technology. Our accessibility-compliant displays and interactive recognition software make every interaction seamless and memorable.
         </p>
         {/* Animated partition */}
-        <div className="flex justify-center items-center mb-10">
+        <div className={`flex justify-center items-center mb-10 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="flex space-x-2">
             {[...Array(5)].map((_, i) => (
               <div
@@ -28,7 +57,7 @@ const InteractiveDisplaysSection: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           {/* Left side - Content */}
           <div className="space-y-6 order-2 md:order-1">
             <ul className="space-y-4">
@@ -196,7 +225,7 @@ const InteractiveDisplaysSection: React.FC = () => {
           </div>
 
           {/* Right side - Image/Visual */}
-          <div className="relative order-1 md:order-2 flex items-center justify-center">
+          <div className={`relative order-1 md:order-2 flex items-center justify-center transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {/* Full image display without background card */}
             <div className="relative w-full h-full overflow-hidden rounded-lg">
               <img

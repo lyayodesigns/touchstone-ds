@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
 import { CheckCircle, DollarSign, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "next/image";
-
-// SSR/SSG compatible: No useEffect, useRef, useState, or browser-only APIs. No client directive needed.
 
 const titleWords = ["Touchscreen", "Touchstone"];
 const carouselImages = [
@@ -19,37 +17,73 @@ const carouselImages = [
 ];
 
 const HeroSection: React.FC = () => {
-  // SSR: Always render as visible, landscape orientation, first title word, first image
-  const [orientation, setOrientation] = useState<"portrait" | "landscape">("landscape");
-  const [currentTitleWordIndex, setCurrentTitleWordIndex] = useState(0);
-  const [isTitleAnimating, setIsTitleAnimating] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at first real image
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [orientation, setOrientation] = useState<"portrait" | "landscape">("portrait");
   const monitorFrameRef = useRef<HTMLDivElement>(null);
 
+  // Title animation state
+  const [currentTitleWordIndex, setCurrentTitleWordIndex] = useState(0);
+  const [isTitleAnimating, setIsTitleAnimating] = useState(true);
+  const titleAnimationTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  // Carousel state and data (infinite loop with clones)
+  const extendedImages = [
+    carouselImages[carouselImages.length - 1],
+    ...carouselImages,
+    carouselImages[0]
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(1); // Start at first real image
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const nextImage = useCallback(() => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setCurrentImageIndex((prevIndex) => prevIndex + 1);
+    }
+  }, [isTransitioning]);
+
+  const prevImage = useCallback(() => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+      setCurrentImageIndex((prevIndex) => prevIndex - 1);
+    }
+  }, [isTransitioning]);
+
   useEffect(() => {
-    setOrientation(
-      window.innerWidth > window.innerHeight ? "landscape" : "portrait"
-    );
+    setIsVisible(true);
+    setOrientation(window.innerWidth > window.innerHeight ? "landscape" : "portrait");
     const handleResize = () => {
-      setOrientation(
-        window.innerWidth > window.innerHeight ? "landscape" : "portrait"
-      );
+      setOrientation(window.innerWidth > window.innerHeight ? "landscape" : "portrait");
     };
     window.addEventListener("resize", handleResize);
     window.addEventListener("orientationchange", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("orientationchange", handleResize);
     };
   }, []);
 
-  const extendedImages = [
-    carouselImages[carouselImages.length - 1],
-    ...carouselImages,
-    carouselImages[0]
-  ];
+  // Title word animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTitleAnimating(false);
+      setTimeout(() => {
+        setCurrentTitleWordIndex((prev) => (prev + 1) % titleWords.length);
+        setIsTitleAnimating(true);
+      }, 100);
+    }, 3000); // Change word every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Auto-advance carousel (infinite loop)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [nextImage]);
 
   return (
     <section 
@@ -69,25 +103,43 @@ const HeroSection: React.FC = () => {
       <div className="absolute top-24 sm:top-28 right-0 h-[1px] w-32 sm:w-48 bg-gradient-to-r from-transparent via-foreground/40 to-transparent"></div>
 
       {/* Plus symbols as decorative elements - responsive positioning */}
-      <div className="absolute top-[10%] left-[10%] md:top-40 md:left-40 text-foreground/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute bottom-[10%] right-[10%] md:bottom-40 md:right-40 text-foreground/10 text-2xl sm:text-3xl">+</div>
-      <div className="absolute top-1/4 right-1/4 text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute top-[10%] left-[10%] md:top-40 md:left-40 text-foreground/10 text-2xl sm:text-3xl">
+        +
+      </div>
+      <div className="absolute bottom-[10%] right-[10%] md:bottom-40 md:right-40 text-foreground/10 text-2xl sm:text-3xl">
+        +
+      </div>
+      <div className="absolute top-1/4 right-1/4 text-foreground/10 text-2xl sm:text-3xl">
+        +
+      </div>
 
       {/* Main content - Two column grid */}
       <div className="container mx-auto z-10 pt-8 sm:pt-10 md:pt-12 px-4 sm:px-6 md:px-8">
         
         <div 
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transition-all duration-700 opacity-100 translate-y-0`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
           {/* Left Column - Text Content */}
-          <div className={`flex flex-col space-y-6 md:space-y-8 ${orientation === "landscape" ? "landscape-mode" : ""}`}>
+          <div className={`flex flex-col space-y-6 md:space-y-8 ${
+            orientation === "landscape" ? "landscape-mode" : ""
+          }`}>
             <div className="flex flex-col justify-center h-full w-full">
               <h1
-                className={`text-[2rem] md:text-[2.5rem] font-bold transition-all duration-700 delay-100 opacity-100 translate-y-0`}
+                className={`text-[2rem] md:text-[2.5rem] font-bold transition-all duration-700 delay-100 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
               >
                 <div className="text-center md:text-left">
                   <span
-                    className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600 inline-block transition-all duration-300 opacity-100 transform-none`}
+                    className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600 inline-block transition-all duration-300 ${
+                      isTitleAnimating
+                        ? "opacity-100 transform-none"
+                        : "opacity-0 -translate-y-2"
+                    }`}
                   >
                     {titleWords[currentTitleWordIndex]}
                   </span>
@@ -97,13 +149,21 @@ const HeroSection: React.FC = () => {
             </div>
 
             <p
-              className={`text-sm sm:text-base md:text-lg text-foreground/70 text-center md:text-left transition-all duration-700 delay-500 opacity-100 translate-y-0`}
+              className={`text-sm sm:text-base md:text-lg text-foreground/70 text-center md:text-left transition-all duration-700 delay-500 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
               Perfecting touchscreen recognition software—the all-in-one solution built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.
             </p>
 
             <div 
-              className={`flex flex-col space-y-6 md:space-y-8 transition-all duration-700 delay-600 opacity-100 translate-y-0`}
+              className={`flex flex-col space-y-6 md:space-y-8 transition-all duration-700 delay-600 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
             >
               {/* Feature cards in a row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -172,7 +232,9 @@ const HeroSection: React.FC = () => {
           
           {/* Right Column - Image/Display */}
           <div 
-            className={`relative flex justify-center items-center transition-all duration-700 delay-300 opacity-100 translate-y-0`}
+            className={`relative flex justify-center items-center transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
             <div 
               className="relative w-full max-w-xl lg:max-w-2xl mx-auto transform scale-110 md:scale-125 lg:scale-110" 
@@ -194,7 +256,7 @@ const HeroSection: React.FC = () => {
               {/* Monitor frame with 3D rotation */}
               <div 
                 ref={monitorFrameRef}
-                className="relative touch-none" 
+                className="relative pointer-events-none touch-none" 
                 style={{ 
                   transform: 'rotateY(-12deg)',
                   transition: 'transform 700ms ease-out'
@@ -206,17 +268,56 @@ const HeroSection: React.FC = () => {
                   <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden pointer-events-none touch-none">
                     {/* Image Carousel */}
                     <div className="relative w-full aspect-[16/10] overflow-hidden select-none pointer-events-none touch-none">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={extendedImages[currentImageIndex].src}
-                          alt={extendedImages[currentImageIndex].alt}
-                          className="select-none pointer-events-none touch-none object-cover rounded-md"
-                          fill
-                          priority
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          quality={90}
-                        />
+                      <div
+                        className={`flex h-full transition-transform ${isTransitioning ? 'duration-1000 ease-in-out' : 'duration-0'}`}
+                        style={{
+                          width: `${extendedImages.length * 100}%`,
+                          transform: `translateX(-${currentImageIndex * (100 / extendedImages.length)}%)`
+                        }}
+                        onTransitionEnd={() => {
+                          // If we moved to the clone, jump instantly to the real one
+                          if (currentImageIndex === 0) {
+                            setIsTransitioning(false);
+                            setCurrentImageIndex(extendedImages.length - 2); // last real image
+                          } else if (currentImageIndex === extendedImages.length - 1) {
+                            setIsTransitioning(false);
+                            setCurrentImageIndex(1); // first real image
+                          } else {
+                            setIsTransitioning(false);
+                          }
+                        }}
+                      >
+                        {extendedImages.map((image, index) => (
+                          <div
+                            key={index}
+                            className="flex-shrink-0 w-full h-full pointer-events-none touch-none"
+                            style={{ width: `${100 / extendedImages.length}%` }}
+                          >
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover rounded-md select-none pointer-events-none touch-none"
+                            />
+                          </div>
+                        ))}
                       </div>
+                      {/* Carousel navigation arrows */}
+                      <button
+                        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/60 hover:bg-white/90 rounded-full p-2 shadow transition-all"
+                        style={{ pointerEvents: 'auto' }}
+                        onClick={() => prevImage()}
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft className="h-6 w-6 text-gray-700" />
+                      </button>
+                      <button
+                        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/60 hover:bg-white/90 rounded-full p-2 shadow transition-all"
+                        style={{ pointerEvents: 'auto' }}
+                        onClick={() => nextImage()}
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="h-6 w-6 text-gray-700" />
+                      </button>
                     </div>
                     
                     {/* Screen reflection overlay */}
@@ -247,7 +348,9 @@ const HeroSection: React.FC = () => {
 
       {/* Awards Slider - responsive positioning */}
       <div
-        className={`w-full mt-8 sm:mt-8 md:mt-2 transition-all duration-700 delay-900 opacity-100 translate-y-0`}
+        className={`w-full mt-8 sm:mt-8 md:mt-2 transition-all duration-700 delay-900 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
       >
         <AwardsSlider />
       </div>

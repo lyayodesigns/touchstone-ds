@@ -41,8 +41,8 @@ const TouchIcon: React.FC = () => {
                 </div>
               </div>
               {/* Ripple effects - smaller size */}
-              <div className="absolute w-[130%] h-[130%] rounded-full border border-[#6CA6FE]/50 animate-ripple"></div>
-              <div className="absolute w-[130%] h-[130%] rounded-full border border-[#6CA6FE]/30 animate-ripple-delayed"></div>
+              <div className="absolute w-[95%] h-[95%] rounded-full border border-[#6CA6FE]/50 animate-ripple"></div>
+              <div className="absolute w-[95%] h-[95%] rounded-full border border-[#6CA6FE]/30 animate-ripple-delayed"></div>
             </div>
           </div>
         </div>

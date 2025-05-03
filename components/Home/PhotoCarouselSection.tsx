@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const slideRightToLeft = {
   "0%": { transform: "translateX(0)" },
@@ -14,33 +13,55 @@ const slideLeftToRight = {
   "100%": { transform: "translateX(0)" },
 };
 
-const images = [
-  "/TDS Cover - 1.jpg",
-  "/TDS Cover - 2.jpg",
-  "/TDS Cover - 3.jpg",
-  "/TDS Cover - 4.jpg",
-  "/TDS Cover - 5.jpg",
-  "/TDS Cover - 6.jpg",
-  "/TDS Cover - 7.jpg",
-  "/TDS Cover - 8.jpg",
-  "/TDS Cover - 9.jpg",
-];
-
-const imageDescriptions = [
-  "Interactive School Hall of Fame Display",
-  "Digital Achievement Wall for Students",
-  "Athletic Recognition Display System",
-  "Touchscreen Sports Statistics Interface",
-  "School Donor Recognition Wall",
-  "Interactive Timeline of School History",
-];
-
 const PhotoCarouselSection: React.FC = () => {
-  // SSR: Always render first image, no animation or interactivity
-  const currentIndex = 0;
-  const selectedImage = null;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([]);
+  const [isPaused, setIsPaused] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const images = [
+    "/TDS Cover - 1.jpg",
+    "/TDS Cover - 2.jpg",
+    "/TDS Cover - 3.jpg",
+    "/TDS Cover - 4.jpg",
+    "/TDS Cover - 5.jpg",
+    "/TDS Cover - 6.jpg",
+    "/TDS Cover - 7.jpg",
+    "/TDS Cover - 8.jpg",
+    "/TDS Cover - 9.jpg",
+  ];
+
+  const imageDescriptions = [
+    "Interactive School Hall of Fame Display",
+    "Digital Achievement Wall for Students",
+    "Athletic Recognition Display System",
+    "Touchscreen Sports Statistics Interface",
+    "School Donor Recognition Wall",
+    "Interactive Timeline of School History",
+  ];
+
+  useEffect(() => {
+    setImagesLoaded(new Array(images.length).fill(false));
+  }, []);
+
+  const handleImageLoad = (index: number) => {
+    setImagesLoaded((prev) => {
+      const newState = [...prev];
+      newState[index] = true;
+      return newState;
+    });
+  };
+
+  const handleImageError = (index: number) => {
+    // Optionally log or handle image load error
+  };
+
   const firstRow = images.slice(0, 3);
   const secondRow = images.slice(3, 6);
+
+  const handleImageClick = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   const firstRowDuplicated = [...firstRow, ...firstRow, ...firstRow];
   const secondRowDuplicated = [...secondRow, ...secondRow, ...secondRow];
@@ -89,7 +110,11 @@ const PhotoCarouselSection: React.FC = () => {
         <div className="space-y-12">
           <div className="w-full overflow-hidden">
             <motion.div
-              className={`flex whitespace-nowrap transform-gpu will-change-transform backface-visibility-hidden`}
+              className={`flex whitespace-nowrap transform-gpu will-change-transform backface-visibility-hidden ${
+                isPaused ? "animation-paused" : ""
+              }`}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -111,18 +136,15 @@ const PhotoCarouselSection: React.FC = () => {
                 >
                   <div
                     className="group relative rounded-xl overflow-hidden shadow-glow-sm hover:shadow-glow-md transition-all duration-300 aspect-video"
+                    onClick={() => setSelectedImage(img)}
                   >
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={img}
-                        alt={imageDescriptions[index % firstRow.length]}
-                        className="transition-transform duration-500 group-hover:scale-110 object-cover"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        priority={index < 3} // Only prioritize the first few images
-                        quality={80}
-                      />
-                    </div>
+                    <img
+                      src={img}
+                      alt={imageDescriptions[index % firstRow.length]}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      onLoad={() => handleImageLoad(index % firstRow.length)}
+                      onError={() => handleImageError(index % firstRow.length)}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-foreground">
                         <h3 className="text-lg font-bold">
@@ -138,7 +160,11 @@ const PhotoCarouselSection: React.FC = () => {
 
           <div className="w-full overflow-hidden">
             <motion.div
-              className={`flex whitespace-nowrap transform-gpu will-change-transform backface-visibility-hidden`}
+              className={`flex whitespace-nowrap transform-gpu will-change-transform backface-visibility-hidden ${
+                isPaused ? "animation-paused" : ""
+              }`}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -160,18 +186,27 @@ const PhotoCarouselSection: React.FC = () => {
                 >
                   <div
                     className="group relative rounded-xl overflow-hidden shadow-glow-sm hover:shadow-glow-md transition-all duration-300 aspect-video"
+                    onClick={() => setSelectedImage(img)}
                   >
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={img}
-                        alt={imageDescriptions[(index % secondRow.length) + firstRow.length]}
-                        className="transition-transform duration-500 group-hover:scale-110 object-cover"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        loading="lazy"
-                        quality={80}
-                      />
-                    </div>
+                    <img
+                      src={img}
+                      alt={
+                        imageDescriptions[
+                          (index % secondRow.length) + firstRow.length
+                        ]
+                      }
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      onLoad={() =>
+                        handleImageLoad(
+                          (index % secondRow.length) + firstRow.length
+                        )
+                      }
+                      onError={() =>
+                        handleImageError(
+                          (index % secondRow.length) + firstRow.length
+                        )
+                      }
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-foreground">
                         <h3 className="text-lg font-bold">
@@ -190,6 +225,19 @@ const PhotoCarouselSection: React.FC = () => {
           </div>
         </div>
       </div>
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-background/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Preview"
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };

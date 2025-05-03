@@ -323,13 +323,15 @@ const VisualFidelity = () => {
           <motion.div 
             className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
               className="text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
@@ -340,7 +342,8 @@ const VisualFidelity = () => {
             <motion.div 
               className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"
               initial={{ width: 0 }}
-              animate={{ width: 96 }}
+              whileInView={{ width: 96 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
           </motion.div>
@@ -391,7 +394,8 @@ const VisualFidelity = () => {
               <motion.div 
                 key={activeTab}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
                 className="space-y-6"
@@ -401,7 +405,8 @@ const VisualFidelity = () => {
                     key={sectionIndex}
                     className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
                   >
                     {/* Section header - clickable */}
@@ -429,7 +434,8 @@ const VisualFidelity = () => {
                       {expandedSections.includes(sectionIndex) && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
+                          whileInView={{ height: "auto", opacity: 1 }}
+                          viewport={{ once: true, amount: 0.2 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
@@ -439,13 +445,17 @@ const VisualFidelity = () => {
                               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                               variants={containerVariants}
                               initial="hidden"
-                              animate="visible"
+                              whileInView="visible"
+                              viewport={{ once: true, amount: 0.2 }}
                             >
                               {section.features.map((feature, featureIndex) => (
                                 <motion.div 
                                   key={featureIndex}
                                   className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 h-full group hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300 cursor-pointer"
                                   variants={itemVariants}
+                                  initial="hidden"
+                                  whileInView="visible"
+                                  viewport={{ once: true, amount: 0.2 }}
                                 >
                                   <div className="flex items-start gap-3">
                                     <div className="relative flex-shrink-0">

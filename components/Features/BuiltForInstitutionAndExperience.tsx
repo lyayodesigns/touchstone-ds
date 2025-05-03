@@ -50,7 +50,7 @@ const BuiltForInstitutionAndExperience = () => {
               className="lg:w-1/2 bg-gradient-to-br from-purple-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 relative overflow-hidden"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
               whileHover={{ 
                 boxShadow: "0 0 30px rgba(139, 92, 246, 0.2)",
@@ -69,14 +69,14 @@ const BuiltForInstitutionAndExperience = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
               >
                 <motion.h2 
                   className="text-3xl md:text-4xl font-bold mb-6 relative z-10"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
@@ -88,7 +88,7 @@ const BuiltForInstitutionAndExperience = () => {
                   className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 />
                 
@@ -96,7 +96,7 @@ const BuiltForInstitutionAndExperience = () => {
                   className="text-foreground/80 text-lg mb-8 relative z-10"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   At Touchstone Digital Solutions, we believe recognition should be as dynamic as the students, alumni, and donors it honors.
@@ -106,7 +106,7 @@ const BuiltForInstitutionAndExperience = () => {
                   className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-8 relative overflow-hidden"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ 
                     scale: 1.02, 
@@ -134,7 +134,7 @@ const BuiltForInstitutionAndExperience = () => {
               className="lg:w-1/2 bg-gradient-to-br from-purple-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 relative overflow-hidden"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               whileHover={{ 
                 boxShadow: "0 0 30px rgba(139, 92, 246, 0.2)",
@@ -150,7 +150,6 @@ const BuiltForInstitutionAndExperience = () => {
                 }}
                 transition={{ duration: 6, repeat: Infinity }}
               />
-              
               <motion.div 
                 className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
                 animate={{ 
@@ -164,7 +163,7 @@ const BuiltForInstitutionAndExperience = () => {
                 className="text-2xl md:text-3xl font-bold mb-6 relative z-10"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
               >
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
@@ -176,7 +175,7 @@ const BuiltForInstitutionAndExperience = () => {
                 className="text-foreground/80 text-lg mb-8 relative z-10"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 Transform your school's history into an interactive, unforgettable experience. Book a personalized demo today and see how Touchstone Digital Solutions can elevate your institution's legacy.
@@ -185,7 +184,7 @@ const BuiltForInstitutionAndExperience = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="relative z-10"
               >

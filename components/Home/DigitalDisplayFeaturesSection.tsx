@@ -1,6 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
 
 const DigitalDisplayFeaturesSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   // Features data
   const features = [
     {
@@ -53,6 +82,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
 
   return (
     <section
+      ref={sectionRef}
       className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
@@ -71,7 +101,9 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center transition-all duration-700 opacity-100 translate-y-0"
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           >
             <span className="text-transparent bg-clip-text text-gradient-purple-blue block sm:inline">
               💻 Seamless, High-Performance
@@ -85,7 +117,10 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10 hover:bg-background/10 transition-all duration-500 transform opacity-100 translate-y-0"
+              className={`bg-background/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-foreground/10 hover:bg-background/10 transition-all duration-500 transform ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: `${200 + (index * 150)}ms` }}
             >
               <div className="flex flex-col h-full">
                 <div className="text-purple-400 mb-4">
@@ -101,7 +136,10 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
                 </p>
                 
                 <div 
-                  className="w-full h-1 bg-gradient-to-r from-purple-500/50 to-blue-500/50 rounded-full mt-6 transition-all duration-700 opacity-100 scale-x-100"
+                  className={`w-full h-1 bg-gradient-to-r from-purple-500/50 to-blue-500/50 rounded-full mt-6 transition-all duration-700 ${
+                    isVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
+                  }`}
+                  style={{ transformOrigin: "left", transitionDelay: `${400 + (index * 150)}ms` }}
                 ></div>
               </div>
             </div>

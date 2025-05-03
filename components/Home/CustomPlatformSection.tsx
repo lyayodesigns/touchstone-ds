@@ -1,9 +1,39 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState, useRef } from "react";
 import { Palette, School, Lightbulb, Monitor } from "lucide-react";
 
 const CustomPlatformSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       className="py-12 sm:py-16 md:py-20 w-full bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10 relative overflow-hidden"
     >
       {/* Background elements */}
@@ -13,7 +43,9 @@ const CustomPlatformSection: React.FC = () => {
 
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <div
-          className={`max-w-4xl mx-auto text-center mb-10 sm:mb-12 transition-all duration-700 opacity-100 translate-y-0`}
+          className={`max-w-4xl mx-auto text-center mb-10 sm:mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             <span className="text-transparent bg-clip-text text-gradient-purple-blue">
@@ -25,7 +57,11 @@ const CustomPlatformSection: React.FC = () => {
 
         <div className="bg-background/30 backdrop-blur-sm border border-foreground/10 rounded-xl p-6 sm:p-8 md:p-10 shadow-glow-sm">
           <p
-            className={`text-base sm:text-lg text-foreground/80 mb-8 transition-all duration-700 delay-200 opacity-100 translate-y-0`}
+            className={`text-base sm:text-lg text-foreground/80 mb-8 transition-all duration-700 delay-200 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
           >
             At Touchstone Digital Solutions, we don't believe in one-size-fits-all. Your school has a unique story, and your Digital Hall of Fame should reflect that. That's why we start every project with the end in mind, ensuring every detail is tailored to your school's legacy, culture, and vision.
           </p>
@@ -63,7 +99,11 @@ const CustomPlatformSection: React.FC = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className={`bg-background/5 border border-foreground/10 rounded-lg p-5 sm:p-6 hover:bg-background/10 hover:border-purple-500/30 transition-all duration-300 group transition-all duration-700 opacity-100 translate-y-0`}
+                className={`bg-background/5 border border-foreground/10 rounded-lg p-5 sm:p-6 hover:bg-background/10 hover:border-purple-500/30 transition-all duration-300 group transition-all duration-700 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
                 style={{ transitionDelay: item.delay }}
               >
                 <div className="flex items-start gap-4">
@@ -84,7 +124,11 @@ const CustomPlatformSection: React.FC = () => {
           </div>
 
           <div
-            className={`mt-8 sm:mt-10 text-center transition-all duration-700 delay-700 opacity-100 translate-y-0`}
+            className={`mt-8 sm:mt-10 text-center transition-all duration-700 delay-700 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
           >
             <p className="text-foreground/80 text-base sm:text-lg mb-2">
               From concept to completion, we create a one-of-a-kind Hall of Fame that feels like a natural extension of your school—not just another display.

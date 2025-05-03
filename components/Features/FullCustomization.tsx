@@ -90,14 +90,14 @@ const FullCustomization = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h2 
               className="text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
@@ -109,7 +109,7 @@ const FullCustomization = () => {
               className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
             
@@ -117,7 +117,7 @@ const FullCustomization = () => {
               className="max-w-3xl mx-auto text-foreground/80"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               Your school's digital presence should be as unique as its legacy. Our platform is built with complete design flexibility, ensuring your brand identity is always front and center.
@@ -131,7 +131,7 @@ const FullCustomization = () => {
               className="lg:w-1/2 order-2 lg:order-1"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
               <div className="relative mx-auto max-w-md">
@@ -253,7 +253,7 @@ const FullCustomization = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <div className="space-y-6">
                 {features.map((feature, index) => (
