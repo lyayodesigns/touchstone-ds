@@ -10,7 +10,8 @@ import PortableTextComponents from "../../../components/Blog/PortableTextCompone
 import { postQuery } from "../../../lib/sanity/queries";
 import { SeoType } from "../../../lib/sanity/types";
 import Link from "next/link";
-import Head from "next/head";
+import { Metadata } from "next";
+import { formatDate } from '../../../lib/utils';
 
 import type { PortableTextBlock } from '@portabletext/types';
 
@@ -40,7 +41,54 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
-import { formatDate } from '../../../lib/utils';
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  try {
+    // Await the params object as required by Next.js 15+
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
+    
+    const post = await client.fetch(postQuery, { slug });
+    
+    if (!post) {
+      return {
+        title: 'Post Not Found | Touchstone Digital Solutions Blog',
+        description: 'The requested blog post could not be found.',
+      };
+    }
+    
+    return {
+      title: post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`,
+      description: post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+      openGraph: {
+        title: post.seo?.metaTitle || post.title,
+        description: post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+        type: 'article',
+        images: post.mainImage ? [
+          {
+            url: urlFor(post.mainImage).width(1200).height(675).url(),
+            width: 1200,
+            height: 675,
+            alt: post.title,
+          }
+        ] : undefined,
+        publishedTime: post.publishedAt,
+        authors: post.author?.name ? [post.author.name] : undefined,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.seo?.metaTitle || post.title,
+        description: post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+        images: post.mainImage ? [urlFor(post.mainImage).width(1200).height(675).url()] : undefined,
+      },
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {
+      title: 'Blog | Touchstone Digital Solutions',
+      description: 'Latest news, insights, and updates from Touchstone Digital Solutions.',
+    };
+  }
+}
 
 async function BlogPostPage({ params }: BlogPostPageProps) {
   // Await the params object as required by Next.js 15+
@@ -60,16 +108,9 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   // Post is guaranteed to exist at this point
-  
-  // In a server component, we don't need to manually set document.title
-  // Next.js will handle this with metadata exports or with the Head component
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Head>
-        <title>{post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`}</title>
-        <meta name="description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
-      </Head>
       <Navbar />
       <BlogHeroSection
         title={post.title}
@@ -133,6 +174,6 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
       <Footer />
     </div>
   );
-};
+}
 
 export default BlogPostPage;
