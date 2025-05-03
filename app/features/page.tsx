@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import FeaturesHeroSection from '../../components/Features/FeaturesHeroSection';
@@ -10,31 +8,41 @@ import FullCustomization from '../../components/Features/FullCustomization';
 import BuiltForInstitutionAndExperience from '../../components/Features/BuiltForInstitutionAndExperience';
 import VisualFidelity from '../../components/Features/VisualFidelity';
 import BuiltByGaming from '../../components/Features/BuiltByGaming';
+import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
 
-const FeaturesPage = () => {
+export const metadata: Metadata = {
+  title: 'Features | Touchstone Digital Solutions',
+  description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+  alternates: {
+    canonical: 'https://touchstone-ds.com/features/'
+  },
+  openGraph: {
+    title: 'Features | Touchstone Digital Solutions',
+    description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+    url: 'https://touchstone-ds.com/features/',
+    type: 'website',
+    images: [{
+      url: 'https://touchstone-ds.com/og-image.jpg',
+      width: 1200,
+      height: 630
+    }],
+    siteName: 'Touchstone Digital Solutions'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@touchstone_ds',
+    title: 'Features | Touchstone Digital Solutions',
+    description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+    images: ['https://touchstone-ds.com/og-image.jpg']
+  }
+};
+
+export default function FeaturesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Head>
-        {/* Basic Meta Tags */}
-        <title>Features | Touchstone Digital Solutions</title>
-        <meta name="description" content="Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration." />
-        <link rel="canonical" href="https://touchstone-ds.com/features/" />
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Features | Touchstone Digital Solutions" />
-        <meta property="og:description" content="Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration." />
-        <meta property="og:url" content="https://touchstone-ds.com/features/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
-        <meta property="og:site_name" content="Touchstone Digital Solutions" />
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@touchstone_ds" />
-        <meta name="twitter:title" content="Features | Touchstone Digital Solutions" />
-        <meta name="twitter:description" content="Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration." />
-        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
-      </Head>
+
       <Navbar />
       <main className="overflow-hidden">
         <FeaturesHeroSection />
@@ -81,4 +89,4 @@ const FeaturesPage = () => {
   );
 };
 
-export default FeaturesPage;
+

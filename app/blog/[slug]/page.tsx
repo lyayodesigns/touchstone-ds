@@ -1,6 +1,5 @@
-
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
+import { notFound } from "next/navigation";
 import { client, urlFor } from "../../../lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { ArrowLeft } from "lucide-react";
@@ -13,86 +12,64 @@ import { SeoType } from "../../../lib/sanity/types";
 import Link from "next/link";
 import Head from "next/head";
 
+import type { PortableTextBlock } from '@portabletext/types';
+
+interface SanityImage {
+  asset: {
+    _ref: string;
+    _type: string;
+  };
+  crop?: Record<string, unknown>;
+  hotspot?: Record<string, unknown>;
+  _type?: string;
+}
+
 interface Post {
   _id: string;
   title: string;
   slug: { current: string };
-  mainImage: any;
+  mainImage: SanityImage;
   publishedAt: string;
-  author: { name: string; image: any; bio: any[] };
+  author: { name: string; image: SanityImage; bio: PortableTextBlock[] };
   categories: Array<{ title: string }>;
-  body: any[];
+  body: PortableTextBlock[];
   seo?: SeoType;
 }
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
+import { formatDate } from '../../../lib/utils';
 
-const BlogPostPage = ({ params }: BlogPostPageProps) => {
-  const router = useRouter();
-  const [post, setPost] = useState<Post | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchPost() {
-      try {
-        const data = await client.fetch(postQuery, { slug: params.slug });
-        if (!data) {
-          router.push('/404');
-          return;
-        }
-        setPost(data);
-      } catch (error) {
-        console.error("Error fetching post:", error);
-        router.push('/404');
-      } finally {
-        setLoading(false);
-      }
+async function BlogPostPage({ params }: BlogPostPageProps) {
+  // Await the params object as required by Next.js 15+
+  const { slug } = await params;
+  let post: Post | null = null;
+  
+  try {
+    post = await client.fetch(postQuery, { slug });
+    
+    // If post not found, return 404
+    if (!post) {
+      return notFound();
     }
-
-    fetchPost();
-  }, [params.slug, router]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex flex-col bg-white">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center">
-          <h2 className="text-2xl font-semibold text-gray-700">Loading post...</h2>
-        </div>
-        <Footer />
-      </div>
-    );
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    return notFound();
   }
 
-  if (!post) {
-    return null; // This shouldn't happen as we redirect to 404 if post is null
-  }
-
-  // Set document title and meta tags
-  useEffect(() => {
-    if (post) {
-      document.title = post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`;
-      
-      // You can add more meta tags here if needed
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`);
-      }
-    }
-  }, [post]);
+  // Post is guaranteed to exist at this point
+  
+  // In a server component, we don't need to manually set document.title
+  // Next.js will handle this with metadata exports or with the Head component
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Head>
+        <title>{post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`}</title>
+        <meta name="description" content={post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`} />
+      </Head>
       <Navbar />
       <BlogHeroSection
         title={post.title}

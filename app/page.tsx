@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import DigitalHallOfFameSection from '../components/Home/DigitalHallOfFameSection';
@@ -13,11 +12,12 @@ import AlumniRecognitionSection from '../components/Home/AlumniRecognitionSectio
 import OnboardingSection from '../components/Home/OnboardingSection';
 import DigitalDisplayFeaturesSection from '../components/Home/DigitalDisplayFeaturesSection';
 import HeroSection from '../components/Home/HomeHeroSection';
+import { Metadata } from 'next';
+
 
 export const dynamic = 'force-static';
 
-// Per-page metadata for SEO and social sharing
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
   description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",
   alternates: {
@@ -47,7 +47,7 @@ export const metadata = {
   },
 };
 
-const Index = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -78,6 +78,6 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
+}
 
-export default Index;
+

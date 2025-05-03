@@ -1,3 +1,40 @@
+// Blog Post Types for Sanity integration
+
+export interface Post {
+  _id: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  mainImage: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+    crop?: Record<string, unknown>;
+    hotspot?: Record<string, unknown>;
+    _type?: string;
+  };
+  publishedAt: string;
+  author: {
+    name: string;
+    image: {
+      asset: {
+        _ref: string;
+        _type: string;
+      };
+      crop?: Record<string, unknown>;
+      hotspot?: Record<string, unknown>;
+      _type?: string;
+    };
+  };
+  categories: Array<{
+    title: string;
+  }>;
+  excerpt?: string;
+  seo?: SeoType;
+}
+
 // SEO Types for Sanity integration
 
 export type SeoType = {

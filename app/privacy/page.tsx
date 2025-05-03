@@ -1,40 +1,36 @@
-
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
+// Server component: No React, no useEffect, no Framer Motion, no Head import.
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Container } from '../../components/ui/container';
 
+export const metadata = {
+  title: 'Privacy Policy | Touchstone Digital Solutions',
+  description: "Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: 'https://touchstone-ds.com/privacy/'
+  },
+  openGraph: {
+    title: 'Privacy Policy | Touchstone Digital Solutions',
+    description: "Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+    url: 'https://touchstone-ds.com/privacy/',
+    type: 'website',
+    images: ['https://touchstone-ds.com/og-image.jpg'],
+    siteName: 'Touchstone Digital Solutions'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@touchstone_ds',
+    title: 'Privacy Policy | Touchstone Digital Solutions',
+    description: "Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+    images: ['https://touchstone-ds.com/og-image.jpg']
+  }
+};
+
 const Privacy = () => {
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Head>
-        {/* Basic Meta Tags */}
-        <title>Privacy Policy | Touchstone Digital Solutions</title>
-        <meta name="description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <link rel="canonical" href="https://touchstone-ds.com/privacy/" />
 
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Privacy Policy | Touchstone Digital Solutions" />
-        <meta property="og:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <meta property="og:url" content="https://touchstone-ds.com/privacy/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://touchstone-ds.com/og-image.jpg" />
-        <meta property="og:site_name" content="Touchstone Digital Solutions" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@touchstone_ds" />
-        <meta name="twitter:title" content="Privacy Policy | Touchstone Digital Solutions" />
-        <meta name="twitter:description" content="Read Touchstone Digital Solutions' privacy policy to understand how we collect, use, and protect your personal information." />
-        <meta name="twitter:image" content="https://touchstone-ds.com/og-image.jpg" />
-      </Head>
       <Navbar />
       
       {/* Hero Section */}
@@ -46,76 +42,28 @@ const Privacy = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
         }}>
-        {/* Background with animated gradient */}
-        <div className="absolute inset-0">
-          <motion.div 
-            className="absolute inset-0"
-            animate={{ 
-              opacity: [0.5, 0.7, 0.5],
-              scale: [1, 1.05, 1]
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-          />
-        </div>
-        
-        {/* Decorative elements - hidden on small screens */}
-        <motion.div 
-          className="absolute top-10 left-10 w-32 h-32 rounded-full bg-blue-500/10 hidden sm:block"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            x: [0, 10, 0],
-            y: [0, -10, 0]
-          }}
-          transition={{ duration: 6, repeat: Infinity }}
-        />
-        <motion.div 
-          className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-purple-500/10 hidden sm:block"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            x: [0, -15, 0],
-            y: [0, 15, 0]
-          }}
-          transition={{ duration: 7, repeat: Infinity }}
-        />
+        {/* Background gradient (static, no animation) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent"></div>
+        {/* Decorative elements - static, no animation */}
+        <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-blue-500/10 hidden sm:block"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-purple-500/10 hidden sm:block"></div>
         
         <Container className="relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              whileInView={{ scale: [0.95, 1] }}
-              viewport={{ once: true }}
-            >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4">
               <span className="text-transparent bg-clip-text text-gradient-purple-blue">
                 Privacy
               </span>
               <span className="text-foreground"> Policy</span>
-            </motion.h1>
+            </h1>
             
-            <motion.div
-              className="relative mb-4 md:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="relative mb-4 md:mb-8">
               <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
                 Last Updated: March 27, 2025
               </p>
-              
-              {/* Decorative line */}
-              <motion.div 
-                className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: 64 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              />
-            </motion.div>
+              {/* Decorative line (static) */}
+              <div className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+            </div>
           </div>
         </Container>
       </section>

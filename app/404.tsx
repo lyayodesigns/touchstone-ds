@@ -5,20 +5,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Container } from '../components/ui/container';
 
-export const metadata: Metadata = {
-  title: 'Page Not Found | Touchstone Digital Solutions',
-  description: 'The page you are looking for does not exist or has been moved.',
-  robots: {
-    index: false,
-    follow: false,
-  },
-  openGraph: {
-    title: 'Page Not Found | Touchstone Digital Solutions',
-    description: 'The page you are looking for does not exist or has been moved.',
-    type: 'website',
-    siteName: 'Touchstone Digital Solutions',
-  },
-};
 
 const NotFoundHeroSection = () => {
   return (

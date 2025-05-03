@@ -1,6 +1,5 @@
-
+"use client"
 import React, { useEffect, useState, useRef } from 'react';
-
 import { useForm, FormProvider, useForm as useFormHook } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -73,48 +72,6 @@ const ContactForm = () => {
   return (
     <main className="container mx-auto px-4 py-16 md:py-20 lg:py-24">
       <div className="max-w-6xl mx-auto" id="contact-form">
-        {/* Section title */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Get in Touch</span>
-          </h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto">We'd love to hear from you. Fill out the form below and our team will get back to you as soon as possible.</p>
-          {/* Stylish navigation links */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4">
-            <a href="https://touchstone-ds.com/about/" className="text-sm group flex items-center">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </span>
-              <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">About Us</span>
-            </a>
-            <a href="https://touchstone-ds.com/blog/" className="text-sm group flex items-center">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                </svg>
-              </span>
-              <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Blog</span>
-            </a>
-            <a href="https://touchstone-ds.com/privacy/" className="text-sm group flex items-center">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </span>
-              <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Privacy Policy</span>
-            </a>
-            <a href="https://touchstone-ds.com/terms/" className="text-sm group flex items-center">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 w-5 h-5 rounded-full flex items-center justify-center mr-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </span>
-              <span className="text-foreground/70 group-hover:text-blue-400 transition-colors">Terms of Service</span>
-            </a>
-          </div>
-        </div>
         {/* Contact Form and Info */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* Contact Form */}
