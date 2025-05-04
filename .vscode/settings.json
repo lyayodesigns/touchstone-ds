@@ -1,8 +1,0 @@
-{
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "css.validate": true,
-  "editor.inlineSuggest.enabled": true,
-  "css.lint.unknownAtRules": "ignore"
-}
