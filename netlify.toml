@@ -4,6 +4,7 @@
 
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
+  NODE_VERSION = "18"
 
 [dev]
   command = "npm run dev"
@@ -17,6 +18,15 @@
 # Ensure all routes are handled by Next.js
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/nextjs-server"
+  to = "/.netlify/functions/server"
   status = 200
-  force = true
+
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
