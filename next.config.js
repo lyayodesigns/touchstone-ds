@@ -10,6 +10,8 @@ const nextConfig = {
     unoptimized: process.env.NODE_ENV === 'production',
   },
   output: 'standalone',
+  // This ensures better compatibility with Netlify's file system
+  distDir: process.env.BUILD_DIR || '.next',
 };
 
 export default nextConfig;
