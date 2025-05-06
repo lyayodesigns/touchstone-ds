@@ -60,4 +60,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-set-up-a-virtual-donor-recognition-wall-in-7-easy-steps/</loc>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/top-8-features-to-look-for-in-digital-donor-wall-software/</loc>
+    <lastmod>2025-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
