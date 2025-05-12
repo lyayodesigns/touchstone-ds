@@ -276,7 +276,7 @@ export const AboutStatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                The average number of cups of coffee brewed by our team members daily, fueling the creativity and passion that go into every custom display
+                The average number of cups of coffee brewed by our team members daily, fueling the creativity and passion that go into every custom display.
               </motion.p>
             </motion.div>
           </motion.div>
@@ -322,7 +322,7 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              The number of possibilities to create a custom build-out, ensuring each project is as unique as the school it represents
+              The number of possibilities to create a custom build-out, ensuring each project is as unique as the school it represents.
             </motion.p>
           </motion.div>
         </div>
