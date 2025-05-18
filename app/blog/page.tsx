@@ -87,10 +87,7 @@ export default async function BlogPage() {
                         {post.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3 flex-1">
-                      {post.seo?.description || "No description available."}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mt-auto">
+                    <div className="flex items-center justify-between text-sm text-gray-400 mt-4">
                       <span>{formatDate(post.publishedAt)}</span>
                       <span>{post.author?.name}</span>
                     </div>
