@@ -327,7 +327,7 @@ const VisualFidelity = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h1 
+            <motion.h2 
               className="text-3xl md:text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -337,7 +337,7 @@ const VisualFidelity = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600">
                 Advanced Platform Features
               </span> for Complete Control
-            </motion.h1>
+            </motion.h2>
             
             <motion.div 
               className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"
