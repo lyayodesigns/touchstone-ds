@@ -25,22 +25,6 @@ interface SanityImage {
   _type?: string;
 }
 
-// Force static generation
-export const dynamic = 'force-static';
-
-// Generate static paths
-export async function generateStaticParams() {
-  const posts = await client.fetch(`*[_type == "post"] { slug { current } }`, {}, {
-    next: {
-      revalidate: 3600 // Revalidate every hour
-    }
-  });
-  
-  return posts.map((post: { slug: { current: string } }) => ({
-    slug: post.slug.current,
-  }));
-}
-
 interface Post {
   _id: string;
   title: string;

@@ -39,20 +39,13 @@ export const metadata: Metadata = {
 
 async function fetchPosts() {
   try {
-    const posts = await client.fetch(postsQuery, {}, {
-      next: {
-        revalidate: 3600 // Revalidate every hour
-      }
-    });
+    const posts = await client.fetch(postsQuery);
     return posts || [];
   } catch (error) {
     console.error("Error fetching posts:", error);
     return [];
   }
 }
-
-// Force static generation
-export const dynamic = 'force-static';
 
 export default async function BlogPage() {
   const posts = await fetchPosts();
