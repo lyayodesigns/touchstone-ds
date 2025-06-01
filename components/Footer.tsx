@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             
             {/* Schedule a Demo - Modernized */}
             <a
-              href="https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website"
+              href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-[#6BA5FD] text-white font-medium rounded-lg shadow-md hover:bg-[#6BA5FD]/90 hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#6BA5FD] focus:ring-offset-2"

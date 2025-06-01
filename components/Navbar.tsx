@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             CONTACT US
           </Link>
           <a
-            href="https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website"
+            href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
             target="_blank"
             rel="noopener"
             className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
@@ -178,7 +178,7 @@ const Navbar: React.FC = () => {
                   CONTACT US
                 </Link>
                 <a
-                  href="https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website"
+                  href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
                   target="_blank"
                   rel="noopener"
                   className="w-full btn-gradient hover-lift font-medium rounded-full px-4 py-2 text-sm md:text-base whitespace-nowrap text-center"

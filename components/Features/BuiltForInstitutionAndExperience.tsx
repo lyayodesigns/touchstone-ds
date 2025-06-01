@@ -192,7 +192,7 @@ const BuiltForInstitutionAndExperience = () => {
                   className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:shadow-glow-md group"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website&month=2025-03', '_blank')}
+                  onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website', '_blank')}
                 >
                   <Mail className="h-5 w-5" />
                   <span>Schedule a Demo Now!</span>

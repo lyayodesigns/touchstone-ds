@@ -75,7 +75,7 @@ const faqData = [
       },
       {
         question: "How can I bring a Digital Hall of Fame display to my school or organization?",
-        answer: `Bringing a Digital Hall of Fame to your school or organization is simple, fast, and stress-free with Touchstone Digital Solutions. We handle the heavy lifting so you can focus on celebrating your legacy.\nHere’s how to get started:\nSchedule a 15-Minute Guided Demo\nMeet with our team for a personalized walkthrough of our platform and features.\n👉 [Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=faq)\nCollaborate on a Custom Design\nWe tailor every display to your school’s identity, from layout and content to branding and functionality.\nLaunch and Inspire\nOnce you approve your design, we handle everything—from setup and training to ongoing support and updates.\nWith no cost to build or maintain, unlimited customization, and Emmy-nominated design, Touchstone makes it easy to transform recognition at your school. Link - https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=faq`,
+        answer: `Bringing a Digital Hall of Fame to your school or organization is simple, fast, and stress-free with Touchstone Digital Solutions. We handle the heavy lifting so you can focus on celebrating your legacy.\nHere’s how to get started:\nSchedule a 15-Minute Guided Demo\nMeet with our team for a personalized walkthrough of our platform and features.\n👉 [Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website)\nCollaborate on a Custom Design\nWe tailor every display to your school’s identity, from layout and content to branding and functionality.\nLaunch and Inspire\nOnce you approve your design, we handle everything—from setup and training to ongoing support and updates.\nWith no cost to build or maintain, unlimited customization, and Emmy-nominated design, Touchstone makes it easy to transform recognition at your school. Link - https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website`,
       }
     ],
   },
@@ -202,7 +202,7 @@ const faqData = [
       },
       {
         question: "Does Touchstone offer free product demos or consultations?",
-        answer: `Yes! We offer free 15-minute guided demos where you’ll get a personalized walkthrough of our software and see real examples of Digital Halls of Fame in action. You can ask questions, explore features, and learn how Touchstone can help your school or organization.\n👉 [Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=faq)`,
+        answer: `Yes! We offer free 15-minute guided demos where you’ll get a personalized walkthrough of our software and see real examples of Digital Halls of Fame in action. You can ask questions, explore features, and learn how Touchstone can help your school or organization.\n👉 [Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website)`,
       },  
       {
         question: "Can we start small and expand later?",
@@ -338,7 +338,7 @@ export default function FAQ() {
                   Our team is ready to help you find the perfect digital recognition solution for your institution.
                 </p>
                 <a
-                  href="https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website"
+                  href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-medium text-center hover:bg-opacity-90 transition-all shadow-lg hover:-translate-y-1"

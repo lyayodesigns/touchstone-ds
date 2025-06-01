@@ -82,7 +82,7 @@ const OnboardingSection: React.FC = () => {
               }`}
             >
               <a
-                href="https://calendly.com/touchstone-ds/custom-guided-tour?atm_source=website&month=2025-03"
+                href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 text-white font-medium rounded-full px-6 py-3 transition-all duration-300 shadow-glow-sm"
