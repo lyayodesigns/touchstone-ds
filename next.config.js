@@ -9,30 +9,14 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: process.env.NODE_ENV === 'production',
   },
-  // Configure webpack for Sanity Studio exclusion and CSS handling
-  webpack: (config, { isServer }) => {
-    // Exclude the Sanity Studio directory from the Next.js build process
-    config.watchOptions = {
-      ...config.watchOptions,
-      ignored: [...(config.watchOptions?.ignored || []), '**/studio/**'],
-    };
-    
-    // Handle CSS files properly
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    
-    // Add CSS loaders
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
-    });
-    
-    return config;
+  // Exclude specific directories from the build process
+  experimental: {
+    outputFileTracingExcludes: {
+      '*': ['**/studio/**'],
+    },
   },
+  // Transpile specific packages
+  transpilePackages: ['@ly/ds-core'],
 };
 
 export default nextConfig;
