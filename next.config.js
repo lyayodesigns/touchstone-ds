@@ -10,10 +10,8 @@ const nextConfig = {
     unoptimized: process.env.NODE_ENV === 'production',
   },
   // Exclude specific directories from the build process
-  experimental: {
-    outputFileTracingExcludes: {
-      '*': ['**/studio/**'],
-    },
+  outputFileTracingExcludes: {
+    '*': ['**/studio/**'],
   },
   // Transpile specific packages
   transpilePackages: ['@ly/ds-core'],
