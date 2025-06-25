@@ -9,7 +9,14 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: process.env.NODE_ENV === 'production',
   },
-
+  // Exclude the Sanity Studio directory from the Next.js build process
+  webpack: (config) => {
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [...(config.watchOptions?.ignored || []), '**/studio/**'],
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
