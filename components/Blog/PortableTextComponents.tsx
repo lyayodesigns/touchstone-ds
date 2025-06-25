@@ -1,6 +1,7 @@
 import React from 'react';
 import { urlFor } from '../../lib/sanity';
 import { PortableTextReactComponents } from '@portabletext/react';
+import YouTubeEmbed from './YouTubeEmbed';
 
 /**
  * Custom components for rendering Portable Text content from Sanity
@@ -23,6 +24,10 @@ const PortableTextComponents: Partial<PortableTextReactComponents> = {
           )}
         </div>
       );
+    },
+    // YouTube video embedding component
+    youtube: ({ value }: { value: { url: string; caption?: string } }) => {
+      return <YouTubeEmbed url={value.url} caption={value.caption} />;
     },
     // Add support for code blocks if they exist in your schema
     code: ({ value }: { value: { code: string } }) => {
