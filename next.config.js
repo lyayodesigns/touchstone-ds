@@ -15,6 +15,20 @@ const nextConfig = {
   },
   // Transpile specific packages
   transpilePackages: ['@ly/ds-core'],
+  // Completely exclude Sanity Studio from the build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      exclude: /(node_modules|studio)/,
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

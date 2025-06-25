@@ -1,5 +1,5 @@
 [build]
-  command = "next build"
+  command = "npm install @sanity/vision && next build"
   publish = ".next"
   functions = "functions"
 
