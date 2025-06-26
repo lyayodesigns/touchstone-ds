@@ -25,6 +25,42 @@ const PortableTextComponents: Partial<PortableTextReactComponents> = {
         </div>
       );
     },
+    // Simple Table component
+    simpleTable: ({ value }: { value: { rows: any[]; tableCaption?: string; hasHeaderRow?: boolean } }) => {
+      if (!value.rows || value.rows.length === 0) {
+        return null;
+      }
+
+      return (
+        <div className="my-8 overflow-x-auto">
+          {value.tableCaption && (
+            <div className="text-sm font-medium text-center text-gray-700 mb-2">
+              {value.tableCaption}
+            </div>
+          )}
+          <table className="w-full border-collapse border border-gray-300 rounded-lg overflow-hidden shadow-md">
+            {value.rows.map((row, rowIndex) => {
+              const isHeader = value.hasHeaderRow && rowIndex === 0;
+              return (
+                <tr 
+                  key={rowIndex}
+                  className={isHeader ? 
+                    'bg-gray-100 text-gray-800 font-semibold' : 
+                    rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
+                >
+                  {row.cell1 && <td className="border border-gray-300 px-4 py-2">{row.cell1}</td>}
+                  {row.cell2 && <td className="border border-gray-300 px-4 py-2">{row.cell2}</td>}
+                  {row.cell3 && <td className="border border-gray-300 px-4 py-2">{row.cell3}</td>}
+                  {row.cell4 && <td className="border border-gray-300 px-4 py-2">{row.cell4}</td>}
+                  {row.cell5 && <td className="border border-gray-300 px-4 py-2">{row.cell5}</td>}
+                  {row.cell6 && <td className="border border-gray-300 px-4 py-2">{row.cell6}</td>}
+                </tr>
+              );
+            })}
+          </table>
+        </div>
+      );
+    },
     // YouTube video embedding component
     youtube: ({ value }: { value: { url: string; caption?: string } }) => {
       return <YouTubeEmbed url={value.url} caption={value.caption} />;

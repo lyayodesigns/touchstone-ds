@@ -48,6 +48,9 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      options: {
+        rows: 25, // Significantly increased height for the body field
+      },
     }),
     defineField({
       name: 'seo',

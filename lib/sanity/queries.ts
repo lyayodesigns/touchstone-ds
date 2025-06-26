@@ -89,7 +89,21 @@ export const postQuery = /* groq */ `
       bio
     },
     "categories": categories[]->{title},
-    body,
+    body[]{
+      ...,
+      _type == "simpleTable" => {
+        ...,
+        rows[]{
+          ...,
+          cell1,
+          cell2,
+          cell3,
+          cell4,
+          cell5,
+          cell6
+        }
+      }
+    },
     ${seo}
   }
 `;

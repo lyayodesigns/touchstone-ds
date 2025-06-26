@@ -63,6 +63,69 @@ export default defineType({
       type: 'image',
       options: {hotspot: true},
     }),
+    // Simple Table feature
+    defineArrayMember({
+      name: 'simpleTable',
+      title: 'Table',
+      type: 'object',
+      fields: [
+        {
+          name: 'tableCaption',
+          title: 'Table Caption',
+          type: 'string',
+          description: 'Optional caption for the table',
+        },
+        {
+          name: 'hasHeaderRow',
+          title: 'Has Header Row',
+          type: 'boolean',
+          initialValue: true,
+        },
+        {
+          name: 'rows',
+          title: 'Rows',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              name: 'tableRow',
+              fields: [
+                { name: 'cell1', type: 'string', title: 'Column 1' },
+                { name: 'cell2', type: 'string', title: 'Column 2' },
+                { name: 'cell3', type: 'string', title: 'Column 3' },
+                { name: 'cell4', type: 'string', title: 'Column 4' },
+                { name: 'cell5', type: 'string', title: 'Column 5' },
+                { name: 'cell6', type: 'string', title: 'Column 6' },
+              ],
+              preview: {
+                select: {
+                  cell1: 'cell1',
+                  cell2: 'cell2',
+                  cell3: 'cell3',
+                },
+                prepare({ cell1, cell2, cell3 }) {
+                  return {
+                    title: [cell1, cell2, cell3].filter(Boolean).join(' | '),
+                  }
+                },
+              },
+            },
+          ],
+        },
+      ],
+      preview: {
+        select: {
+          rows: 'rows',
+          caption: 'tableCaption',
+        },
+        prepare({ rows, caption }) {
+          return {
+            title: caption || 'Table',
+            subtitle: `${rows?.length || 0} rows`,
+          }
+        },
+      },
+    }),
     // YouTube video embedding
     defineArrayMember({
       name: 'youtube',
