@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "next build",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "build": "node scripts/generate-sitemap.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "build:dev": "next build --mode development",
+    "build:dev": "node scripts/generate-sitemap.js && next build --mode development",
     "preview": "next preview"
   },
   "dependencies": {
