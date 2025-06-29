@@ -2,7 +2,7 @@
   "name": "touchstone-ds",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "node scripts/generate-sitemap.js && next build",

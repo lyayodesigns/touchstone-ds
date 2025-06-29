@@ -1,7 +1,15 @@
-const { createClient } = require('@sanity/client');
-const fs = require('fs');
-const path = require('path');
-require('dotenv').config();
+import { createClient } from '@sanity/client';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Initialize the Sanity client
 const client = createClient({
@@ -115,6 +123,7 @@ async function generateSitemap() {
     sitemap += '</urlset>';
     
     // Write to file
+    // Using process.cwd() to get the project root directory
     const publicDir = path.resolve(process.cwd(), 'public');
     if (!fs.existsSync(publicDir)) {
       fs.mkdirSync(publicDir, { recursive: true });
@@ -132,4 +141,5 @@ async function generateSitemap() {
 // Run the function
 generateSitemap();
 
-module.exports = { generateSitemap };
+// Export the function for potential reuse
+export { generateSitemap };
