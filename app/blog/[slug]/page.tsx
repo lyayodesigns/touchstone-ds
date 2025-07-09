@@ -11,7 +11,7 @@ import { postQuery } from "../../../lib/sanity/queries";
 import { SeoType } from "../../../lib/sanity/types";
 import Link from "next/link";
 import { Metadata } from "next";
-import { formatDate } from '../../../lib/utils';
+import { formatDate, calculateReadingTime } from '../../../lib/utils';
 
 import type { PortableTextBlock } from '@portabletext/types';
 
@@ -118,6 +118,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         publishedDate={formatDate(post.publishedAt)}
         author={post.author?.name}
         categories={post.categories?.map(cat => cat.title).join(', ')}
+        readingTime={calculateReadingTime(post.body)}
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white">
         <div className="max-w-4xl mx-auto">

@@ -35,7 +35,7 @@ const AwardsSlider: React.FC = () => {
         >
           <style>{`
             .animate-marquee-slow {
-              animation: marquee 30s linear infinite;
+              animation: marquee 10s linear infinite;
             }
             @keyframes marquee {
               from {

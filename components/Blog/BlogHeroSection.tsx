@@ -13,6 +13,7 @@ interface BlogHeroSectionProps {
   publishedDate?: string;
   author?: string;
   categories?: string;
+  readingTime?: string;
 }
 
 const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({ 
@@ -22,7 +23,8 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
   isPost = false,
   publishedDate,
   author,
-  categories
+  categories,
+  readingTime
 }) => {
   // Scroll to top when component mounts
   useEffect(() => {
@@ -125,33 +127,52 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
           
           {/* Post metadata - only shown for blog posts */}
           {isPost && (publishedDate || author || categories) && (
-            <motion.div 
-              className="flex flex-wrap items-center justify-center gap-6 text-gray-600 mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              {publishedDate && (
-                <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-2 text-blue-500" />
-                  <time>{publishedDate}</time>
-                </div>
-              )}
+            <>
+              <motion.div 
+                className="flex flex-wrap items-center justify-center gap-6 text-gray-600 mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                {publishedDate && (
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2 text-blue-500" />
+                    <time>{publishedDate}</time>
+                  </div>
+                )}
+                
+                {author && (
+                  <div className="flex items-center">
+                    <User className="w-4 h-4 mr-2 text-blue-500" />
+                    <span>{author}</span>
+                  </div>
+                )}
+                
+                {categories && (
+                  <div className="flex items-center">
+                    <Tag className="w-4 h-4 mr-2 text-blue-500" />
+                    <span>{categories}</span>
+                  </div>
+                )}
+              </motion.div>
               
-              {author && (
-                <div className="flex items-center">
-                  <User className="w-4 h-4 mr-2 text-blue-500" />
-                  <span>{author}</span>
-                </div>
+              {/* Reading time in separate row */}
+              {readingTime && (
+                <motion.div
+                  className="flex justify-center mt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <span className="inline-flex items-center px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {readingTime}
+                  </span>
+                </motion.div>
               )}
-              
-              {categories && (
-                <div className="flex items-center">
-                  <Tag className="w-4 h-4 mr-2 text-blue-500" />
-                  <span>{categories}</span>
-                </div>
-              )}
-            </motion.div>
+            </>
           )}
         </div>
       </Container>
