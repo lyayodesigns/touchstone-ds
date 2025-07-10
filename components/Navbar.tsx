@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "../lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const pathname = usePathname();
 
   // Check if the current path matches the link
@@ -78,17 +79,53 @@ const Navbar: React.FC = () => {
           >
             Features
           </Link>
-          <Link
-            href="/faq/"
-            className={cn(
-              "text-sm lg:text-base transition-colors whitespace-nowrap",
-              isActive("/faq/")
-                ? "text-gradient-purple-blue font-medium"
-                : "hover:text-gradient-purple-blue"
-            )}
-          >
-            FAQ
-          </Link>
+          <div className="relative group">
+            <button
+              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+              onMouseEnter={() => setIsResourcesOpen(true)}
+              className={cn(
+                "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
+                (isActive("/faq/") || isActive("/blog/"))
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
+              )}
+            >
+              Resources
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            <div
+              className={cn(
+                "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-40 transition-all duration-200",
+                isResourcesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              )}
+              onMouseLeave={() => setIsResourcesOpen(false)}
+            >
+              <Link
+                href="/faq/"
+                className={cn(
+                  "block px-4 py-2 text-sm transition-colors",
+                  isActive("/faq/")
+                    ? "text-gradient-purple-blue font-medium"
+                    : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                )}
+                onClick={() => setIsResourcesOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/blog/"
+                className={cn(
+                  "block px-4 py-2 text-sm transition-colors",
+                  isActive("/blog/")
+                    ? "text-gradient-purple-blue font-medium"
+                    : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                )}
+                onClick={() => setIsResourcesOpen(false)}
+              >
+                Blog
+              </Link>
+            </div>
+          </div>
         </nav>
         <div className="flex items-center space-x-4">
           <Link
@@ -153,21 +190,43 @@ const Navbar: React.FC = () => {
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
                 { name: "Contact", href: "/contact/" },
-                { name: "FAQ", href: "/faq/" }
+                { name: "Resources", href: "#", isDropdown: true },
+                { name: "FAQ", href: "/faq/", isSubItem: true },
+                { name: "Blog", href: "/blog/", isSubItem: true }
               ].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
-                    isActive(item.href)
-                      ? "text-gradient-purple-blue"
-                      : "text-gray-800 hover:text-gradient-purple-blue"
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                item.isDropdown ? (
+                  <div key={item.name} className="block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white text-gray-800">
+                    {item.name}
+                  </div>
+                ) : item.isSubItem ? (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "block w-full py-3 pl-6 text-base font-medium border-b border-gray-100 transition-colors bg-white",
+                      isActive(item.href)
+                        ? "text-gradient-purple-blue"
+                        : "text-gray-600 hover:text-gradient-purple-blue"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
+                      isActive(item.href)
+                        ? "text-gradient-purple-blue"
+                        : "text-gray-800 hover:text-gradient-purple-blue"
+                    )}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="pt-8 w-full bg-white flex flex-col items-center space-y-2">
                 <Link
