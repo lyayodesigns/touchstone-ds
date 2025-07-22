@@ -12,10 +12,10 @@ import type { Post } from "../../lib/sanity/types";
 
 export const metadata: Metadata = {
   title: 'Blog | Touchstone Digital Solutions',
-  description: 'Latest news, insights, and updates from Touchstone Digital Solutions.',
+  description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
   openGraph: {
     title: 'Blog | Touchstone Digital Solutions',
-    description: 'Latest news, insights, and updates from Touchstone Digital Solutions.',
+    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
     url: 'https://touchstone-ds.com/blog/',
     type: 'website',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Blog | Touchstone Digital Solutions',
-    description: 'Latest news, insights, and updates from Touchstone Digital Solutions.',
+    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
     images: ['https://touchstone-ds.com/og-image.jpg'],
   },
   alternates: {

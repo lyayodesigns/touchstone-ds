@@ -60,7 +60,7 @@ const BlogSeo: React.FC<BlogSeoProps> = ({
   seo,
   slug,
   defaultTitle = 'Touchstone Digital Solutions Blog',
-  defaultDescription = 'Latest news, insights, and updates from Touchstone Digital Solutions.'
+  defaultDescription = 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.'
 }) => {
   const { additionalMetaTags, metaDescription, metaTitle, twitter, nofollowAttributes, seoKeywords, openGraph } = seo || {};
   

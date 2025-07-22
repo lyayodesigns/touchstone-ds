@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     console.error("Error generating metadata:", error);
     return {
       title: 'Blog | Touchstone Digital Solutions',
-      description: 'Latest news, insights, and updates from Touchstone Digital Solutions.',
+      description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
     };
   }
 }
