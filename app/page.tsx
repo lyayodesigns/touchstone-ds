@@ -19,14 +19,14 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
-  description: "Transform donor recognition, records, trophies, flipbooks, awards, and more with Touchstone Digital Solutions' interactive digital Hall of Fame for schools, universities, and more.",
+  description: "Transform donor recognition, records, trophies & awards with Touchstone Digital's interactive Hall of Fame for schools, universities & more.",
   alternates: {
     canonical: '/',
   },
   metadataBase: new URL('https://touchstone-ds.com'),
   openGraph: {
     title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
-    description: "Transform donor recognition, records, trophies, flipbooks, awards, and more with Touchstone Digital Solutions' interactive digital Hall of Fame for schools, universities, and more.",
+    description: "Transform donor recognition, records, trophies & awards with Touchstone Digital's interactive Hall of Fame for schools, universities & more.",
     url: 'https://touchstone-ds.com/',
     siteName: 'Touchstone Digital Solutions',
     images: [
