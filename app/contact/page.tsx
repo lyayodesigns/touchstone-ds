@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ContactForm from '../../components/Contact/ContactForm';
+import IntroPacketForm from '../../components/Contact/IntroPacketForm';
 import { Container } from '../../components/ui/container';
 import { Metadata } from 'next';
 
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
 
       <Navbar />
       {/* Hero Section */}
@@ -90,6 +91,16 @@ export default function ContactPage() {
           </div>
         </Container>
       </section>
+      
+      {/* Intro Packet Form Section */}
+      <section className="pb-4 pt-12">
+        <Container>
+          <div className="max-w-6xl mx-auto">
+            <IntroPacketForm />
+          </div>
+        </Container>
+      </section>
+      
       <ContactForm />
       <Footer />
     </div>

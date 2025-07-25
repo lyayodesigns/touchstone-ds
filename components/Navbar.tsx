@@ -29,108 +29,141 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? `py-3 bg-white border-b border-gray-200 shadow-sm`
-          : "py-5 bg-white/80 backdrop-blur-sm"
-      )}
-    >
-      <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-          <img
-            src="/logo/logo-midnight.png"
-            alt="Touchstone Digital Solutions"
-            className="h-8 lg:h-10 w-auto"
-          />
-        </Link>
-        <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
-          <Link
-            href="/"
-            className={cn(
-              "text-sm lg:text-base transition-colors whitespace-nowrap",
-              isActive("/")
-                ? "text-gradient-purple-blue font-medium"
-                : "hover:text-gradient-purple-blue"
-            )}
-          >
-            Home
+    <>
+      <div
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          isScrolled
+            ? `py-3 bg-white border-b border-gray-200 shadow-sm`
+            : "py-5 bg-white/80 backdrop-blur-sm"
+        )}
+      >
+        <div className="container px-4 md:px-6 mx-auto flex items-center justify-between">
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+            <img
+              src="/logo/logo-midnight.png"
+              alt="Touchstone Digital Solutions"
+              className="h-8 lg:h-10 w-auto"
+            />
           </Link>
-          <Link
-            href="/about/"
-            className={cn(
-              "text-sm lg:text-base transition-colors whitespace-nowrap",
-              isActive("/about/")
-                ? "text-gradient-purple-blue font-medium"
-                : "hover:text-gradient-purple-blue"
-            )}
-          >
-            About Us
-          </Link>
-          <Link
-            href="/features/"
-            className={cn(
-              "text-sm lg:text-base transition-colors whitespace-nowrap",
-              isActive("/features/")
-                ? "text-gradient-purple-blue font-medium"
-                : "hover:text-gradient-purple-blue"
-            )}
-          >
-            Features
-          </Link>
-          <div className="relative group">
-            <button
-              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-              onMouseEnter={() => setIsResourcesOpen(true)}
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
+            <Link
+              href="/"
               className={cn(
-                "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                (isActive("/faq/") || isActive("/blog/"))
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/")
                   ? "text-gradient-purple-blue font-medium"
                   : "hover:text-gradient-purple-blue"
               )}
             >
-              Resources
-              <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-            <div
+              Home
+            </Link>
+            <Link
+              href="/about/"
               className={cn(
-                "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-40 transition-all duration-200",
-                isResourcesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/about/")
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
               )}
-              onMouseLeave={() => setIsResourcesOpen(false)}
             >
-              <Link
-                href="/faq/"
+              About Us
+            </Link>
+            <Link
+              href="/features/"
+              className={cn(
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/features/")
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
+              )}
+            >
+              Features
+            </Link>
+            <div className="relative group">
+              <button
+                onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+                onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
-                  "block px-4 py-2 text-sm transition-colors",
-                  isActive("/faq/")
+                  "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
+                  (isActive("/faq/") || isActive("/blog/"))
                     ? "text-gradient-purple-blue font-medium"
-                    : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                    : "hover:text-gradient-purple-blue"
                 )}
-                onClick={() => setIsResourcesOpen(false)}
               >
-                FAQ
-              </Link>
-              <Link
-                href="/blog/"
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div
                 className={cn(
-                  "block px-4 py-2 text-sm transition-colors",
-                  isActive("/blog/")
-                    ? "text-gradient-purple-blue font-medium"
-                    : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-40 transition-all duration-200",
+                  isResourcesOpen ? "opacity-100 visible" : "opacity-0 invisible"
                 )}
-                onClick={() => setIsResourcesOpen(false)}
+                onMouseLeave={() => setIsResourcesOpen(false)}
               >
-                Blog
-              </Link>
+                <Link
+                  href="/faq/"
+                  className={cn(
+                    "block px-4 py-2 text-sm transition-colors",
+                    isActive("/faq/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  FAQ
+                </Link>
+                <Link
+                  href="/blog/"
+                  className={cn(
+                    "block px-4 py-2 text-sm transition-colors",
+                    isActive("/blog/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Blog
+                </Link>
+              </div>
             </div>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/contact/"
+              className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
+            >
+              CONTACT US
+            </Link>
+            <a
+              href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
+              target="_blank"
+              rel="noopener"
+              className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
+            >
+              SCHEDULE A DEMO
+            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-black hover:text-black/80"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
-        </nav>
-        <div className="flex items-center space-x-4">
+        </div>
+      </div>
+      
+      {/* Mobile sticky buttons */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 safe-area-inset-bottom">
+        <div className="flex items-center justify-center space-x-3">
           <Link
             href="/contact/"
-            className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
+            className="flex-1 btn-gradient hover-lift font-medium rounded-full px-4 py-2 text-sm text-center"
           >
             CONTACT US
           </Link>
@@ -138,23 +171,13 @@ const Navbar: React.FC = () => {
             href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website"
             target="_blank"
             rel="noopener"
-            className="hidden md:block btn-gradient hover-lift font-medium rounded-full px-4 lg:px-5 py-2 text-sm lg:text-base whitespace-nowrap"
+            className="flex-1 btn-gradient hover-lift font-medium rounded-full px-4 py-2 text-sm text-center"
           >
             SCHEDULE A DEMO
           </a>
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-black hover:text-black/80"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
         </div>
       </div>
+      
       {/* Mobile menu overlay */}
       <div
         className={cn(
@@ -250,7 +273,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
