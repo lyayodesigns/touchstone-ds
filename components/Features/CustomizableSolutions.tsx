@@ -29,8 +29,8 @@ const CustomizableSolutions = () => {
   // Feature items
   const features = [
     "Notable Alumni & Legends – Honor the achievements of distinguished graduates and faculty.",
-    "Championship Records & Athletics – Bring trophies and victories to life with immersive multimedia.",
-    "Class Photos, Yearbooks & Events – Preserve history in a dynamic, digital format.",
+    "Digital Athletic Record Boards – Bring trophies and victories to life with immersive multimedia.",
+    "Class Photos, Digital Yearbooks & Events – Preserve history in a dynamic, digital format.",
     "Coaches & Faculty Recognition – Celebrate the educators and mentors who shaped generations.",
     "Team Rosters & Player Profiles – Showcase current and past teams with interactive stats and bios.",
     "Student Spotlights – Highlight academic achievers, club leaders, and student success stories."
@@ -101,7 +101,7 @@ const CustomizableSolutions = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Digital Hall of Fame & Trophy Cases
+              Digital Hall of Fame & Digital Trophy Cases
             </motion.h3>
           </motion.div>
           

@@ -72,7 +72,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 <span className="text-foreground/90">
                   Showcase records, rosters, and historic highlights with a{" "}
                   <span className="text-foreground font-medium">
-                    dynamic, real-time platform
+                    dynamic, real-time digital record board platform
                   </span>
                   .
                 </span>
@@ -98,7 +98,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                   Replace outdated bulletin boards and static trophy cases with
                   a{" "}
                   <span className="text-foreground font-medium">
-                    space-saving digital solution
+                    space-saving digital trophy case
                   </span>
                   .
                 </p>
@@ -123,7 +123,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 <p className="text-foreground/70">
                   Recognize donors, sponsors, and outstanding achievements with{" "}
                   <span className="text-foreground font-medium">
-                    customizable branding
+                    customizable digital donor wall branding
                   </span>
                   .
                 </p>
@@ -148,7 +148,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 <p className="text-foreground/70">
                   Engage students, faculty, and alumni with an{" "}
                   <span className="text-foreground font-medium">
-                    interactive experience
+                    interactive hall of fame and digital yearbooks experiece
                   </span>{" "}
                   that preserves your legacy.
                 </p>

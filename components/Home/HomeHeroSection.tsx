@@ -155,7 +155,7 @@ const HeroSection: React.FC = () => {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              Perfecting touchscreen recognition software—the all-in-one solution built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.
+              Perfecting interactive hall of fame software—the all-in-one digital hall of fame solution built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.
             </p>
 
             <div 

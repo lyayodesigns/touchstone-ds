@@ -40,7 +40,7 @@ const InteractiveDisplaysSection: React.FC = () => {
           <span className="text-foreground block sm:inline">{" That Captivate"}</span>
         </h2>
         <p className={`text-lg text-foreground/70 text-center max-w-2xl mx-auto mb-6 transition-all duration-700 delay-150 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          Engage students, athletes, and visitors with cutting-edge touchscreen technology. Our accessibility-compliant displays and interactive recognition software make every interaction seamless and memorable.
+          Engage students, athletes, and visitors with cutting-edge touchscreen technology. Our accessibility-compliant displays and interactive hall of fame software make every interaction seamless and memorable.
         </p>
         {/* Animated partition */}
         <div className={`flex justify-center items-center mb-10 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -102,7 +102,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                 </div>
                 <p className="text-foreground/70">
                   <span className="text-foreground font-medium">
-                    Touchscreen HOF Displays
+                    Interactive Hall of Fame Displays
                   </span> – Celebrate legends with real-time updates and rich multimedia content.
                 </p>
               </li>
@@ -148,7 +148,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                 </div>
                 <p className="text-foreground/70">
                   <span className="text-foreground font-medium">
-                    Virtual Trophy Case
+                    Digital Trophy Case
                   </span> – A modern way to display championships and school pride—without the dust.
                 </p>
               </li>

@@ -387,30 +387,28 @@ const VisualFidelity = () => {
               {categories[activeTab].description}
             </motion.p>
           </div>
-          
+
           {/* Feature sections */}
           <div ref={contentRef}>
             <AnimatePresence mode="wait">
-              <motion.div 
+              <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
                 className="space-y-6"
               >
                 {filteredSections.map((section, sectionIndex) => (
-                  <motion.div 
+                  <motion.div
                     key={sectionIndex}
                     className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
                   >
                     {/* Section header - clickable */}
-                    <div 
+                    <div
                       className="p-5 cursor-pointer flex justify-between items-center"
                       onClick={() => toggleSection(sectionIndex)}
                     >
@@ -428,34 +426,35 @@ const VisualFidelity = () => {
                         )}
                       </div>
                     </div>
-                    
+
                     {/* Section content - expandable */}
                     <AnimatePresence>
                       {expandedSections.includes(sectionIndex) && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
-                          whileInView={{ height: "auto", opacity: 1 }}
-                          viewport={{ once: true, amount: 0.2 }}
+                          animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
                           <div className="px-5 pb-5">
-                            <motion.div 
+                            <motion.div
                               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-                              variants={containerVariants}
+                              variants={{
+                                hidden: { opacity: 0, x: -20 },
+                                visible: { opacity: 1, x: 0 },
+                              }}
                               initial="hidden"
-                              whileInView="visible"
-                              viewport={{ once: true, amount: 0.2 }}
+                              animate="visible"
                             >
                               {section.features.map((feature, featureIndex) => (
-                                <motion.div 
+                                <motion.div
                                   key={featureIndex}
                                   className="bg-gradient-to-br from-purple-600/5 to-blue-600/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 h-full group hover:bg-gradient-to-br hover:from-purple-600/10 hover:to-blue-600/10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-glow-sm transition-all duration-300 cursor-pointer"
-                                  variants={itemVariants}
-                                  initial="hidden"
-                                  whileInView="visible"
-                                  viewport={{ once: true, amount: 0.2 }}
+                                  variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 },
+                                  }}
                                 >
                                   <div className="flex items-start gap-3">
                                     <div className="relative flex-shrink-0">

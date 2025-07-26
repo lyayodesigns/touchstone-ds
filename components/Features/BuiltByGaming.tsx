@@ -36,7 +36,7 @@ const BuiltByGaming = () => {
     {
       icon: <Flame className="h-6 w-6" />,
       title: "Stunning Graphic Fidelity",
-      description: "Our high-resolution graphics bring your school's legacy to life. From detailed digital trophies and plaques to dynamic team rosters and banners, every element is displayed with crystal-clear precision, allowing users to fully appreciate their school's history."
+      description: "Our high-resolution graphics bring your school's legacy to life. From detailed digital trophies and plaques to dynamic team rosters and digital banners, every element is displayed with crystal-clear precision, allowing users to fully appreciate their school's history."
     },
     {
       icon: <Paintbrush className="h-6 w-6" />,

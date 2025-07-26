@@ -242,7 +242,7 @@ const FullCustomization = () => {
                 }}
               >
                 <p className="text-foreground/80 italic">
-                  From Hall of Fame layouts to Record Boards and Donor Walls, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
+                  From Digital Hall of Fame software to Digital Record Boards and Digital Donor Walls, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
                 </p>
               </motion.div>
             </motion.div>

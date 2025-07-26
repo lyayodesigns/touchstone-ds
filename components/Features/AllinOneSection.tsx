@@ -81,7 +81,7 @@ const AllinOneSection = () => {
                 className="text-lg mb-8 text-foreground/80"
                 variants={itemVariants}
               >
-                Unify your institution's history, achievements, and contributions into one seamless touchscreen experience.
+                Unify your institution's history, achievements, and contributions into one seamless touchscreen software experience.
               </motion.p>
               <motion.h3 
                 className="text-xl font-semibold mb-4"
@@ -98,7 +98,7 @@ const AllinOneSection = () => {
                   <CheckCircle className="text-green-500 h-6 w-6 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-medium text-foreground">Modern, Space-Saving Displays</h4>
-                    <p className="text-foreground/70">Replace static plaques, bulletin boards, and outdated record boards with sleek digital screens.</p>
+                    <p className="text-foreground/70">Replace static plaques, bulletin boards, and outdated record boards with sleek digital displays.</p>
                   </div>
                 </motion.div>
                 <motion.div 

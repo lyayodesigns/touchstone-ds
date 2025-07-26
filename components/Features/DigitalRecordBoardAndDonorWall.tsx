@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
-import { Trophy, BarChart3, Film, Search, Medal, Video, RotateCcw } from 'lucide-react';
+import { Trophy, BarChart3, Film, Search, Medal, Video, RotateCcw, Users, Star, Calendar, Image, Award, Crown, Sparkles, Archive } from 'lucide-react';
 
 const DigitalRecordBoardAndDonorWall = () => {
   // Animation variants
@@ -47,6 +47,54 @@ const DigitalRecordBoardAndDonorWall = () => {
       icon: <Search className="h-5 w-5" />,
       title: "Easy Search & Filtering",
       description: "Let users explore records by sport, year, or category."
+    }
+  ];
+
+  // Feature items for Digital Hall of Fame Displays
+  const hallOfFameFeatures = [
+    {
+      icon: <Users className="h-5 w-5" />,
+      title: "Alumni & Legend Profiles",
+      description: "Celebrate distinguished graduates, faculty, and notable figures with detailed profiles."
+    },
+    {
+      icon: <Star className="h-5 w-5" />,
+      title: "Achievement Showcases",
+      description: "Highlight championships, awards, and milestone accomplishments with rich media."
+    },
+    {
+      icon: <Calendar className="h-5 w-5" />,
+      title: "Historical Timeline",
+      description: "Navigate through decades of institutional history and memorable moments."
+    },
+    {
+      icon: <Image className="h-5 w-5" />,
+      title: "Interactive Media Gallery",
+      description: "Browse photos, videos, and documents that tell your institution's story."
+    }
+  ];
+
+  // Feature items for Digital Trophy Case
+  const trophyCaseFeatures = [
+    {
+      icon: <Award className="h-5 w-5" />,
+      title: "Championship Displays",
+      description: "Showcase trophies, medals, and awards with stunning 3D visualizations and detailed descriptions."
+    },
+    {
+      icon: <Crown className="h-5 w-5" />,
+      title: "Victory Celebrations",
+      description: "Relive championship moments with photos, videos, and interactive victory timelines."
+    },
+    {
+      icon: <Sparkles className="h-5 w-5" />,
+      title: "Achievement Categories",
+      description: "Organize awards by sport, academic achievement, or special recognition categories."
+    },
+    {
+      icon: <Archive className="h-5 w-5" />,
+      title: "Legacy Preservation",
+      description: "Preserve and display historical awards and achievements for future generations."
     }
   ];
 
@@ -129,7 +177,7 @@ const DigitalRecordBoardAndDonorWall = () => {
             />
           </motion.div>
           
-          {/* Digital Record Boards Section */}
+          {/* Digital Hall of Fame Displays Section */}
           <div className="mb-24">
             <div className="flex flex-col lg:flex-row items-center">
               {/* Left side - Image */}
@@ -143,20 +191,20 @@ const DigitalRecordBoardAndDonorWall = () => {
                 <div className="relative mx-auto max-w-md">
                   {/* Main image with frame */}
                   <motion.div 
-                    className="relative z-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl p-1 shadow-2xl overflow-hidden"
+                    className="relative z-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-1 shadow-2xl overflow-hidden"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/TDS Cover - 7.jpg" 
-                      alt="Digital Record Board" 
+                      src="/TDS Cover - 1.jpg" 
+                      alt="Digital Hall of Fame Display" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
                   </motion.div>
                   
                   {/* Decorative elements */}
                   <motion.div 
-                    className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl blur-md -z-10"
+                    className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl blur-md -z-10"
                     animate={{ 
                       opacity: [0.5, 0.8, 0.5],
                     }}
@@ -164,7 +212,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   />
                   
                   <motion.div 
-                    className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-xl blur-md -z-10"
+                    className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 rounded-xl blur-md -z-10"
                     animate={{ 
                       opacity: [0.5, 0.8, 0.5],
                     }}
@@ -176,6 +224,64 @@ const DigitalRecordBoardAndDonorWall = () => {
               {/* Right side - Content */}
               <motion.div 
                 className="lg:w-1/2 lg:pl-12"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.h3 
+                  className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600"
+                  variants={itemVariants}
+                >
+                  Digital Hall of Fame Displays
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-foreground/80 mb-6"
+                  variants={itemVariants}
+                >
+                  Honor your institution's legacy with immersive, interactive hall of fame displays that celebrate achievements and preserve history.
+                </motion.p>
+                
+                <div className="space-y-6">
+                  {hallOfFameFeatures.map((feature, index) => (
+                    <motion.div 
+                      key={index}
+                      className="relative"
+                      variants={itemVariants}
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-sm"></div>
+                          <div className="relative bg-gradient-to-br from-indigo-500 to-purple-600 p-2 rounded-full text-white z-10">
+                            {feature.icon}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-lg text-foreground mb-1">
+                            {feature.title}
+                          </h4>
+                          <p className="text-foreground/70">{feature.description}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Connecting line to next item */}
+                      {index < hallOfFameFeatures.length - 1 && (
+                        <div className="absolute left-[12px] top-[40px] w-0.5 h-[calc(100%-20px)] bg-gradient-to-b from-indigo-500/30 to-purple-500/30"></div>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Digital Record Boards Section */}
+          <div className="mb-24">
+            <div className="flex flex-col-reverse lg:flex-row items-center">
+              {/* Left side - Content */}
+              <motion.div 
+                className="lg:w-1/2 lg:pr-12 mt-8 lg:mt-0"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -220,6 +326,146 @@ const DigitalRecordBoardAndDonorWall = () => {
                       {/* Connecting line to next item */}
                       {index < recordBoardFeatures.length - 1 && (
                         <div className="absolute left-[12px] top-[40px] w-0.5 h-[calc(100%-20px)] bg-gradient-to-b from-purple-500/30 to-blue-500/30"></div>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+              
+              {/* Right side - Image */}
+              <motion.div 
+                className="lg:w-1/2"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="relative mx-auto max-w-md">
+                  {/* Main image with frame */}
+                  <motion.div 
+                    className="relative z-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl p-1 shadow-2xl overflow-hidden"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img 
+                      src="/TDS Cover - 7.jpg" 
+                      alt="Digital Record Board" 
+                      className="rounded-lg w-full h-auto object-cover"
+                    />
+                  </motion.div>
+                  
+                  {/* Decorative elements */}
+                  <motion.div 
+                    className="absolute -top-3 -right-3 w-full h-full bg-gradient-to-bl from-purple-500/20 to-blue-500/20 rounded-xl blur-md -z-10"
+                    animate={{ 
+                      opacity: [0.5, 0.8, 0.5],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  />
+                  
+                  <motion.div 
+                    className="absolute -bottom-3 -left-3 w-full h-full bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-xl blur-md -z-10"
+                    animate={{ 
+                      opacity: [0.5, 0.8, 0.5],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Digital Trophy Case Section */}
+          <div className="mb-24">
+            <div className="flex flex-col lg:flex-row items-center">
+              {/* Left side - Image */}
+              <motion.div 
+                className="lg:w-1/2 mb-8 lg:mb-0"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="relative mx-auto max-w-md">
+                  {/* Main image with frame */}
+                  <motion.div 
+                    className="relative z-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl p-1 shadow-2xl overflow-hidden"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img 
+                      src="/TDS Cover - 3.jpg" 
+                      alt="Digital Trophy Case Display" 
+                      className="rounded-lg w-full h-auto object-cover"
+                    />
+                  </motion.div>
+                  
+                  {/* Decorative elements */}
+                  <motion.div 
+                    className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl blur-md -z-10"
+                    animate={{ 
+                      opacity: [0.5, 0.8, 0.5],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  />
+                  
+                  <motion.div 
+                    className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-tr from-indigo-500/20 to-blue-500/20 rounded-xl blur-md -z-10"
+                    animate={{ 
+                      opacity: [0.5, 0.8, 0.5],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                  />
+                </div>
+              </motion.div>
+              
+              {/* Right side - Content */}
+              <motion.div 
+                className="lg:w-1/2 lg:pl-12"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.h3 
+                  className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600"
+                  variants={itemVariants}
+                >
+                  Digital Trophy Case
+                </motion.h3>
+                
+                <motion.p 
+                  className="text-foreground/80 mb-6"
+                  variants={itemVariants}
+                >
+                  Transform your trophy case into a modern, interactive display that celebrates championships and achievements without the dust.
+                </motion.p>
+                
+                <div className="space-y-6">
+                  {trophyCaseFeatures.map((feature, index) => (
+                    <motion.div 
+                      key={index}
+                      className="relative"
+                      variants={itemVariants}
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full blur-sm"></div>
+                          <div className="relative bg-gradient-to-br from-blue-500 to-indigo-600 p-2 rounded-full text-white z-10">
+                            {feature.icon}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-lg text-foreground mb-1">
+                            {feature.title}
+                          </h4>
+                          <p className="text-foreground/70">{feature.description}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Connecting line to next item */}
+                      {index < trophyCaseFeatures.length - 1 && (
+                        <div className="absolute left-[12px] top-[40px] w-0.5 h-[calc(100%-20px)] bg-gradient-to-b from-blue-500/30 to-indigo-500/30"></div>
                       )}
                     </motion.div>
                   ))}

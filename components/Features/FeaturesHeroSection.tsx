@@ -77,7 +77,7 @@ const FeaturesHeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-                Revolutionizing School Recognition with Digital Innovation
+                Revolutionizing School Recognition with Digital Displays
               </p>
               
               {/* Decorative line */}
@@ -96,7 +96,7 @@ const FeaturesHeroSection = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Touchstone Digital Solutions transforms traditional recognition into a fully interactive, immersive experience. From Digital Halls of Fame to Donor Walls, Record Boards, and more, our platform empowers schools, colleges, and organizations to celebrate excellence with cutting-edge technology.
+                Touchstone Digital Solutions transforms traditional recognition into a fully immersive, interactive displays. From Digital Hall of Fame to Digital Donor Walls, Digital Record Boards, Digital Yearbooks and more, our platform empowers schools, colleges, and organizations to celebrate excellence with cutting-edge technology.
               </p>
             </motion.div>
           </div>
