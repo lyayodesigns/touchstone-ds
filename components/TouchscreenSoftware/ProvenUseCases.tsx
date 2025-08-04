@@ -3,17 +3,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
-import { Award, GraduationCap, Palette, Users } from 'lucide-react';
+import { Award, GraduationCap, Palette, Users, Star, CheckCircle, Quote } from 'lucide-react';
 
 const ProvenUseCases = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
     {
-      icon: <Award className="h-6 w-6" />,
+      icon: <Award className="h-5 w-5" />,
       emoji: "🏆",
       title: "Athletics Departments",
+      shortTitle: "Athletics",
       keyword: "athletic hall of fame software, interactive trophy display",
+      description: "Our athletic hall of fame software turns trophies into talking points:",
+      gradient: "from-blue-600 to-violet-600",
+      bgGradient: "from-blue-500/10 to-violet-500/10",
       features: [
         "Interactive Records & Leaderboards",
         "Team Rosters + College Commitments",
@@ -22,10 +26,14 @@ const ProvenUseCases = () => {
       ]
     },
     {
-      icon: <GraduationCap className="h-6 w-6" />,
+      icon: <GraduationCap className="h-5 w-5" />,
       emoji: "🎓",
       title: "Academic & Administration",
+      shortTitle: "Academic",
       keyword: "school digital archives, educational touchscreen software",
+      description: "Our academic software transforms student achievements into digital showcases:",
+      gradient: "from-violet-600 to-purple-600",
+      bgGradient: "from-violet-500/10 to-purple-500/10",
       features: [
         "Digital Student Spotlights (Valedictorians, STEM stars)",
         "Curriculum Guides + Graduation Requirements",
@@ -33,10 +41,14 @@ const ProvenUseCases = () => {
       ]
     },
     {
-      icon: <Palette className="h-6 w-6" />,
+      icon: <Palette className="h-5 w-5" />,
       emoji: "🎭",
       title: "Theater & Arts Programs",
+      shortTitle: "Arts Programs",
       keyword: "digital recognition software, interactive kiosk content",
+      description: "Our arts program software brings creativity to the digital forefront:",
+      gradient: "from-purple-600 to-blue-600",
+      bgGradient: "from-purple-500/10 to-blue-500/10",
       features: [
         "Virtual Galleries of student artwork",
         "Performance Playbills + Behind-the-Scenes Videos",
@@ -44,10 +56,14 @@ const ProvenUseCases = () => {
       ]
     },
     {
-      icon: <Users className="h-6 w-6" />,
+      icon: <Users className="h-5 w-5" />,
       emoji: "💛",
       title: "Alumni & Donor Engagement",
+      shortTitle: "Alumni & Donors",
       keyword: "donor recognition software, alumni engagement platform",
+      description: "Our alumni engagement platform connects past, present, and future:",
+      gradient: "from-blue-600 to-indigo-600",
+      bgGradient: "from-blue-500/10 to-indigo-500/10",
       features: [
         "Searchable Alumni Databases (Famous grads, career milestones)",
         "Impact Stories + Named Scholarships",
@@ -76,18 +92,67 @@ const ProvenUseCases = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-grid opacity-5"></div>
+    <section className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
+      {/* Enhanced Background with multiple layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-violet-500/5 to-purple-500/10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,119,198,0.1),transparent_50%)]"></div>
       
-      {/* Decorative elements */}
+      {/* Floating Particles - Fixed positions to avoid hydration mismatch */}
+      {[
+        { x: '8%', y: '12%', duration: 16 },
+        { x: '20%', y: '18%', duration: 19 },
+        { x: '35%', y: '25%', duration: 22 },
+        { x: '48%', y: '10%', duration: 15 },
+        { x: '62%', y: '22%', duration: 18 },
+        { x: '75%', y: '15%', duration: 21 },
+        { x: '88%', y: '28%', duration: 17 },
+        { x: '12%', y: '55%', duration: 20 },
+        { x: '25%', y: '68%', duration: 16 },
+        { x: '40%', y: '75%', duration: 19 },
+        { x: '55%', y: '62%', duration: 22 },
+        { x: '70%', y: '70%', duration: 15 },
+        { x: '82%', y: '58%', duration: 18 },
+        { x: '92%', y: '72%', duration: 21 },
+        { x: '15%', y: '85%', duration: 17 }
+      ].map((particle, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/30 to-violet-400/30 rounded-full"
+          style={{
+            left: particle.x,
+            top: particle.y,
+          }}
+          animate={{
+            y: [`calc(${particle.y} - 30px)`, `calc(${particle.y} + 30px)`, `calc(${particle.y} - 30px)`],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: particle.duration,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+      
+      {/* Enhanced Decorative elements */}
       <motion.div 
-        className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl"
+        className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-tr from-violet-500/10 to-transparent rounded-full blur-3xl -z-10"
         animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          scale: [1, 1.3, 1],
+          opacity: [0.3, 0.6, 0.3],
+          rotate: [0, 180, 360]
         }}
-        transition={{ duration: 8, repeat: Infinity }}
+        transition={{ duration: 15, repeat: Infinity }}
+      />
+      <motion.div 
+        className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl -z-10"
+        animate={{ 
+          scale: [1, 1.4, 1],
+          opacity: [0.3, 0.6, 0.3],
+          rotate: [360, 180, 0]
+        }}
+        transition={{ duration: 18, repeat: Infinity }}
       />
       
       <Container>
@@ -98,106 +163,193 @@ const ProvenUseCases = () => {
           variants={containerVariants}
           className="max-w-5xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Proven Use Cases:{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <motion.div variants={itemVariants} className="text-center mb-10">
+          
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-blue-600 to-purple-600">
                 Where Touchstone Shines
               </span>
             </h2>
+            
             <motion.div 
-              className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
+              className="flex justify-center items-center gap-2 mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-            />
-            <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              Targeting High-Intent SEO Keywords with Real-World Applications
+            >
+              <motion.div 
+                className="h-1 w-16 bg-gradient-to-r from-violet-500 to-blue-500 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 64 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              />
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              >
+                <Star className="w-3 h-3 text-violet-500" fill="currentColor" />
+              </motion.div>
+              <motion.div 
+                className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                initial={{ width: 0 }}
+                whileInView={{ width: 64 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              />
+            </motion.div>
+            
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Targeting High-Intent SEO Keywords with <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600">Real-World Applications</span>
             </p>
           </motion.div>
           
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+          {/* Enhanced Tabs */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8">
             {tabs.map((tab, index) => (
               <motion.button
                 key={index}
                 variants={itemVariants}
-                className={`flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-300 ${
+                className={`group relative flex items-center gap-2 px-3 md:px-4 py-2.5 md:py-3 rounded-2xl transition-all duration-300 font-medium overflow-hidden ${
                   activeTab === index 
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white' 
-                    : 'bg-white/10 text-white/70 hover:bg-white/20'
+                    ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg shadow-${tab.gradient.split(' ')[1]}/25` 
+                    : 'bg-white/30 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-white/40 dark:hover:bg-gray-700/60 backdrop-blur-sm border border-white/20 dark:border-gray-600/30'
                 }`}
                 onClick={() => setActiveTab(index)}
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <span>{tab.emoji}</span>
-                <span>{tab.title}</span>
+                {/* Background glow effect */}
+                {activeTab === index && (
+                  <motion.div
+                    className={`absolute inset-0 bg-gradient-to-r ${tab.gradient} opacity-20 blur-xl`}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1.2, opacity: 0.3 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+                
+                <span className="text-lg md:text-xl relative z-10">{tab.emoji}</span>
+                <span className="text-xs md:text-sm font-bold relative z-10 hidden sm:block">{tab.title}</span>
+                <span className="text-xs md:text-sm font-bold relative z-10 sm:hidden">{tab.shortTitle}</span>
+                
+                {/* Active indicator */}
+                {activeTab === index && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/50"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </motion.button>
             ))}
           </div>
           
-          {/* Tab content */}
+          {/* Enhanced Tab content */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+            className={`bg-gradient-to-br ${tabs[activeTab].bgGradient} backdrop-blur-md border border-white/20 dark:border-gray-700/50 rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden`}
           >
-            <div className="flex flex-col md:flex-row gap-8 items-center">
+            {/* Background accent */}
+            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${tabs[activeTab].gradient} opacity-3 rounded-full blur-3xl -translate-y-16 translate-x-16`} />
+            <div className={`absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr ${tabs[activeTab].gradient} opacity-3 rounded-full blur-2xl translate-y-12 -translate-x-12`} />
+            <div className="flex flex-col lg:flex-row gap-6 items-start">
               {/* Left side: Icon and title */}
-              <div className="md:w-1/3 text-center">
-                <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full p-8 inline-flex items-center justify-center mb-4">
-                  <div className="text-5xl">{tabs[activeTab].emoji}</div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{tabs[activeTab].title}</h3>
-                <p className="text-white/60 text-sm">Keywords: {tabs[activeTab].keyword}</p>
+              <div className="lg:w-1/3 text-center lg:text-left relative z-10">
+                <motion.div 
+                  className={`bg-gradient-to-br ${tabs[activeTab].gradient} rounded-2xl p-6 inline-flex items-center justify-center mb-4 shadow-md opacity-90`}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 0.9 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <div className="text-4xl filter drop-shadow-sm">{tabs[activeTab].emoji}</div>
+                </motion.div>
+                <motion.h3 
+                  className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100 mb-3"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  {tabs[activeTab].title}
+                </motion.h3>
+                <motion.div 
+                  className={`bg-gradient-to-r ${tabs[activeTab].bgGradient} rounded-xl p-3 border border-white/15 dark:border-gray-600/20 backdrop-blur-sm`}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <p className="text-xs font-bold text-gray-600 dark:text-gray-400 mb-1">🎯 Target Keywords:</p>
+                  <p className={`text-sm text-transparent bg-clip-text bg-gradient-to-r ${tabs[activeTab].gradient} font-bold`}>{tabs[activeTab].keyword}</p>
+                </motion.div>
               </div>
               
               {/* Right side: Features */}
-              <div className="md:w-2/3">
-                <h4 className="text-xl font-semibold text-white mb-4">
-                  Our {tabs[activeTab].title} software turns trophies into talking points:
-                </h4>
-                <ul className="space-y-4">
+              <div className="lg:w-2/3 relative z-10">
+                <motion.h4 
+                  className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <span className={`text-transparent bg-clip-text bg-gradient-to-r ${tabs[activeTab].gradient}`}>{tabs[activeTab].description}</span>
+                </motion.h4>
+                <ul className="space-y-3 mb-6">
                   {tabs[activeTab].features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-1 mt-1">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
-                        </svg>
+                    <motion.li 
+                      key={idx} 
+                      className="flex items-start gap-3 group"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: (idx * 0.1) + 0.2 }}
+                    >
+                      <div className={`bg-gradient-to-r ${tabs[activeTab].gradient} rounded-full p-1 mt-1 flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-200`}>
+                        <CheckCircle className="w-3 h-3 text-white" />
                       </div>
-                      <span className="text-white/80 text-lg">{feature}</span>
-                    </li>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-200">{feature}</span>
+                    </motion.li>
                   ))}
                 </ul>
                 
-                <div className="mt-8 p-4 bg-white/10 rounded-xl">
-                  <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-2">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                      </svg>
+                <motion.div 
+                  className={`bg-gradient-to-br ${tabs[activeTab].bgGradient} backdrop-blur-sm border border-white/20 dark:border-gray-600/20 rounded-2xl p-4 shadow-md hover:shadow-lg transition-all duration-300`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  whileHover={{ scale: 1.01, y: -1 }}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className={`bg-gradient-to-r ${tabs[activeTab].gradient} rounded-full p-2 flex-shrink-0 shadow-md`}>
+                      <Quote className="w-4 h-4 text-white" />
                     </div>
-                    <p className="text-white/70 italic">
-                      "Our {tabs[activeTab].title.toLowerCase()} touchscreen display has become the centerpiece of our campus tours."
-                    </p>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300 italic text-sm md:text-base leading-relaxed font-medium">
+                        "Our {tabs[activeTab].title.toLowerCase()} touchscreen display has become the centerpiece of our campus tours."
+                      </p>
+                      <p className={`text-xs mt-2 font-bold text-transparent bg-clip-text bg-gradient-to-r ${tabs[activeTab].gradient}`}>— School Administrator</p>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
           
           <motion.div
             variants={itemVariants}
-            className="mt-12 text-center"
+            className="mt-8 text-center"
           >
-            <a 
+            <motion.a 
               href="#demo" 
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-500 via-blue-500 to-purple-500 hover:from-violet-600 hover:via-blue-600 hover:to-purple-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
             >
-              See How It Works In Your School
-            </a>
+              <Star className="w-4 h-4" fill="currentColor" />
+              <span>See How It Works In Your School</span>
+            </motion.a>
           </motion.div>
         </motion.div>
       </Container>

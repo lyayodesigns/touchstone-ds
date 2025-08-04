@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
-import { ArrowRight, Mail, Phone, Calendar } from 'lucide-react';
+import { ArrowRight, Download, Play, DollarSign, BarChart } from 'lucide-react';
 
 const CallToAction = () => {
   const containerVariants = {
@@ -14,8 +14,9 @@ const CallToAction = () => {
         staggerChildren: 0.2
       }
     }
-  };
+  } as const;
 
+  // Animation variants for consistent motion effects
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -23,47 +24,74 @@ const CallToAction = () => {
       y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  } as const;
 
-  const contactOptions = [
+  // Floating particles with fixed positions to avoid hydration mismatch
+  const particles = [
+    { id: 0, size: 'w-20 h-20', x: '15%', y: '20%', duration: 18 },
+    { id: 1, size: 'w-32 h-32', x: '85%', y: '15%', duration: 22 },
+    { id: 2, size: 'w-24 h-24', x: '70%', y: '65%', duration: 15 },
+    { id: 3, size: 'w-16 h-16', x: '25%', y: '75%', duration: 20 },
+  ];
+  
+  // CTA features
+  const ctaFeatures = [
     {
-      icon: <Mail className="h-6 w-6 text-blue-400" />,
-      title: "Email Us",
-      description: "Get a detailed proposal within 24 hours",
-      action: "Send Email",
-      link: "/contact"
+      icon: <Play className="h-6 w-6 text-white" />,
+      title: "See Touchstone in Action",
+      description: "Watch how Westfield High replaced 200+ plaques with one stunning touchscreen kiosk.",
+      buttonText: "FREE TOUR: SEE SOFTWARE DEMO",
+      gradient: "from-blue-600 to-indigo-600",
+      bgGradient: "from-blue-500/10 to-indigo-500/10",
+      borderGradient: "from-blue-500/20 to-indigo-500/20",
+      link: "https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website",
+      openInNewTab: true
     },
     {
-      icon: <Phone className="h-6 w-6 text-purple-400" />,
-      title: "Call Us",
-      description: "Speak directly with a solutions expert",
-      action: "Call Now",
-      link: "/contact"
+      icon: <DollarSign className="h-6 w-6 text-white" />,
+      title: "Get a Custom Quote",
+      description: "Discover affordable plans for schools of all sizes.",
+      buttonText: "GET CUSTOM QUOTE",
+      gradient: "from-violet-600 to-purple-600",
+      bgGradient: "from-violet-500/10 to-purple-500/10",
+      borderGradient: "from-violet-500/20 to-purple-500/20",
+      link: "http://localhost:3000/contact/"
     },
     {
-      icon: <Calendar className="h-6 w-6 text-pink-400" />,
-      title: "Schedule Demo",
-      description: "See our software in action via Zoom",
-      action: "Book Time",
-      link: "/contact"
+      icon: <Download className="h-6 w-6 text-white" />,
+      title: "Download Our ROI Guide",
+      description: "\"10 Ways Digital Displays Boost Enrollment & Donations.\"",
+      buttonText: "DOWNLOAD ROI GUIDE",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-500/10 to-pink-500/10",
+      borderGradient: "from-purple-500/20 to-pink-500/20",
+      link: "/roi-guide"
     }
   ];
 
   return (
-    <section id="demo" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="demo" className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-blue-500/5 -z-10"></div>
-      <div className="absolute inset-0 bg-grid opacity-10 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5"></div>
       
-      {/* Decorative elements */}
-      <motion.div 
-        className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
+      {/* Floating particles */}
+      {particles.map((particle) => (
+        <motion.div 
+          key={particle.id}
+          className={`absolute ${particle.size} rounded-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl`}
+          style={{ left: particle.x, top: particle.y }}
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.3, 0.2],
+            y: [`calc(${particle.y} - 10px)`, `calc(${particle.y} + 10px)`, `calc(${particle.y} - 10px)`],
+          }}
+          transition={{ 
+            duration: particle.duration, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+      ))}
       
       <Container>
         <motion.div
@@ -73,11 +101,11 @@ const CallToAction = () => {
           variants={containerVariants}
           className="max-w-5xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-                Transform Your School's Legacy?
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                Transform Your School?
               </span>
             </h2>
             <motion.div 
@@ -87,159 +115,115 @@ const CallToAction = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
             />
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-              Let's discuss how Touchstone's touchscreen software can revolutionize your school's recognition programs.
+            <p className="text-lg text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
+              Claim Your Free Demo Today!
             </p>
           </motion.div>
           
           {/* Main CTA Box */}
           <motion.div
             variants={itemVariants}
-            className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12 mb-16"
+            className="bg-gradient-to-br from-white/80 to-white/50 dark:from-white/10 dark:to-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-8 shadow-lg mb-12"
           >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* Left side: Image/Graphic */}
-              <div className="md:w-1/2">
-                <div className="relative">
-                  <motion.div 
-                    className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl overflow-hidden aspect-video"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                        <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                      <div className="text-white font-medium">Watch Demo: Touchstone in Action</div>
-                    </div>
-                  </motion.div>
-                  
-                  {/* Decorative elements */}
-                  <motion.div 
-                    className="absolute -top-4 -right-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl -z-10"
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      opacity: [0.5, 0.7, 0.5],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity }}
-                  />
-                  <motion.div 
-                    className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-xl -z-10"
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      opacity: [0.5, 0.7, 0.5],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity, delay: 2 }}
-                  />
+            <div className="flex flex-col space-y-8">
+              {/* Feature points with icons */}
+              <div className="space-y-6">
+                {/* Point 1 */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 p-3 rounded-xl">
+                    <Play className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-800 dark:text-white/90 font-medium">
+                      <span className="text-blue-600 dark:text-blue-400 font-semibold">👉 See Touchstone in Action:</span> Watch how Westfield High replaced 200+ plaques with one stunning touchscreen kiosk.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Point 2 */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 p-3 rounded-xl">
+                    <DollarSign className="h-5 w-5 text-violet-600 dark:text-violet-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-800 dark:text-white/90 font-medium">
+                      <span className="text-violet-600 dark:text-violet-400 font-semibold">👉 Get a Custom Quote:</span> Discover affordable plans for schools of all sizes.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Point 3 */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-3 rounded-xl">
+                    <Download className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-800 dark:text-white/90 font-medium">
+                      <span className="text-purple-600 dark:text-purple-400 font-semibold">👉 Download Our ROI Guide:</span> "10 Ways Digital Displays Boost Enrollment & Donations."
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              {/* Right side: Form */}
-              <div className="md:w-1/2">
-                <h3 className="text-2xl font-bold mb-6">Get Your Custom Quote</h3>
-                <form className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">School Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                      placeholder="Enter your school name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="interest" className="block text-sm font-medium mb-1">I'm Interested In</label>
-                    <select 
-                      id="interest" 
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
-                    >
-                      <option value="">Select an option</option>
-                      <option value="hall-of-fame">Athletic Hall of Fame</option>
-                      <option value="donor-wall">Donor Recognition Wall</option>
-                      <option value="academic-display">Academic Achievement Display</option>
-                      <option value="multiple">Multiple Solutions</option>
-                    </select>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
+              {/* Divider */}
+              <div className="h-px w-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-transparent"></div>
+              
+              {/* CTA Buttons */}
+              <div className="grid md:grid-cols-3 gap-4">
+                {ctaFeatures.map((feature, index) => (
+                  <motion.a
+                    key={index}
+                    href={feature.link}
+                    target={feature.openInNewTab ? "_blank" : undefined}
+                    rel={feature.openInNewTab ? "noopener noreferrer" : undefined}
+                    className={`bg-gradient-to-r ${feature.gradient} text-white text-center py-4 px-6 rounded-xl shadow-lg flex items-center justify-center font-bold text-sm tracking-wide`}
+                    whileHover={{ scale: 1.03, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    transition={{ duration: 0.2 }}
                   >
-                    Request Free Consultation
-                  </motion.button>
-                </form>
-                <p className="text-sm text-foreground/60 mt-4">
-                  No obligation. We'll respond within 24 hours with pricing options.
-                </p>
+                    {feature.buttonText}
+                  </motion.a>
+                ))}
               </div>
             </div>
           </motion.div>
           
-          {/* Contact Options */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {contactOptions.map((option, index) => (
+          {/* Feature Cards */}
+          {/* <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {ctaFeatures.map((feature, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 hover:border-blue-500/20 transition-all duration-300"
-                whileHover={{ y: -5, boxShadow: "0 10px 30px -10px rgba(50, 100, 200, 0.2)" }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="group relative"
               >
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full p-4 mb-4">
-                    {option.icon}
+                <div className={`bg-gradient-to-br ${feature.bgGradient} backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl p-6 h-full shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden`}>
+                  <div className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${feature.gradient} opacity-5 rounded-full blur-3xl`}></div>
+                  
+                  <div className="flex items-start mb-4">
+                    <motion.div 
+                      className={`bg-gradient-to-br ${feature.gradient} rounded-xl p-3 shadow-md mr-4`}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="text-white">{feature.icon}</div>
+                    </motion.div>
+                    <h3 className={`text-xl font-bold text-transparent bg-clip-text bg-gradient-to-br ${feature.gradient}`}>
+                      {feature.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{option.title}</h3>
-                  <p className="text-foreground/70 mb-4">{option.description}</p>
-                  <a 
-                    href={option.link}
-                    className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                  >
-                    <span>{option.action}</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
+                  
+                  <p className="text-gray-700 dark:text-white/80 pl-12 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <div className={`absolute inset-0 border-2 border-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${feature.borderGradient} bg-clip-border`}></div>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
           
-          {/* Final CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-16 text-center"
-          >
-            <h3 className="text-2xl font-bold mb-4">
-              Join 100+ Schools Already Using Touchstone
-            </h3>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8">
-              From small private academies to large public school districts, our touchscreen software
-              is transforming how institutions honor their legacy.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Contact Sales
-              </a>
-              <a 
-                href="/pricing" 
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                View Pricing
-              </a>
-            </div>
-          </motion.div>
+         
         </motion.div>
       </Container>
     </section>

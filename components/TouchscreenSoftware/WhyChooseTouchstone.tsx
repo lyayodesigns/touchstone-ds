@@ -93,16 +93,7 @@ const WhyChooseTouchstone = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
             {/* Badge */}
-            <motion.div 
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-full text-sm text-blue-700 mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              <span className="font-semibold">Why Choose Touchstone?</span>
-            </motion.div>
+          
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span>Transform Your School's </span>
