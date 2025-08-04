@@ -3,15 +3,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
-import { Ban, Award, Globe, TrendingUp, Sparkles, ArrowRight } from 'lucide-react';
+import { Ban, Award, Globe, TrendingUp, Sparkles, Star } from 'lucide-react';
 
 const WhyChooseTouchstone = () => {
+  // Animation variants that ensure content is visible immediately but still animate in
   const containerVariants = {
-    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       }
     }
   };
@@ -21,10 +22,10 @@ const WhyChooseTouchstone = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.5 }
     }
   };
-
+  
   const benefits = [
     {
       icon: <Ban className="h-8 w-8 text-blue-500" />,
@@ -65,36 +66,23 @@ const WhyChooseTouchstone = () => {
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5 -z-10"></div>
       
-      {/* Decorative background elements */}
-      <motion.div 
-        className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
-      <motion.div 
-        className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{ duration: 10, repeat: Infinity }}
-      />
+      {/* Static decorative background elements */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10" />
       
       <Container>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={containerVariants}
+        <motion.div 
           className="max-w-7xl mx-auto"
+          initial="visible"
+          animate="visible"
+          variants={containerVariants}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            {/* Badge */}
-          
-            
+          <motion.div 
+            className="text-center mb-16"
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               <span>Transform Your School's </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
@@ -102,13 +90,13 @@ const WhyChooseTouchstone = () => {
               </span>
             </h2>
             
-            <motion.div 
-              className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-8"
-              initial={{ width: 0 }}
-              whileInView={{ width: 96 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            />
+            <div className="flex justify-center items-center gap-2 mb-8">
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+              <div>
+                <Star className="w-3 h-3 text-blue-500" fill="currentColor" />
+              </div>
+              <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+            </div>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Tired of outdated displays, cluttered hallways, and forgotten achievements? 
@@ -122,8 +110,10 @@ const WhyChooseTouchstone = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  variants={itemVariants}
                   className="group relative border-l-2 pl-4 mb-8 last:mb-0"
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
                   style={{
                     borderLeftColor: index === 0 ? '#3b82f6' : 
                                    index === 1 ? '#8b5cf6' : 
@@ -146,12 +136,9 @@ const WhyChooseTouchstone = () => {
                     <div className="flex items-start">
                       <h3 className="text-lg font-bold text-gray-800 flex items-center">
                         {benefit.title}
-                        <motion.span 
-                          className="inline-flex ml-2 opacity-70"
-                          whileHover={{ scale: 1.2, rotate: 5 }}
-                        >
+                        <span className="inline-flex ml-2 opacity-70">
                           {benefit.icon}
-                        </motion.span>
+                        </span>
                       </h3>
                     </div>
                     
@@ -167,215 +154,27 @@ const WhyChooseTouchstone = () => {
             <motion.div 
               className="md:w-1/2 relative order-1 md:order-2"
               variants={itemVariants}
+              initial="hidden"
+              animate="visible"
             >
               <div className="sticky top-24">
                 <div className="relative">
-                  {/* Modern Touchscreen Kiosk */}
-                  <div className="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl p-8 shadow-2xl">
-                    {/* Kiosk Stand Base */}
-                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full opacity-60"></div>
-                    
-                    {/* Screen Bezel */}
-                    <div className="relative bg-black rounded-2xl p-4 shadow-inner">
-                      {/* Screen */}
-                      <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 rounded-xl overflow-hidden">
-                        {/* Status Bar */}
-                        <div className="absolute top-0 left-0 right-0 h-8 bg-black/20 backdrop-blur-sm flex items-center justify-between px-4">
-                          <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                            <span className="text-white/60 text-xs">Touchstone Digital</span>
-                          </div>
-                          <div className="text-white/60 text-xs">12:34 PM</div>
+                  {/* Image placeholder with border and shadow */}
+                  <div className="relative rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
+                      <div className="text-center p-6">
+                        <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                          <Award className="w-8 h-8 text-blue-500 dark:text-blue-400" />
                         </div>
-                        
-                        {/* Animated Content Area */}
-                        <div className="p-6 h-full relative overflow-hidden">
-                          {/* Central Pulsing Circle */}
-                          <motion.div 
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                            initial={{ scale: 0, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.5 }}
-                          >
-                            <motion.div
-                              className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-400/30 to-purple-400/30 backdrop-blur-sm border border-white/20"
-                              animate={{
-                                scale: [1, 1.1, 1],
-                                rotate: [0, 180, 360]
-                              }}
-                              transition={{
-                                duration: 8,
-                                repeat: Infinity,
-                                ease: "linear"
-                              }}
-                            >
-                              {/* Inner rotating elements */}
-                              <div className="relative w-full h-full">
-                                {[0, 1, 2, 3].map((index) => (
-                                  <motion.div
-                                    key={index}
-                                    className="absolute w-4 h-4 bg-gradient-to-r from-white/60 to-white/30 rounded-full"
-                                    style={{
-                                      top: '50%',
-                                      left: '50%',
-                                      transformOrigin: '50% 50%'
-                                    }}
-                                    animate={{
-                                      rotate: [index * 90, (index * 90) + 360],
-                                      x: [0, 40, 0, -40, 0],
-                                      y: [0, -40, 0, 40, 0]
-                                    }}
-                                    transition={{
-                                      duration: 6,
-                                      delay: index * 0.5,
-                                      repeat: Infinity,
-                                      ease: "easeInOut"
-                                    }}
-                                  />
-                                ))}
-                              </div>
-                            </motion.div>
-                          </motion.div>
-                          
-                          {/* Floating Geometric Shapes */}
-                          {[
-                            { shape: 'circle', color: 'from-yellow-400 to-orange-400', size: 'w-6 h-6', pos: { top: '20%', left: '15%' } },
-                            { shape: 'square', color: 'from-blue-400 to-cyan-400', size: 'w-5 h-5', pos: { top: '25%', right: '20%' } },
-                            { shape: 'circle', color: 'from-green-400 to-emerald-400', size: 'w-4 h-4', pos: { bottom: '30%', left: '10%' } },
-                            { shape: 'square', color: 'from-purple-400 to-pink-400', size: 'w-7 h-7', pos: { bottom: '20%', right: '15%' } },
-                            { shape: 'circle', color: 'from-pink-400 to-rose-400', size: 'w-3 h-3', pos: { top: '40%', left: '80%' } },
-                            { shape: 'square', color: 'from-cyan-400 to-blue-400', size: 'w-5 h-5', pos: { top: '70%', left: '20%' } }
-                          ].map((item, index) => (
-                            <motion.div
-                              key={index}
-                              className={`absolute ${item.size} bg-gradient-to-r ${item.color} ${
-                                item.shape === 'circle' ? 'rounded-full' : 'rounded-lg rotate-45'
-                              } backdrop-blur-sm opacity-70`}
-                              style={item.pos}
-                              initial={{ scale: 0, opacity: 0 }}
-                              animate={{ 
-                                scale: [0, 1, 1.2, 1],
-                                opacity: [0, 0.7, 0.9, 0.7],
-                                y: [0, -20, 0, 20, 0],
-                                rotate: item.shape === 'square' ? [45, 90, 135, 180, 225] : [0, 360]
-                              }}
-                              transition={{
-                                duration: 8 + (index * 0.5),
-                                delay: 1 + (index * 0.3),
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                              }}
-                            />
-                          ))}
-                          
-                          {/* Animated Lines/Connections */}
-                          <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                            {[1, 2, 3].map((_, i) => (
-                              <motion.line
-                                key={i}
-                                x1={`${20 + (i * 25)}%`}
-                                y1={`${30 + (i * 15)}%`}
-                                x2={`${60 + (i * 10)}%`}
-                                y2={`${70 - (i * 20)}%`}
-                                stroke="rgba(255,255,255,0.2)"
-                                strokeWidth="1"
-                                initial={{ pathLength: 0, opacity: 0 }}
-                                animate={{ 
-                                  pathLength: [0, 1, 0],
-                                  opacity: [0, 0.5, 0]
-                                }}
-                                transition={{
-                                  duration: 4,
-                                  delay: 2 + (i * 1),
-                                  repeat: Infinity,
-                                  repeatDelay: 3
-                                }}
-                              />
-                            ))}
-                          </svg>
-                          
-                          {/* Touch Ripple Effects */}
-                          {[1, 2, 3, 4, 5].map((_, i) => (
-                            <motion.div
-                              key={i}
-                              className="absolute w-8 h-8 border border-white/20 rounded-full"
-                              style={{
-                                top: `${25 + (i * 12)}%`,
-                                left: `${20 + (i * 15)}%`,
-                              }}
-                              animate={{
-                                scale: [0, 2.5, 0],
-                                opacity: [0, 0.4, 0],
-                                borderWidth: [1, 3, 1]
-                              }}
-                              transition={{
-                                duration: 3,
-                                delay: i * 0.8,
-                                repeat: Infinity,
-                                repeatDelay: 2
-                              }}
-                            />
-                          ))}
-                        </div>
-                        
-                        {/* Bottom Navigation */}
-                        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                          {[0, 1, 2].map((i) => (
-                            <motion.div 
-                              key={i} 
-                              className={`w-2 h-2 rounded-full ${
-                                i === 1 ? 'bg-white' : 'bg-white/40'
-                              }`}
-                              animate={{
-                                scale: i === 1 ? [1, 1.2, 1] : 1,
-                                opacity: i === 1 ? [1, 0.7, 1] : 0.4
-                              }}
-                              transition={{
-                                duration: 2,
-                                repeat: Infinity
-                              }}
-                            />
-                          ))}
-                        </div>
-                        
-                        {/* Ambient Glow */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
+                        <p className="text-gray-500 dark:text-gray-400 text-sm">Touchstone Kiosk Image</p>
+                        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">800 × 600 px</p>
                       </div>
-                      
-                      {/* Screen Reflection */}
-                      <div className="absolute inset-4 rounded-xl bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
-                    </div>
-                    
-                    {/* Kiosk Brand Label */}
-                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1">
-                      <span className="text-white/80 text-xs font-medium">Touchstone™</span>
                     </div>
                   </div>
                   
-                  {/* Floating Elements */}
-                  <motion.div 
-                    className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
-                    animate={{
-                      scale: [1, 1.3, 1],
-                      opacity: [0.3, 0.6, 0.3]
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity
-                    }}
-                  />
-                  <motion.div 
-                    className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
-                    animate={{
-                      scale: [1, 1.4, 1],
-                      opacity: [0.2, 0.5, 0.2]
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      delay: 1
-                    }}
-                  />
+                  {/* Static decorative elements */}
+                  <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl" />
+                  <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl" />
                 </div>
                 
                 {/* Decorative elements */}
@@ -385,22 +184,18 @@ const WhyChooseTouchstone = () => {
             </motion.div>
           </div>
           
-          <motion.div
-            variants={itemVariants}
+          <motion.div 
             className="mt-12 text-center"
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
           >
             <div className="max-w-3xl mx-auto">
-              <motion.div 
-                className="flex items-center justify-center mb-3"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="flex items-center justify-center mb-3">
                 <div className="h-[1px] w-12 bg-gradient-to-r from-blue-400 to-transparent"></div>
                 <Sparkles className="w-5 h-5 text-blue-500 mx-3" />
                 <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-purple-400"></div>
-              </motion.div>
+              </div>
               
               <blockquote className="text-lg md:text-xl font-medium text-gray-700 max-w-3xl mx-auto mb-2 leading-relaxed italic">
                 "We transform static halls of fame into memorable interactive experiences that never graduate."

@@ -213,9 +213,6 @@ const KeyFeatures = () => {
                   >
                     {feature.icon}
                   </motion.div>
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-blue-500 to-violet-500 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg">
-                    {feature.number}
-                  </div>
                 </div>
                 <motion.div 
                   className={`bg-gradient-to-br ${feature.gradient} ${feature.hoverGradient} backdrop-blur-sm border border-white/15 dark:border-white/10 rounded-2xl p-4 flex-1 shadow-md group-hover:shadow-lg group-hover:border-white/25 dark:group-hover:border-white/15 transition-all duration-400`}
@@ -258,30 +255,7 @@ const KeyFeatures = () => {
             variants={itemVariants}
             className="mt-10 text-center"
           >
-            <motion.div 
-              className="inline-block bg-gradient-to-br from-violet-500/10 via-blue-500/10 to-purple-500/10 backdrop-blur-md border border-violet-200/30 dark:border-violet-400/30 rounded-3xl p-5 shadow-xl"
-              whileHover={{ 
-                scale: 1.02, 
-                y: -3,
-                boxShadow: "0 20px 40px rgba(139, 92, 246, 0.2)",
-                transition: { duration: 0.3 } 
-              }}
-            >
-              <div className="flex items-start gap-3">
-                <motion.div
-                  className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-violet-500 to-blue-500 rounded-full flex items-center justify-center mt-1"
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                >
-                  <Star className="w-3 h-3 text-white" fill="currentColor" />
-                </motion.div>
-                <div className="flex-1">
-                  <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                    <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600">SEO Keywords:</span> Touchscreen Software | Hall of Fame Software | Interactive Displays | Digital Legacy Platform | Donor Recognition Systems
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+      
           </motion.div>
         </motion.div>
       </Container>

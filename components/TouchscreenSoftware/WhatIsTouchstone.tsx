@@ -208,73 +208,22 @@ const WhatIsTouchstone = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="relative mx-auto max-w-md">
-              {/* Device mockup */}
-              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-3xl shadow-2xl overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-lg font-semibold text-white">Touchstone Digital Platform</h3>
-                    <div className="flex space-x-2">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-400 shadow-sm"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-400 shadow-sm"></div>
-                      <div className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-sm"></div>
+              {/* Image placeholder with border and shadow */}
+              <div className="relative rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700">
+                <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                      <Smartphone className="w-8 h-8 text-blue-500 dark:text-blue-400" />
                     </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-xl p-4 mb-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="text-gray-800 font-medium text-sm">Digital Hall of Fame</div>
-                      <div className="bg-blue-500 text-white text-xs px-2 py-0.5 rounded-full font-medium">ACTIVE</div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-2 mb-3">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="aspect-square bg-white/60 border border-blue-200 rounded-lg flex items-center justify-center">
-                          <div className="w-6 h-6 rounded-full bg-blue-400/30"></div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="h-1.5 bg-blue-200 rounded-full w-full mb-1.5"></div>
-                    <div className="h-1.5 bg-blue-200 rounded-full w-2/3"></div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 rounded-xl p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="text-gray-800 font-medium text-sm">Interactive Records</div>
-                      <div className="bg-purple-500 text-white text-xs px-2 py-0.5 rounded-full font-medium">UPDATED</div>
-                    </div>
-                    <div className="space-y-2 mb-2">
-                      <div className="flex items-center justify-between">
-                        <div className="text-gray-600 text-xs font-medium">2023</div>
-                        <div className="h-2 bg-blue-400 rounded-full w-3/4 shadow-sm"></div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-gray-600 text-xs font-medium">2022</div>
-                        <div className="h-2 bg-purple-400 rounded-full w-1/2 shadow-sm"></div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-gray-600 text-xs font-medium">2021</div>
-                        <div className="h-2 bg-pink-400 rounded-full w-2/3 shadow-sm"></div>
-                      </div>
-                    </div>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">Touchstone Interface Image</p>
+                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">800 × 600 px</p>
                   </div>
                 </div>
               </div>
               
-              {/* Decorative elements */}
-              <motion.div 
-                className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-xl blur-md -z-10"
-                animate={{ 
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-              
-              <motion.div 
-                className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-xl blur-md -z-10"
-                animate={{ 
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
-              />
+              {/* Static decorative elements instead of animated ones */}
+              <div className="absolute -top-3 -left-3 w-full h-full bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-xl blur-md -z-10" />
+              <div className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-xl blur-md -z-10" />
             </div>
             
             {/* Closing statement */}
