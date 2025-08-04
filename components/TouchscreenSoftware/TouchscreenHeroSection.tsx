@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
 const TouchscreenHeroSection = () => {
- useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -55,58 +55,35 @@ const TouchscreenHeroSection = () => {
         />
         
         <Container className="relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
             <motion.h1 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               whileInView={{ scale: [0.95, 1] }}
               viewport={{ once: true }}
             >
-              <span className="block pt-3">Transform Your School's</span>
-              <span className="text-transparent bg-clip-text text-gradient-purple-blue block pb-1">
-                Legacy
-              </span>
-              <span className="block text-xl md:text-2xl lg:text-3xl font-medium">
-                with Touchstone Digital Solutions
+              <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+              Interactive Touchscreen Software for Halls of Fame, Digital Archives & Unforgettable School Stories
               </span>
             </motion.h1>
             
             <motion.div
-              className="relative mb-4 md:mb-6"
+              className="relative mb-8 md:mb-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-sm text-blue-700 mb-4">
-                <span className="font-semibold">Premier Touchscreen Software for Halls of Fame & Beyond</span>
-              </div>
-              
-              <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-3">
-                Revolutionize Recognition: <span className="text-transparent bg-clip-text text-gradient-purple-blue">Interactive Touchscreen Software</span>
-              </h2>
-              
-              <p className="text-base md:text-lg text-gray-600 mb-4 max-w-3xl mx-auto">
-                for Halls of Fame, Digital Archives & Unforgettable School Stories
-              </p>
-              
               {/* Decorative line */}
               <motion.div 
-                className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
+                className="h-1 w-16 md:w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
                 initial={{ width: 0 }}
-                animate={{ width: 64 }}
+                animate={{ width: 80 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               />
-            </motion.div>
-            
-            <motion.div
-              className="relative mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              
+              <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 Replace Static Plaques & Crowded Hallways with Dynamic, Cloud-Based Touchscreen Displays That Engage Students, Alumni, and Donors 24/7.
               </p>
             </motion.div>
