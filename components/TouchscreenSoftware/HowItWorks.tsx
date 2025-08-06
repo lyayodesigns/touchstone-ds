@@ -44,31 +44,13 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
-      {/* Floating particles */}
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
-          style={{
-            left: `${particle.x}%`,
-            top: `${particle.y}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.3, 0.8, 0.3],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5 -z-10"></div>
       
-      {/* Background decorative gradients */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-400/5 to-violet-400/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-400/5 to-blue-400/5 rounded-full blur-3xl" />
+      {/* Static decorative background elements */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10" />
       
       <Container>
         <motion.div
@@ -83,7 +65,7 @@ const HowItWorks = () => {
            
             
             <motion.h2 
-              className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-3"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -152,31 +134,6 @@ const HowItWorks = () => {
               </motion.div>
             ))}
           </div>
-          
-          {/* Quote Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-br from-white/10 to-white/5 dark:from-gray-800/50 dark:to-gray-900/30 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-2xl p-6 md:p-8 shadow-lg max-w-2xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-full p-2 flex-shrink-0 mt-1">
-                  <Star className="w-4 h-4 text-white" />
-                </div>
-                <div className="text-left">
-                  <blockquote className="text-lg md:text-xl italic text-gray-700 dark:text-gray-300 font-medium leading-relaxed mb-3">
-                    "Gone are the days of expensive, obsolete hardware. Our platform evolves with you."
-                  </blockquote>
-                  <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
-                    — Touchstone Platform Promise
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </Container>
     </section>

@@ -92,6 +92,7 @@ const ProvenUseCases = () => {
       {/* Enhanced Background with multiple layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-violet-500/5 to-purple-500/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
       
       {/* Floating Particles - Fixed positions to avoid hydration mismatch */}
       {[

@@ -11,7 +11,7 @@ const TouchscreenHeroSection = () => {
 
   return (
       <section 
-        className="relative pt-12 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pb-0 sm:pt-16 sm:pb-0 md:pt-24 md:pb-0"
+        className="relative pt-16 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pb-0 sm:pt-20 sm:pb-0 md:pt-28 md:pb-0"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -57,7 +57,7 @@ const TouchscreenHeroSection = () => {
         <Container className="relative z-10">
           <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
             <motion.h1 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -70,7 +70,7 @@ const TouchscreenHeroSection = () => {
             </motion.h1>
             
             <motion.div
-              className="relative mb-8 md:mb-10"
+              className="relative mb-4 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -83,7 +83,7 @@ const TouchscreenHeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
               />
               
-              <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
                 Replace Static Plaques & Crowded Hallways with Dynamic, Cloud-Based Touchscreen Displays That Engage Students, Alumni, and Donors 24/7.
               </p>
             </motion.div>

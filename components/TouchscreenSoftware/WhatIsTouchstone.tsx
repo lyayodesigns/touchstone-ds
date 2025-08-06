@@ -70,48 +70,32 @@ const WhatIsTouchstone = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
-      {/* Enhanced Background with multiple layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-violet-500/5 to-purple-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,119,198,0.1),transparent_50%)]"></div>
+    <section className="py-16 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-blue-500/10"></div>
+      <div className="absolute inset-0 bg-grid opacity-20 -z-10"></div>
       
-      {/* Floating Particles - Using fixed positions to avoid hydration mismatches */}
-      {[
-        { left: "10%", top: "15%", duration: 18 },
-        { left: "25%", top: "35%", duration: 22 },
-        { left: "40%", top: "25%", duration: 15 },
-        { left: "65%", top: "60%", duration: 20 },
-        { left: "80%", top: "45%", duration: 25 },
-        { left: "92%", top: "70%", duration: 17 },
-        { left: "15%", top: "80%", duration: 19 },
-        { left: "35%", top: "90%", duration: 21 },
-        { left: "55%", top: "75%", duration: 16 },
-        { left: "70%", top: "20%", duration: 23 },
-        { left: "85%", top: "10%", duration: 24 },
-        { left: "5%", top: "50%", duration: 26 },
-        { left: "45%", top: "5%", duration: 18 },
-        { left: "60%", top: "40%", duration: 22 },
-        { left: "30%", top: "65%", duration: 20 }
-      ].map((particle, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/30 to-violet-400/30 rounded-full"
-          style={{
-            left: particle.left,
-            top: particle.top,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+      {/* Decorative elements */}
+      <motion.div 
+        className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-full blur-3xl -z-10"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div 
+        className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-bl from-blue-500/5 to-transparent rounded-full blur-3xl -z-10"
+        animate={{ 
+          scale: [1, 1.3, 1],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+      
+      {/* Plus symbols as decorative elements */}
+      <div className="absolute top-[10%] left-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
+      <div className="absolute bottom-[10%] right-[5%] text-foreground/10 text-2xl sm:text-3xl">+</div>
       
       {/* Decorative elements */}
       <motion.div 
@@ -147,7 +131,7 @@ const WhatIsTouchstone = () => {
         
           
           <motion.h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -316,24 +300,7 @@ const WhatIsTouchstone = () => {
               ))}
             </div>
             
-            {/* Animated dots */}
-            <div className="flex justify-center mt-12 space-x-2">
-              {[...Array(5)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-600"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 1, 0.5]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.2
-                  }}
-                />
-              ))}
-            </div>
+
           </motion.div>
         </div>
       </Container>

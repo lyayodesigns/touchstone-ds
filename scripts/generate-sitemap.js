@@ -73,6 +73,12 @@ async function generateSitemap() {
         priority: '0.7' 
       },
       { 
+        loc: `${baseUrl}/touchscreen-software/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
+      { 
         loc: `${baseUrl}/privacy/`, 
         lastmod: formatDate(new Date()), 
         changefreq: 'yearly', 

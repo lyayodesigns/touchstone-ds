@@ -62,7 +62,7 @@ const WhyChooseTouchstone = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5 -z-10"></div>
       
@@ -83,7 +83,7 @@ const WhyChooseTouchstone = () => {
             initial="hidden"
             animate="visible"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
               <span>Transform Your School's </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
                 Recognition Experience

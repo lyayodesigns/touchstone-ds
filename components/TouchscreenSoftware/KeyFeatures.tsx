@@ -79,65 +79,13 @@ const KeyFeatures = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
-      {/* Enhanced Background with multiple layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-violet-500/5 to-purple-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,119,198,0.1),transparent_50%)]"></div>
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-purple-500/5 -z-10"></div>
       
-      {/* Floating Particles - Fixed positions to avoid hydration mismatch */}
-      {[
-        { x: '10%', y: '20%', duration: 15 },
-        { x: '25%', y: '15%', duration: 18 },
-        { x: '40%', y: '30%', duration: 20 },
-        { x: '60%', y: '25%', duration: 14 },
-        { x: '75%', y: '10%', duration: 22 },
-        { x: '85%', y: '30%', duration: 16 },
-        { x: '15%', y: '60%', duration: 19 },
-        { x: '30%', y: '70%', duration: 21 },
-        { x: '45%', y: '80%', duration: 17 },
-        { x: '65%', y: '65%', duration: 23 },
-        { x: '80%', y: '75%', duration: 15 },
-        { x: '90%', y: '85%', duration: 20 }
-      ].map((particle, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/30 to-violet-400/30 rounded-full"
-          style={{
-            left: particle.x,
-            top: particle.y,
-          }}
-          animate={{
-            y: [`calc(${particle.y} - 30px)`, `calc(${particle.y} + 30px)`, `calc(${particle.y} - 30px)`],
-            opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
-      
-      {/* Enhanced Decorative elements */}
-      <motion.div 
-        className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-tr from-violet-500/10 to-transparent rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.6, 0.3],
-          rotate: [0, 180, 360]
-        }}
-        transition={{ duration: 15, repeat: Infinity }}
-      />
-      <motion.div 
-        className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl -z-10"
-        animate={{ 
-          scale: [1, 1.4, 1],
-          opacity: [0.3, 0.6, 0.3],
-          rotate: [360, 180, 0]
-        }}
-        transition={{ duration: 18, repeat: Infinity }}
-      />
+      {/* Static decorative background elements */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl -z-10" />
       
       <Container>
         <motion.div
