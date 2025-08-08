@@ -70,7 +70,7 @@ const KeyFeatures = () => {
       icon: <Monitor className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       number: "5",
       title: "Multi-Location Kiosk Sync",
-      description: "Install identical touchscreen displays in gyms, auditoriums, and admissions offices—all updated simultaneously.",
+      description: "Install identical touchscreen displays in gyms, auditoriums, and admissions offices, all updated simultaneously.",
       iconBg: "bg-gradient-to-br from-emerald-500 to-teal-500",
       gradient: "from-emerald-500/15 to-teal-500/15",
       borderGradient: "from-emerald-400/40 to-teal-400/40",
