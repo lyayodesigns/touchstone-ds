@@ -54,7 +54,7 @@ const WhyChooseTouchstone = () => {
     {
       icon: <TrendingUp className="h-8 w-8 text-orange-500" />,
       title: "Boost Engagement",
-      description: "Celebrate championships, academic wins, and student art in vivid multimedia—no more dusty glass cases!",
+      description: "Celebrate championships, academic wins, and student art in vivid multimedia, no more dusty glass cases!",
       gradient: "from-orange-500/10 to-red-500/10",
       borderGradient: "from-orange-500/30 to-red-500/30",
       iconBg: "bg-orange-500/10"
@@ -202,7 +202,8 @@ const WhyChooseTouchstone = () => {
               </blockquote>
               
               <div className="flex items-center justify-center text-blue-600">
-                <span className="text-sm font-semibold">Touchstone Digital Solutions</span>
+                <span className="text-sm font-semibold">Gardner Sr. 
+                Touchstone Digital Solutions</span>
               </div>
             </div>
           </motion.div>

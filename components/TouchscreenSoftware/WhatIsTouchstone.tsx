@@ -43,7 +43,7 @@ const WhatIsTouchstone = () => {
     {
       icon: <Sliders className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       title: "Intuitive Content Management",
-      description: "Update trophies, alumni spotlights, or event schedules in minutes—no IT degree needed.",
+      description: "Update trophies, alumni spotlights, or event schedules in minutes, no IT degree needed.",
       gradient: "from-emerald-500/15 to-teal-500/15",
       borderGradient: "from-emerald-400/40 to-teal-400/40",
       iconBg: "bg-gradient-to-br from-emerald-500 to-teal-500",
@@ -61,7 +61,7 @@ const WhatIsTouchstone = () => {
     {
       icon: <Smartphone className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       title: "Multi-Device Accessibility",
-      description: "Display content on touchscreen kiosks in lobbies, gyms, or libraries—and sync to mobile for global access.",
+      description: "Display content on touchscreen kiosks in lobbies, gyms, or libraries, and sync to mobile for global access.",
       gradient: "from-violet-500/15 to-purple-500/15",
       borderGradient: "from-violet-400/40 to-purple-400/40",
       iconBg: "bg-gradient-to-br from-violet-500 to-purple-500",
@@ -221,7 +221,7 @@ const WhatIsTouchstone = () => {
               }}
             >
               <p className="text-foreground/80 italic">
-                "Recognize anyone, anywhere, for any achievement—all with a single click."
+                "Recognize anyone, anywhere, for any achievement, all with a single click."
               </p>
             </motion.div>
           </motion.div>
