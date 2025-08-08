@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 import { Zap, Sliders, Lock, Smartphone, Sparkles, ArrowRight, Play, Star } from 'lucide-react';
 
@@ -191,17 +192,18 @@ const WhatIsTouchstone = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative mx-auto max-w-md">
+            <div className="relative mx-auto w-full">
               {/* Image placeholder with border and shadow */}
               <div className="relative rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                      <Smartphone className="w-8 h-8 text-blue-500 dark:text-blue-400" />
-                    </div>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm">Touchstone Interface Image</p>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">800 × 600 px</p>
-                  </div>
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/touchscreen%20software/Kiosk%20Mockup%20-%20Trial.webp"
+                    alt="Touchstone kiosk mockup - trial"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
               

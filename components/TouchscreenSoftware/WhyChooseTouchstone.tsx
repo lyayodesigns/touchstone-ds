@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 import { Ban, Award, Globe, TrendingUp, Sparkles, Star } from 'lucide-react';
 
@@ -161,14 +162,14 @@ const WhyChooseTouchstone = () => {
                 <div className="relative">
                   {/* Image placeholder with border and shadow */}
                   <div className="relative rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-200 dark:border-gray-700">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                          <Award className="w-8 h-8 text-blue-500 dark:text-blue-400" />
-                        </div>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm">Touchstone Kiosk Image</p>
-                        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">800 × 600 px</p>
-                      </div>
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src="/touchscreen%20software/Touchstone%20Rendering%20-%20Touch%20Stone%20-%20Stand.webp"
+                        alt="Touchstone interactive kiosk stand rendering"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                   
