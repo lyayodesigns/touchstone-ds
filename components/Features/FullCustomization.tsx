@@ -134,83 +134,15 @@ const FullCustomization = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="relative mx-auto max-w-md">
-                {/* Design showcase grid */}
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Design showcase items */}
-                  <motion.div 
-                    className="relative bg-gradient-to-br from-purple-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 overflow-hidden h-48"
-                    whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-600"></div>
-                    <div className="h-full flex flex-col justify-between">
-                      <div className="flex justify-between items-center">
-                        <div className="h-6 w-24 bg-gradient-to-r from-purple-500/20 to-blue-600/20 rounded"></div>
-                        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-purple-500/30 to-blue-600/30"></div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="h-3 w-full bg-gradient-to-r from-purple-500/20 to-blue-600/20 rounded"></div>
-                        <div className="h-3 w-3/4 bg-gradient-to-r from-purple-500/20 to-blue-600/20 rounded"></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="relative bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 overflow-hidden h-48"
-                    whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(96, 165, 250, 0.3)" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
-                    <div className="grid grid-cols-3 gap-2 h-full">
-                      <div className="col-span-1 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-lg"></div>
-                      <div className="col-span-2 flex flex-col justify-between">
-                        <div className="h-3 w-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded"></div>
-                        <div className="h-3 w-3/4 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded"></div>
-                        <div className="h-3 w-1/2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded"></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="relative bg-gradient-to-br from-indigo-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 overflow-hidden h-48"
-                    whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(99, 102, 241, 0.3)" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-blue-600"></div>
-                    <div className="flex flex-col h-full">
-                      <div className="flex justify-center items-center mb-4">
-                        <div className="h-12 w-12 rounded-full bg-gradient-to-r from-indigo-500/30 to-blue-600/30"></div>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2 flex-grow">
-                        <div className="bg-gradient-to-br from-indigo-500/20 to-blue-600/20 rounded-lg"></div>
-                        <div className="bg-gradient-to-br from-indigo-500/20 to-blue-600/20 rounded-lg"></div>
-                        <div className="bg-gradient-to-br from-indigo-500/20 to-blue-600/20 rounded-lg"></div>
-                        <div className="bg-gradient-to-br from-indigo-500/20 to-blue-600/20 rounded-lg"></div>
-                      </div>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="relative bg-gradient-to-br from-purple-600/10 to-indigo-600/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 overflow-hidden h-48"
-                    whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(139, 92, 246, 0.3)" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
-                    <div className="flex flex-col justify-between h-full">
-                      <div className="flex justify-between items-center">
-                        <div className="h-4 w-20 bg-gradient-to-r from-purple-500/20 to-indigo-600/20 rounded"></div>
-                        <div className="flex space-x-1">
-                          <div className="h-4 w-4 rounded-full bg-gradient-to-r from-purple-500/30 to-indigo-600/30"></div>
-                          <div className="h-4 w-4 rounded-full bg-gradient-to-r from-purple-500/30 to-indigo-600/30"></div>
-                        </div>
-                      </div>
-                      <div className="flex-grow flex items-center justify-center">
-                        <div className="h-20 w-20 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-600/20"></div>
-                      </div>
-                      <div className="h-3 w-full bg-gradient-to-r from-purple-500/20 to-indigo-600/20 rounded"></div>
-                    </div>
-                  </motion.div>
+              <div className="relative mx-auto max-w-lg">
+                {/* Design showcase image */}
+                <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 transform scale-110">
+                  <img 
+                    src="/features/Touchstone Web UI - Yearbooks.webp" 
+                    alt="Touchstone Web UI - Yearbooks" 
+                    className="w-full h-auto object-cover" 
+                    loading="lazy"
+                  />
                 </div>
                 
                 {/* Decorative elements */}

@@ -134,66 +134,14 @@ const AllinOneSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="relative perspective">
-                <motion.div 
-                  className="relative bg-gradient-to-br from-blue-600/90 to-purple-600/90 rounded-2xl shadow-2xl overflow-hidden preserve-3d"
-                  initial={{ rotateY: 15 }}
-                  animate={{ 
-                    rotateY: [15, 0, 15],
-                    rotateX: [5, -5, 5]
-                  }}
-                  transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  <div className="p-6 text-white">
-                    <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-xl font-bold">Digital Hall of Fame</h3>
-                      <div className="flex space-x-1">
-                        <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-3 gap-3 mb-4">
-                      {[1, 2, 3, 4, 5, 6].map((item) => (
-                        <motion.div 
-                          key={item}
-                          className="aspect-square bg-white/20 rounded-lg flex items-center justify-center"
-                          whileHover={{ scale: 1.05 }}
-                        >
-                          <div className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center">
-                            <span className="text-white font-medium">{item}</span>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-3 bg-white/20 rounded-full w-full"></div>
-                      <div className="h-3 bg-white/20 rounded-full w-3/4"></div>
-                      <div className="h-3 bg-white/20 rounded-full w-1/2"></div>
-                    </div>
-                  </div>
-                  {/* Reflective surface */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-20 pointer-events-none"></div>
-                </motion.div>
-                {/* Shadow */}
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-4 bg-black/20 blur-xl rounded-full"></div>
-                {/* Decorative elements */}
-                <motion.div 
-                  className="absolute -top-4 -right-4 w-12 h-12 bg-purple-500 rounded-full blur-xl"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.6, 0.3]
-                  }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                />
-                <motion.div 
-                  className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-500 rounded-full blur-xl"
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    opacity: [0.3, 0.6, 0.3]
-                  }}
-                  transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                />
+                <div className="rounded-2xl overflow-hidden shadow-xl transform scale-110 mx-auto max-w-[120%]">
+                  <img 
+                    src="/features/Touchstone Mobile Mockup.webp" 
+                    alt="Touchstone Mobile Mockup" 
+                    className="w-full h-auto object-cover" 
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
