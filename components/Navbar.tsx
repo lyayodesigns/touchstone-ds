@@ -91,6 +91,17 @@ const Navbar: React.FC = () => {
             >
               Touchscreen Software
             </Link>
+            <Link
+              href="/compare-us/"
+              className={cn(
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/compare-us/")
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
+              )}
+            >
+              Compare Us
+            </Link>
             <div className="relative group">
               <button
                 onClick={() => setIsResourcesOpen(!isResourcesOpen)}
@@ -224,6 +235,7 @@ const Navbar: React.FC = () => {
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
                 { name: "Touchscreen Software", href: "/touchscreen-software/" },
+                { name: "Compare Us", href: "/compare-us/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
