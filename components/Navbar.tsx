@@ -80,35 +80,13 @@ const Navbar: React.FC = () => {
             >
               Features
             </Link>
-            <Link
-              href="/touchscreen-software/"
-              className={cn(
-                "text-sm lg:text-base transition-colors whitespace-nowrap",
-                isActive("/touchscreen-software/")
-                  ? "text-gradient-purple-blue font-medium"
-                  : "hover:text-gradient-purple-blue"
-              )}
-            >
-              Touchscreen Software
-            </Link>
-            <Link
-              href="/compare-us/"
-              className={cn(
-                "text-sm lg:text-base transition-colors whitespace-nowrap",
-                isActive("/compare-us/")
-                  ? "text-gradient-purple-blue font-medium"
-                  : "hover:text-gradient-purple-blue"
-              )}
-            >
-              Compare Us
-            </Link>
             <div className="relative group">
               <button
                 onClick={() => setIsResourcesOpen(!isResourcesOpen)}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/faq/") || isActive("/blog/"))
+                  (isActive("/faq/") || isActive("/blog/") || isActive("/touchscreen-software/") || isActive("/compare-us/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -123,6 +101,30 @@ const Navbar: React.FC = () => {
                 )}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
+                <Link
+                  href="/touchscreen-software/"
+                  className={cn(
+                    "block px-4 py-2 text-sm transition-colors",
+                    isActive("/touchscreen-software/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Touchscreen Software
+                </Link>
+                <Link
+                  href="/compare-us/"
+                  className={cn(
+                    "block px-4 py-2 text-sm transition-colors",
+                    isActive("/compare-us/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Compare Us
+                </Link>
                 <Link
                   href="/faq/"
                   className={cn(
@@ -234,10 +236,10 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
-                { name: "Touchscreen Software", href: "/touchscreen-software/" },
-                { name: "Compare Us", href: "/compare-us/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
+                { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
+                { name: "Compare Us", href: "/compare-us/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
                 { name: "Blog", href: "/blog/", isSubItem: true }
               ].map((item) => (

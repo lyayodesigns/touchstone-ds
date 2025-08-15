@@ -77,28 +77,16 @@ const CompareUsHeroSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Key Points - Card Style */}
-            <div className={`grid grid-cols-1 md:grid-cols-3 gap-3 transition-all duration-1000 delay-700 ${
+            {/* Disclaimer */}
+            <div className={`transition-all duration-1000 delay-700 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}>
-              {[
-                { icon: CheckCircle, text: "Done Right", desc: "Professional excellence" },
-                { icon: Star, text: "Told Beautifully", desc: "Elegant storytelling" },
-                { icon: Award, text: "Integrity & Beauty", desc: "Honest & beautiful" }
-              ].map((item, index) => (
-                <div key={index} className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-white/20 rounded-xl p-4 hover:from-blue-100/80 hover:to-purple-100/80 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="relative inline-flex mb-2">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-sm"></div>
-                      <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-full text-white z-10">
-                        <item.icon className="h-4 w-4" />
-                      </div>
-                    </div>
-                    <h3 className="text-sm font-semibold text-gray-800">{item.text}</h3>
-                    <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+              <div className="bg-blue-50/80 backdrop-blur-sm border border-blue-200/50 rounded-xl p-4">
+                <h3 className="text-sm font-semibold text-gray-800 mb-2">Disclaimer:</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">
+                  Touchstone's editorial team is committed to providing the most transparent and objective comparisons possible. We sourced this information directly from vendor websites, vendor example sites, and trusted third-party reviews.
+                </p>
+              </div>
             </div>
 
           </div>

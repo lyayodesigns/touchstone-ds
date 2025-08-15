@@ -5,6 +5,7 @@ import { Check, X, Star, Shield, Clock, Headphones, DollarSign, Award, Zap, User
 
 const ComparisonSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState('overall');
   const [particles, setParticles] = useState<Array<{
     id: number;
     left: string;
@@ -38,8 +39,93 @@ const ComparisonSection: React.FC = () => {
     }));
     setParticles(particleArray);
 
-    return () => observer.disconnect();
+    // Scroll spy functionality for table container
+    const handleTableScroll = () => {
+      const tableContainer = document.querySelector('.table-scroll-container');
+      if (!tableContainer) return;
+
+      const sections = ['overall', 'platform-features', 'security-improvements', 'company-related'];
+      const scrollTop = (tableContainer as HTMLElement).scrollTop;
+      const containerHeight = (tableContainer as HTMLElement).clientHeight;
+      const scrollHeight = (tableContainer as HTMLElement).scrollHeight;
+      const containerRect = (tableContainer as HTMLElement).getBoundingClientRect();
+
+      // Height of sticky thead (approx) to offset measurements
+      const headerHeight = 60; // keep in sync with scrollToSection
+
+      // The reference line (just under sticky header) inside the scroll container
+      const headerLine = scrollTop + headerHeight + 1;
+      // Hysteresis to reduce flicker and avoid snapping back to previous section near boundaries
+      const switchMargin = 80; // px
+
+      // Build a list of section tops relative to the scroll content
+      const tops = sections.map((sectionId) => {
+        const el = document.getElementById(sectionId);
+        if (!el) return Infinity;
+        const rect = el.getBoundingClientRect();
+        return rect.top - containerRect.top + scrollTop;
+      });
+
+      // Edge case: scrolled to bottom -> select last section
+      const atBottom = scrollTop + containerHeight >= scrollHeight - 2;
+      if (atBottom) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
+
+      // Find the last section whose (top - margin) is above the header line
+      let activeIdx = 0;
+      for (let i = 0; i < tops.length; i++) {
+        if (tops[i] - switchMargin <= headerLine) activeIdx = i;
+        else break;
+      }
+
+      setActiveSection(sections[activeIdx]);
+    };
+
+    // Set up scroll listener after component mounts
+    const setupScrollListener = () => {
+      const tableContainer = document.querySelector('.table-scroll-container');
+      if (tableContainer) {
+        tableContainer.addEventListener('scroll', handleTableScroll);
+        handleTableScroll(); // Initial check
+      }
+    };
+
+    // Delay setup to ensure DOM is ready
+    const timeoutId = setTimeout(setupScrollListener, 100);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+      const tableContainer = document.querySelector('.table-scroll-container');
+      if (tableContainer) {
+        tableContainer.removeEventListener('scroll', handleTableScroll);
+      }
+    };
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const tableContainer = document.querySelector('.table-scroll-container');
+    const element = document.getElementById(sectionId);
+    
+    if (tableContainer && element) {
+      const elementTop = element.offsetTop;
+      const headerHeight = 60; // Account for sticky header
+      
+      tableContainer.scrollTo({
+        top: elementTop - headerHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const menuItems = [
+    { id: 'overall', label: 'Overall', icon: Award },
+    { id: 'platform-features', label: 'Platform Features', icon: Zap },
+    { id: 'security-improvements', label: 'Security & Improvements', icon: Shield },
+    { id: 'company-related', label: 'Company Related', icon: Users }
+  ];
 
   // Categorized feature comparison data
   const featureCategories = [
@@ -86,7 +172,7 @@ const ComparisonSection: React.FC = () => {
         { name: "Automatic Video Compression", touchstone: true, rocket: true },
         { name: "Automatic PDF Compression", touchstone: true, rocket: true },
         { name: "Media Caching", touchstone: true, rocket: true },
-        { name: "Support For All Media Types", touchstone: true, rocket: true, touchstoneNote: "MP4, MOV, AVIF, WebP, WebM, MPEG, JPG, PNG, HEIC, SVG, GIF, BMP, ICO, MP3, PDF & more" },
+        { name: "Support For All Media Types", touchstone: "MP4, MOV, AVIF, WebP, WebM, MPEG, JPG, PNG, HEIC, SVG, GIF, BMP, ICO, MP3, PDF & more", rocket: true, isText: true },
         { name: "Custom Domains", touchstone: true, rocket: true },
         { name: "Link Previews", touchstone: true, rocket: true },
         { name: "Animations", touchstone: true, rocket: true },
@@ -180,7 +266,7 @@ const ComparisonSection: React.FC = () => {
             <span className="text-xs font-medium text-blue-800">Detailed Feature Analysis</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-blue-800 bg-clip-text text-transparent">
               Platform Comparison
             </span>
           </h2>
@@ -190,276 +276,120 @@ const ComparisonSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Pricing Comparison Cards */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-12 transition-all duration-1000 delay-300 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}>
-          {/* Touchstone Card */}
-          <div className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/20 hover:scale-[1.02] transition-all duration-300">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-2xl text-sm font-bold shadow-lg">
-                  RECOMMENDED
-                </div>
-              </div>
-              <div className="text-center pt-3">
-                <div className="flex items-center justify-center mb-2">
-                  <Star className="h-5 w-5 text-yellow-500 mr-2" />
-                  <h3 className="text-lg font-bold text-gray-800">Touchstone</h3>
-                </div>
-                <div className="mb-3">
-                  <span className="text-lg font-bold text-green-600">Transparent Pricing</span>
-                  <p className="text-gray-600 mt-1 text-xs">No Hidden Fees</p>
-                </div>
-                <ul className="space-y-1 text-left text-xs">
-                  <li className="flex items-center">
-                    <Check className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
-                    <span>24/7 Premium Support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Unlimited Training</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Check className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
-                    <span>Weekly Updates</span>
-                  </li>
-                </ul>
-              </div>
+        {/* Main Layout with Sticky Navigation */}
+        <div className="flex gap-8 relative">
+          {/* Sticky Navigation Menu */}
+          <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className="sticky top-24 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/30 p-4">
+              <h3 className="text-lg font-bold text-gray-800 mb-4 text-center">
+                <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                  Navigation
+                </span>
+              </h3>
+              <nav className="space-y-2">
+                {menuItems.map((item) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-300 ${
+                        activeSection === item.id
+                          ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-md transform scale-105'
+                          : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600'
+                      }`}
+                    >
+                      <IconComponent className={`h-4 w-4 ${
+                        activeSection === item.id ? 'text-white' : 'text-purple-500'
+                      }`} />
+                      <span className="text-sm font-medium">{item.label}</span>
+                    </button>
+                  );
+                })}
+              </nav>
             </div>
           </div>
 
-          {/* Rocket Card */}
-          <div className="group relative">
-            <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <DollarSign className="h-5 w-5 text-red-500 mr-2" />
-                  <h3 className="text-lg font-bold text-gray-800">Rocket</h3>
-                </div>
-                <div className="mb-3">
-                  <span className="text-lg font-bold text-red-600">Hidden Costs</span>
-                  <p className="text-gray-600 mt-1 text-xs">Complex Pricing</p>
-                </div>
-                <ul className="space-y-1 text-left text-xs">
-                  <li className="flex items-center">
-                    <X className="h-3 w-3 text-red-500 mr-2 flex-shrink-0" />
-                    <span className="text-gray-500">Limited Support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <X className="h-3 w-3 text-red-500 mr-2 flex-shrink-0" />
-                    <span className="text-gray-500">Extra Training Costs</span>
-                  </li>
-                  <li className="flex items-center">
-                    <X className="h-3 w-3 text-red-500 mr-2 flex-shrink-0" />
-                    <span className="text-gray-500">Slow Updates</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+          {/* Main Content Area */}
+          <div className="flex-1 min-w-0">
 
-        {/* Key Feature Comparison Grid */}
+        {/* Unified Feature Comparison Table */}
         <div className={`mb-16 transition-all duration-1000 delay-500 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <div className="flex items-center justify-center mb-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent w-16 mr-4"></div>
-            <h3 className="text-2xl font-bold text-center text-gray-800 relative">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Key Features</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
-            </h3>
-            <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent w-16 ml-4"></div>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-white/30 max-w-4xl mx-auto hover:shadow-xl transition-all duration-300">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                    <th className="px-3 py-2 text-left font-semibold text-sm">Feature</th>
-                    <th className="px-3 py-2 text-center font-semibold text-sm">Touchstone</th>
-                    <th className="px-3 py-2 text-center font-semibold text-sm">Rocket</th>
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-white/30 hover:shadow-xl transition-all duration-300">
+            <div className="overflow-x-auto max-h-[80vh] overflow-y-auto table-scroll-container">
+              <table className="w-full border-separate border-spacing-0">
+                <thead className="sticky top-0 z-20">
+                  <tr className="bg-gradient-to-r from-purple-600 to-blue-600 text-white border-b-2 border-white shadow-[0_2px_0_0_#ffffff]">
+                    <th className="px-4 py-3 text-left font-semibold text-sm border-b-2 border-white">Feature</th>
+                    <th className="px-4 py-3 text-center font-semibold text-sm border-b-2 border-white">Touchstone</th>
+                    <th className="px-4 py-3 text-center font-semibold text-sm border-b-2 border-white">Rocket</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {keyFeatures.map((feature, index) => (
-                    <tr key={index} className={`border-b border-gray-100 hover:bg-blue-50/50 transition-colors ${
-                      index % 2 === 0 ? 'bg-gray-50/30' : 'bg-white/50'
-                    }`}>
-                      <td className="px-3 py-2 font-medium text-gray-800 text-sm">{feature.name}</td>
-                      <td className="px-3 py-2 text-center">
-                        {feature.touchstone ? (
-                          <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
-                            <Check className="h-3 w-3 text-green-600" />
-                          </div>
-                        ) : (
-                          <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
-                            <X className="h-3 w-3 text-red-600" />
-                          </div>
-                        )}
-                      </td>
-                      <td className="px-3 py-2 text-center">
-                        {feature.rocket ? (
-                          <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
-                            <Check className="h-3 w-3 text-green-600" />
-                          </div>
-                        ) : (
-                          <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
-                            <X className="h-3 w-3 text-red-600" />
-                          </div>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
+                  {/* Feature Categories - Starting with OVERALL */}
+                  {featureCategories.map((category, categoryIndex) => {
+                    const sectionId = category.category.toLowerCase().replace(/\s*&\s*/g, '-').replace(/\s+/g, '-');
+                    return (
+                      <React.Fragment key={categoryIndex}>
+                        {/* Category Header */}
+                        <tr id={sectionId} className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                          <td colSpan={3} className="px-4 py-3 text-center font-bold text-lg border-t-2 border-white border-b border-white/70">
+                            {category.category}
+                          </td>
+                        </tr>
+                        {/* Category Features */}
+                        {category.features.map((feature, index) => (
+                          <tr key={`${categoryIndex}-${index}`} className={`border-b border-gray-100 hover:bg-purple-50/50 transition-colors ${
+                            index % 2 === 0 ? 'bg-gray-50/30' : 'bg-white/50'
+                          }`}>
+                            <td className="px-4 py-3 font-medium text-gray-800 text-sm">{feature.name}</td>
+                            <td className="px-4 py-3 text-center text-sm">
+                              {feature.isText ? (
+                                <span className="text-gray-800">{feature.touchstone}</span>
+                              ) : feature.touchstone ? (
+                                <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
+                                  <Check className="h-3 w-3 text-green-600" />
+                                </div>
+                              ) : (
+                                <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
+                                  <X className="h-3 w-3 text-red-600" />
+                                </div>
+                              )}
+                            </td>
+                            <td className="px-4 py-3 text-center text-sm">
+                              {feature.isText ? (
+                                <span className="text-gray-800">{feature.rocket}</span>
+                              ) : feature.rocket ? (
+                                <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
+                                  <Check className="h-3 w-3 text-green-600" />
+                                </div>
+                              ) : (
+                                <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
+                                  <X className="h-3 w-3 text-red-600" />
+                                </div>
+                              )}
+                              {feature.rocketNote && (
+                                <div className="text-xs text-gray-500 mt-1 italic">{feature.rocketNote}</div>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </React.Fragment>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-        
-        {/* Detailed Feature Comparison */}
-        <div className={`mb-16 transition-all duration-1000 delay-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}>
-          <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent w-16 mr-4"></div>
-            <h3 className="text-2xl font-bold text-center text-gray-800 relative">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Detailed Comparison</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
-            </h3>
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent w-16 ml-4"></div>
-          </div>
-          
-          {featureCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-6 last:mb-0">
-              <h4 className="text-lg font-bold text-center mb-4 relative inline-flex items-center justify-center mx-auto w-full">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-8 rounded-full shadow-md">
-                  {category.category}
-                </span>
-                <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent -z-10"></div>
-              </h4>
-              
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-white/30 max-w-4xl mx-auto mb-8 hover:shadow-xl transition-all duration-300">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-                        <th className="px-4 py-3 text-left font-semibold text-sm">Feature</th>
-                        <th className="px-4 py-3 text-center font-semibold text-sm">Touchstone</th>
-                        <th className="px-4 py-3 text-center font-semibold text-sm">Rocket</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {category.features.map((feature, index) => (
-                        <tr key={index} className={`border-b border-gray-100 hover:bg-blue-50/50 transition-colors ${
-                          index % 2 === 0 ? 'bg-gray-50/30' : 'bg-white/50'
-                        }`}>
-                          <td className="px-4 py-3 font-medium text-gray-800 text-sm">{feature.name}</td>
-                          <td className="px-4 py-3 text-center text-sm">
-                            {feature.isText ? (
-                              <span className="text-gray-800">{feature.touchstone}</span>
-                            ) : feature.touchstone ? (
-                              <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
-                                <Check className="h-3 w-3 text-green-600" />
-                              </div>
-                            ) : (
-                              <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
-                                <X className="h-3 w-3 text-red-600" />
-                              </div>
-                            )}
-                            {feature.touchstoneNote && (
-                              <div className="text-xs text-gray-500 mt-1 italic">{feature.touchstoneNote}</div>
-                            )}
-                          </td>
-                          <td className="px-4 py-3 text-center text-sm">
-                            {feature.isText ? (
-                              <span className="text-gray-800">{feature.rocket}</span>
-                            ) : feature.rocket ? (
-                              <div className="inline-flex items-center justify-center w-6 h-6 bg-green-100 rounded-full">
-                                <Check className="h-3 w-3 text-green-600" />
-                              </div>
-                            ) : (
-                              <div className="inline-flex items-center justify-center w-6 h-6 bg-red-100 rounded-full">
-                                <X className="h-3 w-3 text-red-600" />
-                              </div>
-                            )}
-                            {feature.rocketNote && (
-                              <div className="text-xs text-gray-500 mt-1 italic">{feature.rocketNote}</div>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-
-      </div>
-      
-      {/* SEO-friendly summary section */}
-      <div className="max-w-4xl mx-auto mt-16 px-4">
-        <div className="flex items-center justify-center mb-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent w-16 mr-4"></div>
-          <h3 className="text-2xl font-bold text-center text-gray-800 relative">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Why Choose Touchstone?</span>
-            <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
-          </h3>
-          <div className="h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent w-16 ml-4"></div>
-        </div>
-        
-        <div className={`bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-white/30 transition-all duration-1000 delay-800 hover:shadow-xl ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl border border-blue-100/50 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <Shield className="h-8 w-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h4 className="font-bold text-gray-800 mb-2">Transparent Pricing</h4>
-              <p className="text-sm text-gray-600">No hidden fees or surprise charges, unlike Rocket's complex pricing structure.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl border border-blue-100/50 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <Headphones className="h-8 w-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h4 className="font-bold text-gray-800 mb-2">Premium Support</h4>
-              <p className="text-sm text-gray-600">24/7/365 US-based support and unlimited training for your entire team.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-xl border border-blue-100/50 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <Zap className="h-8 w-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h4 className="font-bold text-gray-800 mb-2">Continuous Innovation</h4>
-              <p className="text-sm text-gray-600">Weekly updates and advanced features like video background removal.</p>
-            </div>
-          </div>
-          
-          <div className="prose text-foreground/80 max-w-none border-t border-blue-100 pt-6">
-            <p className="leading-relaxed">
-              Touchstone offers transparent pricing with no hidden fees, unlike Rocket which has a more complex pricing structure with potential additional charges. Our platform provides unlimited, US-based live training and 24/7/365 support, ensuring you always have assistance when needed.
-            </p>
-            <p className="mt-3 leading-relaxed">
-              With weekly software updates, fully handled hardware ordering, and advanced features like 1-click video background removal and automatic content backups, Touchstone delivers a superior digital signage experience that's both powerful and user-friendly.
-            </p>
-            <p className="mt-3 leading-relaxed">
-              Compare the comprehensive feature set above to see why Touchstone is America's most-loved touchscreen platform, offering better value, support, and technology than competitors like Rocket.
-            </p>
-          </div>
-          
-          <div className="mt-6 text-center">
-            <div className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 p-[1px] rounded-full">
-              <div className="bg-white rounded-full px-6 py-2 hover:bg-opacity-0 hover:text-white transition-all duration-300">
-                <span className="font-medium">America's Most-Loved Touchscreen Platform</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+      
+   
 
       {/* CSS for floating animation */}
       <style jsx>{`
@@ -475,6 +405,20 @@ const ComparisonSection: React.FC = () => {
         }
         .animate-float {
           animation: float linear infinite;
+        }
+      `}</style>
+      {/* Hide scrollbars but keep scrolling functional */}
+      <style jsx global>{`
+        .table-scroll-container {
+          /* Firefox */
+          scrollbar-width: none;
+          /* IE and old Edge */
+          -ms-overflow-style: none;
+        }
+        .table-scroll-container::-webkit-scrollbar {
+          /* Chrome, Safari, Opera */
+          width: 0px;
+          height: 0px;
         }
       `}</style>
     </section>

@@ -4,6 +4,7 @@ import CompareUsHeroSection from '../../components/CompareUs/CompareUsHeroSectio
 import ComparisonSection from '../../components/CompareUs/ComparisonSection';
 import CallToActionSection from '../../components/Home/CallToActionSection';
 import { Metadata } from 'next';
+import WhyChooseTouchstone from 'components/TouchscreenSoftware/WhyChooseTouchstone';
 
 export const dynamic = 'force-static';
 
