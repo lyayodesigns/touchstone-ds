@@ -172,7 +172,7 @@ const ComparisonSection: React.FC = () => {
         { name: "Automatic Video Compression", touchstone: true, rocket: true },
         { name: "Automatic PDF Compression", touchstone: true, rocket: true },
         { name: "Media Caching", touchstone: true, rocket: true },
-        { name: "Support For All Media Types", touchstone: "MP4, MOV, AVIF, WebP, WebM, MPEG, JPG, PNG, HEIC, SVG, GIF, BMP, ICO, MP3, PDF & more", rocket: true, isText: true },
+        { name: "Support For All Media Types", touchstone: "MP4, MOV, AVIF, WebP, WebM, MPEG, JPG, PNG, HEIC, SVG, GIF, BMP, ICO, MP3, PDF & more", rocket: "MP4, MOV, AVIF, WebP, WebM, MPEG, JPG, PNG, HEIC, SVG, GIF, BMP, ICO, MP3, PDF & more", isText: true },
         { name: "Custom Domains", touchstone: true, rocket: true },
         { name: "Link Previews", touchstone: true, rocket: true },
         { name: "Animations", touchstone: true, rocket: true },
@@ -197,7 +197,7 @@ const ComparisonSection: React.FC = () => {
         { name: "Graphic Design Team", touchstone: true, rocket: true },
         { name: "Motion Graphic team", touchstone: true, rocket: true },
         { name: "Tutorial Videos & Knowledge Base", touchstone: true, rocket: true },
-        { name: "Clean URLS", touchstone: true, rocket: true }
+        { name: "Clean URLS", touchstone: true, rocket: false }
       ]
     }
   ];
