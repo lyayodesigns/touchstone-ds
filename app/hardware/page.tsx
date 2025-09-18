@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import HardwareHeroSection from '../../components/Hardware/HardwareHeroSection';
+import HardwareInteractiveSection from '../../components/Hardware/HardwareInteractiveSection';
 import { Metadata } from 'next';
 import CallToActionSection from 'components/Home/CallToActionSection';
 
@@ -39,6 +40,9 @@ export default function HardwarePage() {
       <Navbar />
       <main className="overflow-hidden">
         <HardwareHeroSection />
+        <div id="hardware-interactive">
+          <HardwareInteractiveSection />
+        </div>
         <CallToActionSection />
       </main>
       <Footer />

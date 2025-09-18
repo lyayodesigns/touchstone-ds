@@ -1,49 +1,53 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from 'framer-motion';
-import HardwareSizeSelector from './HardwareSizeSelector';
-import HardwareContentDisplay from './HardwareContentDisplay';
-import HardwareIncludesSection from './HardwareIncludesSection';
-import { hardwareSizes } from './hardwareData';
+import { Sparkles, Play } from 'lucide-react';
+import Link from 'next/link';
 
 const HardwareHeroSection: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSize, setActiveSize] = useState('55"');
-
   useEffect(() => {
-    setIsVisible(true);
     window.scrollTo(0, 0);
   }, []);
 
-  const activeHardware = hardwareSizes.find(hw => hw.size === activeSize) || hardwareSizes[0];
-
-  // Floating particles animation
-  const particles = Array.from({ length: 20 }, (_, i) => (
-    <motion.div
-      key={i}
-      className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20"
-      style={{
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-      }}
-      animate={{
-        y: [0, -20, 0],
-        x: [0, 10, 0],
-        scale: [1, 1.2, 1],
-        opacity: [0.2, 0.8, 0.2]
-      }}
-      transition={{
-        duration: 3 + Math.random() * 4,
-        repeat: Infinity,
-        delay: Math.random() * 5
-      }}
-    />
-  ));
+  // Floating particles animation with deterministic positions
+  const particles = Array.from({ length: 15 }, (_, i) => {
+    // Use index-based deterministic positioning instead of Math.random()
+    const positions = [
+      { left: 10, top: 20 }, { left: 85, top: 15 }, { left: 25, top: 70 },
+      { left: 70, top: 30 }, { left: 45, top: 85 }, { left: 90, top: 60 },
+      { left: 15, top: 45 }, { left: 60, top: 10 }, { left: 35, top: 90 },
+      { left: 80, top: 75 }, { left: 5, top: 55 }, { left: 95, top: 25 },
+      { left: 50, top: 5 }, { left: 20, top: 80 }, { left: 75, top: 50 }
+    ];
+    const position = positions[i] || { left: 50, top: 50 };
+    
+    return (
+      <motion.div
+        key={i}
+        className="absolute w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20"
+        style={{
+          left: `${position.left}%`,
+          top: `${position.top}%`,
+        }}
+        animate={{
+          y: [0, -20, 0],
+          x: [0, 10, 0],
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.8, 0.2]
+        }}
+        transition={{
+          duration: 3 + (i % 3),
+          repeat: Infinity,
+          delay: i * 0.3
+        }}
+      />
+    );
+  });
 
   return (
     <section 
-      className="relative min-h-screen w-full overflow-hidden pt-16 sm:pt-20 md:pt-28 pb-0"
+      className="relative pt-16 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pb-0 sm:pt-20 sm:pb-0 md:pt-28 md:pb-0"
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
         backgroundSize: "cover",
@@ -54,10 +58,10 @@ const HardwareHeroSection: React.FC = () => {
       {/* Background with animated gradient overlay */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-slate-50/90 to-blue-50/90"
+          className="absolute inset-0"
           animate={{ 
-            opacity: [0.85, 0.95, 0.85],
-            scale: [1, 1.02, 1]
+            opacity: [0.5, 0.7, 0.5],
+            scale: [1, 1.05, 1]
           }}
           transition={{ 
             duration: 8, 
@@ -92,45 +96,70 @@ const HardwareHeroSection: React.FC = () => {
         transition={{ duration: 7, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-        {/* Size Selector Component */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <HardwareSizeSelector 
-            hardwareSizes={hardwareSizes}
-            activeSize={activeSize}
-            setActiveSize={setActiveSize}
-            isVisible={isVisible}
-          />
-        </motion.div>
+      <div className="relative z-10">
+        <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+          {/* Main Heading */}
+          <motion.h1 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ scale: [0.95, 1] }}
+            viewport={{ once: true }}
+          >
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+              Professional Interactive Display Hardware
+            </span>
+          </motion.h1>
+          
+          <motion.div
+            className="relative mb-4 md:mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {/* Decorative line */}
+            <motion.div 
+              className="h-1 w-16 md:w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
+              initial={{ width: 0 }}
+              animate={{ width: 80 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            />
+            
+            <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
+              Choose from our range of premium interactive displays designed to bring your digital recognition to life with professional-grade touchscreen technology.
+            </p>
+          </motion.div>
 
-        {/* Content Display Component */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          key={activeSize}
-        >
-          <HardwareContentDisplay 
-            activeHardware={activeHardware}
-            activeSize={activeSize}
-            isVisible={isVisible}
-          />
-        </motion.div>
-
-        {/* Includes Section Component */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <HardwareIncludesSection 
-            activeHardware={activeHardware}
-          />
-        </motion.div>
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            <Link href="https://calendly.com/touchstone-digital-solutions/demo" target="_blank">
+              <motion.button
+                className="group flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Book a Demo
+              </motion.button>
+            </Link>
+            <Link href="#hardware-interactive">
+              <motion.button
+                className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 font-semibold rounded-2xl border border-gray-200 hover:bg-white hover:shadow-lg transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Explore Hardware
+              </motion.button>
+            </Link>
+          </motion.div>
+          
+        </div>
       </div>
     </section>
   );

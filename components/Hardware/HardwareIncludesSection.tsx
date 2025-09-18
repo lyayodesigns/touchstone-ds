@@ -46,18 +46,20 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
   ];
 
   return (
-    <motion.div 
-      className="mb-16"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <motion.div
-        className="text-center mb-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+    <section className="relative w-full py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <motion.div 
+          className="mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
         <motion.h3 
           className="text-3xl md:text-4xl font-bold mb-4"
           whileInView={{ scale: [0.95, 1] }}
@@ -77,8 +79,8 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
         />
       </motion.div>
 
-      <div className="space-y-16">
-        {includesData.map((item, index) => (
+          <div className="space-y-24">
+            {includesData.map((item, index) => (
           <motion.div 
             key={index}
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
@@ -167,20 +169,22 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                   </div>
                 )}
 
-                <motion.button
+                {/* <motion.button
                   className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm group"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
                   View Specifications
                   <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-200" />
-                </motion.button>
+                </motion.button> */}
               </div>
             </motion.div>
           </motion.div>
-        ))}
+            ))}
+          </div>
+        </motion.div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 
