@@ -81,6 +81,17 @@ const Navbar: React.FC = () => {
               Features
             </Link>
             <Link
+              href="/hardware/"
+              className={cn(
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/hardware/")
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
+              )}
+            >
+              Hardware
+            </Link>
+            <Link
               href="/touchscreen-software/"
               className={cn(
                 "text-sm lg:text-base transition-colors whitespace-nowrap",
@@ -223,6 +234,7 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
+                { name: "Hardware", href: "/hardware/" },
                 { name: "Touchscreen Software", href: "/touchscreen-software/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
