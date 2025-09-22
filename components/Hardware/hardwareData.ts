@@ -12,6 +12,7 @@ export interface HardwareData {
     };
     accessories: string;
     warranty: string;
+    freeShipping: string;
   };
 }
 
@@ -31,7 +32,7 @@ export const hardwareSizes: HardwareData[] = [
     includes: {
       mounting: {
         title: 'Mounting Bracket',
-        description: 'Our heavy-duty 55" touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments.',
+        description: 'Our heavy-duty 55” touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments. We offer both a low-profile fixed mount and a full-motion mount, giving you flexibility to fit your space and needs. Durable construction means these mounts can withstand the weight of any size display while maintaining a clean, professional look.',
         details: [
           'Supports up to 200 lbs',
           'Options: Low-profile fixed mount or full-motion mount',
@@ -39,8 +40,9 @@ export const hardwareSizes: HardwareData[] = [
           'Streamlined design for a clean, modern appearance'
         ]
       },
-      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control.',
-      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support.'
+      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control. We include all essential accessories to ensure your system is plug and play right out of the box. No extra trips to the store, no missing parts—just an easy, straightforward setup.',
+      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support. For added security, a 5 year warranty is available too upon request. Our warranty covers both parts and labor, so you are protected from unexpected issues. If something goes wrong, our team is here to make it right quickly.',
+      freeShipping: 'No hidden fees or surprise charges. With Touchstone, shipping is always free, so your gear arrives ready to go without the extra cost. We handle everything from packaging to delivery, so you can focus on what matters most, not logistics.'
     }
   },
   {
@@ -58,7 +60,7 @@ export const hardwareSizes: HardwareData[] = [
     includes: {
       mounting: {
         title: 'Mounting Bracket',
-        description: 'Our heavy-duty 65" touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments.',
+        description: 'Our heavy-duty 65” touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments. We offer both a low-profile fixed mount and a full-motion mount, giving you flexibility to fit your space and needs. Durable construction means these mounts can withstand the weight of any size display while maintaining a clean, professional look.',
         details: [
           'Supports up to 200 lbs',
           'Options: Low-profile fixed mount or full-motion mount',
@@ -66,8 +68,9 @@ export const hardwareSizes: HardwareData[] = [
           'Streamlined design for a clean, modern appearance'
         ]
       },
-      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control.',
-      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support.'
+      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control. We include all essential accessories to ensure your system is plug and play right out of the box. No extra trips to the store, no missing parts—just an easy, straightforward setup.',
+      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support. For added security, a 5 year warranty is available too upon request. Our warranty covers both parts and labor, so you are protected from unexpected issues. If something goes wrong, our team is here to make it right quickly.',
+      freeShipping: 'No hidden fees or surprise charges. With Touchstone, shipping is always free, so your gear arrives ready to go without the extra cost. We handle everything from packaging to delivery, so you can focus on what matters most, not logistics.'
     }
   },
   {
@@ -85,7 +88,7 @@ export const hardwareSizes: HardwareData[] = [
     includes: {
       mounting: {
         title: 'Mounting Bracket',
-        description: 'Our heavy-duty 75" touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments.',
+        description: 'Our heavy-duty 75” touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments. We offer both a low-profile fixed mount and a full-motion mount, giving you flexibility to fit your space and needs. Durable construction means these mounts can withstand the weight of any size display while maintaining a clean, professional look.',
         details: [
           'Supports up to 200 lbs',
           'Options: Low-profile fixed mount or full-motion mount',
@@ -93,8 +96,9 @@ export const hardwareSizes: HardwareData[] = [
           'Streamlined design for a clean, modern appearance'
         ]
       },
-      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control.',
-      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support.'
+      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control. We include all essential accessories to ensure your system is plug and play right out of the box. No extra trips to the store, no missing parts—just an easy, straightforward setup.',
+      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support. For added security, a 5 year warranty is available too upon request. Our warranty covers both parts and labor, so you are protected from unexpected issues. If something goes wrong, our team is here to make it right quickly.',
+      freeShipping: 'No hidden fees or surprise charges. With Touchstone, shipping is always free, so your gear arrives ready to go without the extra cost. We handle everything from packaging to delivery, so you can focus on what matters most, not logistics.'
     }
   },
   {
@@ -112,7 +116,7 @@ export const hardwareSizes: HardwareData[] = [
     includes: {
       mounting: {
         title: 'Mounting Bracket',
-        description: 'Our heavy-duty 86" touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments.',
+        description: 'Our heavy-duty 86” touchscreen display mounts are built for strength, stability, and peace of mind. Engineered to support up to 200 lbs, they ensure your display is securely positioned whether in classrooms, conference rooms, or high-traffic environments. We offer both a low-profile fixed mount and a full-motion mount, giving you flexibility to fit your space and needs. Durable construction means these mounts can withstand the weight of any size display while maintaining a clean, professional look.',
         details: [
           'Supports up to 200 lbs',
           'Options: Low-profile fixed mount or full-motion mount',
@@ -120,8 +124,9 @@ export const hardwareSizes: HardwareData[] = [
           'Streamlined design for a clean, modern appearance'
         ]
       },
-      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control.',
-      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support.'
+      accessories: 'Everything you need for a seamless setup, including HDMI cables, touch cords, and a remote for easy control. We include all essential accessories to ensure your system is plug and play right out of the box. No extra trips to the store, no missing parts—just an easy, straightforward setup.',
+      warranty: 'Peace of mind guaranteed with three years of coverage for lasting reliability and support. For added security, a 5 year warranty is available too upon request. Our warranty covers both parts and labor, so you are protected from unexpected issues. If something goes wrong, our team is here to make it right quickly.',
+      freeShipping: 'No hidden fees or surprise charges. With Touchstone, shipping is always free, so your gear arrives ready to go without the extra cost. We handle everything from packaging to delivery, so you can focus on what matters most, not logistics.'
     }
   }
 ];

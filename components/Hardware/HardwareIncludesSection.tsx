@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from 'framer-motion';
-import { Shield, Headphones, Wrench, ExternalLink } from 'lucide-react';
+import { Shield, Headphones, Wrench, ExternalLink, Truck } from 'lucide-react';
+import Image from 'next/image';
 import { HardwareData } from './hardwareData';
 
 interface HardwareIncludesSectionProps {
@@ -42,6 +43,16 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
       bgGradient: "from-green-100/50 to-blue-100/50",
       iconColor: "text-green-500",
       category: "Warranty"
+    },
+    {
+      icon: Truck,
+      title: "Free Shipping",
+      description: activeHardware.includes.freeShipping,
+      details: ["No Hidden Fees", "Professional Packaging", "Nationwide Delivery", "Tracking Included"],
+      imageText: "Free Delivery",
+      bgGradient: "from-orange-100/50 to-yellow-100/50",
+      iconColor: "text-orange-500",
+      category: "Free Shipping"
     }
   ];
 
@@ -95,32 +106,101 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
               transition={{ duration: 0.3 }}
             >
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-white/40 hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4 border border-purple-200/50">
-                    <item.icon className="w-4 h-4 text-purple-600 mr-2" />
-                    <span className="text-sm font-medium text-purple-700">{item.category}</span>
+                {/* All sections now use images, so we don't need badges anymore */}
+                {false && (
+                  <div className="text-center mb-6">
+                    <div className="inline-flex items-center bg-gradient-to-r from-purple-100 to-blue-100 rounded-full px-4 py-2 mb-4 border border-purple-200/50">
+                      <item.icon className="w-4 h-4 text-purple-600 mr-2" />
+                      <span className="text-sm font-medium text-purple-700">{item.category}</span>
+                    </div>
                   </div>
-                </div>
+                )}
                 
                 <motion.div 
-                  className={`bg-gradient-to-br ${item.bgGradient} rounded-2xl p-8 min-h-[200px] flex items-center justify-center`}
+                  className={`bg-gradient-to-br ${item.bgGradient} rounded-2xl p-8 min-h-[200px] flex items-center justify-center overflow-hidden`}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="text-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
+                  {index === 0 ? (
+                    <motion.div 
+                      className="relative w-full h-[220px]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
                     >
-                      <item.icon className={`w-16 h-16 ${item.iconColor} mx-auto mb-4`} />
+                      <Image 
+                        src="/hardware/mount-picture.png" 
+                        alt="Mounting Bracket"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="drop-shadow-xl"
+                      />
                     </motion.div>
-                    <p className={`text-lg font-medium ${
-                      item.title === "3-Year Warranty" ? "text-green-600" : "text-gray-600"
-                    }`}>
-                      {item.imageText}
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">Professional Grade</p>
-                  </div>
+                  ) : index === 1 ? (
+                    <motion.div 
+                      className="relative w-full h-[220px]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Image 
+                        src="/hardware/remote.png" 
+                        alt="Remote & Accessories"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="drop-shadow-xl"
+                      />
+                    </motion.div>
+                  ) : index === 2 ? (
+                    <motion.div 
+                      className="relative w-full h-[220px]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Image 
+                        src="/hardware/warranty.png" 
+                        alt="Warranty Protection"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="drop-shadow-xl"
+                      />
+                    </motion.div>
+                  ) : index === 3 ? (
+                    <motion.div 
+                      className="relative w-full h-[220px]"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Image 
+                        src="/hardware/shipping.webp" 
+                        alt="Free Shipping"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="drop-shadow-xl"
+                      />
+                    </motion.div>
+                  ) : (
+                    <div className="text-center">
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <item.icon className={`w-16 h-16 ${item.iconColor} mx-auto mb-4`} />
+                      </motion.div>
+                      <p className={`text-lg font-medium ${
+                        item.title === "3-Year Warranty" ? "text-green-600" : "text-gray-600"
+                      }`}>
+                        {item.imageText}
+                      </p>
+                      <p className="text-sm text-gray-500 mt-2">Professional Grade</p>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </motion.div>

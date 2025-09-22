@@ -4,14 +4,26 @@ import React, { useState } from "react";
 import { motion } from 'framer-motion';
 import { Monitor, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { hardwareSizes } from './hardwareData';
 
 const HardwareSizeGrid: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const getImageForSize = (size: string) => {
-    // Placeholder for now - you can replace with actual image paths
-    return `/hardware-images/${size.toLowerCase().replace('"', '-inch')}-display.jpg`;
+    // Return the correct image path based on size
+    switch(size) {
+      case '55"':
+        return '/hardware/55.webp';
+      case '65"':
+        return '/hardware/65.webp';
+      case '75"':
+        return '/hardware/75.webp';
+      case '86"':
+        return '/hardware/86.webp';
+      default:
+        return '/hardware/55.webp';
+    }
   };
 
   const getGradientForSize = () => {
@@ -111,18 +123,16 @@ const HardwareSizeGrid: React.FC = () => {
 
                 {/* Display Image - Larger space */}
                 <div className="relative w-full h-40 md:h-48 mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <Monitor className="w-16 h-16 md:w-20 md:h-20 text-gray-400 mx-auto mb-2" />
-                      <p className="text-sm text-gray-500">{hardware.size} Display</p>
-                    </div>
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src={getImageForSize(hardware.size)}
+                      alt={`${hardware.size} Interactive Display`}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      className="rounded-2xl hover:scale-105 transition-transform duration-500"
+                      priority={index < 2} // Prioritize loading the first two images
+                    />
                   </div>
-                  {/* You can replace this with actual images later */}
-                  {/* <img 
-                    src={getImageForSize(hardware.size)} 
-                    alt={`${hardware.size} Interactive Display`}
-                    className="w-full h-full object-cover"
-                  /> */}
                 </div>
 
                 {/* Three Column Layout: Size on Left, Specs in Middle, Arrow on Right */}

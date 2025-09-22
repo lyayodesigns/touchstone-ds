@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from 'framer-motion';
 import { Monitor, Play, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 import { HardwareData } from './hardwareData';
 
 interface HardwareContentDisplayProps {
@@ -119,22 +120,29 @@ const HardwareContentDisplay: React.FC<HardwareContentDisplayProps> = ({
           </div>
         </motion.div>
 
-        {/* Right Column - Placeholder for Touchscreen Image */}
+        {/* Right Column - Touchscreen Image */}
         <motion.div 
-          className="bg-gradient-to-br from-purple-100/50 to-blue-100/50 rounded-3xl p-8 border border-white/40 flex items-center justify-center min-h-[400px]"
+          className="bg-gradient-to-br from-purple-100/50 to-blue-100/50 rounded-3xl p-8 border border-white/40 flex items-center justify-center overflow-hidden"
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="text-center">
+          <div className="relative w-full h-full flex flex-col items-center justify-center">
             <motion.div 
-              className="w-24 h-24 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
-              whileHover={{ rotate: 5, scale: 1.1 }}
-              transition={{ duration: 0.3 }}
+              className="relative w-full h-[400px]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
             >
-              <Monitor className="w-12 h-12 text-white" />
+              <Image 
+                src="/hardware/touchscreen-picture.png" 
+                alt={`${activeSize} Interactive Touchscreen Display`}
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+                className="drop-shadow-xl"
+              />
             </motion.div>
-            <p className="text-gray-600 text-lg">Touchscreen Display Image</p>
-            <p className="text-gray-500 text-sm mt-2">({activeSize} Interactive Display)</p>
+            <p className="text-gray-600 text-lg mt-4 font-medium">{activeSize} Interactive Display</p>
           </div>
         </motion.div>
       </motion.div>
