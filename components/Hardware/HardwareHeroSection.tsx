@@ -138,7 +138,7 @@ const HardwareHeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <Link href="https://calendly.com/touchstone-digital-solutions/demo" target="_blank">
+            <Link href="https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website&month=2025-09" target="_blank">
               <motion.button
                 className="group flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
