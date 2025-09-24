@@ -8,15 +8,15 @@ import CallToActionSection from 'components/Home/CallToActionSection';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Hardware Solutions | Touchstone Digital Solutions',
+  title: 'Touchscreen Hardware | Touchstone Digital Solutions',
   description: "Explore our premium touchscreen hardware solutions in multiple sizes - 55\", 65\", 75\", and 86\" interactive displays for your digital recognition needs.",
   alternates: {
-    canonical: 'https://touchstone-ds.com/hardware/'
+    canonical: 'https://touchstone-ds.com/touchscreen-hardware/'
   },
   openGraph: {
-    title: 'Hardware Solutions | Touchstone Digital Solutions',
+    title: 'Touchscreen Hardware | Touchstone Digital Solutions',
     description: "Explore our premium touchscreen hardware solutions in multiple sizes - 55\", 65\", 75\", and 86\" interactive displays for your digital recognition needs.",
-    url: 'https://touchstone-ds.com/hardware/',
+    url: 'https://touchstone-ds.com/touchscreen-hardware/',
     type: 'website',
     images: [{
       url: 'https://touchstone-ds.com/og-image.jpg',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'Hardware Solutions | Touchstone Digital Solutions',
+    title: 'Touchscreen Hardware | Touchstone Digital Solutions',
     description: "Explore our premium touchscreen hardware solutions in multiple sizes - 55\", 65\", 75\", and 86\" interactive displays for your digital recognition needs.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: '65" Interactive Display Hardware | Touchstone Digital Solutions',
   description: 'Explore our 65" interactive display with PCAP touch technology, industrial-grade construction, and comprehensive 3-year warranty for your digital recognition needs.',
   alternates: {
-    canonical: 'https://touchstone-ds.com/hardware/65-inch-touchscreen-display/'
+    canonical: 'https://touchstone-ds.com/touchscreen-hardware/65-inch-touchscreen-display/'
   },
   openGraph: {
     title: '65" Interactive Display Hardware | Touchstone Digital Solutions',
     description: 'Explore our 65" interactive display with PCAP touch technology, industrial-grade construction, and comprehensive 3-year warranty for your digital recognition needs.',
-    url: 'https://touchstone-ds.com/hardware/65-inch-touchscreen-display/',
+    url: 'https://touchstone-ds.com/touchscreen-hardware/65-inch-touchscreen-display/',
     type: 'website',
     images: [{
       url: 'https://touchstone-ds.com/og-image.jpg',

@@ -32,7 +32,7 @@ const HardwareSizeGrid: React.FC = () => {
   };
 
   const getSizeUrl = (size: string) => {
-    return `/hardware/${size.toLowerCase().replace('"', '-inch-touchscreen-display')}`;
+    return `/touchscreen-hardware/${size.toLowerCase().replace('"', '-inch-touchscreen-display')}`;
   };
 
   return (

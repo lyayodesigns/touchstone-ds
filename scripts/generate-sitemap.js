@@ -78,6 +78,37 @@ async function generateSitemap() {
         changefreq: 'monthly', 
         priority: '0.9' 
       },
+      // Hardware pages
+      { 
+        loc: `${baseUrl}/touchscreen-hardware/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
+      { 
+        loc: `${baseUrl}/touchscreen-hardware/55-inch-touchscreen-display/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.8' 
+      },
+      { 
+        loc: `${baseUrl}/touchscreen-hardware/65-inch-touchscreen-display/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.8' 
+      },
+      { 
+        loc: `${baseUrl}/touchscreen-hardware/75-inch-touchscreen-display/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.8' 
+      },
+      { 
+        loc: `${baseUrl}/touchscreen-hardware/86-inch-touchscreen-display/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.8' 
+      },
       { 
         loc: `${baseUrl}/privacy/`, 
         lastmod: formatDate(new Date()), 

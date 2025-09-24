@@ -81,17 +81,6 @@ const Navbar: React.FC = () => {
               Features
             </Link>
             <Link
-              href="/hardware/"
-              className={cn(
-                "text-sm lg:text-base transition-colors whitespace-nowrap",
-                isActive("/hardware/")
-                  ? "text-gradient-purple-blue font-medium"
-                  : "hover:text-gradient-purple-blue"
-              )}
-            >
-              Hardware
-            </Link>
-            <Link
               href="/touchscreen-software/"
               className={cn(
                 "text-sm lg:text-base transition-colors whitespace-nowrap",
@@ -108,7 +97,7 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/faq/") || isActive("/blog/"))
+                  (isActive("/faq/") || isActive("/blog/") || isActive("/touchscreen-hardware/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -118,15 +107,27 @@ const Navbar: React.FC = () => {
               </button>
               <div
                 className={cn(
-                  "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-40 transition-all duration-200",
+                  "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-56 transition-all duration-200",
                   isResourcesOpen ? "opacity-100 visible" : "opacity-0 invisible"
                 )}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
                 <Link
+                  href="/touchscreen-hardware/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/touchscreen-hardware/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Touchscreen Hardware
+                </Link>
+                <Link
                   href="/faq/"
                   className={cn(
-                    "block px-4 py-2 text-sm transition-colors",
+                    "block px-4 py-2 text-base transition-colors",
                     isActive("/faq/")
                       ? "text-gradient-purple-blue font-medium"
                       : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
@@ -138,7 +139,7 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/blog/"
                   className={cn(
-                    "block px-4 py-2 text-sm transition-colors",
+                    "block px-4 py-2 text-base transition-colors",
                     isActive("/blog/")
                       ? "text-gradient-purple-blue font-medium"
                       : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
@@ -234,10 +235,10 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
-                { name: "Hardware", href: "/hardware/" },
                 { name: "Touchscreen Software", href: "/touchscreen-software/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
+                { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
                 { name: "Blog", href: "/blog/", isSubItem: true }
               ].map((item) => (

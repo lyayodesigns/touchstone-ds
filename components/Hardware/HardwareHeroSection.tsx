@@ -108,7 +108,7 @@ const HardwareHeroSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <span className="text-transparent bg-clip-text text-gradient-purple-blue">
-              Professional Interactive Display Hardware
+              Professional Interactive Touchscreen Hardware
             </span>
           </motion.h1>
           
