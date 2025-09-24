@@ -14,15 +14,15 @@ const HardwareSizeGrid: React.FC = () => {
     // Return the correct image path based on size
     switch(size) {
       case '55"':
-        return '/hardware/55.webp';
+        return '/hardware/55inch.png';
       case '65"':
-        return '/hardware/65.webp';
+        return '/hardware/55inch.png';
       case '75"':
-        return '/hardware/75.webp';
+        return '/hardware/55inch.png';
       case '86"':
-        return '/hardware/86.webp';
+        return '/hardware/55inch.png';
       default:
-        return '/hardware/55.webp';
+        return '/hardware/55inch.png';
     }
   };
 
@@ -122,13 +122,13 @@ const HardwareSizeGrid: React.FC = () => {
                 )}
 
                 {/* Display Image - Larger space */}
-                <div className="relative w-full h-40 md:h-48 mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                  <div className="relative w-full h-full">
+                <div className="relative w-full h-52 md:h-60 mb-6 rounded-2xl overflow-hidden bg-white">
+                  <div className="relative w-full h-full flex items-center justify-center p-2">
                     <Image 
                       src={getImageForSize(hardware.size)}
                       alt={`${hardware.size} Interactive Display`}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'contain' }}
                       className="rounded-2xl hover:scale-105 transition-transform duration-500"
                       priority={index < 2} // Prioritize loading the first two images
                     />

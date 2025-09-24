@@ -105,7 +105,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-white/40 hover:shadow-xl transition-all duration-300">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 border border-white/40 hover:shadow-xl transition-all duration-300">
                 {/* All sections now use images, so we don't need badges anymore */}
                 {false && (
                   <div className="text-center mb-6">
@@ -117,13 +117,13 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                 )}
                 
                 <motion.div 
-                  className={`bg-gradient-to-br ${item.bgGradient} rounded-2xl p-8 min-h-[200px] flex items-center justify-center overflow-hidden`}
+                  className="rounded-2xl overflow-hidden w-full h-full flex items-center justify-center"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   {index === 0 ? (
                     <motion.div 
-                      className="relative w-full h-[220px]"
+                      className="relative w-full h-[320px]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
@@ -134,12 +134,12 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                         alt="Mounting Bracket"
                         fill
                         style={{ objectFit: 'contain' }}
-                        className="drop-shadow-xl"
+                        className="drop-shadow-md"
                       />
                     </motion.div>
                   ) : index === 1 ? (
                     <motion.div 
-                      className="relative w-full h-[220px]"
+                      className="relative w-full h-[320px]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
@@ -150,39 +150,39 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                         alt="Remote & Accessories"
                         fill
                         style={{ objectFit: 'contain' }}
-                        className="drop-shadow-xl"
+                        className="drop-shadow-md"
                       />
                     </motion.div>
                   ) : index === 2 ? (
                     <motion.div 
-                      className="relative w-full h-[220px]"
+                      className="relative w-full h-[320px]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
                       whileHover={{ scale: 1.05 }}
                     >
                       <Image 
-                        src="/hardware/warranty.png" 
+                        src="/hardware/warrantyimage.webp" 
                         alt="Warranty Protection"
                         fill
                         style={{ objectFit: 'contain' }}
-                        className="drop-shadow-xl"
+                        className="drop-shadow-md"
                       />
                     </motion.div>
                   ) : index === 3 ? (
                     <motion.div 
-                      className="relative w-full h-[220px]"
+                      className="relative w-full h-[320px]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
                       whileHover={{ scale: 1.05 }}
                     >
                       <Image 
-                        src="/hardware/shipping.webp" 
+                        src="/hardware/freeshiping.webp" 
                         alt="Free Shipping"
                         fill
-                        style={{ objectFit: 'contain' }}
-                        className="drop-shadow-xl"
+                        style={{ objectFit: 'contain', background: 'transparent' }}
+                        className="mix-blend-multiply"
                       />
                     </motion.div>
                   ) : (
