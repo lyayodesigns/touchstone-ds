@@ -80,24 +80,13 @@ const Navbar: React.FC = () => {
             >
               Features
             </Link>
-            <Link
-              href="/touchscreen-software/"
-              className={cn(
-                "text-sm lg:text-base transition-colors whitespace-nowrap",
-                isActive("/touchscreen-software/")
-                  ? "text-gradient-purple-blue font-medium"
-                  : "hover:text-gradient-purple-blue"
-              )}
-            >
-              Touchscreen Software
-            </Link>
             <div className="relative group">
               <button
                 onClick={() => setIsResourcesOpen(!isResourcesOpen)}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/faq/") || isActive("/blog/") || isActive("/touchscreen-hardware/"))
+                  (isActive("/faq/") || isActive("/blog/") || isActive("/touchscreen-hardware/") || isActive("/touchscreen-software/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -123,6 +112,18 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsResourcesOpen(false)}
                 >
                   Touchscreen Hardware
+                </Link>
+                <Link
+                  href="/touchscreen-software/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/touchscreen-software/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Touchscreen Software
                 </Link>
                 <Link
                   href="/faq/"
@@ -235,10 +236,10 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
-                { name: "Touchscreen Software", href: "/touchscreen-software/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
                 { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
+                { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
                 { name: "Blog", href: "/blog/", isSubItem: true }
               ].map((item) => (
