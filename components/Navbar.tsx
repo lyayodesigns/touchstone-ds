@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsUseCasesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  isActive("/digital-trophy-case/")
+                  (isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -113,6 +113,18 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsUseCasesOpen(false)}
                 >
                   Digital Trophy Case
+                </Link>
+                <Link
+                  href="/digital-donor-walls/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/digital-donor-walls/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Digital Donor Walls
                 </Link>
               </div>
             </div>
@@ -274,6 +286,7 @@ const Navbar: React.FC = () => {
                 { name: "Features", href: "/features/" },
                 { name: "Use Cases", href: "#", isDropdown: true },
                 { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
+                { name: "Digital Donor Walls", href: "/digital-donor-walls/", isSubItem: true },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
                 { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
