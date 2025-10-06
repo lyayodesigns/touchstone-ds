@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isUseCasesOpen, setIsUseCasesOpen] = useState(false);
   const pathname = usePathname();
 
   // Check if the current path matches the link
@@ -80,6 +81,41 @@ const Navbar: React.FC = () => {
             >
               Features
             </Link>
+            <div className="relative group">
+              <button
+                onClick={() => setIsUseCasesOpen(!isUseCasesOpen)}
+                onMouseEnter={() => setIsUseCasesOpen(true)}
+                className={cn(
+                  "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
+                  isActive("/digital-trophy-case/")
+                    ? "text-gradient-purple-blue font-medium"
+                    : "hover:text-gradient-purple-blue"
+                )}
+              >
+                Use Cases
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div
+                className={cn(
+                  "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-56 transition-all duration-200",
+                  isUseCasesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                )}
+                onMouseLeave={() => setIsUseCasesOpen(false)}
+              >
+                <Link
+                  href="/digital-trophy-case/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/digital-trophy-case/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Digital Trophy Case
+                </Link>
+              </div>
+            </div>
             <div className="relative group">
               <button
                 onClick={() => setIsResourcesOpen(!isResourcesOpen)}
@@ -236,6 +272,8 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
+                { name: "Use Cases", href: "#", isDropdown: true },
+                { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
                 { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
