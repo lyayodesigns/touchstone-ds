@@ -9,28 +9,28 @@ const HowToCreate = () => {
     {
       step: "1",
       title: "Discover & Strategize",
-      description: "The process begins with a discovery session where we thoroughly delve into your goals, audiences, and brand. Your digital donor wall ideas and how you want it to impact your constituency will be discussed during this time.",
+      description: "The process begins with a discovery session where we thoroughly delve into your goals, audiences, and brand.",
       icon: "🔍",
       gradient: "from-blue-400 to-purple-500"
     },
     {
       step: "2", 
       title: "Design",
-      description: "A custom interface that truly represents your organization's identity will be developed by our creatives. You will view and provide feedback on the prototypes.",
+      description: "A custom interface that truly represents your organization's identity will be developed by our creatives.",
       icon: "🎨",
       gradient: "from-purple-400 to-pink-500"
     },
     {
       step: "3",
       title: "Develop & Integrate",
-      description: "The technical team executes the building of your wall with our robust digital donor wall software, offering seamless integration with your existing donor database (if need be).",
+      description: "The technical team executes the building of your wall with our robust digital donor wall software, offering seamless integration with your existing donor database",
       icon: "⚙️",
       gradient: "from-pink-400 to-red-500"
     },
     {
       step: "4",
       title: "Deploy & Launch",
-      description: "We install the hardware (large-format screens, touchscreen kiosks, and so forth) and train your team fully on the use of the content management system.",
+      description: "We install the hardware (large-format screens, touchscreen kiosks) and train your team fully on the use of the content management system.",
       icon: "🚀",
       gradient: "from-red-400 to-orange-500"
     },
@@ -86,14 +86,14 @@ const HowToCreate = () => {
                 
                 {/* Content card */}
                 <motion.div
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300 h-80 flex flex-col"
                   whileHover={{ y: -5 }}
                 >
                   <div className="text-3xl mb-4">{step.icon}</div>
                   <h3 className={`text-lg font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${step.gradient}`}>
                     {step.title}
                   </h3>
-                  <p className="text-foreground/70 leading-relaxed text-sm">
+                  <p className="text-foreground/70 leading-relaxed text-sm flex-grow">
                     {step.description}
                   </p>
                 </motion.div>
@@ -108,37 +108,6 @@ const HowToCreate = () => {
             ))}
           </div>
         </div>
-
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto border border-blue-100">
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-              Ready to Start Your Journey?
-            </h3>
-            <p className="text-foreground/80 text-lg mb-6">
-              Our collaborative process ensures your digital donor wall perfectly represents your organization's mission and celebrates your generous supporters in the most impactful way possible.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://touchstone-ds.com/contact/" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Start Your Project Today
-              </a>
-              <a 
-                href="#examples" 
-                className="px-8 py-4 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-full hover:bg-white transition-all duration-300 transform hover:-translate-y-1 text-purple-600 font-medium"
-              >
-                View Process Examples
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </Container>
     </section>
   );

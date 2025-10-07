@@ -1,13 +1,16 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import DigitalDonorWallsHero from '../../components/DigitalDonorWalls/DigitalDonorWallsHero';
+import DigitalDonorWallsIntro from '../../components/DigitalDonorWalls/DigitalDonorWallsIntro';
 import AnatomyOfDigitalDonorWall from '../../components/DigitalDonorWalls/AnatomyOfDigitalDonorWall';
 import TouchstoneStewardshipTool from '../../components/DigitalDonorWalls/TouchstoneStewardshipTool';
 import SectorSpecificIdeas from '../../components/DigitalDonorWalls/SectorSpecificIdeas';
 import HowToCreate from '../../components/DigitalDonorWalls/HowToCreate';
-import InvestmentAndExamples from '../../components/DigitalDonorWalls/InvestmentAndExamples';
+import InvestmentSection from '../../components/DigitalDonorWalls/InvestmentSection';
+import ExamplesSection from '../../components/DigitalDonorWalls/ExamplesSection';
 import WhyTouchstoneChoice from '../../components/DigitalDonorWalls/WhyTouchstoneChoice';
 import DigitalDonorWallsFAQ from '../../components/DigitalDonorWalls/DigitalDonorWallsFAQ';
+import CallToActionSection from '../../components/Home/CallToActionSection';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -45,13 +48,16 @@ export default function DigitalDonorWallsPage() {
       <Navbar />
       <main className="overflow-hidden">
         <DigitalDonorWallsHero />
-        <AnatomyOfDigitalDonorWall />
+        <DigitalDonorWallsIntro />
         <TouchstoneStewardshipTool />
+        <AnatomyOfDigitalDonorWall />  
         <SectorSpecificIdeas />
         <HowToCreate />
-        <InvestmentAndExamples />
+        <InvestmentSection />
+        <ExamplesSection />
         <WhyTouchstoneChoice />
         <DigitalDonorWallsFAQ />
+        <CallToActionSection />
       </main>
       <Footer />
     </div>
