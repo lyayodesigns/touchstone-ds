@@ -17,11 +17,6 @@ const WhyTouchstone = () => {
       icon: "🎬"
     },
     {
-      title: "Seamless Strava Integration",
-      description: "Perfect for runners and cyclists. Pull race times, PRs, and route maps so your athlete's digital trophy case tells the whole story of dedication and achievement.",
-      icon: "🏃‍♂️"
-    },
-    {
       title: "Interactive and Engaging",
       description: "Turn your display into an interactive digital trophy case. Viewers can click on awards to learn more, watch relevant videos, and follow the journey chronologically.",
       icon: "👆"
@@ -35,11 +30,6 @@ const WhyTouchstone = () => {
       title: "Secure & Permanent",
       description: "Data is securely stored in the cloud with backup copies in various locations. No more worrying about fire, loss, or flood. We guard your legacy.",
       icon: "🔒"
-    },
-    {
-      title: "Easy to Share & Embed",
-      description: "Share the URL on any social media platform, email signature, or website. You can also embed the entire case or individual achievements into your existing site.",
-      icon: "🔗"
     },
     {
       title: "Beyond Static Image Gallery",

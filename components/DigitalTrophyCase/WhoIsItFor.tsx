@@ -74,9 +74,11 @@ const WhoIsItFor = () => {
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center mb-4">
-                    <span className="text-2xl font-bold mr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-                      {index + 1}.
-                    </span>
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${audience.gradient} flex items-center justify-center mr-4 flex-shrink-0`}>
+                      <span className="text-white font-bold text-lg">
+                        {index + 1}
+                      </span>
+                    </div>
                     <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${audience.gradient}`}>
                       {audience.title}
                     </h3>
@@ -93,7 +95,9 @@ const WhoIsItFor = () => {
                   <div className="space-y-4 mb-6">
                     {audience.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start space-x-3">
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${audience.gradient} mt-2 flex-shrink-0`}></div>
+                        <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${audience.gradient} flex items-center justify-center mt-0.5 flex-shrink-0`}>
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
                         <p className="text-foreground/80 text-sm">
                           <span className="font-semibold">{feature.split(':')[0]}:</span>
                           {feature.split(':')[1]}
@@ -102,7 +106,7 @@ const WhoIsItFor = () => {
                     ))}
                   </div>
                   
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                  <div className={`bg-gradient-to-r ${audience.gradient.replace('from-', 'from-').replace('to-', 'to-').replace('-400', '-50').replace('-500', '-100')} p-4 rounded-lg`}>
                     <p className="text-sm font-medium text-foreground/80">
                       <span className="font-bold">Benefits:</span> {audience.benefits}
                     </p>

@@ -124,38 +124,6 @@ const FAQ = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-3xl mx-auto border border-blue-100">
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-              Still Have Questions?
-            </h3>
-            <p className="text-foreground/80 mb-6">
-              Our support team is here to help you get started with your digital trophy case. 
-              We're committed to making your experience as smooth as possible.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://touchstone-ds.com/contact/" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Contact Support
-              </a>
-              <a 
-                href="#live-chat" 
-                className="px-8 py-4 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-full hover:bg-white transition-all duration-300 transform hover:-translate-y-1 text-purple-600 font-medium"
-              >
-                Live Chat
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </Container>
     </section>
   );

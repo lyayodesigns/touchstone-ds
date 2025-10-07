@@ -53,36 +53,6 @@ export default function DigitalDonorWallsPage() {
         <WhyTouchstoneChoice />
         <DigitalDonorWallsFAQ />
       </main>
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10"></div>
-        </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Ready to Transform How You Honor Generosity?
-            </span>
-          </h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto mb-8">
-            Stop listing your donors and start celebrating them. A Touchstone Digital Donor Wall is more than a display; it's a dynamic storytelling platform, an engagement engine, and a powerful statement about your organization's future.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="https://touchstone-ds.com/contact/" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Get Started & See a Live Demo
-            </a>
-            <a 
-              href="https://touchstone-ds.com/contact/" 
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Browse Our Gallery
-            </a>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   );
