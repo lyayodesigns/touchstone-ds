@@ -36,11 +36,11 @@ const HardwareSizeGrid: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-8 sm:mb-12">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-4"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -50,7 +50,7 @@ const HardwareSizeGrid: React.FC = () => {
           </span>
         </motion.h2>
         <motion.p 
-          className="text-lg text-gray-600 max-w-2xl mx-auto"
+          className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -59,8 +59,8 @@ const HardwareSizeGrid: React.FC = () => {
         </motion.p>
       </div>
 
-      {/* 2x2 Grid */}
-      <div className="grid grid-cols-2 gap-8 md:gap-12">
+      {/* Responsive Grid - 1 column on mobile, 2 columns on larger screens */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
         {hardwareSizes.map((hardware, index) => (
           <motion.div
             key={hardware.size}
@@ -73,7 +73,7 @@ const HardwareSizeGrid: React.FC = () => {
           >
             <Link href={getSizeUrl(hardware.size)}>
               <motion.div
-                className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 h-full border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden min-h-[350px] flex flex-col"
+                className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 h-full border border-white/40 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden min-h-[300px] sm:min-h-[350px] flex flex-col"
                 whileHover={{ 
                   scale: 1.03,
                   y: -8
@@ -122,7 +122,7 @@ const HardwareSizeGrid: React.FC = () => {
                 )}
 
                 {/* Display Image - Larger space */}
-                <div className="relative w-full h-52 md:h-60 mb-6 rounded-2xl overflow-hidden bg-white">
+                <div className="relative w-full h-40 sm:h-48 md:h-52 lg:h-60 mb-4 sm:mb-6 rounded-2xl overflow-hidden bg-white">
                   <div className="relative w-full h-full flex items-center justify-center p-2">
                     <Image 
                       src={getImageForSize(hardware.size)}
@@ -135,35 +135,47 @@ const HardwareSizeGrid: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Three Column Layout: Size on Left, Specs in Middle, Arrow on Right */}
-                <div className="flex-grow flex gap-8 md:gap-10 items-center">
-                  {/* Left Column - Size Display (Vertically Centered) */}
-                  <div className="flex-shrink-0 flex items-center">
-                    <h3 className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${getGradientForSize()} bg-clip-text text-transparent`}>
-                      {hardware.size}
-                    </h3>
+                {/* Responsive Layout: Size, Specs, and Arrow */}
+                <div className="flex-grow flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                  {/* Top/Left - Size Display */}
+                  <div className="flex items-center justify-between sm:justify-start sm:flex-col sm:items-start">
+                    <div>
+                      <h3 className={`text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r ${getGradientForSize()} bg-clip-text text-transparent`}>
+                        {hardware.size}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-gray-600 font-medium mt-1">Touchscreen Bundle</p>
+                    </div>
+                    
+                    {/* CTA Arrow - Moved to top right on mobile, bottom on larger screens */}
+                    <div className="sm:hidden flex-shrink-0 flex items-center">
+                      <motion.div
+                        className={`p-2 rounded-full bg-gradient-to-r ${getGradientForSize()} text-white`}
+                        whileHover={{ scale: 1.1, x: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </motion.div>
+                    </div>
                   </div>
                   
-                  {/* Middle Column - Specifications */}
-                  <div className="flex-grow pl-4 md:pl-6">
-                    <p className="text-gray-600 font-medium mb-3 text-base">Interactive Display</p>
-                    
+                  {/* Middle - Specifications */}
+                  <div className="flex-grow">
                     {/* Key Features */}
-                    <div className="space-y-2.5">
+                    <div className="space-y-1.5 sm:space-y-2.5 mt-1 sm:mt-0">
                       {hardware.keyDetails.slice(0, 2).map((detail, detailIndex) => (
                         <div
                           key={detailIndex}
-                          className="flex items-center text-sm text-gray-600"
+                          className="flex items-center text-xs sm:text-sm text-gray-600"
                         >
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${getGradientForSize()} mr-3 flex-shrink-0`} />
+                          <div className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-gradient-to-r ${getGradientForSize()} mr-2 sm:mr-3 flex-shrink-0`} />
                           {detail}
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Right Column - CTA Arrow */}
-                  <div className="flex-shrink-0 flex items-center">
+                  {/* Right Column - CTA Arrow (hidden on mobile, shown on larger screens) */}
+                  <div className="hidden sm:flex flex-shrink-0 items-center sm:self-end">
                     <motion.div
                       className={`p-2 rounded-full bg-gradient-to-r ${getGradientForSize()} text-white`}
                       whileHover={{ scale: 1.1, x: 5 }}
@@ -187,12 +199,12 @@ const HardwareSizeGrid: React.FC = () => {
 
       {/* Bottom Text */}
       <motion.div
-        className="text-center mt-12"
+        className="text-center mt-8 sm:mt-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
       >
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
           Each display comes with professional-grade PCAP touch technology, industrial-grade construction, and a comprehensive 3-year warranty.
         </p>
       </motion.div>

@@ -64,24 +64,27 @@ const CallToActionSection: React.FC = () => {
       <div className="container px-3 sm:px-4 md:px-6 mx-auto relative">
         <div className={`max-w-3xl mx-auto text-center mb-8 sm:mb-10 md:mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            We{" "}
-            <div
-              className="inline-block"
-              style={{ width: "150px", textAlign: "left" }}
-            >
-              <span
-                className={`text-transparent text-gradient-purple-blue inline-block transition-all duration-100 ${
-                  isAnimating
-                    ? "opacity-100 transform-none"
-                    : "opacity-0 -translate-y-2"
-                }`}
+            <div className="flex flex-wrap justify-center items-center gap-x-1 sm:gap-x-2">
+              <span>We</span>
+              <div
+                className="inline-block w-[120px] sm:w-[150px]"
+                style={{ textAlign: "left" }}
               >
-                {words[currentWordIndex]}
-              </span>
+                <span
+                  className={`text-transparent text-gradient-purple-blue inline-block transition-all duration-100 ${
+                    isAnimating
+                      ? "opacity-100 transform-none"
+                      : "opacity-0 -translate-y-2"
+                  }`}
+                >
+                  {words[currentWordIndex]}
+                </span>
+              </div>
             </div>
-            <br className="hidden sm:block" />
-            your legacy into{" "}
-            <span className="font-bold text-foreground">digital excellence</span>
+            <div className="mt-0.5 sm:mt-0">
+              your legacy into{" "}
+              <span className="font-bold text-foreground">digital excellence</span>
+            </div>
           </h2>
 
           <p className="text-foreground/70 text-base sm:text-lg mt-4 sm:mt-6">
