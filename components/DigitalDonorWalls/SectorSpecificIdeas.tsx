@@ -9,7 +9,12 @@ const SectorSpecificIdeas = () => {
     {
       title: "Digital Donor Wall for Universities and Colleges",
       description: "Recognize the alumni, faculty, and benefactors who are shaping the future; commemorate scholarship recipients; celebrate new facilities made possible by generous donations; and even display historical timelines of gifts. A digital donor wall for universities would be perfect for placing in the student union, alumni center, or even the library entrance.",
-      icon: "🎓",
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        </svg>
+      ),
       gradient: "from-blue-400 to-purple-500",
       features: [
         "Alumni recognition displays",
@@ -21,7 +26,11 @@ const SectorSpecificIdeas = () => {
     {
       title: "Digital Donor Wall for Hospitals and Health Organizations",
       description: "Celebrate those who give funds that save lives! Display patient success stories, acknowledge advanced technology funded by donations, and recognize members of your foundation's leadership societies. A digital donor wall for hospitals in main lobbies or in waiting areas gives out the message of hope and support from the community.",
-      icon: "🏥",
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3m-6 0h12a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2z" />
+        </svg>
+      ),
       gradient: "from-purple-400 to-pink-500",
       features: [
         "Patient success stories",
@@ -33,7 +42,11 @@ const SectorSpecificIdeas = () => {
     {
       title: "Digital Donor Wall for Schools",
       description: "Instill philanthropy from childhood. Give PTA members, donors to the capital campaign, and local businesses their due recognition. A school digital donor wall can be used to highlight community investment in education at parent-teacher nights and open houses.",
-      icon: "🏫",
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
       gradient: "from-pink-400 to-blue-500",
       features: [
         "PTA member recognition",
@@ -81,7 +94,9 @@ const SectorSpecificIdeas = () => {
               <div className="grid lg:grid-cols-3 gap-8 items-start">
                 <div className="lg:col-span-2">
                   <div className="flex items-center mb-6">
-                    <div className="text-4xl mr-4">{sector.icon}</div>
+                    <div className={`text-blue-600 mr-4 ${index === 0 ? 'text-blue-600' : index === 1 ? 'text-purple-600' : 'text-pink-600'}`}>
+                      {sector.icon}
+                    </div>
                     <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${sector.gradient}`}>
                       {sector.title}
                     </h3>

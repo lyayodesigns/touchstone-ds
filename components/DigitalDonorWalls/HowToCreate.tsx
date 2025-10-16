@@ -77,19 +77,18 @@ const HowToCreate = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                {/* Step number circle */}
-                <div className="relative z-10 mx-auto w-16 h-16 mb-6 flex items-center justify-center">
-                  <div className={`w-full h-full rounded-full bg-gradient-to-r ${step.gradient} flex items-center justify-center shadow-lg`}>
-                    <span className="text-xl font-bold text-white">{step.step}</span>
-                  </div>
-                </div>
-                
                 {/* Content card */}
                 <motion.div
                   className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300 h-80 flex flex-col"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-3xl mb-4">{step.icon}</div>
+                  {/* Step number circle inside card */}
+                  <div className="mx-auto w-14 h-14 mb-4 flex items-center justify-center">
+                    <div className={`w-full h-full rounded-full bg-gradient-to-r ${step.gradient} flex items-center justify-center shadow-lg`}>
+                      <span className="text-lg font-bold text-white">{step.step}</span>
+                    </div>
+                  </div>
+                  
                   <h3 className={`text-lg font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${step.gradient}`}>
                     {step.title}
                   </h3>
