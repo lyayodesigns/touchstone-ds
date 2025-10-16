@@ -9,32 +9,56 @@ const WhyTouchstone = () => {
     {
       title: "Stunning, Customizable Designs",
       description: "Choose from a huge range of contemporary templates to fit your brand or personal style. We also provide specialized design work for completely custom interactive digital trophy cases.",
-      icon: "🎨"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a4 4 0 004 4h4V5z" />
+        </svg>
+      )
     },
     {
       title: "Multimedia Integration",
       description: "Don't just display the trophy; show that winning moment. Embed videos directly from YouTube and Vimeo into your case to tell the complete story.",
-      icon: "🎬"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+      )
     },
     {
       title: "Interactive and Engaging",
       description: "Turn your display into an interactive digital trophy case. Viewers can click on awards to learn more, watch relevant videos, and follow the journey chronologically.",
-      icon: "👆"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+        </svg>
+      )
     },
     {
       title: "Touchscreen Ready",
       description: "Perfect for physical installations. Our displays work beautifully on kiosks and large format screens, creating an imposing touchscreen digital trophy case for lobbies and facilities.",
-      icon: "📱"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      )
     },
     {
       title: "Secure & Permanent",
       description: "Data is securely stored in the cloud with backup copies in various locations. No more worrying about fire, loss, or flood. We guard your legacy.",
-      icon: "🔒"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      )
     },
     {
       title: "Beyond Static Image Gallery",
       description: "While others offer simple templates, we provide a robust ecosystem for engagement and preservation that grows with your achievements.",
-      icon: "🚀"
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      )
     }
   ];
 
@@ -73,7 +97,7 @@ const WhyTouchstone = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
+              <div className="text-blue-500 mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
                 {feature.title}
               </h3>

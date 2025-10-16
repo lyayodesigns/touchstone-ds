@@ -33,7 +33,7 @@ const WhatIsDigitalTrophyCase = () => {
               A Digital Trophy Case is far more than a simple photo gallery. It offers a scalable, cloud-based solution to showcase personal and team-level accomplishments. Think of it as a living, breathing hall-of-fame that develops with you.
             </p>
             <p className="text-foreground/80 mb-6">
-              The digital trophy case software allows you to create a robust platform for anybody who wants a high school digital trophy case-worthy event for a student-athlete's career or an athlete digital trophy case-worthy event for a professional's legacy.
+              The digital trophy case software provides a robust, cloud-based platform for schools, colleges, and athletic programs across the United States, Canada, and the UK to celebrate achievements. Whether you're creating a high school digital trophy case for standout student-athletes or building an athlete digital trophy wall to honor a professional's legacy, this interactive recognition display turns accomplishments into a lasting visual story.
             </p>
           </motion.div>
 

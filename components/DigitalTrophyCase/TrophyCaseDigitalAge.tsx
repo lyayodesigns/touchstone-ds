@@ -105,6 +105,21 @@ const TrophyCaseDigitalAge = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Image section */}
+          <motion.div 
+            className="mt-20"
+            variants={itemVariants}
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/digital trophy case/school-wall-trophies.jpg" 
+                alt="Traditional trophy case display on school wall"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+          </motion.div>
         </motion.div>
       </Container>
     </section>
