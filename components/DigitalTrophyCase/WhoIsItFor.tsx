@@ -15,24 +15,24 @@ const WhoIsItFor = () => {
   const audiences = [
     {
       title: "Schools & Universities",
-      subtitle: "The Ultimate High School Digital Trophy Case",
+      subtitle: "The Ultimate Digital Trophy Case",
       description: "Stop letting your school's history fade in a locked cabinet. Create a permanent digital trophy case display for your:",
       features: [
-        "Athletic Departments: Honor championship teams, MVP athletes, and hall-of-fame coaches",
-        "Academics: Showcase National Merit Scholars, science fair winners, and debate champions",
-        "Arts & Clubs: Celebrate achievements of your band, theater troupe, and robotics club"
+        "Athletic Departments: Honor championship teams, MVP athletes, and hall-of-fame coaches.",
+        "Academics: Showcase National Merit Scholars, science fair winners, and debate champions.",
+        "Arts & Clubs: Celebrate achievements of your band, theater troupe, and robotics club."
       ],
       benefits: "Boost school spirit, attract new students, and provide alumni with a lifelong connection to their achievements.",
       gradient: "from-blue-400 to-purple-500"
     },
     {
       title: "Athletes & Teams",
-      subtitle: "Your Personal Athlete Digital Trophy Case",
+      subtitle: "The Athlete Digital Trophy Case",
       description: "From youth leagues to the pros, every athlete should have a place to showcase their journey. Our platform acts as an online athlete trophy case.",
       features: [
-        "Amateur Athletes: Build a compelling portfolio for college recruiters. Highlight your development over seasons",
-        "Professional Athletes: Build an audience by honoring the legacy and milestones of your career",
-        "Teams: Establish a shared space for season highlights, building camaraderie and winning culture"
+        "Amateur Athletes: Build a compelling portfolio for college recruiters. Highlight your development over seasons.",
+        "Professional Athletes: Build an audience by honoring the legacy and milestones of your career.",
+        "Teams: Establish a shared space for season highlights, building camaraderie and winning culture."
       ],
       benefits: "Create a professional showcase that tells your complete athletic story.",
       gradient: "from-purple-400 to-pink-500"
@@ -42,9 +42,9 @@ const WhoIsItFor = () => {
       subtitle: "Foster a Culture of Recognition",
       description: "Foster a culture of appreciation and recognition within your company.",
       features: [
-        "Employee of the Month/Year: Bring your recognition program into the modern age",
-        "Sales Leaderboards: Create a dynamic and motivational digital trophy case display for top performers",
-        "Project Milestones: Celebrate successful launches of major company initiatives"
+        "Employee of the Month/Year: Bring your recognition program into the modern age.",
+        "Sales Leaderboards: Create a dynamic and motivational digital trophy case display for top performers.",
+        "Project Milestones: Celebrate successful launches of major company initiatives."
       ],
       benefits: "Increase employee engagement and create a lasting culture of excellence.",
       gradient: "from-pink-400 to-blue-500"

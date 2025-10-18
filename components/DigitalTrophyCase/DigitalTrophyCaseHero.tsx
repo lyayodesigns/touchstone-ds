@@ -113,7 +113,7 @@ const DigitalTrophyCaseHero = () => {
                 Get Started
               </a>
               <a 
-                href="#features" 
+                href="/features/" 
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 View Features

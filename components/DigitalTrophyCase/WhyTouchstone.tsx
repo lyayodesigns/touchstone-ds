@@ -121,7 +121,7 @@ const WhyTouchstone = () => {
             </h3>
             <p className="text-foreground/80 text-lg">
               While others offer simple templates, we provide a strong ecosystem for engagement and preservation. 
-              Our platform creates a living, breathing showcase that tells the complete story of every achievement, 
+              Our easy-to-use platform creates a living, breathing showcase that tells the complete story of every achievement, 
               making it accessible from anywhere in the world.
             </p>
           </div>

@@ -113,8 +113,8 @@ const TrophyCaseDigitalAge = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/digital trophy case/school-wall-trophies.jpg" 
-                alt="Traditional trophy case display on school wall"
+                src="/digital trophy case/digital trophy case.webp" 
+                alt="Digital trophy case display"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
