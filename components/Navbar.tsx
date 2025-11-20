@@ -197,6 +197,18 @@ const Navbar: React.FC = () => {
                 >
                   Blog
                 </Link>
+                <Link
+                  href="/compare-us/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/compare-us/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Compare Us
+                </Link>
               </div>
             </div>
           </nav>
@@ -292,7 +304,8 @@ const Navbar: React.FC = () => {
                 { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
                 { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
-                { name: "Blog", href: "/blog/", isSubItem: true }
+                { name: "Blog", href: "/blog/", isSubItem: true },
+                { name: "Compare Us", href: "/compare-us/", isSubItem: true },
               ].map((item) => (
                 item.isDropdown ? (
                   <div key={item.name} className="block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white text-gray-800">
