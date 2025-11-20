@@ -87,13 +87,13 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsUseCasesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/"))
+                  (isActive("/touchscreen-software/") || isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
               >
                 Use Cases
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className="ml-1 h-4 w-4 text-black" />
               </button>
               <div
                 className={cn(
@@ -102,6 +102,18 @@ const Navbar: React.FC = () => {
                 )}
                 onMouseLeave={() => setIsUseCasesOpen(false)}
               >
+                <Link
+                  href="/touchscreen-software/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/touchscreen-software/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Touchscreen Software
+                </Link>
                 <Link
                   href="/digital-trophy-case/"
                   className={cn(
@@ -128,19 +140,30 @@ const Navbar: React.FC = () => {
                 </Link>
               </div>
             </div>
+            <Link
+              href="/touchscreen-hardware/"
+              className={cn(
+                "text-sm lg:text-base transition-colors whitespace-nowrap",
+                isActive("/touchscreen-hardware/")
+                  ? "text-gradient-purple-blue font-medium"
+                  : "hover:text-gradient-purple-blue"
+              )}
+            >
+              Hardware
+            </Link>
             <div className="relative group">
               <button
                 onClick={() => setIsResourcesOpen(!isResourcesOpen)}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/faq/") || isActive("/blog/") || isActive("/touchscreen-hardware/") || isActive("/touchscreen-software/"))
+                  (isActive("/faq/") || isActive("/blog/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
               >
                 Resources
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className="ml-1 h-4 w-4 text-black" />
               </button>
               <div
                 className={cn(
@@ -149,30 +172,6 @@ const Navbar: React.FC = () => {
                 )}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
-                <Link
-                  href="/touchscreen-hardware/"
-                  className={cn(
-                    "block px-4 py-2 text-base transition-colors",
-                    isActive("/touchscreen-hardware/")
-                      ? "text-gradient-purple-blue font-medium"
-                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
-                  )}
-                  onClick={() => setIsResourcesOpen(false)}
-                >
-                  Touchscreen Hardware
-                </Link>
-                <Link
-                  href="/touchscreen-software/"
-                  className={cn(
-                    "block px-4 py-2 text-base transition-colors",
-                    isActive("/touchscreen-software/")
-                      ? "text-gradient-purple-blue font-medium"
-                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
-                  )}
-                  onClick={() => setIsResourcesOpen(false)}
-                >
-                  Touchscreen Software
-                </Link>
                 <Link
                   href="/faq/"
                   className={cn(
@@ -297,12 +296,12 @@ const Navbar: React.FC = () => {
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
                 { name: "Use Cases", href: "#", isDropdown: true },
+                { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
                 { name: "Digital Donor Walls", href: "/digital-donor-walls/", isSubItem: true },
+                { name: "Hardware", href: "/touchscreen-hardware/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
-                { name: "Touchscreen Hardware", href: "/touchscreen-hardware/", isSubItem: true },
-                { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
                 { name: "Blog", href: "/blog/", isSubItem: true },
                 { name: "Compare Us", href: "/compare-us/", isSubItem: true },

@@ -56,6 +56,16 @@ const DigitalTrophyCaseIdeas = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       )
+    },
+    {
+      title: "The \"Mega Digital Trophy Wall\"",
+      description: "Use our premier template to display all of your trophies at once, seamlessly. It is quite the site!",
+      gradient: "from-yellow-400 to-green-500",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      )
     }
   ];
 
@@ -91,7 +101,7 @@ const DigitalTrophyCaseIdeas = () => {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className={`${index === 0 ? 'text-blue-500' : index === 1 ? 'text-purple-500' : index === 2 ? 'text-pink-500' : index === 3 ? 'text-red-500' : 'text-orange-500'}`}>
+                <div className={`${index === 0 ? 'text-blue-500' : index === 1 ? 'text-purple-500' : index === 2 ? 'text-pink-500' : index === 3 ? 'text-red-500' : index === 4 ? 'text-orange-500' : 'text-green-500'}`}>
                   {idea.icon}
                 </div>
               </div>
