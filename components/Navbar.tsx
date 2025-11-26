@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsUseCasesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/touchscreen-software/") || isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/"))
+                  (isActive("/touchscreen-software/") || isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/") || isActive("/digital-yearbooks/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -137,6 +137,18 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsUseCasesOpen(false)}
                 >
                   Digital Donor Walls
+                </Link>
+                <Link
+                  href="/digital-yearbooks/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/digital-yearbooks/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Digital Yearbooks
                 </Link>
               </div>
             </div>
@@ -299,6 +311,7 @@ const Navbar: React.FC = () => {
                 { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
                 { name: "Digital Donor Walls", href: "/digital-donor-walls/", isSubItem: true },
+                { name: "Digital Yearbooks", href: "/digital-yearbooks/", isSubItem: true },
                 { name: "Hardware", href: "/touchscreen-hardware/" },
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
