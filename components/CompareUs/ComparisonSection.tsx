@@ -133,12 +133,13 @@ const ComparisonSection: React.FC = () => {
       category: "OVERALL",
       features: [
         { name: "Typical Price", touchstone: "$", rocket: "$$", isText: true },
-        { name: "Annual & One-Time Pricing Options", touchstone: "Available", rocket: "Not advertised as available", isText: true },
-        { name: "Money-Back Guarantee", touchstone: true, rocket: false, rocketNote: "Not advertised" },
+        { name: "100% Family Owned", touchstone: true, rocket: false, rocketNote: "Not specified" },
+        { name: "Annual & One-Time Pricing Options", touchstone: "Available", rocket: "Annual only", isText: true },
         { name: "Additional Fees, Including Multi-Screen", touchstone: "No additional fees", rocket: "Additional fees may apply", isText: true },
         { name: "Mobile-Friendly Platform", touchstone: true, rocket: true },
         { name: "QR Code Functionality", touchstone: true, rocket: true },
         { name: "Storage Limits", touchstone: "Unlimited", rocket: "Unlimited", isText: true },
+        { name: "Loading Speeds", touchstone: "Fast", rocket: "?", isText: true },
         { name: "24/7/365 Live Support (Text, Call, Email, or On-Site)", touchstone: "Unlimited, US-based support", rocket: "Support hours and location not specified", isText: true },
         { name: "Software Updates", touchstone: "Weekly updates", rocket: "Less frequent updates", isText: true },
         { name: "Content Manager Training", touchstone: "Unlimited, US-based live training", rocket: "Video library & documents only", isText: true },
@@ -270,9 +271,9 @@ const ComparisonSection: React.FC = () => {
               Platform Comparison
             </span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6"></div>
-          <p className="text-foreground/80 max-w-3xl mx-auto">
-            See why Touchstone leads the industry with transparent pricing, superior support, and innovative features
+          <div className="h-1 w-24 bg-gradient-to-r from-[#6ea8fe] to-[#447df5] rounded-full mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
+            See Why <span className="text-gradient-purple-blue font-semibold">Touchstone</span> Leads The Industry With <span className="text-gradient-purple-blue font-semibold">Transparent Pricing</span>, <span className="text-gradient-purple-blue font-semibold">Superior Support</span>, And <span className="text-gradient-purple-blue font-semibold">Innovative Features</span>
           </p>
         </div>
 
@@ -322,9 +323,9 @@ const ComparisonSection: React.FC = () => {
               <table className="w-full border-separate border-spacing-0">
                 <thead className="sticky top-0 z-20">
                   <tr className="bg-gradient-to-r from-purple-600 to-blue-600 text-white border-b-2 border-white shadow-[0_2px_0_0_#ffffff]">
-                    <th className="px-4 py-3 text-left font-semibold text-sm border-b-2 border-white">Feature</th>
-                    <th className="px-4 py-3 text-center font-semibold text-sm border-b-2 border-white">Touchstone</th>
-                    <th className="px-4 py-3 text-center font-semibold text-sm border-b-2 border-white">Rocket</th>
+                    <th className="px-4 py-4 text-left font-bold text-lg border-b-2 border-white">Feature</th>
+                    <th className="px-4 py-4 text-center font-bold text-lg border-b-2 border-white">Touchstone</th>
+                    <th className="px-4 py-4 text-center font-bold text-lg border-b-2 border-white">Rocket Alumni Solutions</th>
                   </tr>
                 </thead>
                 <tbody>

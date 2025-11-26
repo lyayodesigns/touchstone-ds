@@ -61,7 +61,7 @@ const CompareUsHeroSection: React.FC = () => {
               
               <h1 className="text-[2rem] md:text-[2.5rem] font-bold mb-3 leading-tight">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                  Touchstone vs Rocket
+                  Touchstone vs Rocket Alumni Solutions
                 </span>
               </h1>
               
