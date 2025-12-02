@@ -196,6 +196,18 @@ const Navbar: React.FC = () => {
                 >
                   Compare Us
                 </Link>
+                  <Link
+                  href="/touchstone-vs-gipper/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/touchstone-vs-gipper/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  TouchStone vs Gipper
+                </Link>
                 <Link
                   href="/blog/"
                   className={cn(
@@ -316,6 +328,7 @@ const Navbar: React.FC = () => {
                 { name: "Contact", href: "/contact/" },
                 { name: "Resources", href: "#", isDropdown: true },
                 { name: "Compare Us", href: "/compare-us/", isSubItem: true },
+                { name: "TouchStone vs Gipper", href: "/touchstone-vs-gipper/", isSubItem: true },
                 { name: "Blog", href: "/blog/", isSubItem: true },
                 { name: "FAQ", href: "/faq/", isSubItem: true },
               ].map((item) => (
