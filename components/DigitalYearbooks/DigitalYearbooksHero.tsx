@@ -11,7 +11,7 @@ const DigitalYearbooksHero = () => {
 
   return (
       <section 
-        className="relative pt-6 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0"
+        className="relative min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -76,6 +76,18 @@ const DigitalYearbooksHero = () => {
               <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
                 Every moment, every year preserved forever
               </p>
+              <motion.div
+                className="mt-6 max-w-xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+              >
+                <img
+                  src="/hero-animation/home-animation-8.avif"
+                  alt="Digital Yearbooks"
+                  className="w-full rounded-lg shadow-xl"
+                />
+              </motion.div>
             </motion.div>
             
             <motion.div
