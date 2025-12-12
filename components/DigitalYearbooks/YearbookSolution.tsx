@@ -8,20 +8,20 @@ const YearbookSolution = () => {
   const benefits = [
     {
       number: "1",
-      title: "Professional Yearbook Digitization",
-      description: "We bring about the disjunction between your beloved past and a safe, available future. Our yearbook scanning service is a professional offering that will convert your hard volumes to high quality and searchable digital yearbooks.",
+      title: "Scan",
+      description: "High resolution capture of every page, preserving detail, color, and layout.",
       gradient: "from-[#6ea8fe] to-[#447df5]"
     },
     {
       number: "2",
-      title: "Perfect For Everyone",
-      description: "People who desire to save their own memories. Schools and Universities seeking to establish an online yearbook archive of alumni. Libraries & Historical Societies, interested in providing yearbook archives on a searchable database.",
+      title: "Go Live",
+      description: "Publish searchable, online yearbooks accessible anytime, anywhere.",
       gradient: "from-[#447df5] to-[#265bd6]"
     },
     {
       number: "3",
-      title: "High-Quality Results",
-      description: "Yearbook digitization can simply be described as a process of converting your paper year books into a versatile electronic yearbook format. We do not simply capture a photo; we make a digital copy of each page, of the finest, archival quality.",
+      title: "Archive",
+      description: "Store and protect yearbooks in a permanent, secure digital collection.",
       gradient: "from-[#9fcdfd] to-[#6ea8fe]"
     }
   ];

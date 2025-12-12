@@ -5,22 +5,22 @@ import Image from 'next/image';
 
 const TrustedBySection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [counter, setCounter] = useState(100);
   const sectionRef = useRef<HTMLElement>(null);
 
-  // College client logos
-  const collegeLogos = [
-    { src: '/colleges clients/Penn.png', alt: 'University of Pennsylvania', name: 'Penn' },
-    { src: '/colleges clients/UNH.png', alt: 'University of New Hampshire', name: 'UNH' },
-    { src: '/colleges clients/brown.png', alt: 'Brown University', name: 'Brown' },
-    { src: '/colleges clients/csub.png', alt: 'California State University Bakersfield', name: 'CSUB' },
-  ];
-
-  // High school client logos
-  const highSchoolLogos = [
-    { src: '/high school clients/SHP.png', alt: 'Sacred Heart Preparatory', name: 'SHP' },
-    { src: '/high school clients/bishop.png', alt: 'Bishop High School', name: 'Bishop' },
-    { src: '/high school clients/mooresville.png', alt: 'Mooresville High School', name: 'Mooresville' },
-    { src: '/high school clients/whitefield.png', alt: 'Whitefield Academy', name: 'Whitefield' },
+  // All client logos combined
+  const allLogos = [
+    { src: '/trusted-by/brown.avif', alt: 'Brown University', name: 'Brown' },
+    { src: '/trusted-by/UNH.avif', alt: 'University of New Hampshire', name: 'UNH' },
+    { src: '/trusted-by/csub.avif', alt: 'California State University Bakersfield', name: 'CSUB' },
+    { src: '/trusted-by/Seton Hall Prep.avif', alt: 'Seton Hall Preparatory', name: 'Seton Hall Prep' },
+    { src: '/trusted-by/BG.avif', alt: 'BG High School', name: 'BG' },
+    { src: '/trusted-by/whitefield.avif', alt: 'Whitefield School', name: 'Whitefield' },
+    { src: '/clients/mooresville.png', alt: 'Mooresville High School', name: 'Mooresville' },
+    { src: '/trusted-by/Bremen.avif', alt: 'Bremen High School', name: 'Bremen' },
+    { src: '/trusted-by/Laconia.avif', alt: 'Laconia High School', name: 'Laconia' },
+    { src: '/trusted-by/New Bedford.avif', alt: 'New Bedford High School', name: 'New Bedford' },
+    { src: '/trusted-by/Loudoun Valley.avif', alt: 'Loudoun Valley High School', name: 'Loudoun Valley' },
   ];
 
   useEffect(() => {
@@ -47,6 +47,20 @@ const TrustedBySection = () => {
     };
   }, []);
 
+  // Counter animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter((prev) => {
+        if (prev >= 106) {
+          return 100;
+        }
+        return prev + 1;
+      });
+    }, 2000); // Increment every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section 
       ref={sectionRef}
@@ -63,7 +77,7 @@ const TrustedBySection = () => {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4 sm:mb-6 text-gradient-purple-blue">
-            Trusted by the Nation's Best
+            Trusted by <span className="inline-block min-w-[3ch] text-center transition-all duration-300">{counter}</span> of the Nation's Best
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto mb-6">
             With Emmy-nominated design and a hands-on approach, we help institutions tell their stories with impact found nowhere else.
@@ -73,41 +87,46 @@ const TrustedBySection = () => {
           </p>
         </div>
 
-        {/* Colleges Logo Grid */}
-        <div className={`mb-12 sm:mb-16 transition-all duration-700 delay-200 ${
+        {/* Logo Carousel */}
+        <div className={`relative transition-all duration-700 delay-200 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 items-center justify-items-center flex-1">
-              {collegeLogos.map((logo, index) => (
-                <Image
-                  key={`college-${index}`}
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={110}
-                  height={80}
-                  className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
-                />
+          <div className="overflow-hidden relative">
+            {/* Gradient overlays for fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Scrolling container */}
+            <div className="flex animate-scroll-logos">
+              {/* First set of logos */}
+              {allLogos.map((logo, index) => (
+                <div
+                  key={`logo-1-${index}`}
+                  className="flex-shrink-0 px-8 py-4"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={110}
+                    height={80}
+                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                  />
+                </div>
               ))}
-            </div>
-          </div>
-        </div>
-
-        {/* High Schools Logo Grid */}
-        <div className={`mt-12 sm:mt-10 md:mt-0 transition-all duration-700 delay-400 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}>
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 items-center justify-items-center flex-1">
-              {highSchoolLogos.map((logo, index) => (
-                <Image
-                  key={`highschool-${index}`}
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={110}
-                  height={80}
-                  className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
-                />
+              {/* Duplicate set for seamless loop */}
+              {allLogos.map((logo, index) => (
+                <div
+                  key={`logo-2-${index}`}
+                  className="flex-shrink-0 px-8 py-4"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={110}
+                    height={80}
+                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                  />
+                </div>
               ))}
             </div>
           </div>

@@ -25,11 +25,8 @@ const YearbookPricing = () => {
                 Easy & Straightforward Yearbook Digitization Rates
               </span>
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-              We think in simple prices of our yearbook scanning business. We also have good prices to the individual and bulk discounts to those institutions who can afford to make the yearbooks a digital copy in high numbers.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              We have a plan whether you are an individual who is ready to pay to access digitized school yearbooks or a school in India which is interested in digitized school yearbooks purchase access india options.
+            <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+              Simple, transparent pricing for individuals and discounted rates for schools and institutions digitizing yearbook collections at scale.
             </p>
             
             <div className="bg-gradient-to-r from-[#6ea8fe]/10 to-[#447df5]/10 rounded-2xl p-6 border border-[#6ea8fe]/20 mb-8">

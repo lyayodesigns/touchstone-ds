@@ -127,6 +127,30 @@ async function generateSitemap() {
         changefreq: 'weekly', 
         priority: '0.9' 
       },
+      { 
+        loc: `${baseUrl}/digital-yearbooks/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
+      { 
+        loc: `${baseUrl}/touchstone-vs-gipper/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.7' 
+      },
+      { 
+        loc: `${baseUrl}/digital-trophy-case/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
+      { 
+        loc: `${baseUrl}/digital-donor-walls/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
     ];
     
     // Create sitemap entries for blog posts

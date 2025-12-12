@@ -7,16 +7,6 @@ import { Container } from '../ui/container';
 const YearbookDilemma = () => {
   const problems = [
     {
-      title: "Physical Decay",
-      description: "Pages turn yellow, bindings are broken and photos are lost as time passes.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      gradient: "from-[#6ea8fe] to-[#447df5]"
-    },
-    {
       title: "Damage",
       description: "Spills, tears and environmental conditions such as humidity can destroy them.",
       icon: (
@@ -27,18 +17,28 @@ const YearbookDilemma = () => {
       gradient: "from-[#6ea8fe] to-[#447df5]"
     },
     {
-      title: "Loss",
-      description: "They are lost during moves, or natural calamities.",
+      title: "Disaster",
+      description: "Fires, floods, hurricanes, tornadoes, and more can wipe out all your history.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+        </svg>
+      ),
+      gradient: "from-[#6ea8fe] to-[#447df5]"
+    },
+    {
+      title: "Limited Search",
+      description: "Content cannot be searched, indexed, or surfaced by name, event, or moment. What is not already known is effectively invisible.",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       ),
       gradient: "from-[#6ea8fe] to-[#447df5]"
     },
     {
       title: "Inaccessibility",
-      description: "A single book can be available in only one location at a time and it is difficult to share with family members and alumni.",
+      description: "With only a physical archive, alumni cannot access their history from anywhere in the world.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -69,10 +69,10 @@ const YearbookDilemma = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-              Your Physical Yearbooks Are Being Phased Out
+              Yearbooks are not saved digitally
             </p>
             <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-              Are you keeping old yearbooks in an attic or basement? You're not alone. Lots of them struggle with the question of what to do with year books. They are susceptible to:
+              Each class carries countless stories, yet almost none of that history is preserved. With each passing year, it disappears, discarded, damaged, or forgotten, but yet it is so important.
             </p>
           </motion.div>
 
@@ -110,8 +110,11 @@ const YearbookDilemma = () => {
             viewport={{ once: true }}
           >
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
-              <p className="text-lg text-gray-700 font-medium mb-6">
-                The old system of yearbook publishing is also not without challenges and most people ask, why yearbooks are very expensive? This has brought about a hunt to find cheap yearbooks and simple yearbooks by using contemporary gadgets such as digital yearbooking.
+              <h3 className="text-2xl font-bold mb-4 text-gradient-purple-blue">
+                Yearbook Affordability
+              </h3>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                With sky high prices for annual yearbooks, many students cannot afford to purchase their own high school yearbook as a keepsake. With a yearbook archive, no student has to miss out on memories due to budget constraints.
               </p>
             </div>
           </motion.div>

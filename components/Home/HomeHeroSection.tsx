@@ -14,6 +14,8 @@ const carouselImages = [
   { src: "/hero-animation/home-animation-4.jpg", alt: "Touchstone Home Animation 4" },
   { src: "/hero-animation/home-animation-2.jpg", alt: "Touchstone Home Animation 5" },
   { src: "/hero-animation/home-animation-6.jpg", alt: "Touchstone Home Animation 6" },
+  { src: "/hero-animation/home-animation-7.avif", alt: "Touchstone Home Animation 7" },
+  { src: "/hero-animation/home-animation-8.avif", alt: "Touchstone Home Animation 8" },
 ];
 
 const HeroSection: React.FC = () => {
@@ -201,8 +203,8 @@ const HeroSection: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex-1 md:flex-none text-left md:text-center">
-                      <h3 className="text-foreground font-semibold text-base sm:text-lg">No Cost to Build or Maintain</h3>
-                      <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">A stress-free solution.</p>
+                      <h3 className="text-foreground font-semibold text-base sm:text-lg">Extremely Easy to Use</h3>
+                      <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">Saves hours of time</p>
                     </div>
                   </div>
                 </div>

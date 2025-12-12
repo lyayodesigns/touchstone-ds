@@ -22,12 +22,9 @@ const YearbookHistory = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="text-gradient-purple-blue">
-                A Peep into the Past
+                A Little Yearbook History
               </span>
             </h2>
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              The History of Yearbooks
-            </h3>
           </motion.div>
 
           <motion.div

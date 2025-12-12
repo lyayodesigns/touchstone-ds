@@ -74,15 +74,8 @@ const DigitalYearbooksHero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-                Capture, Revive, and Share Your Memories Forever
+                Every moment, every year preserved forever
               </p>
-              
-              <motion.div 
-                className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: 64 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              />
             </motion.div>
             
             <motion.div
@@ -92,7 +85,7 @@ const DigitalYearbooksHero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Your prized school yearbooks, scanned to the new millennium. Capturable, distributable and safe within a digital yearbook database. Touchstone Digital Solutions will make your memories come to life.
+                Bring every yearbook into a clean, searchable digital library that never fades. Preserve your full history and make it accessible in seconds.
               </p>
             </motion.div>
 
@@ -106,7 +99,7 @@ const DigitalYearbooksHero = () => {
                 href="/" 
                 className="px-8 py-4 btn-gradient hover-lift font-medium rounded-full shadow-lg"
               >
-                Get Your Free Quote Today!
+                Go Digital Now
               </a>
             </motion.div>
           </div>

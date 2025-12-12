@@ -9,31 +9,31 @@ const YearbookProcess = () => {
     {
       step: "1",
       title: "Quality Workmanship",
-      description: "We handle your yearbooks with professionalism and respect in our secure state of the art plant.",
+      description: "Each yearbook is handled with care and respect in a secure production environment designed for archival materials.",
       gradient: "from-[#6ea8fe] to-[#447df5]"
     },
     {
       step: "2", 
-      title: "High-Resolution Scanning",
-      description: "Yearbook scans that we do to each book with a special non-destructive equipment capture every detail, including gloss of the photo or ink of a signature.",
+      title: "High Resolution Scanning",
+      description: "Non destructive, high resolution scanning captures every page in full detail, from photo gloss to handwritten signatures.",
       gradient: "from-[#447df5] to-[#265bd6]"
     },
     {
       step: "3",
-      title: "Digital Restoration & Enhancement",
-      description: "We scan and fix photographs, eliminating dark spots and creases to get the original sharpness.",
+      title: "Digital Restoration and Enhancement",
+      description: "Photographs are corrected to reduce fading, shadows, and creases while preserving the original look and character.",
       gradient: "from-[#9fcdfd] to-[#6ea8fe]"
     },
     {
       step: "4",
       title: "OCR Processing",
-      description: "Optical Character Recognition technology that will allow you to search the text in your yearbook. Search and find a name immediately in our searchable collections of yearbooks.",
+      description: "Advanced text recognition makes names, clubs, and events fully searchable across your yearbook collection.",
       gradient: "from-[#6ea8fe] to-[#447df5]"
     },
     {
       step: "5",
       title: "Secure Hosting and Delivery",
-      description: "Your digital yearbooks are on our secure and cloud-based yearbook software platform. You can access them whenever you want at any location.",
+      description: "Digitized yearbooks are hosted on a secure, cloud based platform for reliable access anytime, anywhere.",
       gradient: "from-[#447df5] to-[#265bd6]"
     }
   ];
