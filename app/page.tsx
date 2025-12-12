@@ -12,6 +12,7 @@ import AlumniRecognitionSection from '../components/Home/AlumniRecognitionSectio
 import OnboardingSection from '../components/Home/OnboardingSection';
 import DigitalDisplayFeaturesSection from '../components/Home/DigitalDisplayFeaturesSection';
 import HeroSection from '../components/Home/HomeHeroSection';
+import TrustedBySection from '../components/Home/TrustedBySection';
 import { Metadata } from 'next';
 
 
@@ -53,6 +54,7 @@ export default function Home() {
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />
+        <TrustedBySection />
         <DigitalHallOfFameSection />
         <CustomPlatformSection />
         <InteractiveDisplaysSection />
