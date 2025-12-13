@@ -128,16 +128,16 @@ async function generateSitemap() {
         priority: '0.9' 
       },
       { 
+        loc: `${baseUrl}/compare-us/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.8' 
+      },
+      { 
         loc: `${baseUrl}/digital-yearbooks/`, 
         lastmod: formatDate(new Date()), 
         changefreq: 'monthly', 
         priority: '0.9' 
-      },
-      { 
-        loc: `${baseUrl}/touchstone-vs-gipper/`, 
-        lastmod: formatDate(new Date()), 
-        changefreq: 'monthly', 
-        priority: '0.7' 
       },
       { 
         loc: `${baseUrl}/digital-trophy-case/`, 

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
-import { CheckCircle, DollarSign, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { CheckCircle, MousePointerClick, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "next/image";
 
 const titleWords = ["Touchscreen", "Touchstone"];
@@ -199,7 +199,7 @@ const HeroSection: React.FC = () => {
                     <div className="relative inline-flex mr-4 md:mr-0 mb-0 md:mb-3">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
                       <div className="relative bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-full text-white z-10 transition-all duration-300">
-                        <DollarSign className="h-5 w-5" />
+                        <MousePointerClick className="h-5 w-5" />
                       </div>
                     </div>
                     <div className="flex-1 md:flex-none text-left md:text-center">

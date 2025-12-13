@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
                 <div className="p-1.5 rounded-full bg-gradient-to-br from-teal-600/10 to-amber-600/10 border border-white/10">
                   <MapPin className="w-3.5 h-3.5 text-teal-400" />
                 </div>
-                <span className="text-sm text-foreground/70">Bedford, NH, United States</span>
+                <span className="text-sm text-foreground/70">8 Powder Hill Road Bedford, NH 03110</span>
               </li>
               <li className="flex items-center gap-2">
                 <div className="p-1.5 rounded-full bg-gradient-to-br from-teal-600/10 to-amber-600/10 border border-white/10">

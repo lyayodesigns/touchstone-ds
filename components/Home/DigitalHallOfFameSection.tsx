@@ -63,7 +63,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Your history on demand, right at your fingertips
               </p>
               <img
-                src="/hero-animation/home-animation-8.avif"
+                src="/Yearbooks.avif"
                 alt="Digital Yearbooks"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -95,7 +95,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Whether it is current or historic, display it with pride
               </p>
               <img
-                src="/hero-animation/home-animation-7.avif"
+                src="/Football Roster.avif"
                 alt="Team Rosters"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
