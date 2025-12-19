@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsUseCasesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/touchscreen-software/") || isActive("/digital-trophy-case/") || isActive("/digital-donor-walls/") || isActive("/digital-yearbooks/"))
+                  (isActive("/touchscreen-software/") || isActive("/digital-trophy-case/") || isActive("/digital-record-boards/") || isActive("/digital-history-archive/") || isActive("/digital-donor-walls/") || isActive("/digital-yearbooks/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -125,6 +125,30 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsUseCasesOpen(false)}
                 >
                   Digital Trophy Case
+                </Link>
+                <Link
+                  href="/digital-record-boards/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/digital-record-boards/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Digital Record Boards
+                </Link>
+                <Link
+                  href="/digital-history-archive/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/digital-history-archive/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsUseCasesOpen(false)}
+                >
+                  Digital History Archive
                 </Link>
                 <Link
                   href="/digital-donor-walls/"
@@ -322,6 +346,8 @@ const Navbar: React.FC = () => {
                 { name: "Use Cases", href: "#", isDropdown: true },
                 { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
                 { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
+                { name: "Digital Record Boards", href: "/digital-record-boards/", isSubItem: true },
+                { name: "Digital History Archive", href: "/digital-history-archive/", isSubItem: true },
                 { name: "Digital Donor Walls", href: "/digital-donor-walls/", isSubItem: true },
                 { name: "Digital Yearbooks", href: "/digital-yearbooks/", isSubItem: true },
                 { name: "Hardware", href: "/touchscreen-hardware/" },
