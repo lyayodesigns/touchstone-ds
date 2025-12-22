@@ -20,7 +20,7 @@ const DigitalHallOfFameSection: React.FC = () => {
           {/* Heading */}
           <h2 className="text-lg sm:text-3xl md:text-4xl font-bold leading-tight">
             <span className="text-gradient-purple-blue">
-              ✨ Elevate Your School's Legacy
+              Elevate ✨ Your School's Legacy
             </span>{" "}
             with a Digital Hall of Fame
           </h2>
@@ -63,7 +63,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Your history on demand, right at your fingertips
               </p>
               <img
-                src="/Yearbooks.avif"
+                src="/Digital Yearbooks.jpg"
                 alt="Digital Yearbooks"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />

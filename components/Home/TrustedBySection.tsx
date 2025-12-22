@@ -19,7 +19,7 @@ const TrustedBySection = () => {
     { src: '/clients/mooresville.png', alt: 'Mooresville High School', name: 'Mooresville' },
     { src: '/trusted-by/Bremen.avif', alt: 'Bremen High School', name: 'Bremen' },
     { src: '/trusted-by/Laconia.avif', alt: 'Laconia High School', name: 'Laconia' },
-    { src: '/trusted-by/New Bedford.avif', alt: 'New Bedford High School', name: 'New Bedford' },
+    { src: '/trusted-by/New Bedford.png', alt: 'New Bedford High School', name: 'New Bedford' },
     { src: '/trusted-by/Loudoun Valley.avif', alt: 'Loudoun Valley High School', name: 'Loudoun Valley' },
   ];
 
