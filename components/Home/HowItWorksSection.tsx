@@ -40,10 +40,10 @@ const HowItWorksSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Connecting line */}
-          <div className="absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 hidden md:block"></div>
+          <div className="absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/40 via-blue-500/40 to-purple-500/40 hidden md:block"></div>
           {/* Step 1 */}
           <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 relative"
+            className="bg-white/5 rounded-xl border border-white/10 p-8 relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
           </motion.div>
           {/* Step 2 */}
           <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 relative"
+            className="bg-white/5 rounded-xl border border-white/10 p-8 relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -83,7 +83,7 @@ const HowItWorksSection = () => {
           </motion.div>
           {/* Step 3 */}
           <motion.div 
-            className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 relative"
+            className="bg-white/5 rounded-xl border border-white/10 p-8 relative"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}

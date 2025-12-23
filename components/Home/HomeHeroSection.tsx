@@ -150,15 +150,37 @@ const HeroSection: React.FC = () => {
               </h1>
             </div>
 
-            <p
+            <div
               className={`text-sm sm:text-base md:text-lg text-foreground/70 text-center md:text-left transition-all duration-700 delay-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
             >
-              Perfecting interactive hall of fame software—the all-in-one digital hall of fame solution built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.
-            </p>
+              <p className="mb-4">Touchstone's team of experts will help your organization…</p>
+              <ul className="space-y-2 list-none">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Display centuries of history seamlessly.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Utilize modern tools to remember your best moments.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Find your history in seconds, organized and searchable.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Access it anywhere, across all devices.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Save time and money while enjoying peace of mind.</span>
+                </li>
+              </ul>
+            </div>
 
             <div 
               className={`flex flex-col space-y-6 md:space-y-8 transition-all duration-700 delay-600 ${
