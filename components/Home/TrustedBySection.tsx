@@ -80,10 +80,7 @@ const TrustedBySection = () => {
             Trusted by <span className="inline-block min-w-[3ch] text-center transition-all duration-300">{counter}</span> of the Nation's Best
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto mb-6">
-            With Emmy-nominated design and a hands-on approach, we help institutions tell their stories with impact found nowhere else.
-          </p>
-          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
-            Proud to partner with leading universities and high schools, including:
+            As a family-run company with a hands-on approach, We help institutions tell their stories with care and impact.
           </p>
         </div>
 
@@ -132,11 +129,14 @@ const TrustedBySection = () => {
           </div>
         </div>
 
-        {/* Closing text */}
+        {/* Text below carousel */}
         <div className={`text-center mt-8 sm:mt-10 md:mt-12 transition-all duration-700 delay-600 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <p className="text-base sm:text-lg text-foreground/80 font-medium">
+          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium mb-2">
+            Proud to partner with leading universities and high schools, including:
+          </p>
+          <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto font-medium">
             …and many more nationwide.
           </p>
         </div>

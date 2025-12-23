@@ -127,7 +127,7 @@ export const AboutStatsSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative z-10 text-center w-full"
             >
-              <h3 className="text-xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-3xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Our Mission</h3>
               <div className="h-1 w-12 bg-blue-500 rounded-full mb-4 mx-auto"></div>
               <p className="text-gray-700">
               We create custom digital experiences that celebrate the legacies of students, alumni, and communities, going all in to honor each school's unique story.
@@ -196,7 +196,7 @@ export const AboutStatsSection = () => {
               transition={{ duration: 5, repeat: Infinity }}
             />
             <motion.h2 
-              className="text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
+              className="text-3xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
               initial={{ scale: 0.5, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
@@ -207,7 +207,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              1
+              Family
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -223,7 +223,7 @@ export const AboutStatsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              The one-of-a-kind design your school deserves—crafted with precision and purpose.
+              You're not just a number. As a family-run team, we treat your story like our own and bring your vision to life.
             </motion.p>
           </motion.div>
           {/* Built With Card */}
@@ -260,7 +260,7 @@ export const AboutStatsSection = () => {
                   stiffness: 100
                 }}
               >
-                10
+                100+
               </motion.h2>
               <motion.div 
                 className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
@@ -276,7 +276,7 @@ export const AboutStatsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                The average number of cups of coffee brewed by our team members daily, fueling the creativity and passion that go into every custom display.
+                Installations across North America. From Ivy League athletics to small high schools, we do it all — big or small.
               </motion.p>
             </motion.div>
           </motion.div>
@@ -306,7 +306,7 @@ export const AboutStatsSection = () => {
                 stiffness: 100
               }}
             >
-              <span className="inline-block pt-2">∞</span>
+              ∞
             </motion.h2>
             <motion.div 
               className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
