@@ -20,7 +20,7 @@ const DigitalHallOfFameSection: React.FC = () => {
           {/* Heading */}
           <h2 className="text-lg sm:text-3xl md:text-4xl font-bold leading-tight">
             <span className="text-gradient-purple-blue">
-              Elevate ✨ Your School's Legacy
+              Elevate Your School's Legacy
             </span>{" "}
             with a Digital Hall of Fame
           </h2>

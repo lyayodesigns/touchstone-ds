@@ -35,7 +35,7 @@ const InteractiveDisplaysSection: React.FC = () => {
       <div className="container px-4 sm:px-6 md:px-8 mx-auto">
         <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-center mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 block sm:inline">
-            🖥️ Interactive Displays
+            Interactive Displays
           </span>
           <span className="text-foreground block sm:inline">{" That Captivate"}</span>
         </h2>

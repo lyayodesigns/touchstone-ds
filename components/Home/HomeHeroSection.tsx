@@ -225,7 +225,7 @@ const HeroSection: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex-1 md:flex-none text-left md:text-center">
-                      <h3 className="text-foreground font-semibold text-base sm:text-lg">Extremely Easy to Use</h3>
+                      <h3 className="text-foreground font-semibold text-base sm:text-lg">Easy to Use</h3>
                       <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">Saves hours of time</p>
                     </div>
                   </div>

@@ -88,7 +88,67 @@ const TrustedBySection = () => {
         <div className={`relative transition-all duration-700 delay-200 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <div className="overflow-hidden relative">
+          {/* Mobile: Two rows */}
+          <div className="md:hidden space-y-4">
+            {/* First row */}
+            <div className="overflow-hidden relative">
+              <div className="flex animate-scroll-logos">
+                {allLogos.slice(0, 6).map((logo, index) => (
+                  <div key={`mobile-row1-1-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+                {allLogos.slice(0, 6).map((logo, index) => (
+                  <div key={`mobile-row1-2-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Second row */}
+            <div className="overflow-hidden relative">
+              <div className="flex animate-scroll-logos-reverse">
+                {allLogos.slice(6).map((logo, index) => (
+                  <div key={`mobile-row2-1-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+                {allLogos.slice(6).map((logo, index) => (
+                  <div key={`mobile-row2-2-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Single row */}
+          <div className="hidden md:block overflow-hidden relative">
             {/* Gradient overlays for fade effect */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
@@ -106,7 +166,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -121,7 +181,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -136,7 +196,7 @@ const TrustedBySection = () => {
           <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium mb-2">
             Proud to partner with leading universities and high schools, including:
           </p>
-          <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto font-medium">
+          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
             …and many more nationwide.
           </p>
         </div>

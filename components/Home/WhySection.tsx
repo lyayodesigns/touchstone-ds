@@ -94,53 +94,57 @@ const WhySection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <FeatureCard
               number="01"
-              title="Affordable:"
-              subtitle="Packages for K–12 schools, colleges, and community clubs."
-              description="We offer solutions that fit every budget."
+              title="On Your Team:"
+              subtitle="As a family company, we win when you win."
+              description="Making your history look great always comes first."
               delay={100}
               isVisible={isVisible}
             />
 
             <FeatureCard
               number="02"
-              title="Yours:"
-              subtitle="Custom colors, logos, and layouts to match your brand."
-              description="Make it truly your own."
+              title="Affordable:"
+              subtitle="Packages for K–12 schools, colleges, and community clubs."
+              description="We offer solutions that fit every budget."
               delay={200}
               isVisible={isVisible}
             />
 
             <FeatureCard
               number="03"
-              title="Scalable Solutions:"
-              subtitle="Start small with a Team-Focused Achievement Display or go big with a University-Wide Digital Hall of Fame."
-              description="Grow with your needs."
+              title="Yours:"
+              subtitle="Custom colors, logos, and layouts to match your brand."
+              description="Make it truly your own."
               delay={300}
               isVisible={isVisible}
             />
 
             <FeatureCard
               number="04"
-              title="Future-Proof Tech:"
-              subtitle="Enjoy automated updates and AI-driven content suggestions."
-              description="Stay ahead of the curve."
+              title="Scalable Solutions:"
+              subtitle="Start small with a Team-Focused Achievement Display or go big with a University-Wide Digital Hall of Fame."
+              description="Grow with your needs."
               delay={400}
               isVisible={isVisible}
             />
 
-            {/* Center the last feature card in the grid */}
-            <div className="md:col-span-2 w-full mx-auto">
-              <div className="max-w-3xl mx-auto">
-                <FeatureCard
-                  number="05"
-                  title="Unmatched Support:"
-                  subtitle="From installation to training, we're with you."
-                  description="Our team is always here to help."
-                  delay={500}
-                  isVisible={isVisible}
-                />
-              </div>
-            </div>
+            <FeatureCard
+              number="05"
+              title="Future-Proof Tech:"
+              subtitle="Enjoy automated updates and AI-driven content suggestions."
+              description="Stay ahead of the curve."
+              delay={500}
+              isVisible={isVisible}
+            />
+
+            <FeatureCard
+              number="06"
+              title="Unmatched Support:"
+              subtitle="From installation to training, we're with you."
+              description="Our team is always here to help."
+              delay={600}
+              isVisible={isVisible}
+            />
           </div>
         </div>
       </div>
