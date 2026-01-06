@@ -83,11 +83,8 @@ const TrustedBySection = () => {
           <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto mb-6">
             As a family-run company with a hands-on approach, we help institutions tell their stories with care and impact.
           </p>
-            <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium mb-2">
-            Proud to partner with leading universities and high schools, including:
-          </p>
           <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
-            …and many more nationwide.
+            Proud to partner with leading universities and high schools, including:
           </p>
         </div>
        
@@ -157,10 +154,6 @@ const TrustedBySection = () => {
 
           {/* Desktop: Single row */}
           <div className="hidden md:block overflow-hidden relative">
-            {/* Gradient overlays for fade effect */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
-            
             {/* Scrolling container */}
             <div className="flex animate-scroll-logos">
               {/* First set of logos */}
@@ -198,16 +191,13 @@ const TrustedBySection = () => {
         </div>
 
         {/* Text below carousel */}
-        {/* <div className={`text-center mt-8 sm:mt-10 md:mt-12 transition-all duration-700 delay-600 ${
+        <div className={`text-center mt-8 sm:mt-10 md:mt-12 transition-all duration-700 delay-600 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium mb-2">
-            Proud to partner with leading universities and high schools, including:
-          </p>
           <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
             …and many more nationwide.
           </p>
-        </div> */}
+        </div>
       </div>
     </section>
   );
