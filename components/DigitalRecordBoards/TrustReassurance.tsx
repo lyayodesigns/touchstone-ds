@@ -7,17 +7,17 @@ import { Container } from '../ui/container';
 const TrustReassurance = () => {
   const trustStats = [
     {
-      stat: "500+",
+      stat: "150+",
       label: "Institutions Nationwide",
       gradient: "from-blue-500 to-purple-500"
     },
     {
       stat: "100%",
-      label: "Uptime Guarantee",
+      label: "Uptime",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      stat: "2 Hours",
+      stat: "5 minutes",
       label: "Average Response Time",
       gradient: "from-pink-500 to-blue-500"
     },
@@ -105,13 +105,6 @@ const TrustReassurance = () => {
                   </div>
                 ))}
               </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-xl p-6">
-              <h4 className="text-lg font-semibold mb-3 text-gray-900">Risk-Free Trial:</h4>
-              <p className="text-gray-700 leading-relaxed">
-                Test our digital record boards within 30 days. In case you are not happy with the transformation, we would make adjustments or negotiate with you.
-              </p>
             </div>
           </div>
         </motion.div>

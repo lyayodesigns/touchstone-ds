@@ -20,7 +20,7 @@ const CustomerSuccessStories = () => {
     },
     {
       quote: "When we started using digital record boards in our schools, it brought about a common way in which we put together our achievements. More students are involved, parents enjoy watching their children being known and the system has increased the school spirit so much.",
-      author: "Coordinator of Technology",
+      author: "IT Director",
       organization: "High School District",
       gradient: "from-pink-500 to-blue-500"
     }

@@ -9,36 +9,36 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What is the difference between your digital records management system and a traditional record board?",
-      answer: "We have dynamic interactive and cloud-based touchscreen displays. They are also capable of multimedia, update automatically, and maintain the entire history unlike the traditional boards. You will not lose any records anymore, and the process of updating will take seconds rather than hours."
+      question: "What are digital record boards?",
+      answer: "Digital record boards are cloud based records displayed on touchscreen displays that showcase athletic and academic records, milestones, and achievements in a modern, searchable, and interactive format. Because records are digital, updates happen in seconds, there are no data limits, and virtually anything can be displayed."
     },
     {
-      question: "Is it possible to incorporate digital record boards with our systems?",
-      answer: "Yes. In our enterprise records management software, we have integrated with the majority of typical platforms and databases. We will evaluate your infrastructure and develop a flawless integration plan."
+      question: "How are records updated?",
+      answer: "Records can be updated instantly from any device. Authorized staff can log in, make changes, and see them reflected immediately on the displays."
     },
     {
-      question: "Is our data secure?",
-      answer: "Absolutely. Our encryption keys are enterprise grade and we have role-based access control as well as adherence to FERPA, HIPAA, and other regulations. The security measures that are provided to protect your records are that of big corporations and government agencies."
+      question: "What Is the Implementation Timeline?",
+      answer: "Implementation typically takes a few days to two weeks, depending on system complexity and the amount of data to migrate. If you're working with a tight deadline, we'll meet it."
     },
     {
-      question: "What is the time of implementation?",
-      answer: "The implementation process normally requires 2-6 weeks based on the complexity of the system and the extent of data migration. Our schedule is flexible to strive to work around yours."
+      question: "Can we transfer our old records?",
+      answer: "Yes. We securely migrate your historical records into the system so nothing is lost and everything is organized and searchable."
     },
     {
-      question: "Do employees have the option of updating records remotely?",
-      answer: "Yes. The cloud system we have will enable those authorized to make updates to records wherever they may be in the office, home, or even on the move through the mobile devices."
+      question: "What Makes Our Digital Record Boards Different?",
+      answer: "Unlike traditional boards, our cloud based touchscreen displays are interactive, multimedia ready, and always up to date. They store your entire history so no records are ever lost, and updates take seconds instead of hours or weeks. It's a smarter, faster, and more complete way to manage and showcase achievements."
     },
     {
-      question: "What type of training do you offer?",
-      answer: "We provide full training such as system administration, day to day operations and troubleshooting. Our easy to use interface ensures that your team becomes productive in a short time."
+      question: "What Type of Training Do You Offer?",
+      answer: "We provide full training, including system administration, team instruction, new feature demonstrations, and troubleshooting. Our easy to use interface ensures your team becomes a confident super user as quickly as possible."
     },
     {
-      question: "What would we do in case we require more displays or places?",
-      answer: "Such a platform is scalable, and the addition of locations is simple. Installation and configuration will be done by us to allow you to grow at your speed."
+      question: "What Is Your Customer Support Like?",
+      answer: "Every customer has access to 24/7 live support — call, text, email, or FaceTime. When you need help, you'll connect with someone from our team you know and trust. We're always here when it matters most."
     },
     {
-      question: "Do you provide after sales services?",
-      answer: "Yes. Each plan has 24/7 technical support, frequent software updates, security patches and optimization recommendations."
+      question: "Do we need to buy new equipment?",
+      answer: "No, you can use any touchscreens you prefer. However, we also offer beautiful, industry leading hardware at unbeatable prices."
     }
   ];
 

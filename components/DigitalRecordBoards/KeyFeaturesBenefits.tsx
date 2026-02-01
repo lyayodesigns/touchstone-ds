@@ -3,54 +3,61 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { Sparkles, Clock, Archive, Shield, Film, TrendingUp } from 'lucide-react';
 
 const KeyFeaturesBenefits = () => {
   const benefits = [
     {
-      title: "Improved Interaction and Contemporary Design",
-      description: "Make unforgettable memories in tours, recruitment activities and open houses. Projects presented on digital records have a high-tech and professional impression that appeals to students, families, and stakeholders. Innovation and excellence is directly expressed by your facility.",
+      title: "Modern Design That Engages",
+      description: "Create lasting impressions during tours, recruiting, and open houses. Digital boards showcase innovation and professionalism that resonate with students, families, and stakeholders. Most importantly, makes alumni proud!",
+      icon: Sparkles,
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Time & Cost Savings",
+      title: "Time and Cost Savings",
       points: [
-        "Hundreds of hours saved each year in administrative staff - No longer any handwritten updates or installations",
-        "Minimise printing and material expenses - Use no vinyl, magnetic strips and replacement nameplates",
-        "Automate working processes - Automation of record entry and organizing",
-        "Single system operates multifunction - Use shows records and announcement, event schedule, and sponsor messages"
+        "Save hundreds of staff hours annually with no manual updates or installations",
+        "Cut printing and material costs — no vinyl, magnets, or nameplates needed",
+        "Automate record entry and organization to streamline workflows",
+        "Use one system for records, announcements, event schedules, and sponsor messages"
       ],
+      icon: Clock,
       gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Preservation of History",
       description: "Electronic record boards will ensure that your institution does not become a forgotten thing. In comparison to the physical boards in which the previous records are lost, our electronic records management system will have a complete and searchable record of all accomplishments. Decades later, graduates will be able to review their data.",
+      icon: Archive,
       gradient: "from-pink-500 to-blue-500"
     },
     {
-      title: "Compliance & Security",
-      description: "Our system has enterprise level security features:",
+      title: "Compliance and Security",
+      description: "Our system includes enterprise-grade security features:",
       points: [
-        "Role-based access controls are in line with compliance requirements",
-        "Encrypted storage complies with FERPA, HIPAA, and others",
-        "Detailed audit logs of all changes and access",
-        "Your data is secured by frequent security updates"
+        "Role-based access aligned with compliance standards",
+        "Encrypted storage that meets FERPA and PII requirements",
+        "Detailed audit logs for all access and updates",
+        "Ongoing security updates to keep your data protected"
       ],
+      icon: Shield,
       gradient: "from-blue-500 to-purple-500"
     },
     {
       title: "Multimedia Integration",
-      description: "Go beyond text-based records:",
+      description: "Go beyond text-only records with rich visual content:",
       points: [
-        "Add athlete images and teams logos",
-        "Show video clips of record performances",
-        "Integrate dynamic social media streams",
-        "Link to external systems and databases"
+        "Add athlete photos and team logos",
+        "Display video highlights of record performances",
+        "Integrate live social media feeds",
+        "Link to external systems and databases seamlessly"
       ],
+      icon: Film,
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Scalability & Flexibility",
-      description: "Our records management service grows with you, regardless of whether you are managing records of a single facility or tens. Add destinations, people or screens without further complications.",
+      title: "Scalability and Flexibility",
+      description: "Whether you're managing one facility or many, our system grows with you. Easily add locations, users, or displays without extra hassle.",
+      icon: TrendingUp,
       gradient: "from-pink-500 to-blue-500"
     }
   ];
@@ -86,7 +93,7 @@ const KeyFeaturesBenefits = () => {
               viewport={{ once: true }}
             >
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${benefit.gradient} flex items-center justify-center mb-6`}>
-                <div className="w-4 h-4 bg-white rounded-full"></div>
+                <benefit.icon className="w-6 h-6 text-white" />
               </div>
               
               <h3 className={`text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${benefit.gradient}`}>

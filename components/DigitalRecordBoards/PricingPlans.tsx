@@ -79,7 +79,7 @@ const PricingPlans = () => {
           viewport={{ once: true }}
         >
           <p className="text-gray-700 mb-6">
-            Software updates, security patches and customer support are part of all plans.
+            Software updates, state-of-the-art security, and customer support are part of all plans.
           </p>
           
           <a 

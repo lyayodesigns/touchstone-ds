@@ -3,38 +3,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { Award, Heart, Settings, Shield, Headset, Rocket } from 'lucide-react';
 
 const CompetitiveAdvantages = () => {
   const advantages = [
     {
       title: "Industry Experience",
-      description: "Having worked over many years in educational and organizations, we have come to know about the special needs of records management and display.",
-      icon: "🎓"
+      description: "Having worked over many years in educational and athletic spaces, we are experts in records management and proper display layouts.",
+      icon: Award
+    },
+    {
+      title: "Family Owned & Operated",
+      description: "With Touchstone, you're more than a number — you're part of the family. As former Division I athletes, we know the pride behind every record and bring that same dedication to your school's legacy.",
+      icon: Heart
     },
     {
       title: "Customizable Platform",
-      description: "Each institution is unique. Our software is customized to you and your needed requirements, workflow, and branding specifications.",
-      icon: "⚙️"
+      description: "Every institution is unique. Our software is tailored to your specific needs, branding, and historical records — ensuring a perfect fit for your school.",
+      icon: Settings
     },
     {
       title: "Enterprise-Grade Security",
       description: "Your data is encrypted with the most advanced industry encryption, compliance models, and security measures that are relied on by companies across the country.",
-      icon: "🔒"
+      icon: Shield
     },
     {
-      title: "Seamless Integration",
-      description: "Our system integrates with the current software, databases, and platforms that you already operate - no need to spend a lot of money on any overhaul.",
-      icon: "🔗"
-    },
-    {
-      title: "Responsive Support Team",
-      description: "We have expert support representatives who reply to questions quickly and give continuous optimization proposals.",
-      icon: "💬"
+      title: "24/7 Support Team",
+      description: "When you have a problem, you call, text, email, or facetime someone you trust, instantly. We are always there for you and treat you like family.",
+      icon: Headset
     },
     {
       title: "Continuous Innovation",
       description: "Frequent updates of features make sure that the effect of the digital record boards is to add the latest technology and user experience enhancements.",
-      icon: "🚀"
+      icon: Rocket
     }
   ];
 
@@ -54,7 +55,7 @@ const CompetitiveAdvantages = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Competitive Advantages
+            Why Schools Choose Us
           </p>
         </motion.div>
 
@@ -68,7 +69,9 @@ const CompetitiveAdvantages = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-5xl mb-6">{advantage.icon}</div>
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-6">
+                <advantage.icon className="w-6 h-6 text-white" />
+              </div>
               
               <h3 className="text-xl font-bold mb-4 text-gray-900">
                 {advantage.title}

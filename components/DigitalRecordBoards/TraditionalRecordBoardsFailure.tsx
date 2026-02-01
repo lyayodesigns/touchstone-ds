@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { DollarSign, Calendar, Wrench, Users, Maximize2, MapPin } from 'lucide-react';
 
 const TraditionalRecordBoardsFailure = () => {
   const containerVariants = {
@@ -29,29 +30,34 @@ const TraditionalRecordBoardsFailure = () => {
 
   const limitations = [
     {
-      title: "Hours Required",
-      description: "Manual updates - Each time a new record is established, staff members have to physically change strips, panels or nameplates.",
-      icon: "⏰"
+      title: "Expensive",
+      description: "Physical record boards require thousands of dollars to purchase and install, followed by ongoing yearly costs for updates as new record holders are added.",
+      icon: DollarSign
     },
     {
-      title: "Limited Capacity",
-      description: "It is also due to material space that is not much, old records are lost as new records are created to take their place and forget the history of your institution.",
-      icon: "📦"
+      title: "Standard Static Boards",
+      description: "Physical record boards have not meaningfully changed in decades. Even newly installed boards look the same as those from generations ago and do not evolve with modern expectations or technology.",
+      icon: Calendar
     },
     {
-      title: "No Interaction",
-      description: "Static exhibits interact into the background, and they lack the possibilities of motivating students, athletes, and visitors.",
-      icon: "🚫"
+      title: "Manual Updates",
+      description: "Each update requires ordering a replacement nameplate, matching the design, getting on a ladder, and changing the record holder. The process is slow, repetitive, and labor intensive.",
+      icon: Wrench
     },
     {
-      title: "Scattered Information",
-      description: "Data stored in various systems and localities is also confusing and problematic to access.",
-      icon: "🔀"
+      title: "Record Holder Limits",
+      description: "Most physical boards display only a single record holder per event. Showing additional holders becomes impractical due to space and cost constraints.",
+      icon: Users
     },
     {
-      title: "First Impressions Count",
-      description: "Sluggish displays project the wrong message when conducting tours, recruiting and special events.",
-      icon: "👁️"
+      title: "Limited Wall Space",
+      description: "Wall space is finite. Banners, plaques, and boards quickly compete for room, making it difficult to represent every sport or achievement fairly.",
+      icon: Maximize2
+    },
+    {
+      title: "On-Campus Visibility Only",
+      description: "Record boards can only be viewed in person on campus in the specific area. Record holders must take a picture of the board to share their achievement, limiting reach and accessibility.",
+      icon: MapPin
     }
   ];
 
@@ -77,14 +83,27 @@ const TraditionalRecordBoardsFailure = () => {
               The Problem
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-8">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
                 The Failure of Traditional Record Boards
               </span>
             </h2>
+
+            <motion.div
+              className="relative mb-8 md:mb-12 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <img 
+                src="/digital record boards/Traditional Record Boards.avif" 
+                alt="Traditional Record Boards"
+                className="w-full h-auto rounded-lg shadow-2xl"
+              />
+            </motion.div>
             
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto font-light">
-              The old record boards are no longer in use. They need continuous hand-updating, take excessive space on the walls, and do not attract the attention of the modern viewers. The old-fashioned record display boards such as magnetic boards or add-a-name plaques could not stand the challenge of the digital demands of today.
+              Physical record boards demand manual upkeep, take up valuable wall space, and can look outdated fast. Although they are eye-catching, they are often exclusionary. Basketball, track & field, swim & dive, and wrestling may get them if they are lucky but those boards are expensive to maintain. Plus, they involve ordering new name plates, ladders, and even dusting. Traditional boards fall short of today's demands and busy schedules.
             </p>
           </motion.div>
 
@@ -93,7 +112,7 @@ const TraditionalRecordBoardsFailure = () => {
             variants={itemVariants}
           >
             <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 text-center">
-              The Limitations You are Having:
+              The Limitations You Are Facing:
             </h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,7 +125,9 @@ const TraditionalRecordBoardsFailure = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-4xl mb-4">{limitation.icon}</div>
+                  <div className="mb-4">
+                    <limitation.icon className="w-10 h-10 text-blue-600" />
+                  </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">
                     {limitation.title}
                   </h4>
@@ -123,7 +144,7 @@ const TraditionalRecordBoardsFailure = () => {
             variants={itemVariants}
           >
             <p className="text-lg md:text-xl text-gray-700 font-light">
-              The success of your institution has the right to be modernized. Time to move on to an interactive, cloud-based records management that appreciates the past and celebrates new wins.
+              "Just because it is the way it's always been doesn't mean it's how it should be done".
             </p>
           </motion.div>
         </motion.div>

@@ -3,58 +3,75 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { GraduationCap, School, Users, Building2, Stethoscope, Trophy } from 'lucide-react';
 
 const UseCases = () => {
   const useCases = [
     {
-      title: "Universities & Colleges",
+      title: "Universities and Colleges",
       features: [
-        "Display sports activities and victories",
-        "Put up academic performance and awards",
-        "Keep the alumni networks that have searchable profiles",
-        "Impressive facilities will attract best recruits"
+        "Showcase athletic achievements and victories",
+        "Highlight academic awards and honors",
+        "Maintain searchable alumni profiles to support engagement",
+        "Attract top recruits with impressive, high-tech facilities"
       ],
+      icon: GraduationCap,
       gradient: "from-blue-500 to-purple-500"
     },
     {
       title: "High Schools",
       features: [
-        "Reward the achievements of student-athletes",
-        "Conserve history and traditions of schools",
-        "Involve parents and community members in the events",
-        "Sponsor rotation Support fundraising with sponsor rotation capabilities"
+        "Recognize student-athlete accomplishments",
+        "Preserve school history and traditions",
+        "Engage parents and the community through shared updates",
+        "Support fundraising with rotating sponsor features"
       ],
+      icon: School,
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Community Centers/Recreation Facilities",
+      title: "Community Centers and Recreation Facilities",
       features: [
-        "Showcase swimming records and outcomes of the competitions",
-        "Publicize the success and accomplishments of membership",
-        "Swap facility details and schedule of classes",
-        "Praise the community achievements"
+        "Display swimming records and competition results",
+        "Celebrate member achievements and milestones",
+        "Share class schedules and facility announcements",
+        "Highlight community impact and involvement"
       ],
+      icon: Users,
       gradient: "from-pink-500 to-blue-500"
     },
     {
       title: "Corporate Offices and Organizations",
       features: [
-        "Keep records of employee accomplishments",
-        "Show sales achievements and team performance",
-        "Market company anniversaries and trophies",
-        "Make inspirational placards to the workers"
+        "Track and display employee milestones and performance",
+        "Celebrate sales goals, anniversaries, and team wins",
+        "Promote a culture of recognition and motivation",
+        "Use digital boards as inspirational workplace tools"
       ],
+      icon: Building2,
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Medical and Professional Organisations",
+      title: "Medical and Professional Organizations",
       features: [
-        "Archive qualifications and certifications",
-        "Show organizational performance",
-        "Have secure and compliant record systems",
-        "The accreditation of support and regulatory needs"
+        "Archive staff qualifications and certifications",
+        "Present institutional performance metrics",
+        "Maintain secure, compliant records",
+        "Support accreditation and regulatory visibility"
       ],
+      icon: Stethoscope,
       gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Club Sports and Associations",
+      features: [
+        "Highlight athlete stats, wins, and milestones",
+        "Share schedules, scores, and updates in real time",
+        "Strengthen engagement with players, families, and fans",
+        "Organize and preserve records across multiple teams and seasons"
+      ],
+      icon: Trophy,
+      gradient: "from-pink-500 to-blue-500"
     }
   ];
 
@@ -70,7 +87,7 @@ const UseCases = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Digital Record Boards in All Institutes
+              Digital Record Boards Across Institutions
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -89,7 +106,7 @@ const UseCases = () => {
               viewport={{ once: true }}
             >
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center mb-6`}>
-                <div className="w-4 h-4 bg-white rounded-full"></div>
+                <useCase.icon className="w-6 h-6 text-white" />
               </div>
               
               <h3 className={`text-xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r ${useCase.gradient}`}>

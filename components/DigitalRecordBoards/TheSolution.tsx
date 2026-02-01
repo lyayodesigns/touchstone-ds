@@ -7,64 +7,40 @@ import { Container } from '../ui/container';
 const TheSolution = () => {
   const features = [
     {
-      title: "Dynamic Content Display",
+      title: "Futuristic Features",
       items: [
         "Show scrolling lists of records with impressive transition effects",
-        "Present video clips of the world record performances",
-        "Include large-sized photos of players, clubs, and success",
+        "Present pictures and video of the top record holding performances",
         "Combine real-time updates and live data feeds"
       ],
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Unlimited Record Capacity",
-      items: [
-        "Catalogue centuries of historical successes without a physical restriction",
-        "Never repeat the same mistake of erasing the past again - keep full records of all-time classics and the modern record-holders",
-        "Automatic rearrangement of records to respect the past achievements as well as commemorate the new ones",
-        "A simple search will give access records conducted decades ago"
-      ],
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
       title: "Easy & Instant Updates",
       items: [
-        "Make update records via end-user-friendly records management software",
-        "Make modifications offsite - one does not even have to be in the display",
-        "Install automatic records and notifications",
-        "Destroy manual installation and printing"
-      ],
-      gradient: "from-pink-500 to-blue-500"
-    },
-    {
-      title: "Interactive Touchscreen Facilities",
-      items: [
-        "Browse sports, categories, and periods",
-        "Find particular athletes and their past performance records",
-        "Make a virtual hall of fame that will motivate the generations to come",
-        "Create print records and certificates"
-      ],
-      gradient: "from-blue-500 to-purple-500"
-    },
-    {
-      title: "Cross-Device Accessibility",
-      items: [
-        "View your digital records board in computers, tablets, and smart phones",
-        "The QR code can be integrated to enable the visitors to view the records through personal devices",
-        "Legal access would require full ADA compliance",
-        "Responsive design is one which responds to all the screen sizes"
+        "Update records anytime, from anywhere",
+        "Automatically notify record holders when updates go live",
+        "No more binders, PDFs, or printed sheets"
       ],
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Secure Data Management",
+      title: "Records on the Go",
       items: [
-        "All sensitive information is secured by an enterprise grade encryption",
-        "Records are not accessed by unauthorized personnel due to strict access controls",
-        "Information is not lost to automated backup systems",
-        "Accountability and compliance are guaranteed through full audit trails"
+        "View records on phones, tablets, laptops, or displays",
+        "Share your record board via text, email, or social media",
+        "Embed your board directly into your school's website or app"
       ],
       gradient: "from-pink-500 to-blue-500"
+    },
+    {
+      title: "Unlimited Record Capacity",
+      items: [
+        "Catalogue centuries of historical successes without wall space constraints",
+        "Display record boards for every category and every sport",
+        "Search tens of thousands of entries and centuries of records in seconds"
+      ],
+      gradient: "from-blue-500 to-purple-500"
     }
   ];
 
@@ -85,12 +61,12 @@ const TheSolution = () => {
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
-              Meet Digital Record Boards: The Future of Records Display
+              Meet Digital Record Boards:<br />The Future of Records Display
             </span>
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Touchstone Digital Solutions digital record boards are the combination of an enterprise-level records management software combined with a beautiful visual display. Our digital records management system is based on latest touchscreen technology, artificial intelligence, and cloud storage to redefine the way institutions demonstrate and handle records.
+            Touchstone Digital Solutions makes it easy to update athletic records and display them beautifully, both in person and online. Schools can use our platform as a central hub for records across every sport. Coaches can update results directly, athletes can see what they need to beat, and alumni can stay connected to their school's legacy.
           </p>
         </motion.div>
 

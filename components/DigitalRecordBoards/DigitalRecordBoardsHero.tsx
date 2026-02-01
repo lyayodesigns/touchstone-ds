@@ -11,7 +11,7 @@ const DigitalRecordBoardsHero = () => {
 
   return (
       <section 
-        className="relative pt-6 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0"
+        className="relative min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 pb-8 sm:pt-20 sm:pb-10 md:pt-24 md:pb-12 lg:pt-32 lg:pb-16"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -68,54 +68,40 @@ const DigitalRecordBoardsHero = () => {
             </motion.h1>
             
             <motion.div
-              className="relative mb-4 md:mb-8"
+              className="relative mb-8 md:mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-                Demonstrate Your Accomplishments using Digital Record Boards at Touchstone Digital Solutions.
+              <p className="text-base md:text-lg text-gray-700">
+                Beautifully organized, unlimited, searchable, instant and does not involve ladders or dusting.
               </p>
-              
-              <motion.div 
-                className="h-1 w-16 md:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: 64 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              />
-            </motion.div>
-            
-            <motion.div
-              className="relative mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Show moving records using the latest touchscreen technology that motivates, involves and glorifies achievement. The history and achievements of your institution need more than just display stands. Touchstone Digital Solutions offers state-of-the-art digital record board that changes the way you present athletics accomplishments, academic accolades and company milestones.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <a 
-                href="/contact/" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Get Started Now - Demo Request
-              </a>
-              <a 
-                href="/features/" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                View Features
-              </a>
             </motion.div>
           </div>
+
+          <motion.div
+            className="relative mb-8 md:mb-12 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <img 
+              src="/digital record boards/record board.avif" 
+              alt="Digital Record Board Display"
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </motion.div>
+
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <p className="text-base md:text-lg text-gray-700">
+              Show dynamic records with modern touchscreen displays that impress viewers and honor achievement. Your institution's history deserves more than static record boards in your gym. Touchstone Digital Solutions delivers beautifully organized, searchable digital record boards that update instantly and grow with your achievements.
+            </p>
+          </motion.div>
         </Container>
       </section>
   );
