@@ -13,6 +13,16 @@ export const metadata: Metadata = {
   title: 'Touchstone vs Gipper - Compare Digital Recognition Platforms',
   description: "Detailed comparison of Touchstone and Gipper. Compare pricing, features, support, and see why institutions choose Touchstone over Gipper for their digital recognition needs.",
   keywords: 'Gipper, Touchstone vs Gipper, Gipper alternative, digital recognition platform comparison, touchscreen software comparison, alumni recognition software',
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
   alternates: {
     canonical: '/compare-us',
   },

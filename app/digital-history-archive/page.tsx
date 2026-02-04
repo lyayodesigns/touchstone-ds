@@ -16,6 +16,16 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Digital History Archive | Touchstone Digital Solutions',
   description: "Preserve, protect, and share your institutional history with Touchstone's Digital History Archive. Transform records, artifacts, and cultural heritage into a searchable, secure digital archive accessible to researchers worldwide.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-history-archive/'
   },
