@@ -68,7 +68,7 @@ export const TeamSection = () => {
             </h3>
             <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
             <p className="text-gray-700 mb-6 text-lg">
-            At Touchstone, we do things differently. From start to finish, you’ll work directly with Colby and Gardner, ensuring your vision is brought to life. We don’t rely on sales reps or middlemen—just personal collaboration with the founders and our talented design team.
+            At Touchstone, we do things differently. From start to finish, you’ll work directly with Colby, Gardner Jr, and Gardner Sr, ensuring your vision is brought to life. We don’t rely on sales reps or middlemen—just personal collaboration with the founders and our talented design team.
             </p>
             <p className="text-gray-700 mb-8 text-lg">
             Every step of the way, we’ll be right there with you, combining our expertise and passion to deliver a truly custom experience. Together, we’ll create something exceptional, because your project deserves nothing less.

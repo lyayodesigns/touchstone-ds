@@ -13,6 +13,7 @@ const TrustedBySection = () => {
     { src: '/trusted-by/brown.avif', alt: 'Brown University', name: 'Brown' },
     { src: '/trusted-by/UNH.avif', alt: 'University of New Hampshire', name: 'UNH' },
     { src: '/trusted-by/csub.avif', alt: 'California State University Bakersfield', name: 'CSUB' },
+    { src: '/trusted-by/Upen.avif', alt: 'University of Pennsylvania', name: 'UPenn' },
     { src: '/trusted-by/Seton Hall Prep.avif', alt: 'Seton Hall Preparatory', name: 'Seton Hall Prep' },
     { src: '/trusted-by/BG.avif', alt: 'BG High School', name: 'BG' },
     { src: '/trusted-by/whitefield.avif', alt: 'Whitefield School', name: 'Whitefield' },
@@ -80,19 +81,79 @@ const TrustedBySection = () => {
             Trusted by <span className="inline-block min-w-[3ch] text-center transition-all duration-300">{counter}</span> of the Nation's Best
           </h2>
           <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto mb-6">
-            As a family-run company with a hands-on approach, We help institutions tell their stories with care and impact.
+            As a family-run company with a hands-on approach, we help institutions tell their stories with care and impact.
+          </p>
+          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
+            Proud to partner with leading universities and high schools, including:
           </p>
         </div>
+       
 
         {/* Logo Carousel */}
         <div className={`relative transition-all duration-700 delay-200 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <div className="overflow-hidden relative">
-            {/* Gradient overlays for fade effect */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+          {/* Mobile: Two rows */}
+          <div className="md:hidden space-y-4">
+            {/* First row */}
+            <div className="overflow-hidden relative">
+              <div className="flex animate-scroll-logos">
+                {allLogos.slice(0, 6).map((logo, index) => (
+                  <div key={`mobile-row1-1-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+                {allLogos.slice(0, 6).map((logo, index) => (
+                  <div key={`mobile-row1-2-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
             
+            {/* Second row */}
+            <div className="overflow-hidden relative">
+              <div className="flex animate-scroll-logos-reverse">
+                {allLogos.slice(6).map((logo, index) => (
+                  <div key={`mobile-row2-1-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+                {allLogos.slice(6).map((logo, index) => (
+                  <div key={`mobile-row2-2-${index}`} className="flex-shrink-0 px-4 py-2">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={110}
+                      height={80}
+                      className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Single row */}
+          <div className="hidden md:block overflow-hidden relative">
             {/* Scrolling container */}
             <div className="flex animate-scroll-logos">
               {/* First set of logos */}
@@ -106,7 +167,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -121,7 +182,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    className="w-24 h-20 md:w-28 md:h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
+                    className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               ))}
@@ -133,10 +194,7 @@ const TrustedBySection = () => {
         <div className={`text-center mt-8 sm:mt-10 md:mt-12 transition-all duration-700 delay-600 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}>
-          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium mb-2">
-            Proud to partner with leading universities and high schools, including:
-          </p>
-          <p className="text-base sm:text-lg text-foreground/80 max-w-3xl mx-auto font-medium">
+          <p className="text-base sm:text-lg text-foreground/90 max-w-3xl mx-auto font-medium">
             …and many more nationwide.
           </p>
         </div>

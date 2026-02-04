@@ -157,29 +157,7 @@ const HeroSection: React.FC = () => {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <p className="mb-4">Touchstone's team of experts will help your organization…</p>
-              <ul className="space-y-2 list-none">
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Display centuries of history seamlessly.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Utilize modern tools to remember your best moments.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Find your history in seconds, organized and searchable.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Access it anywhere, across all devices.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span>Save time and money while enjoying peace of mind.</span>
-                </li>
-              </ul>
+              <p>The all-in-one digital hall of fame solution built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.</p>
             </div>
 
             <div 
@@ -225,7 +203,7 @@ const HeroSection: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex-1 md:flex-none text-left md:text-center">
-                      <h3 className="text-foreground font-semibold text-base sm:text-lg">Extremely Easy to Use</h3>
+                      <h3 className="text-foreground font-semibold text-base sm:text-lg">Easy to Use</h3>
                       <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">Saves hours of time</p>
                     </div>
                   </div>
