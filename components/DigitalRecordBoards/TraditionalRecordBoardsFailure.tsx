@@ -88,19 +88,6 @@ const TraditionalRecordBoardsFailure = () => {
                 The Failure of Traditional Record Boards
               </span>
             </h2>
-
-            <motion.div
-              className="relative mb-8 md:mb-12 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <img 
-                src="/digital record boards/Traditional Record Boards.avif" 
-                alt="Traditional Record Boards"
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-            </motion.div>
             
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto font-light">
               Physical record boards demand manual upkeep, take up valuable wall space, and can look outdated fast. Although they are eye-catching, they are often exclusionary. Basketball, track & field, swim & dive, and wrestling may get them if they are lucky but those boards are expensive to maintain. Plus, they involve ordering new name plates, ladders, and even dusting. Traditional boards fall short of today's demands and busy schedules.
