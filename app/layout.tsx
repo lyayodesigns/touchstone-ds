@@ -40,6 +40,8 @@ export default function RootLayout({
         }} />
         {/* Ahrefs analytics tag */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="DIaGnoRCPzT0LmMVeM0VeQ" async></script>
+        {/* Leadsy AI tracking */}
+        <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="81MfBpd6ogtvjpwR" data-version="062024"></script>
       </head>
       <body suppressHydrationWarning>
         {children}
