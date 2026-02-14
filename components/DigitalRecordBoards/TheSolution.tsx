@@ -68,6 +68,20 @@ const TheSolution = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Touchstone Digital Solutions makes it easy to update athletic records and display them beautifully, both in person and online. Schools can use our platform as a central hub for records across every sport. Coaches can update results directly, athletes can see what they need to beat, and alumni can stay connected to their school's legacy.
           </p>
+
+          <motion.div
+            className="mt-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <img 
+              src="/digital record boards/record-board-1.avif" 
+              alt="Digital Record Board Example"
+              className="w-full h-auto rounded-lg shadow-xl"
+            />
+          </motion.div>
         </motion.div>
 
         <div className="mb-12">

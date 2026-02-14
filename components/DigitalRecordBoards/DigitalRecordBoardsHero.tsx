@@ -86,7 +86,7 @@ const DigitalRecordBoardsHero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <img 
-              src="/digital record boards/record board.avif" 
+              src="/digital record boards/record-board-2.avif" 
               alt="Digital Record Board Display"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
