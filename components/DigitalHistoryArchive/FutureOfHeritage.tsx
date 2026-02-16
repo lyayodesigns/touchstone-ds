@@ -81,9 +81,6 @@ const FutureOfHeritage = () => {
               </motion.div>
             </div>
 
-            <div className="mt-8 text-center">
-              <p className="text-gray-600 text-sm">Click on either image to highlight it</p>
-            </div>
           </div>
 
           <motion.div
