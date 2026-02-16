@@ -8,28 +8,33 @@ const IndustrySolutions = () => {
   const industries = [
     {
       title: "Academic Institutions and Universities",
-      description: "Archive thesis, rare manuscripts, faculty publications, historical documents, and student publications. Allow access to institutional heritage by researchers the world over but with adequate access controls to sensitive materials. Fund repositories and research.",
+      description: "Archive class pictures, yearbooks, rare manuscripts, faculty publications, historical events, student publications, and more.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Cultural Heritage Organizations and Museums",
-      description: "Digitization of collections of artifacts, artworks, historical objects and cultural material. Engage more people in virtual exhibitions, contribute to conservation by the extensive documentation, and engage wider audiences via access to your heritage collections via the internet.",
+      title: "Athletic programs and teams",
+      description: "Digitize coaching history, team rosters, all-time statistics, all-team honors, championships, notable alumni, and more.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Business Heritage and Corporate Archives",
-      description: "Preserve essential business records, keep the company history, keep the company in compliance with regulatory procedures and develop the corporate heritage resources to be used by the employees, investors and the rest of the populace.",
+      title: "Companies and corporations",
+      description: "Preserve and present company history, CEO messages, employee achievements, company awards, sales tracking, financial disclosures, anniversaries, and other big moments.",
       gradient: "from-pink-500 to-blue-500"
     },
     {
-      title: "Government and Public Agencies",
-      description: "Make sure that the records of the government are stored forever, facilitate the freedom of information request, adhere to the current archival standards and avail government heritage and historical information to the citizens.",
+      title: "Museums and Places of Interest",
+      description: "Digitization of collections, artifacts, artworks, historical objects, wayfinding maps, and highlights.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Content Creators and Media Companies",
-      description: "Manage large collections of digital content, make it available on license and creative reuse, enable the maintenance of proper chain of custody of valuable intellectual property, and help in content discovery in large archives.",
+      title: "Hospitals and Care Centers",
+      description: "Document the facilities history, leadership history, achievements, awards, biggest moments",
       gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Towns and municipalities",
+      description: "Celebrate town history with founding documents, early years, big moments, anniversaries, pictures of the decades, timelines, artifacts, and more",
+      gradient: "from-pink-500 to-blue-500"
     }
   ];
 
@@ -49,7 +54,7 @@ const IndustrySolutions = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Solutions of All Types of Institutions
+            Solutions For All Types of Institutions
           </p>
         </motion.div>
 

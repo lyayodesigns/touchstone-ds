@@ -9,37 +9,37 @@ const ArchiveProcess = () => {
     {
       number: 1,
       title: "Evaluation and Planning",
-      description: "We start by knowing what you have got. What are the materials at your disposal? What do you consider your preservation priorities? Who will be accessing the archive? It is based on this consultation that we work out a tailor-made digitization plan, schedule, and technology roadmap, in your institution.",
+      description: "We begin by understanding what you have. We catalog your materials, identify your preservation priorities, and clarify who will access the archive. From this consultation, we develop a tailored digitization plan, schedule, and technology roadmap for your institution.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
       number: 2,
-      title: "Selection, Appraisal and Preparation",
-      description: "Everything does not have to be digitized. Our professional appraisers assist in the identification of high-priority materials basing on historical importance, fragility, research importance, and institutional purpose. We keep materials in a secure way, working with fine objects in terms of preservation.",
+      title: "Selection, Appraisal, and Preparation",
+      description: "Not everything needs to be digitized. Our professional digitization team helps identify high priority materials based on historical significance, fragility, research value, and institutional goals. We handle all materials securely and work with delicate items using preservation focused practices.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       number: 3,
       title: "Quality Control and Professional Digitization",
-      description: "We scan your materials with archival-standard scanning equipment with strict quality assurance guidelines. All the scans comply with the technical requirements of both color accuracy and file format. All digitized items are checked by quality control experts in order to achieve professional results.",
+      description: "We scan your materials using archival standard equipment and follow strict quality assurance guidelines. Each file meets technical requirements for color accuracy and format. Our quality control experts review every digitized item to ensure professional results.",
       gradient: "from-pink-500 to-blue-500"
     },
     {
       number: 4,
       title: "Metadata Creation and Organization",
-      description: "Metadata is provided in detail about every item by professional archivists and catalogers. This organized data renders your collection to be found, places materials into a larger context of collections, and will provide long-term access even in the face of future technological transformation.",
+      description: "We gather and catalog metadata to optimize search across our global platform. This structured data makes your collection searchable in seconds and ensures long term access, even as technology evolves.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
       number: 5,
       title: "Integration and Launch",
-      description: "Your Digital History Archive is a fully functional site. Your collections can be searched, browsed and explored instantly by the user. Documentation and training also make sure that your employees are able to handle and maintain the system well.",
+      description: "Your Digital History Archive becomes a fully functional site. Users can search, browse, and explore your collections instantly. We also provide documentation and training to ensure your team can manage and maintain the system effectively.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       number: 6,
       title: "Continuous Preservation and Optimization",
-      description: "Digital preservation is not a single undertaking, but a long-term commitment. They are constantly checking the state of their system, updating security patches, migrating formats to adapt with the technology change, and keeping your expanding collection.",
+      description: "Digital preservation is not a one time effort but a long term commitment. We continuously monitor system performance, apply security updates, migrate file formats as technology evolves, and support the growth of your collection.",
       gradient: "from-pink-500 to-blue-500"
     }
   ];

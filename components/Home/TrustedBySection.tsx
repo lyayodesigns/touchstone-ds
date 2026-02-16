@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const TrustedBySection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [counter, setCounter] = useState(100);
+  const [counter, setCounter] = useState(150);
   const sectionRef = useRef<HTMLElement>(null);
 
   // All client logos combined
@@ -52,8 +52,8 @@ const TrustedBySection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prev) => {
-        if (prev >= 106) {
-          return 100;
+        if (prev >= 156) {
+          return 150;
         }
         return prev + 1;
       });

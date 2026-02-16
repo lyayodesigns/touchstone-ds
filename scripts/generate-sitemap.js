@@ -157,6 +157,12 @@ async function generateSitemap() {
         changefreq: 'monthly', 
         priority: '0.9' 
       },
+      { 
+        loc: `${baseUrl}/digital-history-archive/`, 
+        lastmod: formatDate(new Date()), 
+        changefreq: 'monthly', 
+        priority: '0.9' 
+      },
     ];
     
     // Create sitemap entries for blog posts

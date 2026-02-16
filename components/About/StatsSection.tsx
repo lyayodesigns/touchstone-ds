@@ -260,7 +260,7 @@ export const AboutStatsSection = () => {
                   stiffness: 100
                 }}
               >
-                100+
+                150+
               </motion.h2>
               <motion.div 
                 className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"

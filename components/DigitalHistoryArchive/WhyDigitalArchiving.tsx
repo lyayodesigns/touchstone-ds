@@ -7,34 +7,34 @@ import { Container } from '../ui/container';
 const WhyDigitalArchiving = () => {
   const benefits = [
     {
-      title: "Fight Digital Obsolescence and Defend against Data Loss",
-      description: "Hardcopy material can be destroyed by fire, flood, theft and natural degradation. There are also challenges of digital assets: obsolescence of file format, failure of hardware and change of technology. One of the ways that a solid digital archiving platform can solve these risks is by incorporating redundant storage systems, format conversion policies and long-term digital preservation plans. Our service provides backup systems at enterprise level having on-site and off-site backup so that the historical records of our institution are secure of all situations.",
+      title: "Combat Digital Obsolescence and Prevent Data Loss",
+      description: "Physical materials face constant risks from fire, flood, theft, and natural deterioration. Digital assets also present challenges, including file format obsolescence, hardware failure, and evolving technology standards. A robust digital archiving platform addresses these risks through redundant storage systems, format migration strategies, and long term preservation planning. Our service provides enterprise level backups, both on site and off site, ensuring your institution's historical records remain secure in any circumstance.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Make Instant Access and Retrieval Possible",
-      description: "Manual cataloging and retrieval- Traditional archive management uses manual cataloging and physical retrieval- a process that may take weeks or even months. Our e-archive solutions are characterised with high levels of search, intelligent indexing, and extensive metadata solutions. Scientists can now find individual documents within seconds instead of days and this can significantly boost the productivity of the researcher and the efficiency of the institution.",
+      title: "Enable Instant Access and Retrieval",
+      description: "Traditional archive management relies on manual cataloging and physical retrieval, a process that can take weeks or even months. Our digital archive solutions feature advanced search capabilities, intelligent indexing, and comprehensive metadata. Researchers and staff can locate specific documents within seconds, significantly increasing productivity and institutional efficiency.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Support Regulatory Compliance and Governance",
-      description: "Lots of organizations are being run in rigorous compliance standards- GDPR, HIPAA, SOX, or industry-related laws. The Digital History Archive will be built with in-built security measures, access controls, and audit trails to assist your organization to remain within regulatory compliance. The governance systems that are fitted following the complexity of organization structure guarantee that the right document handling and retention policies are automatically implemented.",
+      description: "Many organizations operate under strict compliance requirements such as PII, HIPAA, SOX, or industry specific regulations. The Digital History Archive includes built in security measures, role based access controls, and detailed audit trails to help your institution maintain compliance. Governance systems tailored to your organizational structure ensure that document handling and retention policies are consistently applied.",
       gradient: "from-pink-500 to-blue-500"
     },
     {
-      title: "Conserve Traditions and Government",
-      description: "The narrative of your organization is important. You might be a university preserving academic history, a museum preserving cultural artifacts, a corporation recording business heritage or a cultural institution preserving artistic creations, in any case heritage digitization is the solution to ensure that these invaluable resources will be available to future generations. Digital archives present points of transition between the past and the present where research, education, and community may occur.",
+      title: "Preserve Heritage and Institutional Identity",
+      description: "Your organization's story matters. Whether you are a university safeguarding academic history, a museum preserving cultural artifacts, a corporation documenting business milestones, or a cultural institution protecting artistic works, digitization ensures these invaluable resources remain accessible to future generations. Digital archives connect the past with the present, supporting research, education, and community engagement.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Minimize the Costs of Physical Storage and Opera Overhead",
-      description: "Hardcopy storage takes up a lot of space, climate management, specialized personnel, and maintenance. A digital preservation solution enables institutions to save a significant amount of money by cutting real estate expenses, lowering the complexity of their operations and allowing their staff to invest in more valuable endeavors, including research and curation instead of spending time on physical storage management.",
+      title: "Reduce Physical Storage Costs and Operational Overhead",
+      description: "Maintaining physical archives requires significant space, climate control, specialized staffing, and ongoing maintenance. A digital preservation solution reduces real estate expenses, streamlines operations, and allows staff to focus on higher value work such as research, programming, and curation rather than managing storage.",
       gradient: "from-purple-500 to-pink-500"
     }
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50/50">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -45,12 +45,9 @@ const WhyDigitalArchiving = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
-              The Essential Nature of Digital Preservation and Archive Management
+              Why Your Institution Should Invest in Digital Archiving Services?
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Why Your Institution Should have Digital Archiving Services
-          </p>
         </motion.div>
 
         <div className="space-y-8">

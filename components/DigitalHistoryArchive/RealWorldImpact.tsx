@@ -7,29 +7,39 @@ import { Container } from '../ui/container';
 const RealWorldImpact = () => {
   const impacts = [
     {
-      title: "Dramatically Increased Research Impact",
-      description: "Researchers are now able to access collections previously invisible, and new scholarship and discoveries are the result.",
+      title: "Deeper Historical Appreciation",
+      description: "When centuries of history become searchable in seconds, every generation gains a deeper understanding and love for its story. Decades of content become accessible like never before, bringing smiles along the way.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Lower Physical Storage Cost",
-      description: "Institutions have done away with costly climate-controlled physical storage, and have invested resources in activities that drive the missions.",
+      title: "Build It and More Will Come",
+      description: "When institutions launch a public digital archive, new historical material quickly follows. Community members across generations begin sharing photos, stories, and records, expanding the collection in meaningful ways.",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Improved Community Interaction",
-      description: "Digitized collections will attract more people, raise institutional awareness and strengthen community ties with the help of various heritage materials.",
+      title: "Strengthened Community Support",
+      description: "When schools go digital, they often see an overwhelmingly positive response from their community. Public archives attract more engagement, raise awareness, inspire greater support, and strengthen connections across generations.",
       gradient: "from-pink-500 to-blue-500"
     },
     {
-      title: "Better Compliance and Risk Management",
-      description: "Automated systems will provide regulatory compliance and guard against loss or disaster of irreplaceable materials.",
+      title: "Lower Physical Storage Costs",
+      description: "By going digital, institutions reduce costly, time consuming, and cluttered storage solutions. Time, money, and space can be redirected to higher priorities, while your history receives a meaningful upgrade.",
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Stored Institutional Memory",
-      description: "The successive generations are now able to access past as the organization heritage helps to continue and honor the institutions.",
+      title: "Peace of Mind",
+      description: "School leaders can rest easier knowing their community's most precious history is protected from loss, decay, or natural disaster. On our cloud based platform, your archive remains secure, continues to grow, and evolves alongside new technology.",
       gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Do More With Less",
+      description: "School leaders spend less time, money, space, and energy managing their history. When everything is neatly organized and accessible, questions decrease, frustrations fade, and everyone benefits.",
+      gradient: "from-pink-500 to-blue-500"
+    },
+    {
+      title: "Inspiring the Future",
+      description: "When achievements are proudly displayed, current community members feel inspired to reach new heights. Leaders often report more motivated students and even stronger performance across the board.",
+      gradient: "from-blue-500 to-purple-500"
     }
   ];
 
@@ -48,7 +58,7 @@ const RealWorldImpact = () => {
               Digital Preservation: Changing Institutions
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 max-w-2xl mx-auto">
             Real-World Impact
           </p>
         </motion.div>

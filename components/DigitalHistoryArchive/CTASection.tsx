@@ -6,11 +6,11 @@ import { Container } from '../ui/container';
 
 const CTASection = () => {
   const consultationPoints = [
-    "Evaluation of your present collection and preservation problems",
-    "Summary of digital archiving solution and platform capabilities",
-    "Timeline, budget and resource requirements discussed",
-    "Assessment of regulatory compliance and security",
-    "Tailored proposal, according to your needs as an institution"
+    "Evaluation of your physical history",
+    "Overview of our archiving platform and capabilities",
+    "Discussion of timeline, budget, and resource requirements",
+    "Development of quotes and cost estimates",
+    "Creation of custom renderings and mockups for your project"
   ];
 
   return (
@@ -27,12 +27,8 @@ const CTASection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-            Willing to Leave a Legacy to Your Institution?
+            Ready to Leave a Lasting Legacy at Your Institution?
           </h2>
-          
-          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-            The first one is easy: a consultation with our preservation officers of the digital sphere. We will hear about your collection, get to know your aims, and answer your questions, as well as describe a personal course of action.
-          </p>
 
           <div className="mb-12">
             <a 
@@ -59,25 +55,13 @@ const CTASection = () => {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-            <p className="text-white leading-relaxed">
-              The historical records of your institution, cultural heritage and organizational heritage should be professionally preserved. You are an academic researcher, cultural organization, corporation or community event; you may have 1,000 documents or 1 million items; you have a Digital History Archive that you want to come to life; Touchstone Digital Solutions can help you do so.
-            </p>
-          </div>
-
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-white mb-6">
-              Book Your Digital History Archival Visit
+              Why wait any longer? Go public with your history!
             </h3>
-            <p className="text-white/90 mb-6">
-              Learn how our online preservation products can change the way your organization preserves, protects, and disseminates its invaluable heritage. Our consultation is absolutely free and obligation free.
+            <p className="text-white/90 mb-6 leading-relaxed">
+              Your institution deserves a lasting digital legacy. Let our team professionally preserve it all. Whether you have 100 yearbooks or millions of files, Touchstone saves you time, money, and space while giving you peace of mind for decades to come.
             </p>
-            <a 
-              href="/contact/" 
-              className="inline-block px-8 py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-medium rounded-full border-2 border-white/50 transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Schedule Your Consultation
-            </a>
           </div>
         </motion.div>
       </Container>

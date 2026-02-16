@@ -3,38 +3,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import { GraduationCap, Sparkles, HandHeart, Palette, Users, HeadphonesIcon } from 'lucide-react';
 
 const WhyTouchstone = () => {
   const reasons = [
     {
       title: "Proven Expertise",
-      description: "Touchstone Digital Solutions has assisted hundreds of institutions to preserve and share the most valuable assets successfully since we were established. We have experience in universities, museums, cultural heritage groups, corporations and government agencies. We have a sense of the special issues of institutional archiving and the need to do it right.",
-      icon: "🎓"
+      description: "Touchstone Digital Solutions has helped hundreds of institutions preserve and share their most valuable assets, from Ivy League universities to small high schools. We bring experience across universities, museums, nonprofits, corporations, and professional sports organizations. Our team provides the hands-on support that clients value and trust.",
+      Icon: GraduationCap,
+      gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Fully Integrated Service Model",
-      description: "We are not like other vendors who are only offering isolated point solutions but end-to-end services. Our team takes care of the whole process including preliminary consultation to the delivery of the project and even the preservation in the long term. You are able to work on your mission and we are able to work on the technical complexity.",
-      icon: "🔄"
+      title: "Industry Innovators",
+      description: "We stay at the forefront of software, hardware, and service. When you partner with Touchstone, you gain access to best in class solutions at exceptional value. From PDF viewers and AI advancements to the latest touchscreen technology, Touchstone delivers.",
+      Icon: Sparkles,
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Institutional-Grade Security and Compliance",
-      description: "In your archive are priceless irreplaceable materials. We treat them accordingly. Encryption, access controls, audit trails, and compliance functionality are all part of our platform, in accordance with international standards (ISO 16363 on digital repository standards, OAIS Reference Model on information preservation). Inbuilt compliance with GDPR, HIPAA and SOX.",
-      icon: "🔒"
+      title: "White Glove Service",
+      description: "Whether we are transferring data, building your custom wall, or delivering hardware to your school, Touchstone takes the work off your plate so you can focus on what matters most, leading the next generation. We make it simple to go digital and celebrate your history.",
+      Icon: HandHeart,
+      gradient: "from-pink-500 to-blue-500"
     },
     {
-      title: "Cutting-Edge Technology",
-      description: "We are making a constant investment in platform enhancement. Our Digital History Archive is based on the cloud-infrastructure, artificial intelligence-based discovery, and modern security measures. Your archive is enjoying the technological advantage with minimal system enhancement.",
-      icon: "🚀"
+      title: "Beautifully Designed Interface",
+      description: "Our platform is trusted by many of America's leading institutions. Designed by our Emmy nominated team, it is recognized for its visual appeal and its seamless alignment with each school's brand guidelines. The result is an engaging, intuitive experience that reflects your institution's identity while remaining easy to navigate.",
+      Icon: Palette,
+      gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Full-time Support and Training",
-      description: "Your group does not get abandoned post-launch. We deliver extensive training, documentation, ongoing technical assistance and collection development advice. Our customer success group has a long-term success of our customers.",
-      icon: "💬"
+      title: "Family Owned and Operated",
+      description: "When you partner with Touchstone, you become part of a family that puts you first. If a question or issue arises, you can email, call, text, or FaceTime a trusted member of our team who knows you and your institution. Come join the Touchstone family and let's build something meaningful together.",
+      Icon: Users,
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "One of the Digital Hall of Fame Initiatives",
-      description: "We have installed our Digital History Archive service as part of the Touchstone Digital Solutions Digital Hall of Fame program. This stance shows our dedication to taking the institutions to the next level in preserving and commemorating their heritage in the online era.",
-      icon: "🏆"
+      title: "24 7 Customer Support",
+      description: "Day or night, you can call, text, email, or FaceTime us, or we will even come in person. Our team will move mountains to meet your needs, hit your deadlines, and resolve any issues quickly and effectively. Ain't mountain high, ain't valley low.",
+      Icon: HeadphonesIcon,
+      gradient: "from-pink-500 to-blue-500"
     }
   ];
 
@@ -54,7 +61,7 @@ const WhyTouchstone = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Reason to Select Touchstone Digital Solutions
+            Reason to Partner with Touchstone Digital Solutions
           </p>
         </motion.div>
 
@@ -68,9 +75,11 @@ const WhyTouchstone = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-5xl mb-6">{reason.icon}</div>
+              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${reason.gradient} flex items-center justify-center mb-6`}>
+                <reason.Icon className="w-8 h-8 text-white" />
+              </div>
               
-              <h3 className="text-xl font-bold mb-4 text-gray-900">
+              <h3 className={`text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${reason.gradient}`}>
                 {reason.title}
               </h3>
               

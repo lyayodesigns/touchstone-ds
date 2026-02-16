@@ -3,11 +3,11 @@ import Footer from '../../components/Footer';
 import DigitalHistoryArchiveHero from '../../components/DigitalHistoryArchive/DigitalHistoryArchiveHero';
 import FutureOfHeritage from '../../components/DigitalHistoryArchive/FutureOfHeritage';
 import WhyDigitalArchiving from '../../components/DigitalHistoryArchive/WhyDigitalArchiving';
-import PlatformFeatures from '../../components/DigitalHistoryArchive/PlatformFeatures';
 import IndustrySolutions from '../../components/DigitalHistoryArchive/IndustrySolutions';
 import ArchiveProcess from '../../components/DigitalHistoryArchive/ArchiveProcess';
 import WhyTouchstone from '../../components/DigitalHistoryArchive/WhyTouchstone';
 import RealWorldImpact from '../../components/DigitalHistoryArchive/RealWorldImpact';
+import FAQSection from '../../components/DigitalHistoryArchive/FAQSection';
 import CTASection from '../../components/DigitalHistoryArchive/CTASection';
 import { Metadata } from 'next';
 
@@ -16,16 +16,6 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Digital History Archive | Touchstone Digital Solutions',
   description: "Preserve, protect, and share your institutional history with Touchstone's Digital History Archive. Transform records, artifacts, and cultural heritage into a searchable, secure digital archive accessible to researchers worldwide.",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-    },
-  },
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-history-archive/'
   },
@@ -58,11 +48,11 @@ export default function DigitalHistoryArchivePage() {
         <DigitalHistoryArchiveHero />
         <FutureOfHeritage />
         <WhyDigitalArchiving />
-        <PlatformFeatures />
         <IndustrySolutions />
         <ArchiveProcess />
         <WhyTouchstone />
         <RealWorldImpact />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

@@ -2,105 +2,333 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://touchstone-ds.com/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/features/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/about/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/faq/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/contact/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-software/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-hardware/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-hardware/55-inch-touchscreen-display/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-hardware/65-inch-touchscreen-display/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-hardware/75-inch-touchscreen-display/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/touchscreen-hardware/86-inch-touchscreen-display/</loc>
-    <lastmod>2025-09-24</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://touchstone-ds.com/digital-trophy-case/</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://touchstone-ds.com/digital-record-boards/</loc>
-    <lastmod>2025-12-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://touchstone-ds.com/digital-donor-walls/</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://touchstone-ds.com/privacy/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/terms/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/blog/</loc>
-    <lastmod>2025-08-06</lastmod>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/compare-us/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/touchstone-vs-gipper/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/digital-yearbooks/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/digital-trophy-case/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/digital-donor-walls/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/digital-history-archive/</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-universities/</loc>
+    <lastmod>2025-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/what-are-the-modern-alternatives-to-traditional-trophies/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/what-is-the-wall-of-fame-real-life-examples/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/budget-friendly-ways-to-create-an-interactive-wall-of-honor-for-small-nonprofits/</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/top-10-uses-for-interactive-touchwalls-in-education-and-training/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/step-by-step-building-your-own-college-digital-archive/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/best-practices-for-building-online-high-school-digital-archives/</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/future-trends-in-digital-walls-of-fame-ai-and-beyond/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/getting-smaller-the-biggest-trend-in-sports/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/the-rise-of-digital-wall-of-fame-displays/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-create-a-digital-trophy-case-for-your-classroom/</loc>
+    <lastmod>2025-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/common-mistakes-to-avoid-when-installing-hall-of-fame-boards/</loc>
+    <lastmod>2025-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/custom-high-school-hall-of-fame-signage-a-step-by-step-guide/</loc>
+    <lastmod>2025-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-create-personalized-cheap-yearbooks-in-5-easy-steps/</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/the-best-software-solutions-for-education-records-digitization-in-2025/</loc>
+    <lastmod>2025-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/10-eco-friendly-trophy-alternatives-for-events-and-tournaments/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-set-up-touchscreen-lobby-software-in-k-12-schools-step-by-step-tutorial/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-set-up-a-touchscreen-electronic-trophy-case-kiosk-for-schools/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/ideas-for-setting-up-a-digital-showcase-for-high-school-sports-trophies/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-integrate-digital-tools-in-your-high-school-history-curriculum/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-archive-high-school-memories-and-photos/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/10-creative-interactive-donor-wall-ideas/</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/benefits-of-a-digital-trophy-case-for-alumni-recognition-programs/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/the-best-platforms-for-building-a-virtual-hall-of-fame-in-2025/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/online-achievement-gallery-enhances-professional-associations/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/virtual-awards-hall-ideas/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/15-fun-activities-to-build-team-morale-in-the-office/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/top-10-achievements-to-feature-on-an-academic-wall-of-fame/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/the-benefits-of-an-employee-recognition-program/</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-design-engaging-touchscreen-donor-walls/</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/top-10-virtual-donor-engagement-strategies/</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-to-create-affordable-yearbooks-a-step-by-step-guide/</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/tips-for-designing-an-effective-donor-recognition-wall/</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://touchstone-ds.com/blog/how-long-do-you-leave-a-donor-wall-recognition-up/</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://touchstone-ds.com/blog/why-a-weight-room-record-board-boosts-athlete-performance/</loc>
@@ -267,12 +495,6 @@
   <url>
     <loc>https://touchstone-ds.com/blog/what-are-yearbooks/</loc>
     <lastmod>2025-04-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://touchstone-ds.com/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/</loc>
-    <lastmod>2025-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
