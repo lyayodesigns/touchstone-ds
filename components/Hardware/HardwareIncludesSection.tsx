@@ -162,7 +162,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                       whileHover={{ scale: 1.05 }}
                     >
                       <Image 
-                        src="/hardware/warrantyimage.webp" 
+                        src="/digital%20record%20boards/record-board-2.avif" 
                         alt="Warranty Protection"
                         fill
                         style={{ objectFit: 'contain' }}
@@ -178,7 +178,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                       whileHover={{ scale: 1.05 }}
                     >
                       <Image 
-                        src="/hardware/freeshiping.webp" 
+                        src="/hardware/free%20shipping.avif" 
                         alt="Free Shipping"
                         fill
                         style={{ objectFit: 'contain', background: 'transparent' }}
