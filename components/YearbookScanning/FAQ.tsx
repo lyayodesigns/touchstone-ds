@@ -9,32 +9,52 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Can you view yearbooks online after scanning?",
-      answer: "Yes. Once your project is complete, Touchstone can help you create a secure digital library or integrate the files into your existing website so authorized users can view yearbooks online from any device. You control who can access which years and whether downloads or only on‑screen viewing are allowed. For interactive modern yearbooks, check out our <a href='/digital-yearbooks/' class='text-blue-600 hover:text-purple-600 underline font-medium transition-colors'>Digital Yearbooks</a> solution."
+      question: "Why should schools digitize their yearbooks?",
+      answer: "Digitizing yearbooks protects your school's history from wear, damage, theft, and permanent loss. Physical copies stored in libraries and archives deteriorate over time. Professional digitization preserves each volume in high resolution digital format for long term access. Digital yearbooks are searchable, shareable, and accessible to alumni and administrators at any time, especially when published through Touchstone's digital yearbook platform where centuries of history can be searched in seconds."
     },
     {
-      question: "How do I look up yearbook photos in a digital archive?",
-      answer: "Because your PDFs are fully searchable, users can simply type a student's name, teacher's name, team, or club into a search box and jump directly to the correct page. This dramatically improves answers to questions like \"how do I find old elementary school yearbook pictures?\" compared to manually flipping through shelves of books."
+      question: "How does digitizing yearbooks help engage alumni?",
+      answer: "Digitized yearbooks are a proven alumni engagement asset. Hosting your collection online can increase alumni website traffic, reinforce emotional connection, support fundraising efforts, capture updated contact information through gated access, and create structured membership opportunities. Many alumni no longer own their original copy. Providing secure access through Touchstone's platform restores connection and strengthens community ties."
     },
     {
-      question: "Can I get a yearbook reprint from the digital files?",
-      answer: "High‑quality scanned pages can be used as the basis for yearbook reprints, especially when combined with professional print‑on‑demand services. Touchstone can advise on print specifications so you can confidently say \"yes\" when alumni ask for reunion gifts or replacements."
+      question: "How much does it cost to digitize yearbooks?",
+      answer: "Pricing is straightforward: $39 per yearbook for larger collections, $45 per yearbook for smaller orders under 10 volumes. We combine manual and robotic scanning technology to deliver non destructive, high resolution results at competitive rates. Once complete, your digitized collection can be published directly on Touchstone's digital yearbook platform for secure access and long term hosting. Reprints are available: $125 hardcover, $95 softcover."
     },
     {
-      question: "Are old yearbooks worth anything?",
-      answer: "Printed yearbooks can have collectible monetary value, but their real worth is historical and emotional, capturing faces, names, and stories that may not exist anywhere else. Digitization protects that value so it is not lost to damage, fading, or missing volumes, while also making your content more discoverable for genealogy and local history research."
+      question: "Does the company keep the rights to our digitized yearbooks?",
+      answer: "No. Your school retains full ownership and control of all digitized files. You decide whether to display them publicly, restrict access to alumni, require login or membership, or monetize access through donations or fees. When hosted on Touchstone's platform, those permissions remain fully in your control."
     },
     {
-      question: "Why do some yearbook photos look so bad, and can scanning help?",
-      answer: "Older yearbook photos may suffer from limited printing technology, poor lighting, or deterioration over time. Professional scanning and careful image processing can improve contrast and readability, and while they cannot recreate a shot that was never well lit, they often make existing images look noticeably better on screen than on paper."
+      question: "How do you protect fragile yearbooks during scanning?",
+      answer: "We use a white glove, non destructive scanning process designed for archival materials. Your yearbooks are carefully handled, professionally scanned without damaging bindings, and returned intact and protected. After scanning, they can be safely preserved while their digital versions are securely delivered through Touchstone's platform."
     },
     {
-      question: "What about \"yearbook scanning com\" and other services I see online?",
-      answer: "Many users search phrases like \"yearbook scanning com\" when they want a professional scanning company that focuses on yearbooks. Touchstone Digital Solutions partners directly with Yearbook Scanning Service, a specialist provider with an A+ Better Business Bureau rating, so you get the reliability of an established scanning operation plus local, strategic support."
+      question: "Are digitized yearbooks searchable?",
+      answer: "Yes. Advanced OCR technology makes every page fully searchable, capturing printed text as well as text embedded within photos and scanned images. Users can search by student names, activities, clubs, keywords, and graduation years. When integrated into Touchstone's digital yearbook platform, this searchable functionality allows alumni and administrators to find specific individuals and memories instantly all in one place."
     },
     {
-      question: "Does this service help with questions like \"what to wear for senior yearbook pictures\"?",
-      answer: "Touchstone and Yearbook Scanning Service focus on digitizing existing books rather than shooting new portraits, but a digital archive makes it much easier for schools to show seniors real examples of what photographs well and what does not. Schools can point students to online samples from previous classes when sharing guidelines on what to wear for senior yearbook pictures."
+      question: "Can you convert yearbooks into online flipbooks?",
+      answer: "Yes. We convert digitized yearbooks into interactive online flipbooks that embed directly on your website. Each flipbook includes page turn animation, zoom functionality, full text search, secure hosting options, and a custom virtual bookcase display. These interactive yearbooks are seamlessly delivered through Touchstone's digital platform to create a modern archive experience."
+    },
+    {
+      question: "Can old yearbooks be reprinted?",
+      answer: "Yes. Using high resolution digital files, we produce print on demand reprints. Schools can sell replacement copies, provide copies to alumni, or archive physical reproductions. Individuals can order personal hardcover or softcover copies, all supported by the same digital files hosted within Touchstone's system."
+    },
+    {
+      question: "Do you offer senior headshot extraction services?",
+      answer: "Yes. We extract and organize senior portraits, labeled by student name and graduation year. These structured digital headshot collections support reunion committees, alumni associations, development offices, and school marketing initiatives. When paired with Touchstone's digital yearbook platform, these assets become searchable and easy to manage."
+    },
+    {
+      question: "Is there a minimum number of yearbooks required?",
+      answer: "No minimum is required. We handle projects ranging from a single volume to multi decade collections, all of which can be centrally managed and accessed through Touchstone's platform once the digital copies are received."
+    },
+    {
+      question: "What is your turnaround time for yearbook digitization?",
+      answer: "Most projects are completed within three weeks. A limited rush option is available with one week turnaround upon request."
+    },
+    {
+      question: "What areas do you serve?",
+      answer: "Based near New York City, we provide yearbook digitization services nationwide and internationally. Schools outside the region can securely ship yearbooks to our facility, and local pickup may be available within the NY tri state area. Regardless of location, your completed digital archive is delivered through Touchstone's online yearbook platform for secure access anywhere."
     }
   ];
 

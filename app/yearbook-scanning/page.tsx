@@ -2,11 +2,11 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import YearbookScanningHero from '../../components/YearbookScanning/YearbookScanningHero';
 import YearbookScanningIntro from '../../components/YearbookScanning/YearbookScanningIntro';
-import WhyDigitizeYearbooks from '../../components/YearbookScanning/WhyDigitizeYearbooks';
 import WhatYouGet from '../../components/YearbookScanning/WhatYouGet';
-import HowItWorks from '../../components/YearbookScanning/HowItWorks';
-import WhoIsItFor from '../../components/YearbookScanning/WhoIsItFor';
-import TestimonialsSection from '../../components/Home/TestimonialsSection';
+import WhoIsYearbookScanning from '../../components/YearbookScanning/WhoIsYearbookScanning';
+import WhySchoolsTrust from '../../components/YearbookScanning/WhySchoolsTrust';
+import BuiltForPreservation from '../../components/YearbookScanning/BuiltForPreservation';
+import Testimonials from '../../components/YearbookScanning/Testimonials';
 import FAQ from '../../components/YearbookScanning/FAQ';
 import YearbookScanningFormCTA from '../../components/YearbookScanning/YearbookScanningFormCTA';
 import { Metadata } from 'next';
@@ -47,13 +47,13 @@ export default function YearbookScanningPage() {
       <main className="overflow-hidden">
         <YearbookScanningHero />
         <YearbookScanningIntro />
-        <WhyDigitizeYearbooks />
         <WhatYouGet />
-        <HowItWorks />
-        <WhoIsItFor />
-        <TestimonialsSection />
-        <FAQ />
+        <WhoIsYearbookScanning />
+        <WhySchoolsTrust />
+        <BuiltForPreservation />
+        <Testimonials />
         <YearbookScanningFormCTA />
+        <FAQ />
       </main>
       <Footer />
     </div>

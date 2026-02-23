@@ -69,7 +69,7 @@ const YearbookScanningIntro = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/Yearbook%20Scanning/yearbook-scanning-1.avif" 
+                src="/Yearbook%20Scanning/yearbook%20scanning.avif" 
                 alt="Yearbook scanning and digitization service"
                 className="w-full h-auto object-cover"
               />
