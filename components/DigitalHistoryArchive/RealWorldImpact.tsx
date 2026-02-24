@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import Image from 'next/image';
 
 const RealWorldImpact = () => {
   const impacts = [
@@ -73,6 +74,24 @@ const RealWorldImpact = () => {
           >
             Those organizations that have utilized our Digital History Archive have found outstanding results:
           </motion.p>
+
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/digital history archives/after.avif"
+                alt="Digital History Archive Results"
+                fill
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+          </motion.div>
 
           {impacts.map((impact, index) => (
             <motion.div

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
+import Image from 'next/image';
 
 const ArchiveProcess = () => {
   const steps = [
@@ -62,6 +63,24 @@ const ArchiveProcess = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             My Digital History Archive Process: Our Time-tested Response
           </p>
+        </motion.div>
+
+        <motion.div
+          className="mb-12 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/digital history archives/digital-history-archive.avif"
+              alt="Digital History Archive"
+              fill
+              className="object-cover"
+              priority={false}
+            />
+          </div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
