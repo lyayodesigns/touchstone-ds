@@ -4,7 +4,7 @@ import { Phone, Heart, Users } from 'lucide-react';
 
 export default function TouchstoneFamilySection() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-primary/5">
+    <section className="relative py-16 md:py-32 px-6 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-primary/5">
       {/* Animated background patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -38,8 +38,8 @@ export default function TouchstoneFamilySection() {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Personal attention from day one</h3>
-                  <p className="text-muted-foreground">Direct access to our team, no automated systems</p>
+                  <h3 className="text-base md:text-lg font-semibold mb-1">Personal attention from day one</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">Direct access to our team, no automated systems</p>
                 </div>
               </div>
               
@@ -48,8 +48,8 @@ export default function TouchstoneFamilySection() {
                   <Heart className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Always here when you need us</h3>
-                  <p className="text-muted-foreground">Responsive support that feels like home</p>
+                  <h3 className="text-base md:text-lg font-semibold mb-1">Always here when you need us</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">Responsive support that feels like home</p>
                 </div>
               </div>
               
@@ -58,8 +58,8 @@ export default function TouchstoneFamilySection() {
                   <Users className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Your success is our mission</h3>
-                  <p className="text-muted-foreground">We celebrate your wins as our own</p>
+                  <h3 className="text-base md:text-lg font-semibold mb-1">Your success is our mission</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">We celebrate your wins as our own</p>
                 </div>
               </div>
             </div>
