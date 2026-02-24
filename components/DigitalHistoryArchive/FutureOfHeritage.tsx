@@ -121,6 +121,7 @@ const FutureOfHeritage = () => {
                 </div>
               </motion.div>
             </div>
+
           </div>
         </motion.div>
       </Container>
