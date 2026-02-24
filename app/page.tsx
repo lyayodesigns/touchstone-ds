@@ -13,6 +13,7 @@ import OnboardingSection from '../components/Home/OnboardingSection';
 import DigitalDisplayFeaturesSection from '../components/Home/DigitalDisplayFeaturesSection';
 import HeroSection from '../components/Home/HomeHeroSection';
 import TrustedBySection from '../components/Home/TrustedBySection';
+import TouchstoneFamilySection from '../components/Home/TouchstoneFamilySection';
 import { Metadata } from 'next';
 
 
@@ -55,6 +56,7 @@ export default function Home() {
       <main className="overflow-hidden">
         <HeroSection />
         <TrustedBySection />
+        <TouchstoneFamilySection />
         <DigitalHallOfFameSection />
         <CustomPlatformSection />
         <InteractiveDisplaysSection />
