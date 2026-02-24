@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Testimonials = () => {
   const [offset, setOffset] = useState(0);
@@ -16,56 +17,66 @@ const Testimonials = () => {
       text: "For years, we wanted to digitize our yearbooks to make them accessible to alumni, faculty, and students. The days of flipping through physical books to find one person are over. Each file is fully searchable by keyword, making it effortless to find specific names or photos. That feature alone is priceless.",
       name: "Matthew Rizzotti",
       title: "Alumni Development Officer",
-      organization: "Archbishop Molloy High School – Briarwood, NY"
+      organization: "Archbishop Molloy High School – Briarwood, NY",
+      logo: "/Yearbook Scanning/Logos/molloyhs2.png"
     },
     {
       quote: "High-resolution scans. Careful handling. Exceptional results.",
       text: "They scanned 80+ yearbooks and 300+ magazines, carefully picked up and returned every publication, and delivered perfect digital files for our website. Our constituents — especially those who lost their originals — are thrilled. We highly recommend digitizing your printed archives.",
       name: "Gregg Matalas",
       title: "Director of Marketing / Development",
-      organization: "U.S. Merchant Marine Academy Alumni Association – Kings Point, NY"
+      organization: "U.S. Merchant Marine Academy Alumni Association – Kings Point, NY",
+      logo: "/Yearbook Scanning/Logos/usmmaalumni.png"
     },
     {
       quote: "Non-destructive scanning helped us preserve 60+ yearbooks.",
       text: "Their non-destructive yearbook scanning process allowed us to preserve our physical copies while making searchable digital versions available to alumni. The images are high quality and can even be used for social media and reunion materials. Responsive, cost-effective, and professional.",
       name: "Robert Lukevich",
       title: "",
-      organization: "Bishop Blanchet High School – Seattle, WA"
+      organization: "Bishop Blanchet High School – Seattle, WA",
+      logo: "/Yearbook Scanning/Logos/bishopblanchet-1.png"
     },
     {
       quote: "From the 1920s to today — beautifully digitized.",
       text: "We digitized our entire collection spanning from the 1920s to present. There's no way we could have achieved this level of quality, speed, and affordability in-house. Alumni are thrilled to search and rediscover themselves. We couldn't recommend them more highly.",
       name: "Barbara Isacson",
       title: "",
-      organization: "Bloomfield College"
+      organization: "Bloomfield College",
+      logo: "/Yearbook Scanning/Logos/bloomfield-1.png",
+      logoClass: "w-28 h-16"
     },
     {
       quote: "Used daily across multiple departments.",
       text: "There isn't a day that goes by that we don't use our digital yearbooks. We verify alumni records, pull photos for reunions, highlight legacy families, and preserve history in case of damage or loss. This is an invaluable service. Every school should be scanning their yearbooks.",
       name: "Nancy E. Foulks",
       title: "Director of Alumni Relations",
-      organization: "Union Catholic Regional High School"
+      organization: "Union Catholic Regional High School",
+      logo: "/Yearbook Scanning/Logos/unioncatholic.png"
     },
     {
       quote: "Professional. Careful. Highly recommended.",
       text: "Our yearbooks dated back to 1882 and many were deteriorating. They scanned every publication and returned them in the same condition. The high-quality digital files now help us engage alumni and preserve our school's rich history.",
       name: "Marc Spivak",
       title: "Director of Technology",
-      organization: "The Wardlaw-Hartridge School – NJ"
+      organization: "The Wardlaw-Hartridge School – NJ",
+      logo: "/Yearbook Scanning/Logos/whschool-svg.png",
+      logoClass: "w-28 h-16"
     },
     {
       quote: "Over 100 books scanned with exceptional service.",
       text: "We scanned over 100 yearbooks and chose Yearbook Scanning Service for their pricing, nonprofit discount, and impressive scanning of inner page edges. The service was excellent, and we will continue using them for future volumes.",
       name: "Michael B. Hofmeister",
       title: "President",
-      organization: "Franklin High School Alumni Association – MD"
+      organization: "Franklin High School Alumni Association – MD",
+      logo: "/Yearbook Scanning/Logos/franklinalumni1.png"
     },
     {
       quote: "A huge decision — and absolutely worth it.",
       text: "Scanning 60 years of yearbooks has benefited far more departments than we expected — alumni relations, admissions, institutional advancement, guidance, and development. The professional, non-destructive scanning process made all the difference.",
       name: "David Seidel",
       title: "",
-      organization: "Bishop McGuinness Catholic High School – NC"
+      organization: "Bishop McGuinness Catholic High School – NC",
+      logo: "/Yearbook Scanning/Logos/bmhs.png"
     }
   ];
 
@@ -125,17 +136,17 @@ const Testimonials = () => {
             <div
               className="flex gap-6 transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(calc(${offset * (100 / 3)}% + ${offset * 1.5}rem))`
+                transform: `translateX(calc(${offset * (100 / 2)}% + ${offset * 1.5}rem))`
               }}
               onTransitionEnd={handleTransitionEnd}
             >
               {extendedTestimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)]"
+                  className="flex-shrink-0 w-full md:w-[calc(50%-0.75rem)]"
                 >
-                  <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full flex flex-col">
-                    <div className="mb-4 flex-grow">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full flex flex-col min-h-[380px]">
+                    <div className="flex-grow">
                       <svg className="w-10 h-10 text-blue-500/20 mb-3" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
@@ -147,12 +158,22 @@ const Testimonials = () => {
                       </p>
                     </div>
                     
-                    <div className="border-t border-gray-200 pt-4 mt-4">
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      {testimonial.title && (
-                        <p className="text-xs text-foreground/60 mt-1">{testimonial.title}</p>
-                      )}
-                      <p className="text-xs text-foreground/60 mt-1">{testimonial.organization}</p>
+                    <div className="border-t border-gray-200 pt-4 mt-auto flex items-center gap-4">
+                      <div className={`flex-shrink-0 relative ${testimonial.logoClass || 'w-20 h-14'}`}>
+                        <Image
+                          src={testimonial.logo}
+                          alt={testimonial.organization}
+                          fill
+                          className="object-contain object-left"
+                        />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                        {testimonial.title && (
+                          <p className="text-xs text-foreground/60">{testimonial.title}</p>
+                        )}
+                        <p className="text-xs text-foreground/60">{testimonial.organization}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
