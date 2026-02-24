@@ -67,20 +67,6 @@ const DigitalHallOfFameSection: React.FC = () => {
                 alt="Digital Yearbooks"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
-              <ul className="space-y-3 text-left inline-block">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Store centuries of yearbooks and access them in seconds</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Search 100+ years of history instantly</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Inspire the next generation</span>
-                </li>
-              </ul>
             </div>
 
             {/* Divider */}
@@ -99,20 +85,49 @@ const DigitalHallOfFameSection: React.FC = () => {
                 alt="Team Rosters"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
-              <ul className="space-y-3 text-left inline-block">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Display every roster and team photo from any era</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Show athlete pictures, facts, videos and more</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  <span className="text-foreground/80">Give your teams a professional presence in your halls</span>
-                </li>
-              </ul>
+            </div>
+          </div>
+
+          {/* Horizontal Divider */}
+          <div className={`w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-foreground/20 to-transparent mb-8 transition-all duration-700 delay-350 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}></div>
+
+          {/* Second Two Column Section */}
+          <div className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full max-w-6xl mt-12 transition-all duration-700 delay-400 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}>
+            {/* Digital Record Boards Column */}
+            <div className="space-y-4 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
+                Digital Record Boards
+              </h3>
+              <p className="text-lg font-medium text-foreground/90">
+                Tens of thousands of records searchable in seconds
+              </p>
+              <img
+                src="/Digital Record Boards.avif"
+                alt="Digital Record Boards"
+                className="w-full rounded-lg sm:rounded-xl object-cover"
+              />
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-foreground/20 to-transparent"></div>
+
+            {/* Interactive Timelines Column */}
+            <div className="space-y-4 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
+                Interactive Timelines
+              </h3>
+              <p className="text-lg font-medium text-foreground/90">
+                Highlight centuries of important moments, big and small
+              </p>
+              <img
+                src="/Interactive Timelines.avif"
+                alt="Interactive Timelines"
+                className="w-full rounded-lg sm:rounded-xl object-cover"
+              />
             </div>
           </div>
         </div>

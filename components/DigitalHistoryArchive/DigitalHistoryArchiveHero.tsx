@@ -74,7 +74,7 @@ const DigitalHistoryArchiveHero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-                Preservation, Protection, and Sharing of your Institutional History.
+                Preserve, Protect, and Share your Institution’s History.
               </p>
               
               <motion.div 

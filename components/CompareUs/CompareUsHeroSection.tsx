@@ -98,7 +98,7 @@ const CompareUsHeroSection: React.FC = () => {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-2xl hover:scale-[1.03] transition-all duration-500">
                 <img
-                  src="/compare2.png"
+                  src="/compare us/compare2.png"
                   alt="Touchstone vs Rocket Comparison"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                   onError={(e) => {
