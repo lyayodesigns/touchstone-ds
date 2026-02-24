@@ -11,7 +11,7 @@ const DigitalYearbooksHero = () => {
 
   return (
       <section 
-        className="relative min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden py-16 sm:py-20 md:py-24 lg:py-32"
+        className="relative min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-12 md:pt-32 md:pb-16"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -99,20 +99,6 @@ const DigitalYearbooksHero = () => {
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
                 Bring every yearbook into a clean, searchable digital library that never fades. Preserve your full history and make it accessible in seconds.
               </p>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <a 
-                href="/" 
-                className="px-8 py-4 btn-gradient hover-lift font-medium rounded-full shadow-lg"
-              >
-                Go Digital Now
-              </a>
             </motion.div>
           </div>
         </Container>

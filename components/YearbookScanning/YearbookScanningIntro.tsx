@@ -28,7 +28,7 @@ const YearbookScanningIntro = () => {
   };
 
   return (
-    <section className="py-32 bg-gradient-to-b from-gray-50/50 to-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 md:py-32 bg-gradient-to-b from-gray-50/50 to-white relative overflow-hidden">
       {/* Subtle background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.03),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,154,158,0.03),transparent_50%)]" />

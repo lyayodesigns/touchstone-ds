@@ -9,6 +9,7 @@ import Image from 'next/image';
 const Testimonials = () => {
   const [offset, setOffset] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [
@@ -83,6 +84,17 @@ const Testimonials = () => {
   const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       goToNext();
     }, 4000);
@@ -136,7 +148,9 @@ const Testimonials = () => {
             <div
               className="flex gap-6 transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(calc(${offset * (100 / 2)}% + ${offset * 1.5}rem))`
+                transform: isMobile
+                  ? `translateX(calc(${offset * 100}% + ${offset * 1.5}rem))`
+                  : `translateX(calc(${offset * (100 / 2)}% + ${offset * 1.5}rem))`
               }}
               onTransitionEnd={handleTransitionEnd}
             >

@@ -73,7 +73,7 @@ const YearbookScanningHero = () => {
 
   return (
       <section 
-        className="relative pt-6 min-h-[110svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0"
+        className="relative pt-24 min-h-[110svh] w-full flex flex-col items-center justify-center overflow-hidden sm:pt-28 md:pt-32 pb-0"
         style={{
           backgroundImage: "url('/hero-bg-1.png')",
           backgroundSize: "cover",
@@ -165,7 +165,7 @@ const YearbookScanningHero = () => {
             </motion.div>
 
             <motion.div
-              className="flex items-center justify-center gap-6 md:gap-8 mb-8 max-w-2xl mx-auto"
+              className="flex items-center justify-center gap-3 sm:gap-6 md:gap-8 mb-8 max-w-2xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
@@ -173,11 +173,11 @@ const YearbookScanningHero = () => {
               <img 
                 src="/logo/logo-midnight.png" 
                 alt="Touchstone Digital Solutions" 
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain flex-shrink-0"
               />
               
-              <div className="flex items-center justify-center">
-                <svg className="w-10 h-10 text-primary/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <div className="flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-primary/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
                 </svg>
               </div>
@@ -185,7 +185,7 @@ const YearbookScanningHero = () => {
               <img 
                 src="/Yearbook%20Scanning/boundbook%20scanning-3.png" 
                 alt="Yearbook Scanning Service" 
-                className="h-14 md:h-16 w-auto object-contain"
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain flex-shrink-0"
               />
             </motion.div>
 
