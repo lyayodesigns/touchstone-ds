@@ -5,17 +5,6 @@ import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
 const WhyChooseTouchstone = () => {
-  const comparisonRows = [
-    { feature: "Custom-Branded Platform", touchstone: "Fully customized to your organization", traditional: "Generic templates" },
-    { feature: "Fundraising Strategy", touchstone: "Dedicated consultant support", traditional: "DIY guesswork" },
-    { feature: "Donor Recognition", touchstone: "Integrated digital donor walls", traditional: "Static plaques and lists" },
-    { feature: "Event Support", touchstone: "End-to-end event management", traditional: "Manual coordination" },
-    { feature: "Online & Offline", touchstone: "Omnichannel fundraising", traditional: "Limited to one channel" },
-    { feature: "Real-Time Analytics", touchstone: "Live dashboards and reporting", traditional: "Delayed or no data" },
-    { feature: "Scalability", touchstone: "Grows with your organization", traditional: "Fixed capacity" },
-    { feature: "24/7 Support", touchstone: "Unlimited support included", traditional: "Limited hours" }
-  ];
-
   const additionalReasons = [
     {
       title: "Family-Owned Dedication",
@@ -76,63 +65,6 @@ const WhyChooseTouchstone = () => {
   return (
     <section className="py-16 bg-white">
       <Container>
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Why Touchstone Fundraising Is the Smart Choice
-            </span>
-          </h2>
-          <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
-            Backed by Touchstone Digital Solutions&apos; Emmy-nominated design team, our platform doesn&apos;t just function well — it looks stunning.
-          </p>
-        </motion.div>
-
-        {/* Comparison Table */}
-        <motion.div
-          className="max-w-5xl mx-auto mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-            {/* Table Header */}
-            <div className="grid grid-cols-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white">
-              <div className="px-6 py-4 font-bold text-sm md:text-base">Feature</div>
-              <div className="px-6 py-4 font-bold text-sm md:text-base text-center">Touchstone Fundraising</div>
-              <div className="px-6 py-4 font-bold text-sm md:text-base text-center">Traditional Fundraising</div>
-            </div>
-            
-            {/* Table Rows */}
-            {comparisonRows.map((row, index) => (
-              <motion.div
-                key={index}
-                className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-gray-50/50' : 'bg-white'} border-b border-gray-100 last:border-b-0`}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
-                <div className="px-6 py-4 font-medium text-gray-800 text-sm md:text-base">{row.feature}</div>
-                <div className="px-6 py-4 text-center text-sm md:text-base">
-                  <span className="text-green-600 font-medium">&#10003;</span>
-                  <span className="text-gray-600 ml-2 hidden sm:inline">{row.touchstone}</span>
-                </div>
-                <div className="px-6 py-4 text-center text-sm md:text-base">
-                  <span className="text-red-500 font-medium">&#10007;</span>
-                  <span className="text-gray-400 ml-2 hidden sm:inline">{row.traditional}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Additional Reasons */}
         <motion.div
           className="text-center mb-8"

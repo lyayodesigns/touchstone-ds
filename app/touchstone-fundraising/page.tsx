@@ -1,7 +1,6 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import FundraisingHero from '../../components/TouchstoneFundraising/FundraisingHero';
-import FundraisingIntro from '../../components/TouchstoneFundraising/FundraisingIntro';
 import ServicesOverview from '../../components/TouchstoneFundraising/ServicesOverview';
 import WhoWeServe from '../../components/TouchstoneFundraising/WhoWeServe';
 import WhyChooseTouchstone from '../../components/TouchstoneFundraising/WhyChooseTouchstone';
@@ -9,6 +8,10 @@ import HowItWorks from '../../components/TouchstoneFundraising/HowItWorks';
 import Testimonials from '../../components/TouchstoneFundraising/Testimonials';
 import FundraisingFAQ from '../../components/TouchstoneFundraising/FundraisingFAQ';
 import FinalCTA from '../../components/TouchstoneFundraising/FinalCTA';
+import ImageSection from '../../components/TouchstoneFundraising/ImageSection';
+import ImageSection2 from '../../components/TouchstoneFundraising/ImageSection2';
+import SimpleHowItWorks from '../../components/TouchstoneFundraising/SimpleHowItWorks';
+import Scorecard from '../../components/TouchstoneFundraising/Scorecard';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -46,12 +49,15 @@ export default function TouchstoneFundraisingPage() {
       <Navbar />
       <main className="overflow-hidden">
         <FundraisingHero />
-        <FundraisingIntro />
-        <ServicesOverview />
-        <WhoWeServe />
-        <WhyChooseTouchstone />
-        <HowItWorks />
+        <ImageSection />
+        <SimpleHowItWorks />
         <Testimonials />
+        <Scorecard />
+        <HowItWorks />
+        <WhyChooseTouchstone />
+        <ImageSection2 />
+        <ServicesOverview />
+        <WhoWeServe />        
         <FundraisingFAQ />
         <FinalCTA />
       </main>

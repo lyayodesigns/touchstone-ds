@@ -26,11 +26,11 @@ const FinalCTA = () => {
           </h2>
           
           <p className="text-gray-600 leading-relaxed text-lg mb-4 max-w-3xl mx-auto">
-            Your organization&apos;s mission deserves the best support. Touchstone Fundraising by Touchstone Digital Solutions gives you the strategy, technology, and partnership you need to raise more, engage supporters, and make a lasting impact.
+            Your organization&apos;s mission deserves the best support. TouchstoneFunder by Touchstone Digital Solutions gives you the strategy, technology, and partnership you need to raise more, engage supporters, and make a lasting impact.
           </p>
           
           <p className="text-gray-600 leading-relaxed text-lg mb-8 max-w-3xl mx-auto">
-            Whether you&apos;re looking for fundraising ideas for NPO organizations, seeking the best nonprofit fundraising software, or planning your next charity fundraising event, Touchstone is here to help.
+            Whether you&apos;re looking for fundraising for an upcoming project, seeking the best touchscreen platform, or planning your next charity fundraising event, Touchstone is here to help.
           </p>
 
           <motion.div

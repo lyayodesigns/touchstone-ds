@@ -10,23 +10,27 @@ const FundraisingFAQ = () => {
   const faqs = [
     {
       question: "What types of organizations does Touchstone Fundraising serve?",
-      answer: "We serve schools (K\u201312 and higher education), nonprofits, churches, youth groups, PTAs, animal shelters, community organizations, and more. Whether you need fundraising software for nonprofits or a full-service fundraising platform for schools, we have a solution for you."
+      answer: "We serve all organizations, schools (K–12 and higher education), nonprofits, churches, youth groups, PTAs, animal shelters, community organizations, and more. Whether you need fundraising software for a project or a full-service fundraising platform for schools, we have a solution for you."
+    },
+    {
+      question: "How big of a time commitment is Touchstone's Fundraising?",
+      answer: "After a quick walk through call, our platform takes minutes to get started. Then, you will reach your campaign's goal in no time."
     },
     {
       question: "Is Touchstone Fundraising suitable for small organizations?",
-      answer: "Absolutely. Our solutions scale to fit organizations of every size and budget, from a single preschool fundraising campaign to a multi-year higher education fundraising initiative."
+      answer: "Absolutely. Our solutions scale to fit organizations of every size and budget, from a single middle school fundraising campaign to a multi-year higher education fundraising initiative."
     },
     {
       question: "Do you provide fundraising training?",
-      answer: "Yes. We offer nonprofit fundraising training sessions to empower your team with the skills and knowledge to run campaigns independently."
+      answer: "Yes. We offer fundraising training sessions as well as walking you through the process on a live call. Touchstone also always offers live 24/7 support to all customers."
     },
     {
       question: "Can I use the platform for online and in-person events?",
-      answer: "Yes. Touchstone Fundraising supports online fundraising sites for schools and nonprofits as well as in-person fundraising activities for church, schools, and charity events."
+      answer: "Yes. TouchstoneFunder supports online fundraising sites for schools and nonprofits as well as in-person fundraising activities for church, schools, and charity events."
     },
     {
       question: "How does the digital donor wall integrate with fundraising?",
-      answer: "Our digital donor wall technology, a flagship product of Touchstone Digital Solutions, integrates seamlessly with your fundraising campaigns to provide real-time donor recognition \u2014 a proven tool for boosting engagement and repeat giving."
+      answer: "Our digital donor wall technology, a flagship product of Touchstone Digital Solutions, integrates seamlessly with your fundraising campaigns to provide real-time donor recognition — a proven tool for boosting engagement and repeat giving."
     }
   ];
 
@@ -46,7 +50,7 @@ const FundraisingFAQ = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Frequently Asked Questions
+              Touchstone Fundraising FAQ
             </span>
           </h2>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">

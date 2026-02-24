@@ -9,7 +9,7 @@ const ServicesOverview = () => {
     {
       number: "1",
       title: "Fundraising Strategy & Consulting",
-      description: "Our experienced nonprofit fundraising consultants work alongside your team to develop a tailored fundraising plan for nonprofit organizations, schools, and churches. We help you set realistic goals, identify donor segments, create messaging frameworks, and build a nonprofit fundraising calendar that keeps your campaigns on track year-round. Whether you need a nonprofit fundraising strategy from scratch or want to optimize an existing plan, our consultants bring deep expertise in nonprofit fundraising training and best practices.",
+      description: "Our experienced nonprofit fundraising consultants work alongside your team to develop a tailored fundraising plan for your school, nonprofit, or other organization. We help you set realistic goals, identify donor segments, create messaging frameworks, and build a nonprofit fundraising calendar that keeps your campaigns on track year-round. Whether you need a fundraising strategy from scratch or want to optimize an existing plan, our consultants bring deep expertise in nonprofit fundraising training and best practices.",
       gradient: "from-blue-400 to-purple-500",
       features: []
     },
@@ -20,19 +20,19 @@ const ServicesOverview = () => {
       gradient: "from-purple-400 to-pink-500",
       features: [
         "Customizable donation pages with your brand identity",
-        "Peer-to-peer fundraising for nonprofits and schools",
+        "Peer-to-peer fundraising for your school",
         "Recurring donation management",
         "Real-time campaign dashboards and analytics",
         "Mobile-responsive design for on-the-go giving",
         "Secure payment processing with multiple payment options",
         "Social sharing integrations to amplify reach",
-        "Nonprofit fundraising tools for event ticketing, auctions, and pledge drives"
+        "Fundraising tools for event ticketing, auctions, and pledge drives"
       ]
     },
     {
       number: "3",
       title: "Event Fundraising Support",
-      description: "From galas and auctions to fun runs and community dinners, Touchstone helps you plan and execute nonprofit event fundraising that excites donors and exceeds goals. We offer support for church fundraising events, school fundraising fairs, restaurant fundraising for nonprofit nights, and more. Our team handles event logistics, digital ticketing, live and silent auction management, and post-event donor follow-up so you can deliver successful fundraising ideas for nonprofits every time.",
+      description: "From galas and auctions to fun runs and community dinners, Touchstone helps you plan and execute event fundraising that excites donors and exceeds goals. We offer support for broad fundraising events, school fundraising fairs, fundraising for nonprofit nights, and more. Our team handles event logistics, digital ticketing, live and silent auction management, and post-event donor follow-up so you can deliver successful fundraising ideas for nonprofits every time.",
       gradient: "from-pink-400 to-red-500",
       features: []
     },
@@ -61,7 +61,7 @@ const ServicesOverview = () => {
             </span>
           </h2>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
-            Touchstone Fundraising is not just a platform — it&apos;s a complete ecosystem of services and tools designed to maximize your fundraising potential.
+            TouchstoneFunder is not just a platform — it&apos;s a complete ecosystem of services and tools designed to maximize your project&apos;s potential.
           </p>
         </motion.div>
 
