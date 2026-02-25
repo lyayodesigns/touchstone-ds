@@ -11,6 +11,8 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isUseCasesOpen, setIsUseCasesOpen] = useState(false);
+  const [isMobileUseCasesOpen, setIsMobileUseCasesOpen] = useState(false);
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
   const pathname = usePathname();
 
   // Check if the current path matches the link
@@ -355,56 +357,104 @@ const Navbar: React.FC = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about/" },
                 { name: "Features", href: "/features/" },
-                { name: "Use Cases", href: "#", isDropdown: true },
-                { name: "Touchscreen Software", href: "/touchscreen-software/", isSubItem: true },
-                { name: "Digital Trophy Case", href: "/digital-trophy-case/", isSubItem: true },
-                { name: "Digital Record Boards", href: "/digital-record-boards/", isSubItem: true },
-                { name: "Digital Donor Walls", href: "/digital-donor-walls/", isSubItem: true },
-                { name: "Digital Yearbooks", href: "/digital-yearbooks/", isSubItem: true },
-                { name: "Digital History Archive", href: "/digital-history-archive/", isSubItem: true },
                 { name: "Hardware", href: "/touchscreen-hardware/" },
                 { name: "Contact", href: "/contact/" },
-                { name: "Resources", href: "#", isDropdown: true },
-                { name: "Fundraise with Us", href: "/touchstone-fundraising/", isSubItem: true },
-                { name: "Digitize Yearbooks", href: "/yearbook-scanning/", isSubItem: true },
-                { name: "Compare Us", href: "/compare-us/", isSubItem: true },
-                { name: "Blog", href: "/blog/", isSubItem: true },
-                { name: "FAQ", href: "/faq/", isSubItem: true },
               ].map((item) => (
-                item.isDropdown ? (
-                  <div key={item.name} className="block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white text-gray-800">
-                    {item.name}
-                  </div>
-                ) : item.isSubItem ? (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={cn(
-                      "block w-full py-3 pl-6 text-base font-medium border-b border-gray-100 transition-colors bg-white",
-                      isActive(item.href)
-                        ? "text-gradient-purple-blue"
-                        : "text-gray-600 hover:text-gradient-purple-blue"
-                    )}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={cn(
-                      "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
-                      isActive(item.href)
-                        ? "text-gradient-purple-blue"
-                        : "text-gray-800 hover:text-gradient-purple-blue"
-                    )}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
+                    isActive(item.href)
+                      ? "text-gradient-purple-blue"
+                      : "text-gray-800 hover:text-gradient-purple-blue"
+                  )}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
+              {/* Use Cases collapsible */}
+              <div className="border-b border-gray-100">
+                <button
+                  onClick={() => setIsMobileUseCasesOpen(!isMobileUseCasesOpen)}
+                  className="flex w-full items-center justify-between py-4 text-lg font-medium bg-white text-gray-800"
+                >
+                  Use Cases
+                  <ChevronDown
+                    className={cn(
+                      "h-5 w-5 text-gray-500 transition-transform duration-200",
+                      isMobileUseCasesOpen ? "rotate-180" : ""
+                    )}
+                  />
+                </button>
+                {isMobileUseCasesOpen && (
+                  <div className="pb-2">
+                    {[
+                      { name: "Touchscreen Software", href: "/touchscreen-software/" },
+                      { name: "Digital Trophy Case", href: "/digital-trophy-case/" },
+                      { name: "Digital Record Boards", href: "/digital-record-boards/" },
+                      { name: "Digital Donor Walls", href: "/digital-donor-walls/" },
+                      { name: "Digital Yearbooks", href: "/digital-yearbooks/" },
+                      { name: "Digital History Archive", href: "/digital-history-archive/" },
+                    ].map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className={cn(
+                          "block w-full py-3 pl-6 text-base font-medium border-b border-gray-50 transition-colors bg-white",
+                          isActive(sub.href)
+                            ? "text-gradient-purple-blue"
+                            : "text-gray-600 hover:text-gradient-purple-blue"
+                        )}
+                        onClick={() => { setIsMobileMenuOpen(false); setIsMobileUseCasesOpen(false); }}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {/* Resources collapsible */}
+              <div className="border-b border-gray-100">
+                <button
+                  onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                  className="flex w-full items-center justify-between py-4 text-lg font-medium bg-white text-gray-800"
+                >
+                  Resources
+                  <ChevronDown
+                    className={cn(
+                      "h-5 w-5 text-gray-500 transition-transform duration-200",
+                      isMobileResourcesOpen ? "rotate-180" : ""
+                    )}
+                  />
+                </button>
+                {isMobileResourcesOpen && (
+                  <div className="pb-2">
+                    {[
+                      { name: "Fundraise with Us", href: "/touchstone-fundraising/" },
+                      { name: "Digitize Yearbooks", href: "/yearbook-scanning/" },
+                      { name: "Compare Us", href: "/compare-us/" },
+                      { name: "Blog", href: "/blog/" },
+                      { name: "FAQ", href: "/faq/" },
+                    ].map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className={cn(
+                          "block w-full py-3 pl-6 text-base font-medium border-b border-gray-50 transition-colors bg-white",
+                          isActive(sub.href)
+                            ? "text-gradient-purple-blue"
+                            : "text-gray-600 hover:text-gradient-purple-blue"
+                        )}
+                        onClick={() => { setIsMobileMenuOpen(false); setIsMobileResourcesOpen(false); }}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               <div className="pt-8 w-full bg-white flex flex-col items-center space-y-2">
                 <Link
                   href="/contact/"
