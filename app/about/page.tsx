@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import AboutHeroSection from '../../components/About/AboutHeroSection';
 import { AboutStatsSection } from '../../components/About/StatsSection';
+import { OurFamilySection } from '../../components/About/OurFamilySection';
 import { WhatMakeUsDifferent } from '../../components/About/WhatMakeUsDifferent';
 import { OurValues } from '../../components/About/Ourvalues';
 import TeamSection from '../../components/About/TeamSection';
@@ -46,6 +47,7 @@ export default function AboutPage() {
       <main className="overflow-hidden">
         <AboutHeroSection />
         <AboutStatsSection />
+        <OurFamilySection />
         <WhatMakeUsDifferent />
         <TeamSection />
         <WhoWeAreSection />

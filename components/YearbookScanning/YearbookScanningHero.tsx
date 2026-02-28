@@ -195,6 +195,9 @@ const YearbookScanningHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-black">
+                Digitize Your Yearbooks Today
+              </h2>
               <div className="bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden">
                 {/* Background gradient */}
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
