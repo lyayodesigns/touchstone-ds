@@ -133,7 +133,7 @@ export const OurFamilySection = () => {
                                     whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.2)" }}
                                 >
                                     <Image
-                                        src="/our family.png"
+                                        src="/our family.avif"
                                         alt="The Touchstone Digital Solutions Family"
                                         width={600}
                                         height={500}
