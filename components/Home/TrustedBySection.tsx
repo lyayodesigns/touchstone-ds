@@ -10,13 +10,13 @@ const TrustedBySection = () => {
 
   // All client logos combined
   const allLogos = [
-    { src: '/trusted-by/brown.avif', alt: 'Brown University', name: 'Brown' },
-    { src: '/trusted-by/UNH.avif', alt: 'University of New Hampshire', name: 'UNH' },
-    { src: '/trusted-by/csub.avif', alt: 'California State University Bakersfield', name: 'CSUB' },
-    { src: '/trusted-by/Upen.avif', alt: 'University of Pennsylvania', name: 'UPenn' },
-    { src: '/trusted-by/Seton Hall Prep.avif', alt: 'Seton Hall Preparatory', name: 'Seton Hall Prep' },
     { src: '/trusted-by/BG.avif', alt: 'BG High School', name: 'BG' },
+    { src: '/trusted-by/UNH.avif', alt: 'University of New Hampshire', name: 'UNH' },
+    { src: '/trusted-by/Seton Hall Prep.avif', alt: 'Seton Hall Preparatory', name: 'Seton Hall Prep' },
+    { src: '/trusted-by/Upen.avif', alt: 'University of Pennsylvania', name: 'UPenn' },
     { src: '/trusted-by/whitefield.avif', alt: 'Whitefield School', name: 'Whitefield' },
+    { src: '/trusted-by/brown.avif', alt: 'Brown University', name: 'Brown' },
+    { src: '/trusted-by/csub.avif', alt: 'California State University Bakersfield', name: 'CSUB' },
     { src: '/clients/mooresville.png', alt: 'Mooresville High School', name: 'Mooresville' },
     { src: '/trusted-by/Bremen.avif', alt: 'Bremen High School', name: 'Bremen' },
     { src: '/trusted-by/Laconia.avif', alt: 'Laconia High School', name: 'Laconia' },
