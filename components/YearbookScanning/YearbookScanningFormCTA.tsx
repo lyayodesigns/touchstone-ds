@@ -35,12 +35,18 @@ const YearbookScanningFormCTA = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
-      const response = await fetch('/api/send-yearbook-email', {
+      const formData = new FormData();
+      formData.append('name', values.name);
+      formData.append('email', values.email);
+      formData.append('school', values.school);
+      formData.append('requestType', values.requestType);
+      formData.append('_subject', 'New Yearbook Scanning Request');
+      formData.append('_template', 'table');
+      formData.append('_captcha', 'false');
+      
+      const response = await fetch('https://formsubmit.co/d6494e93d993a930e148f6e40a07ad0b', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values)
+        body: formData
       });
       
       if (!response.ok) {

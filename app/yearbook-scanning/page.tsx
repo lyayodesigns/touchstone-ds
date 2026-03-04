@@ -16,15 +16,6 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Yearbook Scanning | Touchstone Digital Solutions',
   description: "Turn every printed yearbook into a high‑quality, searchable digital archive with Touchstone's Yearbook Scanning service. Non‑destructive scanning, searchable PDFs, and secure delivery for schools, libraries, and alumni organizations.",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-    }
-  },
   alternates: {
     canonical: 'https://touchstone-ds.com/yearbook-scanning/'
   },
