@@ -85,8 +85,8 @@ const Testimonials = () => {
                 />
               </div>
               
-              <p className="text-gray-800 leading-relaxed font-medium text-lg mb-6 flex-grow">
-                &ldquo;{testimonial.quote}&rdquo;
+              <p className="text-gray-800 leading-relaxed font-medium text-2xl mb-6 flex-grow">
+                {testimonial.quote}
               </p>
               
               <div className="border-t border-gray-100 pt-4 w-full">
