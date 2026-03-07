@@ -8,7 +8,7 @@ const SimpleHowItWorks = () => {
   const bulletPoints = [
     "TouchstoneFunder builds our campaign.",
     "Athletes add contacts in minutes.",
-    "TouchstoneFunder sends personalized emails/texts to supporters.",
+    "TouchstoneFunder sends personalized emails/texts.",
     "Community members add contributions"
   ];
 
@@ -57,10 +57,6 @@ const SimpleHowItWorks = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-2xl md:text-3xl font-semibold text-foreground italic">
-              And contributions started rolling in!
-            </p>
-            
             <p className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               $8,000 Raised, Minutes Spent
             </p>

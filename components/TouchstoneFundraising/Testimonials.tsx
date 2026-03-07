@@ -8,20 +8,38 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "$23,000",
-      org: "Pelham HS Lacrosse",
+      org: "Pelham HS",
       logo: "/touchstone fundraising/Pelham HS Lacrosse.png",
       gradient: "from-blue-400 to-purple-500"
     },
     {
       quote: "$28,000",
-      org: "Maine South HS Baseball",
+      org: "Maine South HS",
       logo: "/touchstone fundraising/Maine South HS Baseball.png",
       gradient: "from-purple-400 to-pink-500"
     },
     {
       quote: "$17,000",
-      org: "Augusta University Softball",
+      org: "Augusta University",
       logo: "/touchstone fundraising/Augusta University Softball.png",
+      gradient: "from-pink-400 to-blue-500"
+    },
+    {
+      quote: "$19,000",
+      org: "St. Thomas More",
+      logo: "/touchstone fundraising/1.png",
+      gradient: "from-blue-400 to-purple-500"
+    },
+    {
+      quote: "$37,000",
+      org: "Bethany Lutheran",
+      logo: "/touchstone fundraising/2.png",
+      gradient: "from-purple-400 to-pink-500"
+    },
+    {
+      quote: "$31,000",
+      org: "Aurora University",
+      logo: "/touchstone fundraising/3.png",
       gradient: "from-pink-400 to-blue-500"
     }
   ];
