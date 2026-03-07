@@ -34,7 +34,7 @@ const HowItWorks = () => {
     {
       step: "6",
       title: "You keep 90% of every Dollar!",
-      description: "90 cents of every dollar donated goes to your team! No products to sell, no events to manage, and nothing to organize."
+      description: "90% of every dollar donated goes to your project."
     }
   ];
 

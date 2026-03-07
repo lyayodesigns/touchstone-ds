@@ -137,7 +137,8 @@ const FundraisingHero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-              Let us help you raise money for your touchscreen project. We have helped countless schools raise an average of $5,000 with minimal effort. If you are interested, sign up below.
+              Let us help you raise money and get your project paid for. Our Platform has helped countless schools raise tens of thousands of dollars. 
+interested?  Sign up below.
             </p>
             
             {/* Decorative line */}
@@ -264,7 +265,7 @@ const FundraisingHero = () => {
                           Submitting...
                         </>
                       ) : (
-                        'Sign Up for Fundraising'
+                        'Get the details'
                       )}
                     </Button>
                   </form>

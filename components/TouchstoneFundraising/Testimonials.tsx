@@ -7,21 +7,21 @@ import { Container } from '../ui/container';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "The easiest $19,000 we've ever raised!",
-      org: "St. Thomas More Basketball",
-      logo: "/touchstone fundraising/1.png",
+      quote: "$23,000",
+      org: "Pelham HS Lacrosse",
+      logo: "/touchstone fundraising/Pelham HS Lacrosse.png",
       gradient: "from-blue-400 to-purple-500"
     },
     {
-      quote: "Over $37,000 raised and still going!",
-      org: "Bethany Lutheran Baseball",
-      logo: "/touchstone fundraising/2.png",
+      quote: "$28,000",
+      org: "Maine South HS Baseball",
+      logo: "/touchstone fundraising/Maine South HS Baseball.png",
       gradient: "from-purple-400 to-pink-500"
     },
     {
-      quote: "Spent minutes... pulled in $31,000",
-      org: "Aurora University Lacrosse",
-      logo: "/touchstone fundraising/3.png",
+      quote: "$17,000",
+      org: "Augusta University Softball",
+      logo: "/touchstone fundraising/Augusta University Softball.png",
       gradient: "from-pink-400 to-blue-500"
     }
   ];
@@ -63,7 +63,7 @@ const Testimonials = () => {
                 <img 
                   src={testimonial.logo} 
                   alt={testimonial.org}
-                  className="max-h-full max-w-full object-contain"
+                  className={`max-h-full max-w-full object-contain ${index === 2 ? 'scale-150' : ''}`}
                 />
               </div>
               

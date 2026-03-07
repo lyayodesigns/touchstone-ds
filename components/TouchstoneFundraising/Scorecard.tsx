@@ -15,7 +15,7 @@ const Scorecard = () => {
     {
       icon: DollarSign,
       title: "Avg Raise",
-      description: "Our teams average raising over $5,000 for their digital displays."
+      description: "Individual teams raise an average of $5,000. Departments raise more…"
     },
     {
       icon: CheckCircle,

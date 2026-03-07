@@ -8,7 +8,8 @@ const SimpleHowItWorks = () => {
   const bulletPoints = [
     "TouchstoneFunder builds our campaign.",
     "Athletes add contacts in minutes.",
-    "TouchstoneFunder sends personalized emails/texts to supporters."
+    "TouchstoneFunder sends personalized emails/texts to supporters.",
+    "Community members add contributions"
   ];
 
   return (

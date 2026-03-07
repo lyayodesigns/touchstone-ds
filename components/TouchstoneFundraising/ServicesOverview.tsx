@@ -31,13 +31,6 @@ const ServicesOverview = () => {
     },
     {
       number: "3",
-      title: "Event Fundraising Support",
-      description: "From galas and auctions to fun runs and community dinners, Touchstone helps you plan and execute event fundraising that excites donors and exceeds goals. We offer support for broad fundraising events, school fundraising fairs, fundraising for nonprofit nights, and more. Our team handles event logistics, digital ticketing, live and silent auction management, and post-event donor follow-up so you can deliver successful fundraising ideas for nonprofits every time.",
-      gradient: "from-pink-400 to-red-500",
-      features: []
-    },
-    {
-      number: "4",
       title: "Digital Donor Recognition",
       description: "Leveraging Touchstone Digital Solutions' industry-leading digital donor wall technology, we integrate donor recognition directly into your fundraising campaigns. Showing donors the impact of their gifts in real time encourages repeat giving and strengthens community engagement. Our digital displays are perfect for schools, hospitals, universities, and houses of worship looking to celebrate generosity in a dynamic, modern way.",
       gradient: "from-red-400 to-blue-500",
