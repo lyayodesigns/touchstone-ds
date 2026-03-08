@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { CheckCircle2, Award } from 'lucide-react';
 
 const WhyChooseTouchstone: React.FC = () => {
@@ -48,7 +49,7 @@ const WhyChooseTouchstone: React.FC = () => {
           <div className="h-1 w-32 bg-gradient-to-r from-[#6ea8fe] to-[#447df5] rounded-full mx-auto mb-8"></div>
           
           <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Comparing <strong className="text-gradient-purple-blue">Touchstone</strong> and <strong>Rocket Alumni Solutions</strong>, institutions always prefer to use Touchstone because of its better value, full support, and innovation. Although Rocket Alumni Solutions has a good platform, Touchstone is better with its transparent prices, open-ended training and 24/7/365 US-based service.
+            Comparing <Link href="/about" className="text-gradient-purple-blue font-semibold hover:underline underline-offset-2">Touchstone</Link> and <strong>Rocket Alumni Solutions</strong>, institutions always prefer to use Touchstone because of its better value, full support, and innovation. Although Rocket Alumni Solutions has a good platform, Touchstone is better with its transparent prices, open-ended training and 24/7/365 US-based service.
           </p>
         </div>
 

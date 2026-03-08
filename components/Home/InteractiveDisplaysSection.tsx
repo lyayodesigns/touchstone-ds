@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 
 const InteractiveDisplaysSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,9 +79,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Athletic Program Showcase
-                  </span> – Honor team success with dynamic rosters, championship highlights, records, player spotlights, and so much more.
+                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Athletic Program Showcase</Link> – Honor team success with dynamic rosters, championship highlights, records, player spotlights, and so much more.
                 </p>
               </li>
 
@@ -101,9 +100,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Interactive Hall of Fame Displays
-                  </span> – Celebrate legends with real-time updates and rich multimedia content.
+                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Interactive Hall of Fame Displays</Link> – Celebrate legends with real-time updates and rich multimedia content.
                 </p>
               </li>
 
@@ -124,9 +121,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Interactive School Displays
-                  </span> – Perfect for locker rooms, lobbies, gyms, and auditoriums, bringing history and achievements to life.
+                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Interactive School Displays</Link> – Perfect for locker rooms, lobbies, gyms, and auditoriums, bringing history and achievements to life.
                 </p>
               </li>
 
@@ -147,9 +142,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Digital Trophy Case
-                  </span> – A modern way to display championships and school pride—without the dust.
+                  <Link href="/digital-trophy-case" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Digital Trophy Case</Link> – A modern way to display championships and school pride—without the dust.
                 </p>
               </li>
 
@@ -170,9 +163,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Digital Record Boards
-                  </span> – Keep alumni records up to date automatically, ensuring every milestone is captured.
+                  <Link href="/digital-record-boards" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Digital Record Boards</Link> – Keep alumni records up to date automatically, ensuring every milestone is captured.
                 </p>
               </li>
 
@@ -193,9 +184,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Interactive Yearbooks
-                  </span> – Relive school memories with digital pages that feature photos, videos, and student stories.
+                  <Link href="/digital-yearbooks" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Interactive Yearbooks</Link> – Relive school memories with digital pages that feature photos, videos, and student stories.
                 </p>
               </li>
 
@@ -216,9 +205,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <span className="text-foreground font-medium">
-                    Digital Donor Walls
-                  </span> – Celebrate the contributors who make a difference with a dynamic, engaging display.
+                  <Link href="/digital-donor-walls" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Digital Donor Walls</Link> – Celebrate the contributors who make a difference with a dynamic, engaging display.
                 </p>
               </li>
             </ul>

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const TouchscreenHeroSection = () => {
@@ -65,7 +66,7 @@ const TouchscreenHeroSection = () => {
               viewport={{ once: true }}
             >
               <span className="text-transparent bg-clip-text text-gradient-purple-blue">
-              Interactive Touchscreen Software for Halls of Fame, Digital Archives & Unforgettable School Stories
+              Interactive Touchscreen Software for <Link href="/" className="hover:underline underline-offset-4">Halls of Fame</Link>, Digital Archives & Unforgettable School Stories
               </span>
             </motion.h1>
             
@@ -84,7 +85,7 @@ const TouchscreenHeroSection = () => {
               />
               
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Replace Static Plaques & Crowded Hallways with Dynamic, Cloud-Based Touchscreen Displays That Engage Students, Alumni, and Donors 24/7.
+                Replace Static Plaques & Crowded Hallways with Dynamic, Cloud-Based Touchscreen Displays That Engage Students, Alumni, and <Link href="/digital-donor-walls" className="text-gray-700 hover:underline underline-offset-2">Donors</Link> 24/7.
               </p>
             </motion.div>
           </div>

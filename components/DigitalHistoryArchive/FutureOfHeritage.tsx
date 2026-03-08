@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import Image from 'next/image';
 
@@ -68,7 +69,7 @@ const FutureOfHeritage = () => {
               </p>
               
               <p className="text-gray-700 font-normal">
-                The Digital History Archive of Touchstone Digital Solutions, which is one of the Digital Hall of Fame projects, is an evolution of the way institutions handle their most invaluable resources. We are a hybrid of institutional-level digital preservation technology and friendly user interfaces that can make archivists and researchers smile.
+                The Digital History Archive of <Link href="/about" className="text-gray-700 hover:underline underline-offset-2">Touchstone Digital Solutions</Link>, which is one of the <Link href="/" className="text-gray-700 hover:underline underline-offset-2">Digital Hall of Fame</Link> projects, is an evolution of the way institutions handle their most invaluable resources. We are a hybrid of institutional-level digital preservation technology and friendly user interfaces that can make archivists and researchers smile.
               </p>
             </div>
           </motion.div>

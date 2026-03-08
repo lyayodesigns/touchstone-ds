@@ -3,6 +3,7 @@ import Footer from '../../components/Footer';
 import ContactForm from '../../components/Contact/ContactForm';
 import IntroPacketForm from '../../components/Contact/IntroPacketForm';
 import { Container } from '../../components/ui/container';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -75,7 +76,7 @@ export default function ContactPage() {
             </h1>
             {/* Subheading */}
             <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
-              Have questions about our <span className="text-gradient-purple-blue font-medium">digital recognition solutions</span>? Our team is ready to create an unforgettable experience for your institution.
+              Have questions about our <Link href="/features" className="text-gradient-purple-blue font-medium hover:underline underline-offset-2">digital recognition solutions</Link>? Our team is ready to create an unforgettable experience for your institution.
             </p>
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">

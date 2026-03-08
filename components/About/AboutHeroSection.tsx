@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 // This component is SSR compatible as it does not use any browser-only APIs or hooks.
@@ -74,7 +75,7 @@ const AboutHeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-              The industry leader in fully customized interactive touchscreen recognition software
+              The industry leader in fully customized <Link href="/touchscreen-software" className="text-blue-700 hover:underline underline-offset-2">interactive touchscreen recognition software</Link>
             </p>
             {/* Decorative line */}
             <motion.div 

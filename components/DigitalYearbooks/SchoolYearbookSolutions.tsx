@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const SchoolYearbookSolutions = () => {
@@ -22,12 +23,12 @@ const SchoolYearbookSolutions = () => {
             <p className="text-gray-700 mb-6">
               Whether you're digitizing historical yearbooks or creating new ones, we have the perfect solution for your school.
             </p>
-            <a 
-              href="https://touchstone-ds.com/contact/" 
+            <Link 
+              href="/contact" 
               className="inline-block px-8 py-4 btn-gradient hover-lift font-medium rounded-full shadow-lg"
             >
               Get Started Today
-            </a>
+            </Link>
           </div>
         </motion.div>
       </Container>

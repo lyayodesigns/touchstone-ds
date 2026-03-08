@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Palette, Book, Users, RefreshCw, CheckCircle } from 'lucide-react';
 
@@ -174,7 +175,7 @@ const FullCustomization = () => {
                 }}
               >
                 <p className="text-foreground/80 italic">
-                  From Digital Hall of Fame software to Digital Record Boards and Digital Donor Walls, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
+                  From <Link href="/touchscreen-software" className="text-purple-500 hover:underline underline-offset-2">Digital Hall of Fame software</Link> to <Link href="/digital-record-boards" className="text-purple-500 hover:underline underline-offset-2">Digital Record Boards</Link> and <Link href="/digital-donor-walls" className="text-purple-500 hover:underline underline-offset-2">Digital Donor Walls</Link>, every element is crafted to reflect your school's personality while maintaining a professional, polished look.
                 </p>
               </motion.div>
             </motion.div>

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Flame, Paintbrush, Search } from 'lucide-react';
 
@@ -36,7 +37,7 @@ const BuiltByGaming = () => {
     {
       icon: <Flame className="h-6 w-6" />,
       title: "Stunning Graphic Fidelity",
-      description: "Our high-resolution graphics bring your school's legacy to life. From detailed digital trophies and plaques to dynamic team rosters and digital banners, every element is displayed with crystal-clear precision, allowing users to fully appreciate their school's history."
+      description: <>Our high-resolution graphics bring your school's legacy to life. From detailed digital trophies and plaques to dynamic <Link href="/interactive-athletic-environments" className="text-purple-500 hover:underline underline-offset-2">team rosters</Link> and digital banners, every element is displayed with crystal-clear precision, allowing users to fully appreciate their school's history.</>,
     },
     {
       icon: <Paintbrush className="h-6 w-6" />,
@@ -46,7 +47,7 @@ const BuiltByGaming = () => {
     {
       icon: <Search className="h-6 w-6" />,
       title: "Crisp & Clear Visuals with Anti-Aliasing",
-      description: "We implement anti-aliasing technology to eliminate jagged edges and ensure smooth, readable text and crisp images. Whether showcasing a team roster, individual records, or a Hall of Fame plaque, every detail is displayed with precision and clarity."
+      description: <>We implement anti-aliasing technology to eliminate jagged edges and ensure smooth, readable text and crisp images. Whether showcasing a team roster, individual records, or a <Link href="/" className="text-purple-500 hover:underline underline-offset-2">Hall of Fame plaque</Link>, every detail is displayed with precision and clarity.</>,
     }
   ];
 

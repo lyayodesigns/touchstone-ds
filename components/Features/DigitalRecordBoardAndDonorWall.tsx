@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Trophy, BarChart3, Film, Search, Medal, Video, RotateCcw, Users, Star, Calendar, Image, Award, Crown, Sparkles, Archive } from 'lucide-react';
 
@@ -233,7 +234,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600"
                   variants={itemVariants}
                 >
-                  Digital Hall of Fame Displays
+                  <Link href="/" className="hover:underline underline-offset-4">Digital Hall of Fame Displays</Link>
                 </motion.h3>
                 
                 <motion.p 
@@ -291,7 +292,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-600"
                   variants={itemVariants}
                 >
-                  Digital Record Boards
+                  <Link href="/digital-record-boards" className="hover:underline underline-offset-4">Digital Record Boards</Link>
                 </motion.h3>
                 
                 <motion.p 
@@ -431,7 +432,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600"
                   variants={itemVariants}
                 >
-                  Digital Trophy Case
+                  <Link href="/digital-trophy-case" className="hover:underline underline-offset-4">Digital Trophy Case</Link>
                 </motion.h3>
                 
                 <motion.p 
@@ -489,7 +490,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
                   variants={itemVariants}
                 >
-                  Dynamic Digital Donor Walls
+                  <Link href="/digital-donor-walls" className="hover:underline underline-offset-4">Dynamic Digital Donor Walls</Link>
                 </motion.h3>
                 
                 <motion.p 

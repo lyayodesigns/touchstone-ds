@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 export const WhatMakeUsDifferent = () => {
@@ -199,7 +200,7 @@ export const WhatMakeUsDifferent = () => {
                     </div>
                     <p className="text-gray-600 leading-relaxed">
                       Just genuine partnerships. We don't chase numbers—we chase excellence. Our team isn't driven by sales quotas 
-                      but by a passion for crafting truly customized recognition experiences that exceed your expectations.
+                      but by a passion for crafting truly <Link href="/compare-us" className="text-blue-600 hover:underline underline-offset-2">customized recognition experiences</Link> that exceed your expectations.
                     </p>
                   </div>
                 </div>
@@ -330,7 +331,7 @@ export const WhatMakeUsDifferent = () => {
                       <h3 className="text-2xl font-bold text-gray-800">Always Evolving</h3>
                     </div>
                     <p className="text-gray-600 leading-relaxed">
-                      We continuously release new software updates, ensuring your display stays cutting-edge. With over-the-air updates, 
+                      We continuously release new software updates, ensuring your display stays cutting-edge. With <Link href="/touchscreen-software" className="text-purple-600 hover:underline underline-offset-2">over-the-air updates</Link>, 
                       your system evolves effortlessly—no manual installs, no downtime, just seamless improvements.
                     </p>
                   </div>

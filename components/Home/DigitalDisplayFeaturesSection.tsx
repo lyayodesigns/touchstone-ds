@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 
 const DigitalDisplayFeaturesSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,7 @@ const DigitalDisplayFeaturesSection: React.FC = () => {
   const features = [
     {
       title: "Intuitive & User-Friendly Interface",
-      description: "We design intuitive, easy-to-navigate interfaces that make accessing achievements, stats, and records effortless. Whether exploring a Hall of Fame, viewing a digital record board, or celebrating team history, our platform ensures a smooth and engaging experience for coaches, players, and fans alike.",
+      description: <>We design intuitive, easy-to-navigate interfaces that make accessing achievements, stats, and records effortless. Whether exploring a <Link href="/interactive-athletic-environments" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">Hall of Fame</Link>, viewing a <Link href="/digital-record-boards" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">digital record board</Link>, or celebrating team history, our platform ensures a smooth and engaging experience for coaches, players, and fans alike.</>,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>

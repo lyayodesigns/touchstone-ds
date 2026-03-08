@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const CallToAction = () => {
@@ -52,30 +53,32 @@ const CallToAction = () => {
             variants={itemVariants}
             className="text-foreground/70 max-w-2xl mx-auto mb-8"
           >
-            Touchstone Digital Solutions delivers interactive environments built for modern athletic facilities.
+            <Link href="/about" className="text-foreground/70 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> delivers interactive environments built for modern athletic facilities.
           </motion.p>
           
           <motion.div 
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-4"
           >
-            <motion.a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              whileHover={{ y: -4, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Request a Consultation
-            </motion.a>
+            <Link href="/contact">
+              <motion.div
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer inline-block"
+                whileHover={{ y: -4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Request a Consultation
+              </motion.div>
+            </Link>
             
-            <motion.a 
-              href="/about" 
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
-              whileHover={{ y: -4, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Learn About Us
-            </motion.a>
+            <Link href="/about">
+              <motion.div
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer inline-block"
+                whileHover={{ y: -4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Learn About Us
+              </motion.div>
+            </Link>
           </motion.div>
         </motion.div>
       </Container>

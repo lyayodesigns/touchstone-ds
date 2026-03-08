@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const ServicesOverview = () => {
@@ -32,7 +33,7 @@ const ServicesOverview = () => {
     {
       number: "3",
       title: "Digital Donor Recognition",
-      description: "Leveraging Touchstone Digital Solutions' industry-leading digital donor wall technology, we integrate donor recognition directly into your fundraising campaigns. Showing donors the impact of their gifts in real time encourages repeat giving and strengthens community engagement. Our digital displays are perfect for schools, hospitals, universities, and houses of worship looking to celebrate generosity in a dynamic, modern way.",
+      description: <>Leveraging <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link>' industry-leading <Link href="/digital-donor-walls" className="text-gray-600 hover:underline underline-offset-2">digital donor wall technology</Link>, we integrate donor recognition directly into your fundraising campaigns. Showing donors the impact of their gifts in real time encourages repeat giving and strengthens community engagement. Our digital displays are perfect for schools, hospitals, universities, and houses of worship looking to celebrate generosity in a dynamic, modern way.</>,
       gradient: "from-red-400 to-blue-500",
       features: []
     }

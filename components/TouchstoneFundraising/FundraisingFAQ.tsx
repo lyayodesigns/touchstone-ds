@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const FundraisingFAQ = () => {
@@ -30,7 +31,7 @@ const FundraisingFAQ = () => {
     },
     {
       question: "How does the digital donor wall integrate with fundraising?",
-      answer: "Our digital donor wall technology, a flagship product of Touchstone Digital Solutions, integrates seamlessly with your fundraising campaigns to provide real-time donor recognition — a proven tool for boosting engagement and repeat giving."
+      answer: <>Our <Link href="/digital-donor-walls" className="text-blue-600 hover:underline underline-offset-2">digital donor wall technology</Link>, a flagship product of <Link href="/about" className="text-blue-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link>, integrates seamlessly with your fundraising campaigns to provide real-time donor recognition — a proven tool for boosting engagement and repeat giving.</>
     }
   ];
 

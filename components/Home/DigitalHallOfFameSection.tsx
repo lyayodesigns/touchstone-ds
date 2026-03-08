@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 const DigitalHallOfFameSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,7 +58,9 @@ const DigitalHallOfFameSection: React.FC = () => {
             {/* Digital Yearbooks Column */}
             <div className="space-y-4 text-center">
               <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
-                Digital Yearbooks
+                <Link href="/digital-yearbooks" className="hover:underline underline-offset-4">
+                  Digital Yearbooks
+                </Link>
               </h3>
               <p className="text-lg font-medium text-foreground/90">
                 Your history on demand, right at your fingertips
@@ -75,7 +78,9 @@ const DigitalHallOfFameSection: React.FC = () => {
             {/* Team Rosters Column */}
             <div className="space-y-4 text-center">
               <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
-                Team Rosters
+                <Link href="/interactive-athletic-environments" className="hover:underline underline-offset-4">
+                  Team Rosters
+                </Link>
               </h3>
               <p className="text-lg font-medium text-foreground/90">
                 Whether it is current or historic, display it with pride
@@ -100,7 +105,9 @@ const DigitalHallOfFameSection: React.FC = () => {
             {/* Digital Record Boards Column */}
             <div className="space-y-4 text-center">
               <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
-                Digital Record Boards
+                <Link href="/digital-record-boards" className="hover:underline underline-offset-4">
+                  Digital Record Boards
+                </Link>
               </h3>
               <p className="text-lg font-medium text-foreground/90">
                 Tens of thousands of records searchable in seconds
@@ -118,7 +125,9 @@ const DigitalHallOfFameSection: React.FC = () => {
             {/* Interactive Timelines Column */}
             <div className="space-y-4 text-center">
               <h3 className="text-2xl sm:text-3xl font-bold text-gradient-purple-blue">
-                Interactive Timelines
+                <Link href="/interactive-athletic-environments" className="hover:underline underline-offset-4">
+                  Interactive Timelines
+                </Link>
               </h3>
               <p className="text-lg font-medium text-foreground/90">
                 Highlight centuries of important moments, big and small

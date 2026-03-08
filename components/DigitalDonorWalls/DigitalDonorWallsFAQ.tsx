@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalDonorWallsFAQ = () => {
@@ -14,7 +15,7 @@ const DigitalDonorWallsFAQ = () => {
     },
     {
       question: "What kind of hardware do we require?",
-      answer: "Commercial large-format displays or touchscreen kiosks are what we usually use. And we can get them for you and install them in your facility as part of our turnkey service."
+      answer: <>Commercial large-format displays or <Link href="/touchscreen-hardware" className="text-blue-600 hover:underline underline-offset-2">touchscreen kiosks</Link> are what we usually use. And we can get them for you and install them in your facility as part of our turnkey service.</>
     },
     {
       question: "Our donors belong to different campaigns and giving levels. Can they be categorized?",

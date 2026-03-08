@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from 'next/link';
 import { Star, Award, CheckCircle } from 'lucide-react';
 
 const CompareUsHeroSection: React.FC = () => {
@@ -73,7 +74,7 @@ const CompareUsHeroSection: React.FC = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
-                Compare top-rated services, pricing, and support to see why Touchstone is America's most-loved touchscreen platform.
+                Compare top-rated services, pricing, and support to see why Touchstone is America's most-loved <Link href="/touchscreen-software" className="text-gray-600 hover:underline underline-offset-2">touchscreen platform</Link>.
               </p>
             </div>
 

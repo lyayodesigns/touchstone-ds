@@ -69,7 +69,7 @@ export const CallToAction = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                Unlock the transformative power of digital recognition with Touchstone Digital Solutions. 
+                Unlock the transformative power of <Link href="/features" className="text-white underline underline-offset-2 hover:text-white/80 transition-colors">digital recognition</Link> with Touchstone Digital Solutions. 
                 Our commitment to innovation, quality, and fully customized service sets us apart.
               </motion.p>
               

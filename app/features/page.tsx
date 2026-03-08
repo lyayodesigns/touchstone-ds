@@ -9,6 +9,7 @@ import BuiltForInstitutionAndExperience from '../../components/Features/BuiltFor
 import VisualFidelity from '../../components/Features/VisualFidelity';
 import BuiltByGaming from '../../components/Features/BuiltByGaming';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const dynamic = 'force-static';
 
@@ -69,18 +70,18 @@ export default function FeaturesPage() {
             Explore our innovative digital solutions or get in touch with our team to learn more about how we can help your institution.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="https://touchstone-ds.com/contact/" 
+            <Link 
+              href="/contact" 
               className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               Contact Us
-            </a>
-            <a 
-              href="https://touchstone-ds.com/about/" 
+            </Link>
+            <Link 
+              href="/about" 
               className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
             >
               Learn About Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

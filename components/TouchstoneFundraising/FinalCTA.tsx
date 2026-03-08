@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const FinalCTA = () => {
@@ -26,11 +27,11 @@ const FinalCTA = () => {
           </h2>
           
           <p className="text-gray-600 leading-relaxed text-lg mb-4 max-w-3xl mx-auto">
-            Your organization&apos;s mission deserves the best support. TouchstoneFunder by Touchstone Digital Solutions gives you the strategy, technology, and partnership you need to raise more, engage supporters, and make a lasting impact.
+            Your organization&apos;s mission deserves the best support. TouchstoneFunder by <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> gives you the strategy, technology, and partnership you need to raise more, engage supporters, and make a lasting impact.
           </p>
           
           <p className="text-gray-600 leading-relaxed text-lg mb-8 max-w-3xl mx-auto">
-            Whether you&apos;re looking for fundraising for an upcoming project, seeking the best touchscreen platform, or planning your next charity fundraising event, Touchstone is here to help.
+            Whether you&apos;re looking for fundraising for an upcoming project, seeking the best <Link href="/touchscreen-software" className="text-gray-600 hover:underline underline-offset-2">touchscreen platform</Link>, or planning your next charity fundraising event, Touchstone is here to help.
           </p>
 
           <motion.div
@@ -40,12 +41,12 @@ const FinalCTA = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <a 
-              href="/contact/" 
+            <Link 
+              href="/contact" 
               className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               Get Started — Book Your Free Consultation
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 

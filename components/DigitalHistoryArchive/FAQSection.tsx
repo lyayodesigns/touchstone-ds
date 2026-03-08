@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { ChevronDown } from 'lucide-react';
 
@@ -15,7 +16,7 @@ const FAQSection = () => {
     },
     {
       question: "What types of materials can be included in the archive?",
-      answer: "Your archive can include yearbooks, photographs, trophies, awards, newspaper clippings, event programs, student publications, coaching records, championship history, artifacts, documents, maps, timelines, faculty publications, leadership history, and other institutional records. If it captures your institution's legacy, Touchstone can preserve it and make it accessible in one organized platform."
+      answer: <>Your archive can include <Link href="/digital-yearbooks" className="text-blue-600 hover:underline underline-offset-2">yearbooks</Link>, photographs, <Link href="/digital-trophy-case" className="text-blue-600 hover:underline underline-offset-2">trophies</Link>, awards, newspaper clippings, event programs, student publications, coaching records, championship history, artifacts, documents, maps, timelines, faculty publications, leadership history, and other institutional records. If it captures your institution's legacy, Touchstone can preserve it and make it accessible in one organized platform.</>
     },
     {
       question: "Why should we digitize our history instead of keeping everything physical?",
@@ -47,7 +48,7 @@ const FAQSection = () => {
     },
     {
       question: "Why should we choose Touchstone Digital Solutions?",
-      answer: "Touchstone is trusted by institutions across the country because we combine proven experience with white glove service. We handle the heavy lifting, provide a beautifully designed platform, and support your team long term. Our goal is simple: preserve your history, protect it, and make it easy to share for generations."
+      answer: <><Link href="/about" className="text-blue-600 hover:underline underline-offset-2">Touchstone</Link> is trusted by institutions across the country because we combine proven experience with white glove service. We handle the heavy lifting, provide a beautifully designed platform, and support your team long term. Our goal is simple: preserve your history, protect it, and make it easy to share for generations.</>
     }
   ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 import { Palette, School, Lightbulb, Monitor } from "lucide-react";
 
 const CustomPlatformSection: React.FC = () => {
@@ -79,7 +80,7 @@ const CustomPlatformSection: React.FC = () => {
                 icon: <School className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "Built for Your School, Not Just Any School",
                 description:
-                  "No two institutions are the same—so why should their recognition platforms be? Whether you need a sleek, interactive athletic record boards or a digital donor wall that commands attention, we build a fully customized experience from the ground up.",
+                  <>No two institutions are the same—so why should their recognition platforms be? Whether you need a sleek, interactive <Link href="/digital-record-boards" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">athletic record boards</Link> or a <Link href="/digital-donor-walls" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">digital donor wall</Link> that commands attention, we build a fully customized experience from the ground up.</>,
                 delay: "400ms",
               },
               {
@@ -93,7 +94,7 @@ const CustomPlatformSection: React.FC = () => {
                 icon: <Monitor className="h-6 w-6 sm:h-7 sm:w-7" />,
                 title: "Seamless Touchscreen Software Meets Stunning Design",
                 description:
-                  "The difference isn't just in our technology—it's in the details. Our touchscreen software is powerful, but it's the premium look and feel that makes our platform truly stand out.",
+                  <>The difference isn't just in our technology—it's in the details. Our <Link href="/touchscreen-software" className="text-purple-400 hover:text-purple-300 underline underline-offset-2">touchscreen software</Link> is powerful, but it's the premium look and feel that makes our platform truly stand out.</>,
                 delay: "600ms",
               },
             ].map((item, index) => (

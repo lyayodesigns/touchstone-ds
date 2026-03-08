@@ -5,6 +5,7 @@ import TouchIcon from "./TouchIcon";
 import AwardsSlider from "./AwardsSlider";
 import { CheckCircle, MousePointerClick, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from "next/image";
+import Link from "next/link";
 
 const titleWords = ["Touchscreen", "Touchstone"];
 const carouselImages = [
@@ -170,11 +171,11 @@ const HeroSection: React.FC = () => {
               {/* Feature cards in a row */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Card 1 */}
-                <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
+                <Link href="/features" className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
                   hover:from-blue-100/80 hover:to-purple-100/80 
                   hover:border-primary/20 hover:shadow-lg hover:scale-[1.02] 
                   hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
-                  transition-all duration-300 ease-out cursor-pointer md:text-center">
+                  transition-all duration-300 ease-out cursor-pointer md:text-center block">
                   <div className="flex flex-row md:flex-col items-start md:items-center md:justify-center mb-3">
                     <div className="relative inline-flex mr-4 md:mr-0 mb-0 md:mb-3">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
@@ -187,14 +188,14 @@ const HeroSection: React.FC = () => {
                       <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">Tailored to reflect your school's identity.</p>
                     </div>
                   </div>
-                </div>
+                </Link>
                 
                 {/* Card 2 */}
-                <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
+                <Link href="/touchscreen-software" className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
                   hover:from-blue-100/80 hover:to-purple-100/80 
                   hover:border-primary/20 hover:shadow-lg hover:scale-[1.02] 
                   hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
-                  transition-all duration-300 ease-out cursor-pointer md:text-center">
+                  transition-all duration-300 ease-out cursor-pointer md:text-center block">
                   <div className="flex flex-row md:flex-col items-start md:items-center md:justify-center mb-3">
                     <div className="relative inline-flex mr-4 md:mr-0 mb-0 md:mb-3">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
@@ -207,14 +208,14 @@ const HeroSection: React.FC = () => {
                       <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">So you can focus on what matters most.</p>
                     </div>
                   </div>
-                </div>
+                </Link>
                 
                 {/* Card 3 */}
-                <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
+                <Link href="/features" className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 backdrop-blur-sm border border-foreground/5 rounded-xl p-5 
                   hover:from-blue-100/80 hover:to-purple-100/80 
                   hover:border-primary/20 hover:shadow-lg hover:scale-[1.02] 
                   hover:-translate-y-1 active:scale-[0.98] active:translate-y-0 
-                  transition-all duration-300 ease-out cursor-pointer md:text-center">
+                  transition-all duration-300 ease-out cursor-pointer md:text-center block">
                   <div className="flex flex-row md:flex-col items-start md:items-center md:justify-center mb-3">
                     <div className="relative inline-flex mr-4 md:mr-0 mb-0 md:mb-3">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full blur-sm"></div>
@@ -227,7 +228,7 @@ const HeroSection: React.FC = () => {
                       <p className="text-foreground/60 text-xs sm:text-sm mt-1 md:mt-2">Emmy-nominated UI/UX graphic design.</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

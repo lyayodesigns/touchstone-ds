@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const SectorSpecificIdeas = () => {
@@ -136,12 +137,12 @@ const SectorSpecificIdeas = () => {
             <p className="text-gray-700 mb-6">
               Every organization is unique, and so should be your donor recognition strategy. Let us create a custom solution that perfectly fits your mission and community.
             </p>
-            <a 
-              href="https://touchstone-ds.com/contact/" 
+            <Link 
+              href="/contact" 
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               Get Custom Ideas for My Organization
-            </a>
+            </Link>
           </div>
         </motion.div>
       </Container>

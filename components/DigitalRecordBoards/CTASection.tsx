@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const CTASection = () => {
@@ -27,12 +28,12 @@ const CTASection = () => {
           </p>
 
           <div>
-            <a 
-              href="/contact/" 
+            <Link 
+              href="/contact" 
               className="inline-block px-10 py-5 bg-white text-purple-600 font-bold text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
               Get Your Free Demo Today
-            </a>
+            </Link>
           </div>
         </motion.div>
       </Container>

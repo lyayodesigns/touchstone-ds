@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const YearbookBenefits = () => {
@@ -78,7 +79,7 @@ const YearbookBenefits = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-gradient-purple-blue">
-              Why Use Touchstone to Digitize Your Yearbook?
+              <Link href="/about" className="hover:underline underline-offset-2">Why Use Touchstone to Digitize Your Yearbook?</Link>
             </span>
           </h2>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">

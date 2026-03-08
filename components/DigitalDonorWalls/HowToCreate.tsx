@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const HowToCreate = () => {
@@ -30,7 +31,7 @@ const HowToCreate = () => {
     {
       step: "4",
       title: "Deploy & Launch",
-      description: "We install the hardware (large-format screens, touchscreen kiosks) and train your team fully on the use of the content management system.",
+      description: <>We install the hardware (large-format screens, <Link href="/touchscreen-hardware" className="text-gray-500 hover:underline underline-offset-2">touchscreen kiosks</Link>) and train your team fully on the use of the content management system.</>,
       icon: "🚀",
       gradient: "from-red-400 to-orange-500"
     },

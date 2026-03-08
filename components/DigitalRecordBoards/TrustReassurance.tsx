@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const TrustReassurance = () => {
@@ -83,7 +84,7 @@ const TrustReassurance = () => {
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
-                Your Business Association with Touchstone Digital Solutions
+                Your Business Association with <Link href="/about" className="hover:underline underline-offset-2">Touchstone Digital Solutions</Link>
               </span>
             </h3>
             

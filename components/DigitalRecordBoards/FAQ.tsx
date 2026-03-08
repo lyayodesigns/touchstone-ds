@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const FAQ = () => {
@@ -10,7 +11,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What are digital record boards?",
-      answer: "Digital record boards are cloud based records displayed on touchscreen displays that showcase athletic and academic records, milestones, and achievements in a modern, searchable, and interactive format. Because records are digital, updates happen in seconds, there are no data limits, and virtually anything can be displayed."
+      answer: <>Digital record boards are cloud based records displayed on <Link href="/touchscreen-software" className="text-blue-600 hover:underline underline-offset-2">touchscreen displays</Link> that showcase athletic and academic records, milestones, and achievements in a modern, searchable, and interactive format. Because records are digital, updates happen in seconds, there are no data limits, and virtually anything can be displayed.</>
     },
     {
       question: "How are records updated?",
@@ -38,7 +39,7 @@ const FAQ = () => {
     },
     {
       question: "Do we need to buy new equipment?",
-      answer: "No, you can use any touchscreens you prefer. However, we also offer beautiful, industry leading hardware at unbeatable prices."
+      answer: <>No, you can use any <Link href="/touchscreen-hardware" className="text-blue-600 hover:underline underline-offset-2">touchscreens</Link> you prefer. However, we also offer beautiful, industry leading hardware at unbeatable prices.</>
     }
   ];
 

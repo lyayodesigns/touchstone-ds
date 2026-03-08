@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const HowItWorks = () => {
@@ -102,12 +103,12 @@ const HowItWorks = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <a 
-            href="/contact/" 
+          <Link 
+            href="/contact" 
             className="inline-block px-8 py-3.5 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
           >
             Book Your Free Consultation Now
-          </a>
+          </Link>
         </motion.div>
       </Container>
     </section>

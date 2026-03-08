@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const FeaturesHeroSection = () => {
@@ -96,7 +97,7 @@ const FeaturesHeroSection = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Touchstone Digital Solutions transforms traditional recognition into a fully immersive, interactive displays. From Digital Hall of Fame to Digital Donor Walls, Digital Record Boards, Digital Yearbooks and more, our platform empowers schools, colleges, and organizations to celebrate excellence with cutting-edge technology.
+                Touchstone Digital Solutions transforms traditional recognition into a fully immersive, interactive displays. From <Link href="/" className="text-blue-700 hover:underline underline-offset-2">Digital Hall of Fame</Link> to <Link href="/digital-donor-walls" className="text-blue-700 hover:underline underline-offset-2">Digital Donor Walls</Link>, <Link href="/digital-record-boards" className="text-blue-700 hover:underline underline-offset-2">Digital Record Boards</Link>, <Link href="/digital-yearbooks" className="text-blue-700 hover:underline underline-offset-2">Digital Yearbooks</Link> and more, our platform empowers schools, colleges, and organizations to celebrate excellence with cutting-edge technology.
               </p>
             </motion.div>
           </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const AnatomyOfDigitalDonorWall = () => {
@@ -99,9 +100,9 @@ const AnatomyOfDigitalDonorWall = () => {
           >
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
               <p className="text-lg text-gray-700 font-medium">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-bold">
+                <Link href="/about" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-bold hover:underline underline-offset-2">
                   Touchstone Digital Solutions
-                </span> is among America's premier digital donor wall companies, creating custom, beautiful, and intuitive solutions for mission-driven organizations.
+                </Link> is among America's premier digital donor wall companies, creating custom, beautiful, and intuitive solutions for mission-driven organizations.
               </p>
             </div>
           </motion.div>

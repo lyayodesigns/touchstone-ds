@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { User, School, Library } from 'lucide-react';
 
@@ -95,12 +96,12 @@ const YearbookPricing = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <a 
-                href="https://touchstone-ds.com/contact/" 
+              <Link 
+                href="/contact" 
                 className="inline-block px-8 py-4 btn-gradient hover-lift font-medium rounded-full shadow-lg"
               >
                 View Our Pricing Plans
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div

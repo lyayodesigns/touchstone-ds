@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const WhyTouchstoneChoice = () => {
@@ -26,7 +27,7 @@ const WhyTouchstoneChoice = () => {
     },
     {
       title: "Turn-Key Solution",
-      description: "We manage the entire process from concept and design to hardware, software, installation, and training.",
+      description: <>We manage the entire process from concept and design to <Link href="/touchscreen-hardware" className="text-gray-600 hover:underline underline-offset-2">hardware</Link>, <Link href="/touchscreen-software" className="text-gray-600 hover:underline underline-offset-2">software</Link>, installation, and training.</>,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -57,7 +58,7 @@ const WhyTouchstoneChoice = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              Why Touchstone Digital Solutions
+              <Link href="/about" className="hover:underline underline-offset-2">Why Touchstone Digital Solutions</Link>
             </span>
           </h2>
           <h3 className="text-2xl font-bold text-gray-800 mb-6">

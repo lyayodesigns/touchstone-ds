@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, Heart, Users } from 'lucide-react';
 
 export default function TouchstoneFamilySection() {
@@ -23,7 +24,7 @@ export default function TouchstoneFamilySection() {
               </div>
               
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-                Join the <span className="text-transparent bg-clip-text text-gradient-purple-blue">Touchstone Family</span>
+                Join the <Link href="/about" className="text-transparent bg-clip-text text-gradient-purple-blue hover:underline underline-offset-4">Touchstone Family</Link>
               </h2>
             </div>
             
@@ -82,13 +83,13 @@ export default function TouchstoneFamilySection() {
             </div>
             
             {/* Floating decorative card */}
-            <div className="absolute -bottom-8 -left-8 bg-card/95 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-border/50 max-w-xs hidden lg:block">
+            <Link href="/contact" className="absolute -bottom-8 -left-8 bg-card/95 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-border/50 max-w-xs hidden lg:block hover:border-primary/30 transition-colors">
               <div className="flex items-center gap-3 mb-2">
                 <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm font-medium">Available Now</span>
               </div>
               <p className="text-sm text-muted-foreground">Our team is ready to help you succeed</p>
-            </div>
+            </Link>
             
             {/* Decorative elements */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>

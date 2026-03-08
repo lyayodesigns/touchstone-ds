@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 // SSR/SSG compatible: No useEffect, useRef, or browser-only APIs. All framer-motion usage is SSR safe.
@@ -133,7 +134,7 @@ export const WhoWeAreSection = () => {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <span className="text-xl font-medium text-blue-600">Touchstone Digital Solutions</span> is an industry leader in fully customized interactive touchscreen recognition software. Founded by two brothers with years of experience in the field, we saw an opportunity to do more—delivering bespoke digital recognition solutions that go beyond the standard offerings of our competitors.
+                  <span className="text-xl font-medium text-blue-600">Touchstone Digital Solutions</span> is an industry leader in fully customized <Link href="/touchscreen-software" className="text-blue-600 hover:underline underline-offset-2">interactive touchscreen recognition software</Link>. Founded by two brothers with years of experience in the field, we saw an opportunity to do more—delivering bespoke digital recognition solutions that go beyond the standard offerings of our competitors.
                 </motion.p>
                 <motion.p 
                   className="text-gray-700 text-lg mb-6 leading-relaxed"
@@ -142,7 +143,7 @@ export const WhoWeAreSection = () => {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  At Touchstone, every project is a unique opportunity to craft a one-of-a-kind experience, tailored to the institution's identity and vision. We take a meticulous step-by-step approach, ensuring seamless integration and stunning design that transforms traditional Wall of Fame displays into dynamic, immersive showcases.
+                  At Touchstone, every project is a unique opportunity to craft a one-of-a-kind experience, tailored to the institution's identity and vision. We take a meticulous step-by-step approach, ensuring seamless integration and stunning design that transforms traditional <Link href="/interactive-athletic-environments" className="text-blue-600 hover:underline underline-offset-2">Wall of Fame displays</Link> into dynamic, immersive showcases.
                 </motion.p>
                 <motion.p 
                   className="text-gray-700 text-lg leading-relaxed"

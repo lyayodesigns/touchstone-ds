@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { MessageSquare, Palette, Rocket, Star } from 'lucide-react';
 
@@ -11,7 +12,7 @@ const HowItWorks = () => {
       icon: <MessageSquare className="h-5 w-5" />,
       number: "1",
       title: "Consultation",
-      description: "We identify your goals (e.g., modernize hall of fame, boost donor visibility).",
+      description: <>We identify your goals (e.g., modernize <Link href="/" className="text-blue-600 hover:underline underline-offset-2">hall of fame</Link>, boost <Link href="/digital-donor-walls" className="text-blue-600 hover:underline underline-offset-2">donor visibility</Link>).</>,
       gradient: "from-blue-600 to-violet-600",
       bgGradient: "from-blue-500/8 to-violet-500/8"
     },

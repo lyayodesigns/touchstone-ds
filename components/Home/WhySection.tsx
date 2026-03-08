@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const FeatureCard: React.FC<{
   number: string;
   title: string;
-  subtitle: string;
+  subtitle: React.ReactNode;
   description: string;
   additionalInfo?: string;
   delay: number;
@@ -122,7 +123,7 @@ const WhySection: React.FC = () => {
             <FeatureCard
               number="04"
               title="Scalable Solutions:"
-              subtitle="Start small with a Team-Focused Achievement Display or go big with a University-Wide Digital Hall of Fame."
+              subtitle={<>Start small with a <Link href="/interactive-athletic-environments" className="underline underline-offset-2 hover:opacity-70 transition-opacity">Team-Focused Achievement Display</Link> or go big with a <Link href="/interactive-athletic-environments" className="underline underline-offset-2 hover:opacity-70 transition-opacity">University-Wide Digital Hall of Fame</Link>.</>}
               description="Grow with your needs."
               delay={400}
               isVisible={isVisible}

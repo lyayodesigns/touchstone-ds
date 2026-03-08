@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const TrophyCaseDigitalAge = () => {
@@ -98,7 +99,7 @@ const TrophyCaseDigitalAge = () => {
                       Welcome to the future of recognition.
                     </h3>
                     <p className="text-gray-600 leading-relaxed font-light">
-                      Touchstone Digital Solutions presents an innovative Digital Trophy Case—a secure, interactive, online platform for the permanent honoring of achievements.
+                      <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> presents an innovative Digital Trophy Case—a secure, interactive, online platform for the permanent honoring of achievements.
                     </p>
                   </div>
                 </div>

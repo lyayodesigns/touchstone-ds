@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Monitor, Tv, Users, Layers, Sparkles } from 'lucide-react';
 
@@ -29,7 +30,7 @@ const ScalableSolutions = () => {
     {
       icon: <Monitor className="h-5 w-5" />,
       title: "Single-Touch Interactive Displays",
-      description: "Large-format touchscreen installations that allow users to explore athlete hometowns, records, and program history through intuitive navigation.",
+      description: <>Large-format <Link href="/touchscreen-hardware" className="text-gray-600 hover:underline underline-offset-2">touchscreen installations</Link> that allow users to explore athlete hometowns, <Link href="/digital-record-boards" className="text-gray-600 hover:underline underline-offset-2">records</Link>, and program history through intuitive navigation.</>,
       color: "blue"
     },
     {
@@ -47,7 +48,7 @@ const ScalableSolutions = () => {
     {
       icon: <Layers className="h-5 w-5" />,
       title: "Immersive Flagship Environments",
-      description: "Synchronized LED walls and interactive surfaces designed for recruiting corridors and donor-facing spaces.",
+      description: <>Synchronized LED walls and interactive surfaces designed for recruiting corridors and <Link href="/digital-donor-walls" className="text-gray-600 hover:underline underline-offset-2">donor-facing spaces</Link>.</>,
       color: "emerald"
     }
   ];

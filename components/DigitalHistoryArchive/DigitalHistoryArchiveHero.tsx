@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalHistoryArchiveHero = () => {
@@ -92,7 +93,7 @@ const DigitalHistoryArchiveHero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-                Turn your past records, objects and cultural background into an online search and secure digital archive site. The Digital History Archive service of Touchstone Digital Solutions has been designed to secure the most valuable assets of your institution and preserve them throughout generations with just a touch of a button by the researchers, stakeholders, and the general population.
+                Turn your past records, objects and cultural background into an online search and secure digital archive site. The Digital History Archive service of <Link href="/about" className="text-gray-700 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> has been designed to secure the most valuable assets of your institution and preserve them throughout generations with just a touch of a button by the researchers, stakeholders, and the general population.
               </p>
             </motion.div>
 
@@ -102,18 +103,18 @@ const DigitalHistoryArchiveHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <a 
-                href="/contact/" 
+              <Link 
+                href="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Your Free Assessment
-              </a>
-              <a 
-                href="/features/" 
+              </Link>
+              <Link 
+                href="/features" 
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 View Features
-              </a>
+              </Link>
             </motion.div>
           </div>
         </Container>

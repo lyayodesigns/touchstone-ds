@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const TouchstoneStewardshipTool = () => {
@@ -86,12 +87,12 @@ const TouchstoneStewardshipTool = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <a 
-            href="https://touchstone-ds.com/contact/" 
+          <Link 
+            href="/contact" 
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
             See How It Works for Your Organization
-          </a>
+          </Link>
         </motion.div>
       </Container>
     </section>

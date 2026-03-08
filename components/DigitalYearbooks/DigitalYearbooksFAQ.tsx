@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalYearbooksFAQ = () => {
@@ -26,7 +27,7 @@ const DigitalYearbooksFAQ = () => {
     },
     {
       question: "How do I access my digital yearbooks?",
-      answer: "Your digital yearbooks are hosted on our secure cloud-based platform. You can access them anytime from any device with an internet connection - computer, tablet, or smartphone."
+      answer: <>Your digital yearbooks are hosted on our secure <Link href="/touchscreen-software" className="text-blue-600 hover:underline underline-offset-2">cloud-based platform</Link>. You can access them anytime from any device with an internet connection - computer, tablet, or smartphone.</>
     },
     {
       question: "Can I share my digital yearbooks with others?",
@@ -144,17 +145,17 @@ const DigitalYearbooksFAQ = () => {
               Your yearbook is not just a graduation book, it is an actual part of your own history. The purpose of yearbook lies in the associations it entails. Those links should not be lost in time.
             </p>
             <p className="text-gray-700 font-medium mb-6">
-              Touchstone Digital Solutions gives you more than a digital version of the yearbook, it is a legacy. You are guaranteeing the answer to the question of what are yearbooks for? will never lose its meaning: it is to remember, to relate, to re-live the best days of our lives.
+              <Link href="/about" className="text-gray-700 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> gives you more than a digital version of the yearbook, it is a legacy. You are guaranteeing the answer to the question of what are yearbooks for? will never lose its meaning: it is to remember, to relate, to re-live the best days of our lives.
             </p>
             <p className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-6">
               Be a part of thousands of happy clients who have left their memories with us.
             </p>
-            <a 
-              href="https://touchstone-ds.com/contact/" 
+            <Link 
+              href="/contact" 
               className="inline-block px-8 py-4 btn-gradient hover-lift font-medium rounded-full shadow-lg"
             >
               Start Preserving Your Memories Today
-            </a>
+            </Link>
           </div>
         </motion.div>
       </Container>

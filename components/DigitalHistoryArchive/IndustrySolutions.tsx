@@ -2,18 +2,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const IndustrySolutions = () => {
   const industries = [
     {
       title: "Academic Institutions and Universities",
-      description: "Archive class pictures, yearbooks, rare manuscripts, faculty publications, historical events, student publications, and more.",
+      description: <>Archive class pictures, <Link href="/digital-yearbooks" className="text-gray-600 hover:underline underline-offset-2">yearbooks</Link>, rare manuscripts, faculty publications, historical events, student publications, and more.</>,
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: "Athletic programs and teams",
-      description: "Digitize coaching history, team rosters, all-time statistics, all-team honors, championships, notable alumni, and more.",
+      title: <Link href="/interactive-athletic-environments" className="hover:underline underline-offset-2">Athletic programs and teams</Link>,
+      description: <>Digitize coaching history, <Link href="/interactive-athletic-environments" className="text-gray-600 hover:underline underline-offset-2">team rosters</Link>, all-time statistics, all-team honors, championships, notable alumni, and more.</>,
       gradient: "from-purple-500 to-pink-500"
     },
     {

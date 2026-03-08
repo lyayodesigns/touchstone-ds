@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalRecordBoardsHero = () => {
@@ -99,7 +100,7 @@ const DigitalRecordBoardsHero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-base md:text-lg text-gray-700">
-              Show dynamic records with modern touchscreen displays that impress viewers and honor achievement. Your institution's history deserves more than static record boards in your gym. Touchstone Digital Solutions delivers beautifully organized, searchable digital record boards that update instantly and grow with your achievements.
+              Show dynamic records with modern touchscreen displays that impress viewers and honor achievement. Your institution's history deserves more than static record boards in your gym. <Link href="/about" className="text-gray-700 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> delivers beautifully organized, searchable digital record boards that update instantly and grow with your achievements.
             </p>
           </motion.div>
         </Container>

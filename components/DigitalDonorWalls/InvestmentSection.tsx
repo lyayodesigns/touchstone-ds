@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const InvestmentSection = () => {
@@ -32,7 +33,7 @@ const InvestmentSection = () => {
               "What is the digital donor wall cost?" is a common question, answerable only according to what you need. Considerations are how large or how many displays, how complex is the design, and so forth, including custom software integrations.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              At Touchstone Digital Solutions, we maintain a transparent policy concerning our prices. We provide solutions that bestow extraordinary value upon the consumer, hence converting a stakeholder's one-time expense into a lifelong stewardship asset.
+              At <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link>, we maintain a transparent policy concerning our prices. We provide solutions that bestow extraordinary value upon the consumer, hence converting a stakeholder's one-time expense into a lifelong stewardship asset.
             </p>
             
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100 mb-8">
@@ -146,12 +147,12 @@ const InvestmentSection = () => {
                 An investment in a digital donor wall is an investment in future fundraising success.
               </p>
               
-              <a 
-                href="https://touchstone-ds.com/contact/" 
+              <Link 
+                href="/contact" 
                 className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Your Custom Quote
-              </a>
+              </Link>
             </motion.div>
 
             {/* Background decorative elements */}

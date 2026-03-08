@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from 'next/link';
 import { Check, X, Star, Shield, Clock, Headphones, DollarSign, Award, Zap, Users } from 'lucide-react';
 
 const ComparisonSection: React.FC = () => {
@@ -273,7 +274,7 @@ const ComparisonSection: React.FC = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-[#6ea8fe] to-[#447df5] rounded-full mx-auto mb-8"></div>
           <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-            See Why <span className="text-gradient-purple-blue font-semibold">Touchstone</span> Leads The Industry With <span className="text-gradient-purple-blue font-semibold">Transparent Pricing</span>, <span className="text-gradient-purple-blue font-semibold">Superior Support</span>, And <span className="text-gradient-purple-blue font-semibold">Innovative Features</span>
+            See Why <Link href="/about" className="text-gradient-purple-blue font-semibold hover:underline underline-offset-2">Touchstone</Link> Leads The Industry With <span className="text-gradient-purple-blue font-semibold">Transparent Pricing</span>, <span className="text-gradient-purple-blue font-semibold">Superior Support</span>, And <span className="text-gradient-purple-blue font-semibold">Innovative Features</span>
           </p>
         </div>
 

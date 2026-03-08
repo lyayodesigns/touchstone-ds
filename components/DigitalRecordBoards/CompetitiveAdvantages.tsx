@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Award, Heart, Settings, Shield, Headset, Rocket } from 'lucide-react';
 
@@ -51,7 +52,7 @@ const CompetitiveAdvantages = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              The Difference Between Touchstone Digital Solutions and Other Companies
+              <Link href="/compare-us" className="hover:underline underline-offset-2">The Difference Between Touchstone Digital Solutions and Other Companies</Link>
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

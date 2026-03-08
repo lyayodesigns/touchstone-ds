@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Monitor, Tv, Users, MapPin, Video, Cloud, Star } from 'lucide-react';
 
@@ -68,7 +69,7 @@ const BeyondTouchscreens = () => {
     },
     {
       icon: <Cloud className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
-      title: "Cloud-based content management systems",
+      title: <Link href="/touchscreen-software" className="hover:underline underline-offset-2">Cloud-based content management systems</Link>,
       iconBg: "bg-gradient-to-br from-sky-500 to-blue-500",
       gradient: "from-sky-500/15 to-blue-500/15",
       borderGradient: "from-sky-400/40 to-blue-400/40",
@@ -125,7 +126,7 @@ const BeyondTouchscreens = () => {
             </motion.div>
 
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-4">
-              Modern athletic facilities demand more than static displays. We create interactive environments that allow fans, recruits, and donors to explore athlete stories, achievements, and program history in a powerful visual format.
+              Modern athletic facilities demand more than static displays. We create interactive environments that allow fans, recruits, and <Link href="/digital-donor-walls" className="text-gray-600 hover:underline underline-offset-2">donors</Link> to explore athlete stories, achievements, and program history in a powerful visual format.
             </p>
             <p className="text-base text-gray-500 max-w-3xl mx-auto leading-relaxed">
               Our solutions scale from single-screen installations to large-format LED walls and immersive multi-surface experiences.

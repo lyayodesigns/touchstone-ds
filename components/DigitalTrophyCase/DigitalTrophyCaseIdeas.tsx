@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalTrophyCaseIdeas = () => {
@@ -38,7 +39,7 @@ const DigitalTrophyCaseIdeas = () => {
       )
     },
     {
-      title: "The \"Corporate Hall of Fame\"",
+      title: <><Link href="/" className="hover:underline underline-offset-2">The &quot;Corporate Hall of Fame&quot;</Link></>,
       description: "A rotating digital trophy case display at your office lobby highlighting top-tier employees and historic company achievements.",
       gradient: "from-red-400 to-orange-500",
       icon: (
@@ -134,12 +135,12 @@ const DigitalTrophyCaseIdeas = () => {
               These are just a few examples of what's possible. Your digital trophy case can be as unique as your achievements. 
               Let your creativity flow and build something that truly represents your journey.
             </p>
-            <a 
-              href="#start-trial" 
+            <Link 
+              href="/contact" 
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               Get Started Today
-            </a>
+            </Link>
           </div>
         </motion.div>
       </Container>

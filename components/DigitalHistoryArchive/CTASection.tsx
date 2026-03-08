@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const CTASection = () => {
@@ -31,12 +32,12 @@ const CTASection = () => {
           </h2>
 
           <div className="mb-12">
-            <a 
-              href="/contact/" 
+            <Link 
+              href="/contact" 
               className="inline-block px-10 py-5 bg-white text-purple-600 font-bold text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
               Get Your Free Assessment of Archives
-            </a>
+            </Link>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
@@ -60,7 +61,7 @@ const CTASection = () => {
               Why wait any longer? Go public with your history!
             </h3>
             <p className="text-white/90 mb-6 leading-relaxed">
-              Your institution deserves a lasting digital legacy. Let our team professionally preserve it all. Whether you have 100 yearbooks or millions of files, Touchstone saves you time, money, and space while giving you peace of mind for decades to come.
+              Your institution deserves a lasting digital legacy. Let our team professionally preserve it all. Whether you have 100 <Link href="/digital-yearbooks" className="text-white hover:underline underline-offset-2">yearbooks</Link> or millions of files, Touchstone saves you time, money, and space while giving you peace of mind for decades to come.
             </p>
           </div>
         </motion.div>

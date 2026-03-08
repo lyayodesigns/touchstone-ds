@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { GraduationCap, Sparkles, HandHeart, Palette, Users, HeadphonesIcon } from 'lucide-react';
 
@@ -15,7 +16,7 @@ const WhyTouchstone = () => {
     },
     {
       title: "Industry Innovators",
-      description: "We stay at the forefront of software, hardware, and service. When you partner with Touchstone, you gain access to best in class solutions at exceptional value. From PDF viewers and AI advancements to the latest touchscreen technology, Touchstone delivers.",
+      description: <>We stay at the forefront of software, hardware, and service. When you partner with Touchstone, you gain access to best in class solutions at exceptional value. From PDF viewers and AI advancements to the latest <Link href="/touchscreen-hardware" className="text-gray-600 hover:underline underline-offset-2">touchscreen technology</Link>, Touchstone delivers.</>,
       Icon: Sparkles,
       gradient: "from-purple-500 to-pink-500"
     },
@@ -33,7 +34,7 @@ const WhyTouchstone = () => {
     },
     {
       title: "Family Owned and Operated",
-      description: "When you partner with Touchstone, you become part of a family that puts you first. If a question or issue arises, you can email, call, text, or FaceTime a trusted member of our team who knows you and your institution. Come join the Touchstone family and let's build something meaningful together.",
+      description: <>When you partner with Touchstone, you become part of a family that puts you first. If a question or issue arises, you can email, call, text, or FaceTime a trusted member of our team who knows you and your institution. Come join the <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone family</Link> and let's build something meaningful together.</>,
       Icon: Users,
       gradient: "from-purple-500 to-pink-500"
     },
@@ -57,7 +58,7 @@ const WhyTouchstone = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
-              Touchstone Digital Solutions: Heritage Digitalization and Archive Management Leaders
+              <Link href="/about" className="hover:underline underline-offset-2">Touchstone Digital Solutions</Link>: Heritage Digitalization and Archive Management Leaders
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

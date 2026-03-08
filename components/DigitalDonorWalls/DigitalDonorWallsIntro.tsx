@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const DigitalDonorWallsIntro = () => {
@@ -98,7 +99,7 @@ const DigitalDonorWallsIntro = () => {
                       Welcome to the future of donor recognition.
                     </h3>
                     <p className="text-gray-600 leading-relaxed font-light">
-                      Touchstone Digital Solutions presents innovative Digital Donor Walls—secure, interactive, online platforms for the permanent honoring of your most generous supporters and their lasting impact.
+                      <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> presents innovative Digital Donor Walls—secure, interactive, online platforms for the permanent honoring of your most generous supporters and their lasting impact.
                     </p>
                   </div>
                 </div>

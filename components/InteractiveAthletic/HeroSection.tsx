@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const HeroSection = () => {
@@ -84,11 +85,11 @@ const HeroSection = () => {
             />
             
             <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto mb-3">
-              Touchstone Digital Solutions designs and deploys large-scale interactive environments that transform athletic spaces into dynamic storytelling destinations.
+              <Link href="/about" className="text-gray-700 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> designs and deploys large-scale interactive environments that transform athletic spaces into dynamic storytelling destinations.
             </p>
 
             <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto mb-6">
-              From touchscreen displays to multi-user LED walls and synchronized installations, we deliver custom interactive software powered by Formetco LED systems.
+              From <Link href="/touchscreen-hardware" className="text-gray-600 hover:underline underline-offset-2">touchscreen displays</Link> to multi-user LED walls and synchronized installations, we deliver custom interactive software powered by Formetco LED systems.
             </p>
           </motion.div>
 
@@ -97,14 +98,15 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <motion.a
-              href="/contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              whileHover={{ y: -4, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Request a Consultation
-            </motion.a>
+            <Link href="/contact">
+              <motion.div
+                className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                whileHover={{ y: -4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Request a Consultation
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
       </Container>

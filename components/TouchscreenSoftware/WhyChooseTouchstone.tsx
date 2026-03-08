@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Ban, Award, Globe, TrendingUp, Sparkles, Star } from 'lucide-react';
 
@@ -47,7 +48,7 @@ const WhyChooseTouchstone = () => {
     {
       icon: <Globe className="h-8 w-8 text-emerald-500" />,
       title: "Connect Globally",
-      description: "Let alumni in Tokyo or donors in Toronto access your hall of fame, records, or donor wall from any device.",
+      description: <>Let alumni in Tokyo or donors in Toronto access your <Link href="/" className="text-emerald-600 hover:underline underline-offset-2">hall of fame</Link>, <Link href="/digital-record-boards" className="text-emerald-600 hover:underline underline-offset-2">records</Link>, or <Link href="/digital-donor-walls" className="text-emerald-600 hover:underline underline-offset-2">donor wall</Link> from any device.</>,
       gradient: "from-emerald-500/10 to-teal-500/10",
       borderGradient: "from-emerald-500/30 to-teal-500/30",
       iconBg: "bg-emerald-500/10"

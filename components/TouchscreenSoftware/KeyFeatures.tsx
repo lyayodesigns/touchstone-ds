@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 import { Trophy, Heart, BookOpen, Medal, Monitor, Star, ArrowRight } from 'lucide-react';
 
@@ -30,7 +31,7 @@ const KeyFeatures = () => {
       icon: <Trophy className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       number: "1",
       title: "Interactive Hall of Fame Software",
-      description: "Showcase championship teams, Olympians, or Nobel laureates with dynamic profiles, highlight reels, and 3D trophy displays.",
+      description: <>Showcase championship teams, Olympians, or Nobel laureates with dynamic profiles, highlight reels, and 3D trophy displays. <Link href="/" className="text-amber-600 hover:underline underline-offset-2">Explore our Hall of Fame</Link>.</>,
       iconBg: "bg-gradient-to-br from-amber-500 to-orange-500",
       gradient: "from-amber-500/15 to-orange-500/15",
       borderGradient: "from-amber-400/40 to-orange-400/40",
@@ -39,7 +40,7 @@ const KeyFeatures = () => {
     {
       icon: <Heart className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       number: "2",
-      title: "Digital Donor Recognition Walls",
+      title: <Link href="/digital-donor-walls" className="hover:underline underline-offset-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-600 group-hover:to-blue-600">Digital Donor Recognition Walls</Link>,
       description: "Honor contributors with searchable profiles, impact stories, and real-time scholarship updates.",
       iconBg: "bg-gradient-to-br from-pink-500 to-rose-500",
       gradient: "from-pink-500/15 to-rose-500/15",
@@ -50,7 +51,7 @@ const KeyFeatures = () => {
       icon: <BookOpen className="h-5 w-5 text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />,
       number: "3",
       title: "Cloud-Based School Archives",
-      description: "Preserve yearbooks, historic photos, and school songs in a secure, easily navigable database.",
+      description: <>Preserve <Link href="/digital-yearbooks" className="text-blue-600 hover:underline underline-offset-2">yearbooks</Link>, historic photos, and school songs in a secure, easily navigable database.</>,
       iconBg: "bg-gradient-to-br from-blue-500 to-cyan-500",
       gradient: "from-blue-500/15 to-cyan-500/15",
       borderGradient: "from-blue-400/40 to-cyan-400/40",

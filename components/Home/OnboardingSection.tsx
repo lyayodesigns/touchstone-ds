@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 
 const OnboardingSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -119,8 +120,8 @@ const OnboardingSection: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   "Affordable pricing for any budget",
-                  "Custom software development",
-                  "Premium hardware packages",
+                  <Link href="/touchscreen-software" className="hover:underline underline-offset-2">Custom software development</Link>,
+                  <Link href="/touchscreen-hardware" className="hover:underline underline-offset-2">Premium hardware packages</Link>,
                   "Complete brand integration",
                   "Customized wall wraps",
                   "Content creation & design",
