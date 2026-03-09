@@ -164,7 +164,7 @@ async function generateSitemap() {
         priority: '0.9' 
       },
       { 
-        loc: `${baseUrl}/interactive-athletic-environments/`, 
+        loc: `${baseUrl}/yearbook-scanning/`, 
         lastmod: formatDate(new Date()), 
         changefreq: 'monthly', 
         priority: '0.9' 

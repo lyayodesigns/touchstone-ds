@@ -26,7 +26,7 @@ const BuiltForPreservation = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-            Yearbook Scanning Service combines archival preservation standards with modern digital technology — ensuring your yearbooks are:
+            Touchstone Digital Solutions combines archival preservation standards with modern digital technology — ensuring your yearbooks are:
           </p>
         </div>
 

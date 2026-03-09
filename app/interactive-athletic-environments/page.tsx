@@ -13,6 +13,16 @@ export const dynamic = 'force-static';
 export const metadata: Metadata = {
   title: 'Interactive Athletic Environments & Fan Experiences | Touchstone Digital Solutions',
   description: "Touchstone Digital Solutions designs and deploys large-scale interactive environments that transform athletic spaces into dynamic storytelling destinations. From touchscreen displays to multi-user LED walls.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    }
+  },
   alternates: {
     canonical: 'https://touchstone-ds.com/interactive-athletic-environments/'
   },

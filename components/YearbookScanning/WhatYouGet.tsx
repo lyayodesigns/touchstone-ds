@@ -35,7 +35,7 @@ const WhatYouGet = () => {
     },
     {
       title: "Exclusive Control of Your Content",
-      description: "Unlike some yearbook scanning companies, Yearbook Scanning Service does not keep a copy of your files; your digitized yearbooks remain exclusively in the domain of the publishing school or institution.",
+      description: "We do not keep a copy of your files; your digitized yearbooks remain exclusively in the domain of the publishing school or institution.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -78,11 +78,11 @@ const WhatYouGet = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-              What You Get From Our Partner‑Powered Yearbook Scanning
+              What You Get From Touchstone's Yearbook Scanning Service
             </span>
           </h2>
           <p className="text-foreground/70 max-w-3xl mx-auto text-lg">
-            Through Touchstone's partnership with Yearbook Scanning Service, every project follows a proven, preservation‑focused workflow designed specifically for yearbooks.
+            Every project follows our proven, preservation‑focused workflow designed specifically for yearbooks.
           </p>
         </motion.div>
 
@@ -117,10 +117,10 @@ const WhatYouGet = () => {
         >
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-              Touchstone + Yearbook Scanning Service
+              Complete Yearbook Digitization Solutions
             </h3>
             <p className="text-foreground/80 text-lg">
-              Touchstone Digital Solutions manages the relationship, planning, and ongoing support, while Yearbook Scanning Service provides the secure production backbone and proven scanning expertise. Need interactive <a href="/digital-yearbooks/" className="text-blue-600 hover:text-purple-600 underline font-medium transition-colors">digital yearbooks</a> for current students? We offer that solution too.
+              Touchstone Digital Solutions manages every aspect of your yearbook scanning project, from planning and consultation to secure production and digital delivery. Need interactive <a href="/digital-yearbooks/" className="text-blue-600 hover:text-purple-600 underline font-medium transition-colors">digital yearbooks</a> for current students? We offer that solution too.
             </p>
           </div>
         </motion.div>

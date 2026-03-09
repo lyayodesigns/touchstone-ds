@@ -64,7 +64,7 @@ const WhySchoolsTrust = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-                Why Schools Trust Yearbook Scanning Service
+                Why Schools Trust Touchstone Digital Solutions
               </span>
             </h2>
           </div>
@@ -99,7 +99,7 @@ const WhySchoolsTrust = () => {
             viewport={{ once: true }}
           >
             <p className="text-lg text-foreground/80 leading-relaxed text-center">
-              Operating from a state-of-the-art New York facility, their team has digitized thousands of archival yearbooks, creating searchable, high-quality digital files that preserve school history while protecting fragile originals.
+              Our team has digitized thousands of archival yearbooks using state-of-the-art equipment and techniques, creating searchable, high-quality digital files that preserve school history while protecting fragile originals.
             </p>
           </motion.div>
         </motion.div>

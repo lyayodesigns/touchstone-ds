@@ -16,11 +16,11 @@ const WhoIsYearbookScanning = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
-                Who Is Yearbook Scanning Service?
+                Why Choose Touchstone for Yearbook Scanning?
               </span>
             </h2>
             <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-              The Nation's Trusted Leader in Yearbook Digitization Since 2010
+              Professional Yearbook Digitization You Can Trust
             </p>
           </div>
 
@@ -34,11 +34,11 @@ const WhoIsYearbookScanning = () => {
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 space-y-6">
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  Yearbook Scanning Service is the industry leader in professional yearbook digitization for schools and universities across the United States and internationally.
+                  Touchstone Digital Solutions brings professional yearbook digitization expertise to schools and universities across the United States and internationally.
                 </p>
                 
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  Founded in 2010 by historian and book preservation specialist Mark Honig, the company was built on one core mission:
+                  Our yearbook scanning service is built on a core commitment to preservation and accessibility:
                 </p>
 
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-500">
@@ -48,7 +48,7 @@ const WhoIsYearbookScanning = () => {
                 </div>
                 
                 <p className="text-lg text-foreground/70 leading-relaxed">
-                  What began as a passion for non-destructive book scanning evolved into a specialized service dedicated to helping schools protect and digitize their most treasured historical records — their yearbooks.
+                  We combine advanced scanning technology with archival preservation standards to help schools protect and digitize their most treasured historical records — their yearbooks. Our non-destructive scanning process ensures your originals remain intact while creating high-quality digital archives.
                 </p>
               </div>
             </motion.div>
@@ -63,7 +63,7 @@ const WhoIsYearbookScanning = () => {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/Yearbook%20Scanning/stacked%20yearbooks.avif"
-                  alt="Yearbook Scanning Service"
+                  alt="Touchstone Yearbook Scanning Service"
                   fill
                   className="object-cover"
                 />

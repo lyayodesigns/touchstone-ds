@@ -195,7 +195,7 @@ const Navbar: React.FC = () => {
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 className={cn(
                   "text-sm lg:text-base transition-colors whitespace-nowrap flex items-center",
-                  (isActive("/touchstone-fundraising/") || isActive("/compare-us/") || isActive("/blog/") || isActive("/faq/"))
+                  (isActive("/touchstone-fundraising/") || isActive("/compare-us/") || isActive("/blog/") || isActive("/faq/") || isActive("/yearbook-scanning/"))
                     ? "text-gradient-purple-blue font-medium"
                     : "hover:text-gradient-purple-blue"
                 )}
@@ -221,6 +221,18 @@ const Navbar: React.FC = () => {
                   onClick={() => setIsResourcesOpen(false)}
                 >
                   Fundraise with Us
+                </Link>
+                <Link
+                  href="/yearbook-scanning/"
+                  className={cn(
+                    "block px-4 py-2 text-base transition-colors",
+                    isActive("/yearbook-scanning/")
+                      ? "text-gradient-purple-blue font-medium"
+                      : "text-gray-700 hover:text-gradient-purple-blue hover:bg-gray-50"
+                  )}
+                  onClick={() => setIsResourcesOpen(false)}
+                >
+                  Yearbook Scanning
                 </Link>
                 <Link
                   href="/compare-us/"
@@ -421,6 +433,7 @@ const Navbar: React.FC = () => {
                   <div className="pb-2">
                     {[
                       { name: "Fundraise with Us", href: "/touchstone-fundraising/" },
+                      { name: "Yearbook Scanning", href: "/yearbook-scanning/" },
                       { name: "Compare Us", href: "/compare-us/" },
                       { name: "Blog", href: "/blog/" },
                       { name: "FAQ", href: "/faq/" },

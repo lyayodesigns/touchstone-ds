@@ -53,12 +53,12 @@ const YearbookScanningIntro = () => {
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-8">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Yearbook Scanning by Touchstone Digital Solutions
+                Professional Yearbook Scanning by Touchstone Digital Solutions
               </span>
             </h2>
             
             <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl mx-auto font-light">
-              Touchstone Digital Solutions provides an end‑to‑end digital yearbook scanning solution for schools, districts, universities, libraries, and alumni organizations. In partnership with Yearbook Scanning Service, a Bound Book Scanning company founded in New York in 2010, your yearbooks are digitized by a specialist team that has scanned thousands of volumes using advanced robotics and automation.
+              Touchstone Digital Solutions provides an end‑to‑end digital yearbook scanning solution for schools, districts, universities, libraries, and alumni organizations. Your yearbooks are digitized by our specialist team using advanced robotics and automation, with thousands of volumes successfully preserved and made accessible.
             </p>
           </motion.div>
 
@@ -91,10 +91,10 @@ const YearbookScanningIntro = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4 leading-tight">
-                      A specialist production partner
+                      Specialized expertise and technology
                     </h3>
                     <p className="text-gray-600 leading-relaxed font-light">
-                      Yearbook Scanning Service focuses on archival yearbook digitization for schools, individuals, and reunion planners, making it a perfect production partner while Touchstone manages consulting, planning, and digital delivery for your institution.
+                      We specialize in archival yearbook digitization for schools, individuals, and reunion planners. Touchstone manages everything from consulting and planning to production and digital delivery for your institution.
                     </p>
                   </div>
                 </div>
@@ -110,10 +110,10 @@ const YearbookScanningIntro = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-light text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4 leading-tight">
-                      The best of both worlds
+                      Complete digital solutions
                     </h3>
                     <p className="text-gray-600 leading-relaxed font-light">
-                      This combination gives you the personalized support of a local digital partner plus the quality and efficiency of a dedicated yearbook scanning company. Looking for interactive <a href="/digital-yearbooks/" className="text-blue-600 hover:text-purple-600 underline font-medium transition-colors">digital yearbooks</a>? We offer that too.
+                      We provide personalized support combined with the quality and efficiency of professional yearbook scanning services. Looking for interactive <a href="/digital-yearbooks/" className="text-blue-600 hover:text-purple-600 underline font-medium transition-colors">digital yearbooks</a>? We offer that solution too.
                     </p>
                   </div>
                 </div>

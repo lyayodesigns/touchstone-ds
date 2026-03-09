@@ -76,28 +76,23 @@ const YearbookScanningFormCTA = () => {
             <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 flex items-center">
-                <img 
-                  src="/Yearbook%20Scanning/boundbook%20scanning-2.png" 
-                  alt="Yearbook Scanning" 
-                  className="w-16 h-16 object-contain mr-3"
-                />
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Ready to Protect and Modernize Your Yearbooks?
               </h2>
               <p className="text-lg text-foreground/80 mb-4">
-                Contact the Yearbook Scanning Service team directly:
+                Contact Touchstone Digital Solutions:
               </p>
               <div className="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>Phone: <a href="tel:+18455980467" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all">(845) 598-0467</a></span>
+                <span>Phone: <a href="tel:+16033617541" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all">(603) 361-7541</a></span>
               </div>
               <div className="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>Email: <a href="mailto:service@yearbookscanning.com" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all">service@yearbookscanning.com</a></span>
+                <span>Email: <a href="mailto:info@touchstone-ds.com" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all">info@touchstone-ds.com</a></span>
               </div>
               <p className="text-lg text-foreground/80">
                 Or request a free quote above to get started today.
