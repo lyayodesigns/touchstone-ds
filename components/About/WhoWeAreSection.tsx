@@ -143,7 +143,7 @@ export const WhoWeAreSection = () => {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  At Touchstone, every project is a unique opportunity to craft a one-of-a-kind experience, tailored to the institution's identity and vision. We take a meticulous step-by-step approach, ensuring seamless integration and stunning design that transforms traditional <Link href="/interactive-athletic-environments" className="text-blue-600 hover:underline underline-offset-2">Wall of Fame displays</Link> into dynamic, immersive showcases.
+                  At Touchstone, every project is a unique opportunity to craft a one-of-a-kind experience, tailored to the institution's identity and vision. We take a meticulous step-by-step approach, ensuring seamless integration and stunning design that transforms traditional Wall of Fame displays into dynamic, immersive showcases.
                 </motion.p>
                 <motion.p 
                   className="text-gray-700 text-lg leading-relaxed"

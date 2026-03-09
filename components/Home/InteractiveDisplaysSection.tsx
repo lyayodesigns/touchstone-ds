@@ -79,7 +79,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Athletic Program Showcase</Link> – Honor team success with dynamic rosters, championship highlights, records, player spotlights, and so much more.
+                  <span className="text-foreground font-medium">Athletic Program Showcase</span> – Honor team success with dynamic rosters, championship highlights, records, player spotlights, and so much more.
                 </p>
               </li>
 
@@ -100,7 +100,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Interactive Hall of Fame Displays</Link> – Celebrate legends with real-time updates and rich multimedia content.
+                  <span className="text-foreground font-medium">Interactive Hall of Fame Displays</span> – Celebrate legends with real-time updates and rich multimedia content.
                 </p>
               </li>
 
@@ -121,7 +121,7 @@ const InteractiveDisplaysSection: React.FC = () => {
                   </svg>
                 </div>
                 <p className="text-foreground/70">
-                  <Link href="/interactive-athletic-environments" className="text-foreground font-medium hover:text-cyan-400 transition-colors">Interactive School Displays</Link> – Perfect for locker rooms, lobbies, gyms, and auditoriums, bringing history and achievements to life.
+                  <span className="text-foreground font-medium">Interactive School Displays</span> – Perfect for locker rooms, lobbies, gyms, and auditoriums, bringing history and achievements to life.
                 </p>
               </li>
 

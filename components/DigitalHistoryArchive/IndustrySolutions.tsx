@@ -13,8 +13,8 @@ const IndustrySolutions = () => {
       gradient: "from-blue-500 to-purple-500"
     },
     {
-      title: <Link href="/interactive-athletic-environments" className="hover:underline underline-offset-2">Athletic programs and teams</Link>,
-      description: <>Digitize coaching history, <Link href="/interactive-athletic-environments" className="text-gray-600 hover:underline underline-offset-2">team rosters</Link>, all-time statistics, all-team honors, championships, notable alumni, and more.</>,
+      title: "Athletic programs and teams",
+      description: <>Digitize coaching history, team rosters, all-time statistics, all-team honors, championships, notable alumni, and more.</>,
       gradient: "from-purple-500 to-pink-500"
     },
     {

@@ -67,7 +67,7 @@ const TheSolution = () => {
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> makes it easy to update athletic records and display them beautifully, both in person and online. Schools can use our platform as a central hub for records across <Link href="/interactive-athletic-environments" className="text-gray-600 hover:underline underline-offset-2">every sport</Link>. Coaches can update results directly, athletes can see what they need to beat, and alumni can stay connected to their school's legacy.
+            <Link href="/about" className="text-gray-600 hover:underline underline-offset-2">Touchstone Digital Solutions</Link> makes it easy to update athletic records and display them beautifully, both in person and online. Schools can use our platform as a central hub for records across every sport. Coaches can update results directly, athletes can see what they need to beat, and alumni can stay connected to their school's legacy.
           </p>
 
           <motion.div
