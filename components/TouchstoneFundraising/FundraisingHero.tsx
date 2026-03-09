@@ -46,6 +46,7 @@ const FundraisingHero = () => {
       formData.append('_subject', 'New Fundraising Request');
       formData.append('_template', 'table');
       formData.append('_captcha', 'false');
+      formData.append('_cc', 'jon@reachingourgoal.com');
       
       const response = await fetch('https://formsubmit.co/d6494e93d993a930e148f6e40a07ad0b', {
         method: 'POST',
