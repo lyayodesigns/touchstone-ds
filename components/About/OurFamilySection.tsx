@@ -13,7 +13,7 @@ const familyValues = [
             </svg>
         ),
         title: "Family Owned & Operated",
-        description: "We are a family owned and operated company.",
+        description: "Led by people who care about your success.",
     },
     {
         icon: (
@@ -22,7 +22,7 @@ const familyValues = [
             </svg>
         ),
         title: "Your Needs Come First",
-        description: "We put your needs first in every decision we make.",
+        description: "We tailor our approach to fit your needs, not the other way around.",
     },
     {
         icon: (
@@ -31,7 +31,7 @@ const familyValues = [
             </svg>
         ),
         title: "Long-Term Commitment",
-        description: "We are committed to being here for you today and in the years ahead.",
+        description: "You can count on us today and in the years ahead.",
     },
     {
         icon: (
@@ -40,7 +40,7 @@ const familyValues = [
             </svg>
         ),
         title: "A Personal Touch",
-        description: "When you call, you speak directly with a member of our family who is ready to help.",
+        description: "When you call, you speak directly with someone who knows you and how to help.",
     },
 ];
 
@@ -88,10 +88,7 @@ export const OurFamilySection = () => {
                             className="inline-block relative"
                         >
                             <h2 className="text-4xl md:text-5xl font-bold mb-2 relative z-10 inline-block pb-1">
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
-                                    Business That Feels
-                                </span>
-                                <span className="text-foreground"> Like Home</span>
+                                <span className="text-foreground">Business That Feels Like Home</span>
                             </h2>
                             <motion.div
                                 className="absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-purple-200 via-pink-200 to-blue-200 rounded-full -z-10"
@@ -108,7 +105,7 @@ export const OurFamilySection = () => {
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
                         >
-                            When you work with Touchstone, you&apos;re not just a client — you&apos;re family.
+                            Family-Owned. Relationship-Driven. Built for the Long Term.
                         </motion.p>
                     </motion.div>
 
@@ -136,7 +133,7 @@ export const OurFamilySection = () => {
                                     whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.2)" }}
                                 >
                                     <Image
-                                        src="/our family.png"
+                                        src="/our family.avif"
                                         alt="The Touchstone Digital Solutions Family"
                                         width={600}
                                         height={500}
