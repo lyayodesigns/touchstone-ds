@@ -15,6 +15,7 @@ const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
   phone: z.string().min(10, { message: 'Please enter a valid phone number.' }),
+  organization: z.string().min(2, { message: 'Please enter your organization name.' }),
   state: z.string().min(2, { message: 'Please enter your state.' })
 });
 
@@ -30,6 +31,7 @@ const FundraisingHero = () => {
       name: '',
       email: '',
       phone: '',
+      organization: '',
       state: ''
     }
   });
@@ -42,6 +44,7 @@ const FundraisingHero = () => {
       formData.append('name', values.name);
       formData.append('email', values.email);
       formData.append('phone', values.phone);
+      formData.append('organization', values.organization);
       formData.append('state', values.state);
       formData.append('_subject', 'New Fundraising Request');
       formData.append('_template', 'table');
@@ -72,7 +75,7 @@ const FundraisingHero = () => {
 
   return (
     <section 
-      className="relative pt-6 min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-4 pb-0 sm:pt-8 sm:pb-0 md:pt-16 md:pb-0"
+      className="relative min-h-[70svh] w-full flex flex-col items-center justify-center overflow-hidden pt-32 pb-0 sm:pt-32 sm:pb-0 md:pt-16 md:pb-0"
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
         backgroundSize: "cover",
@@ -150,12 +153,12 @@ const FundraisingHero = () => {
           </motion.div>
           
           <motion.div
-            className="mt-8 max-w-3xl mx-auto"
+            className="mt-8 max-w-6xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <div className="bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden">
+            <div className="bg-background/80 backdrop-blur-md p-4 md:p-8 rounded-3xl border border-foreground/10 shadow-xl relative overflow-hidden">
               {/* Background gradient */}
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
@@ -176,8 +179,8 @@ const FundraisingHero = () => {
                 )}
                 
                 <FormProvider {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
                       <FormField
                         control={form.control}
                         name="name"
@@ -188,7 +191,7 @@ const FundraisingHero = () => {
                               <Input 
                                 placeholder="Your name" 
                                 {...field}
-                                className="bg-background/50 border-foreground/20 rounded-xl py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
+                                className="bg-background/50 border-foreground/20 rounded-xl py-3 md:py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
                               />
                             </FormControl>
                             <FormMessage />
@@ -207,7 +210,7 @@ const FundraisingHero = () => {
                                 type="email"
                                 placeholder="your@email.com" 
                                 {...field}
-                                className="bg-background/50 border-foreground/20 rounded-xl py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
+                                className="bg-background/50 border-foreground/20 rounded-xl py-3 md:py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
                               />
                             </FormControl>
                             <FormMessage />
@@ -226,7 +229,25 @@ const FundraisingHero = () => {
                                 type="tel"
                                 placeholder="(555) 123-4567" 
                                 {...field}
-                                className="bg-background/50 border-foreground/20 rounded-xl py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
+                                className="bg-background/50 border-foreground/20 rounded-xl py-3 md:py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="organization"
+                        render={({ field }) => (
+                          <FormItem className="space-y-3">
+                            <FormLabel className="text-foreground/90 font-medium">Organization</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="School/Organization" 
+                                {...field}
+                                className="bg-background/50 border-foreground/20 rounded-xl py-3 md:py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
                               />
                             </FormControl>
                             <FormMessage />
@@ -244,7 +265,7 @@ const FundraisingHero = () => {
                               <Input 
                                 placeholder="CA" 
                                 {...field}
-                                className="bg-background/50 border-foreground/20 rounded-xl py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
+                                className="bg-background/50 border-foreground/20 rounded-xl py-3 md:py-6 px-4 focus:border-blue-500 focus:ring-blue-500/20 transition-all duration-200"
                               />
                             </FormControl>
                             <FormMessage />
@@ -253,11 +274,12 @@ const FundraisingHero = () => {
                       />
                     </div>
                     
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full py-6 text-base font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
+                    <div className="flex justify-center">
+                      <Button 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className="py-6 px-8 text-base font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
@@ -266,7 +288,8 @@ const FundraisingHero = () => {
                       ) : (
                         'Sign Up for Fundraising'
                       )}
-                    </Button>
+                      </Button>
+                    </div>
                   </form>
                 </FormProvider>
               </div>
