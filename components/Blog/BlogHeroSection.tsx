@@ -33,8 +33,8 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
 
   return (
     <section 
-      className={`relative w-full flex flex-col items-center justify-center overflow-visible ${
-        isPost ? "min-h-[auto] sm:min-h-[50svh]" : "min-h-[auto] sm:min-h-[60svh]"
+      className={`relative w-full flex flex-col items-center justify-center overflow-hidden ${
+        isPost ? "min-h-[auto] sm:min-h-[55svh]" : "min-h-[auto] sm:min-h-[65svh]"
       } pt-[86px] pb-10 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24`}
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
@@ -81,7 +81,7 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
       <Container className="relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           <motion.h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2 break-words"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2 break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
