@@ -13,14 +13,14 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Press Releases | Touchstone Digital Solutions",
+  title: "News | Touchstone Digital Solutions",
   description:
     "Official announcements and updates from Touchstone Digital Solutions.",
   openGraph: {
-    title: "Press Releases | Touchstone Digital Solutions",
+    title: "News | Touchstone Digital Solutions",
     description:
       "Official announcements and updates from Touchstone Digital Solutions.",
-    url: "https://touchstone-ds.com/press-releases/",
+    url: "https://touchstone-ds.com/news/",
     type: "website",
     images: [
       {
@@ -32,17 +32,17 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@touchstone_ds",
-    title: "Press Releases | Touchstone Digital Solutions",
+    title: "News | Touchstone Digital Solutions",
     description:
       "Official announcements and updates from Touchstone Digital Solutions.",
     images: ["https://touchstone-ds.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://touchstone-ds.com/press-releases/",
+    canonical: "https://touchstone-ds.com/news/",
   },
 };
 
-async function fetchPressReleases(): Promise<Post[]> {
+async function fetchNews(): Promise<Post[]> {
   try {
    
     const posts = await client.fetch(postsQuery, { categoryTitle: null });
@@ -52,19 +52,19 @@ async function fetchPressReleases(): Promise<Post[]> {
       ),
     );
   } catch (error) {
-    console.error("Error fetching press releases:", error);
+    console.error("Error fetching news:", error);
     return [];
   }
 }
 
-export default async function PressReleasesPage() {
-  const posts = await fetchPressReleases();
+export default async function NewsPage() {
+  const posts = await fetchNews();
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
       <BlogHeroSection
-        title="Press Releases"
+        title="News"
         subtitle="Official announcements and updates from Touchstone Digital Solutions"
       />
       <section className="py-8 sm:py-10 lg:py-12">
@@ -72,7 +72,7 @@ export default async function PressReleasesPage() {
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <h2 className="text-2xl font-semibold text-gray-700">
-                No press releases found
+                No news found
               </h2>
               <p className="mt-2 text-gray-500">Check back soon for updates.</p>
             </div>
@@ -95,7 +95,7 @@ export default async function PressReleasesPage() {
                   <div className="flex-1 flex flex-col p-6">
                     <h3 className="text-xl font-semibold mb-2">
                       <Link
-                        href={`/press-releases/${post.slug.current}`}
+                        href={`/news/${post.slug.current}`}
                         className="hover:text-blue-600 transition-colors"
                       >
                         {post.title}

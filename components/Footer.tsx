@@ -104,8 +104,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/press-releases/" className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group">
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">Press Releases</span>
+                <Link href="/news/" className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">News</span>
                 </Link>
               </li>
             </ul>

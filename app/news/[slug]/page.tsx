@@ -18,6 +18,63 @@ import type { PortableTextBlock } from "@portabletext/types";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+// Helper function to extract first sentence from PortableText
+function getFirstSentence(body: PortableTextBlock[]): string {
+  if (!body || body.length === 0) return "";
+  
+  const firstBlock = body.find((block) => block._type === "block" && block.children);
+  if (!firstBlock || !("children" in firstBlock)) return "";
+  
+  const text = firstBlock.children
+    .filter((child: any) => child._type === "span" && child.text)
+    .map((child: any) => child.text)
+    .join("");
+  
+  // Extract first sentence (ending with . ! or ?)
+  const match = text.match(/^[^.!?]+[.!?]/);
+  return match ? match[0].trim() : text.split(".")[0].trim() + ".";
+}
+
+// Helper function to remove first sentence from body
+function removeFirstSentence(body: PortableTextBlock[]): PortableTextBlock[] {
+  if (!body || body.length === 0) return body;
+  
+  const firstSentence = getFirstSentence(body);
+  if (!firstSentence) return body;
+  
+  const bodyCopy = JSON.parse(JSON.stringify(body));
+  const firstBlockIndex = bodyCopy.findIndex((block: any) => block._type === "block" && block.children);
+  
+  if (firstBlockIndex === -1) return body;
+  
+  const firstBlock = bodyCopy[firstBlockIndex];
+  let remainingText = "";
+  
+  // Get full text from first block
+  const fullText = firstBlock.children
+    .filter((child: any) => child._type === "span" && child.text)
+    .map((child: any) => child.text)
+    .join("");
+  
+  // Remove first sentence
+  remainingText = fullText.replace(firstSentence, "").trim();
+  
+  if (remainingText) {
+    // Update first block with remaining text
+    firstBlock.children = firstBlock.children.map((child: any) => {
+      if (child._type === "span" && child.text) {
+        return { ...child, text: remainingText };
+      }
+      return child;
+    }).filter((child: any) => child.text && child.text.trim());
+    
+    return bodyCopy;
+  } else {
+    // Remove entire first block if it only contained the first sentence
+    return bodyCopy.filter((_: any, index: number) => index !== firstBlockIndex);
+  }
+}
+
 interface SanityImage {
   asset: {
     _ref: string;
@@ -40,7 +97,7 @@ interface Post {
   seo?: SeoType;
 }
 
-interface PressReleasePageProps {
+interface NewsPageProps {
   params: Promise<{ slug: string }>;
 }
 
@@ -57,8 +114,8 @@ export async function generateMetadata({
 
     if (!post) {
       return {
-        title: "Press Release Not Found | Touchstone Digital Solutions",
-        description: "The requested press release could not be found.",
+        title: "News Not Found | Touchstone Digital Solutions",
+        description: "The requested news article could not be found.",
       };
     }
 
@@ -67,12 +124,12 @@ export async function generateMetadata({
         post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions`,
       description:
         post.seo?.metaDescription ||
-        `Read the press release: ${post.title} from Touchstone Digital Solutions.`,
+        `Read the news: ${post.title} from Touchstone Digital Solutions.`,
       openGraph: {
         title: post.seo?.metaTitle || post.title,
         description:
           post.seo?.metaDescription ||
-          `Read the press release: ${post.title} from Touchstone Digital Solutions.`,
+          `Read the news: ${post.title} from Touchstone Digital Solutions.`,
         type: "article",
         images: post.mainImage
           ? [
@@ -92,7 +149,7 @@ export async function generateMetadata({
         title: post.seo?.metaTitle || post.title,
         description:
           post.seo?.metaDescription ||
-          `Read the press release: ${post.title} from Touchstone Digital Solutions.`,
+          `Read the news: ${post.title} from Touchstone Digital Solutions.`,
         images: post.mainImage
           ? [urlFor(post.mainImage).width(1200).height(675).url()]
           : undefined,
@@ -101,14 +158,14 @@ export async function generateMetadata({
   } catch (error) {
     console.error("Error generating metadata:", error);
     return {
-      title: "Press Releases | Touchstone Digital Solutions",
+      title: "News | Touchstone Digital Solutions",
       description:
         "Official announcements and updates from Touchstone Digital Solutions.",
     };
   }
 }
 
-async function PressReleasePage({ params }: PressReleasePageProps) {
+async function NewsPage({ params }: NewsPageProps) {
   const { slug } = await params;
   let post: Post | null = null;
 
@@ -155,8 +212,14 @@ async function PressReleasePage({ params }: PressReleasePageProps) {
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 bg-white">
         <div className="max-w-4xl mx-auto">
+          {/* Subtitle - First Sentence */}
+          <div className="mb-8 border-l-4 border-blue-500 pl-6 py-4 bg-gray-50/50 rounded-r-lg">
+            <p className="text-xl font-light text-gray-700 leading-relaxed italic">
+              {getFirstSentence(post.body)}
+            </p>
+          </div>
           {post.mainImage && (
-            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <div className="mb-4 rounded-lg overflow-hidden shadow-lg">
               <img
                 src={urlFor(post.mainImage).width(1200).height(675).url()}
                 alt={post.title}
@@ -166,19 +229,19 @@ async function PressReleasePage({ params }: PressReleasePageProps) {
           )}
         </div>
       </div>
-      <section className="py-12">
+      <section className="pt-2 pb-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <Link
-              href="/press-releases"
+              href="/news"
               className="inline-flex items-center text-blue-600 hover:underline mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Press Releases
+              Back to News
             </Link>
             <article className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-justify prose-a:text-blue-600 prose-a:font-medium prose-a:no-underline hover:prose-a:text-purple-600 hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg">
               <PortableText
-                value={post.body}
+                value={removeFirstSentence(post.body)}
                 components={PressReleasePortableTextComponents}
               />
             </article>
@@ -220,5 +283,5 @@ async function PressReleasePage({ params }: PressReleasePageProps) {
   );
 }
 
-export default PressReleasePage;
+export default NewsPage;
 
