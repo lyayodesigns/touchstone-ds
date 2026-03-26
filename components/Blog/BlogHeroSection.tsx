@@ -33,7 +33,9 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
 
   return (
     <section 
-      className={`relative ${isPost ? 'min-h-[50svh]' : 'min-h-[60svh]'} w-full flex flex-col items-center justify-center overflow-hidden pt-16 pb-10 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24`}
+      className={`relative w-full flex flex-col items-center justify-center overflow-visible ${
+        isPost ? "min-h-[auto] sm:min-h-[50svh]" : "min-h-[auto] sm:min-h-[60svh]"
+      } pt-[86px] pb-10 sm:pt-24 sm:pb-16 md:pt-32 md:pb-24`}
       style={{
         backgroundImage: "url('/hero-bg-1.png')",
         backgroundSize: "cover",
@@ -79,14 +81,14 @@ const BlogHeroSection: React.FC<BlogHeroSectionProps> = ({
       <Container className="relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           <motion.h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight px-2 break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             whileInView={{ scale: [0.95, 1] }}
             viewport={{ once: true }}
           >
-            <span className="text-transparent bg-clip-text text-gradient-purple-blue">
+            <span className="text-transparent bg-clip-text text-gradient-purple-blue inline-block">
               {title}
             </span>
           </motion.h1>

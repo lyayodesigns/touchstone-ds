@@ -110,7 +110,14 @@ export const postQuery = /* groq */ `
 
 // Blog posts list query with SEO fields
 export const postsQuery = /* groq */ `
-  *[_type == "post"] | order(publishedAt desc) {
+  *[
+    _type == "post" &&
+    (
+      $categoryTitle == null ||
+      $categoryTitle == "" ||
+      $categoryTitle in categories[]->title
+    )
+  ] | order(publishedAt desc) {
     _id,
     title,
     slug,

@@ -103,6 +103,11 @@ const Footer: React.FC = () => {
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Blog</span>
                 </Link>
               </li>
+              <li>
+                <Link href="/press-releases/" className="text-foreground/70 hover:text-teal-400 transition-colors flex items-center gap-1 group">
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Press Releases</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

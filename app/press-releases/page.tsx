@@ -1,7 +1,6 @@
 import React from "react";
 import { formatDate } from "../../lib/utils";
 import { client, urlFor } from "../../lib/sanity";
-import { cn } from "../../lib/utils";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import BlogHeroSection from "../../components/Blog/BlogHeroSection";
@@ -10,74 +9,76 @@ import Link from "next/link";
 import { Metadata } from "next";
 import type { Post } from "../../lib/sanity/types";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const metadata: Metadata = {
-  title: 'Blog | Touchstone Digital Solutions',
-  description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
+  title: "Press Releases | Touchstone Digital Solutions",
+  description:
+    "Official announcements and updates from Touchstone Digital Solutions.",
   openGraph: {
-    title: 'Blog | Touchstone Digital Solutions',
-    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
-    url: 'https://touchstone-ds.com/blog/',
-    type: 'website',
+    title: "Press Releases | Touchstone Digital Solutions",
+    description:
+      "Official announcements and updates from Touchstone Digital Solutions.",
+    url: "https://touchstone-ds.com/press-releases/",
+    type: "website",
     images: [
       {
-        url: 'https://touchstone-ds.com/og-image.jpg',
+        url: "https://touchstone-ds.com/og-image.jpg",
       },
     ],
-    siteName: 'Touchstone Digital Solutions',
+    siteName: "Touchstone Digital Solutions",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@touchstone_ds',
-    title: 'Blog | Touchstone Digital Solutions',
-    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
-    images: ['https://touchstone-ds.com/og-image.jpg'],
+    card: "summary_large_image",
+    site: "@touchstone_ds",
+    title: "Press Releases | Touchstone Digital Solutions",
+    description:
+      "Official announcements and updates from Touchstone Digital Solutions.",
+    images: ["https://touchstone-ds.com/og-image.jpg"],
   },
   alternates: {
-    canonical: 'https://touchstone-ds.com/blog/',
+    canonical: "https://touchstone-ds.com/press-releases/",
   },
 };
 
-async function fetchPosts() {
+async function fetchPressReleases(): Promise<Post[]> {
   try {
+   
     const posts = await client.fetch(postsQuery, { categoryTitle: null });
-    return posts || [];
+    return (posts || []).filter((post) =>
+      post.categories?.some((cat) =>
+        (cat.title || "").toLowerCase().includes("press-release"),
+      ),
+    );
   } catch (error) {
-    console.error("Error fetching posts:", error);
+    console.error("Error fetching press releases:", error);
     return [];
   }
 }
 
-export default async function BlogPage() {
-  const posts = await fetchPosts();
-  // Blog page should not surface press releases.
-  const blogPosts = posts.filter(
-    (post) =>
-      !post.categories?.some((cat) =>
-        (() => {
-          const t = (cat.title || "").toLowerCase();
-          return t.includes("press-release") || t.includes("press release");
-        })(),
-      ),
-  );
+export default async function PressReleasesPage() {
+  const posts = await fetchPressReleases();
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
-      <BlogHeroSection 
-        title="Our Blog" 
-        subtitle="Insights, updates, and stories from Touchstone Digital Solutions" 
+      <BlogHeroSection
+        title="Press Releases"
+        subtitle="Official announcements and updates from Touchstone Digital Solutions"
       />
-      {/* Blog Posts */}
       <section className="py-8 sm:py-10 lg:py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {blogPosts.length === 0 ? (
+          {posts.length === 0 ? (
             <div className="text-center py-12">
-              <h2 className="text-2xl font-semibold text-gray-700">No posts found</h2>
-              <p className="mt-2 text-gray-500">Check back soon for new content!</p>
+              <h2 className="text-2xl font-semibold text-gray-700">
+                No press releases found
+              </h2>
+              <p className="mt-2 text-gray-500">Check back soon for updates.</p>
             </div>
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.map((post) => (
+              {posts.map((post) => (
                 <div
                   key={post._id}
                   className="flex flex-col h-full bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300"
@@ -93,7 +94,10 @@ export default async function BlogPage() {
                   </div>
                   <div className="flex-1 flex flex-col p-6">
                     <h3 className="text-xl font-semibold mb-2">
-                      <Link href={`/blog/${post.slug.current}`} className="hover:text-blue-600 transition-colors">
+                      <Link
+                        href={`/press-releases/${post.slug.current}`}
+                        className="hover:text-blue-600 transition-colors"
+                      >
                         {post.title}
                       </Link>
                     </h3>
@@ -112,3 +116,4 @@ export default async function BlogPage() {
     </div>
   );
 }
+

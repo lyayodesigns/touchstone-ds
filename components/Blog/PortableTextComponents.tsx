@@ -99,7 +99,11 @@ const PortableTextComponents: Partial<PortableTextReactComponents> = {
       <p className="mb-6 text-gray-700 leading-relaxed text-lg text-justify">{children}</p>
     ),
     blockquote: ({ children, value }) => (
-      <blockquote className="border-l-4 border-gradient-to-b from-blue-500 to-purple-500 pl-6 py-1 my-8 bg-gray-50 rounded-r-lg shadow-sm italic text-gray-700">
+      <blockquote className="relative pl-8 py-4 my-8 bg-gray-50 rounded-r-lg shadow-sm italic text-gray-700">
+        <span
+          aria-hidden="true"
+          className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-r"
+        />
         {children}
       </blockquote>
     ),
