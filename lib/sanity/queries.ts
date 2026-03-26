@@ -129,3 +129,31 @@ export const postsQuery = /* groq */ `
     ${seo}
   }
 `;
+
+// Blog list query (paginated) with SEO fields.
+// Slice is based on a 1-indexed $page number (12 items per page).
+export const blogPostsPaginatedQuery = /* groq */ `
+  *[
+    _type == "post" &&
+    (
+      $categoryTitle == null ||
+      $categoryTitle == "" ||
+      $categoryTitle in categories[]->title
+    )
+  ] |
+  order(publishedAt desc)
+  [($page - 1) * 12 ... $page * 12] {
+    _id,
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    "author": author->{name, image},
+    "categories": categories[]->{title},
+    "excerpt": array::join(string::split(pt::text(body), "")[0..255], "") + "...",
+    ${seo}
+  }
+`;
+
+// Total count used for pagination controls.
+export const postsCountQuery = /* groq */ `count(*[_type == "post"])`;
