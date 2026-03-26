@@ -1,14 +1,17 @@
 import React from "react";
 import { formatDate } from "../../lib/utils";
 import { client, urlFor } from "../../lib/sanity";
-import { cn } from "../../lib/utils";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import BlogHeroSection from "../../components/Blog/BlogHeroSection";
-import { postsQuery } from "../../lib/sanity/queries";
+import BlogPagination from "../../components/Blog/BlogPagination";
+import { blogPostsPaginatedQuery, postsCountQuery } from "../../lib/sanity/queries";
 import Link from "next/link";
 import { Metadata } from "next";
 import type { Post } from "../../lib/sanity/types";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: 'Blog | Touchstone Digital Solutions',
@@ -37,18 +40,35 @@ export const metadata: Metadata = {
   },
 };
 
-async function fetchPosts() {
+const POSTS_PER_PAGE = 12;
+
+async function fetchBlogPageData(page: number) {
   try {
-    const posts = await client.fetch(postsQuery, { categoryTitle: null });
-    return posts || [];
+    const [posts, totalCount] = await Promise.all([
+      client.fetch(blogPostsPaginatedQuery, { categoryTitle: null, page }),
+      client.fetch(postsCountQuery),
+    ]);
+
+    return {
+      posts: (posts || []) as Post[],
+      totalCount: typeof totalCount === "number" ? totalCount : Number(totalCount) || 0,
+    };
   } catch (error) {
     console.error("Error fetching posts:", error);
-    return [];
+    return { posts: [] as Post[], totalCount: 0 };
   }
 }
 
-export default async function BlogPage() {
-  const posts = await fetchPosts();
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ page?: string }>;
+}) {
+  const resolvedSearchParams = await searchParams;
+  const requestedPage = Number(resolvedSearchParams?.page ?? 1);
+  const currentPage = Number.isFinite(requestedPage) && requestedPage >= 1 ? Math.floor(requestedPage) : 1;
+
+  const { posts, totalCount } = await fetchBlogPageData(currentPage);
   // Blog page should not surface press releases.
   const blogPosts = posts.filter(
     (post) =>
@@ -60,6 +80,9 @@ export default async function BlogPage() {
       ),
   );
 
+  const hasPrev = currentPage > 1;
+  const hasNext = currentPage * POSTS_PER_PAGE < totalCount;
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
       <Navbar />
@@ -69,7 +92,7 @@ export default async function BlogPage() {
       />
       {/* Blog Posts */}
       <section className="py-8 sm:py-10 lg:py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="blog-list" className="container mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
           {blogPosts.length === 0 ? (
             <div className="text-center py-12">
               <h2 className="text-2xl font-semibold text-gray-700">No posts found</h2>
@@ -106,6 +129,8 @@ export default async function BlogPage() {
               ))}
             </div>
           )}
+
+          <BlogPagination currentPage={currentPage} hasPrev={hasPrev} hasNext={hasNext} />
         </div>
       </section>
       <Footer />

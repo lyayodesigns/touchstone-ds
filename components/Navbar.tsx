@@ -31,6 +31,21 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <div
@@ -304,7 +319,12 @@ const Navbar: React.FC = () => {
       </div>
       
       {/* Mobile sticky buttons */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 safe-area-inset-bottom">
+      <div
+        className={cn(
+          "md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 safe-area-inset-bottom",
+          isMobileMenuOpen ? "hidden" : ""
+        )}
+      >
         <div className="flex items-center justify-center space-x-3">
           <Link
             href="/contact/"
@@ -326,7 +346,7 @@ const Navbar: React.FC = () => {
       {/* Mobile menu overlay */}
       <div
         className={cn(
-          `fixed inset-0 bg-white z-50 md:hidden transition-all duration-300`,
+          `fixed inset-0 bg-white z-50 md:hidden transition-all duration-300 overflow-y-auto`,
           isMobileMenuOpen
             ? "opacity-100 top-0"
             : "opacity-0 top-[-100%] pointer-events-none"
