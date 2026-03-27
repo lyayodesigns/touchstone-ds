@@ -19,7 +19,7 @@ const AwardsSlider: React.FC = () => {
     "Team History",
     "Olympians",
     "Professional Athletes",
-    "Hall of Fame",
+    "Digital Hall of Fame",
     "Digital Trophy Case",
     "Interactive Displays",
     "Digital Donor Wall",
