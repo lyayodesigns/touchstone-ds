@@ -216,9 +216,10 @@ const Navbar: React.FC = () => {
       
       {/* Mobile menu overlay - only render when open */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 md:hidden overflow-y-auto">
-          <div className="absolute top-0 left-0 w-full h-1 bg-white"></div>
-          <div className="container px-4 pt-6 pb-4 flex justify-between items-center border-b border-gray-100 bg-white">
+        <div className="fixed inset-0 bg-white z-[60] md:hidden flex flex-col h-[100dvh]">
+          <div className="absolute top-0 left-0 w-full h-1 bg-white" />
+          <div className="bg-white border-b border-gray-100 flex-shrink-0">
+            <div className="container px-4 pt-6 pb-4 flex justify-between items-center bg-white">
             <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
               <img
                 src="/logo/logo-midnight.png"
@@ -234,22 +235,31 @@ const Navbar: React.FC = () => {
               <X className="h-6 w-6" />
             </button>
           </div>
-          <div className="bg-white">
-            <div className="container px-4 py-8 bg-white">
+          </div>
+
+          <div
+            className="flex-1 min-h-0 overflow-y-auto bg-white"
+            style={{ WebkitOverflowScrolling: "touch", touchAction: "pan-y" }}
+          >
+            <div className="container px-4 py-8 bg-white pb-24">
               <div className="w-full space-y-0">
                 {NAV_ITEMS.map((item) => {
                   if (item.submenu) {
                     return (
                       <div key={item.name} className="border-b border-gray-100">
                         <button
-                          onClick={() => setOpenMobileDropdown(openMobileDropdown === item.name ? null : item.name)}
+                          onClick={() =>
+                            setOpenMobileDropdown(
+                              openMobileDropdown === item.name ? null : item.name,
+                            )
+                          }
                           className="flex w-full items-center justify-between py-4 text-lg font-medium bg-white text-gray-800"
                         >
                           {item.name}
                           <ChevronDown
                             className={cn(
                               "h-5 w-5 text-gray-500 transition-transform duration-200",
-                              openMobileDropdown === item.name ? "rotate-180" : ""
+                              openMobileDropdown === item.name ? "rotate-180" : "",
                             )}
                           />
                         </button>
@@ -263,7 +273,7 @@ const Navbar: React.FC = () => {
                                   "block w-full py-3 pl-6 text-base font-medium border-b border-gray-50 transition-colors bg-white",
                                   isActive(subItem.href)
                                     ? "text-gradient-purple-blue"
-                                    : "text-gray-600 hover:text-gradient-purple-blue"
+                                    : "text-gray-600 hover:text-gradient-purple-blue",
                                 )}
                                 onClick={() => {
                                   setIsMobileMenuOpen(false);
@@ -287,7 +297,7 @@ const Navbar: React.FC = () => {
                         "block w-full py-4 text-lg font-medium border-b border-gray-100 transition-colors bg-white",
                         isActive(item.href)
                           ? "text-gradient-purple-blue"
-                          : "text-gray-800 hover:text-gradient-purple-blue"
+                        : "text-gray-800 hover:text-gradient-purple-blue",
                       )}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
