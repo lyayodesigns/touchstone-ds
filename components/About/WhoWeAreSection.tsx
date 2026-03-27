@@ -87,7 +87,7 @@ export const WhoWeAreSection = () => {
                   whileHover={{ y: -5, boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.2)" }}
                 >
                   <img 
-                    src="/TDS Cover - 4.jpg" 
+                    src="/home/carousel/TDS Cover - 4.avif" 
                     alt="Touchstone Digital Solutions Founders" 
                     className="w-full h-[350px] object-cover"
                   />

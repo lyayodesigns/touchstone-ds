@@ -9,14 +9,14 @@ import Link from "next/link";
 
 const titleWords = ["Touchscreen", "Touchstone"];
 const carouselImages = [
-  { src: "/hero-animation/home-animation-1.jpg", alt: "Touchstone Home Animation 1" },
-  { src: "/hero-animation/home-animation-5.jpg", alt: "Touchstone Home Animation 2" },
-  { src: "/hero-animation/home-animation-3.jpg", alt: "Touchstone Home Animation 3" },
-  { src: "/hero-animation/home-animation-4.jpg", alt: "Touchstone Home Animation 4" },
-  { src: "/hero-animation/home-animation-2.jpg", alt: "Touchstone Home Animation 5" },
-  { src: "/hero-animation/home-animation-6.jpg", alt: "Touchstone Home Animation 6" },
-  { src: "/hero-animation/home-animation-7.avif", alt: "Touchstone Home Animation 7" },
-  { src: "/hero-animation/home-animation-8.avif", alt: "Touchstone Home Animation 8" },
+  { src: "/home/hero-animation/home-animation-1.avif", alt: "Touchstone Home Animation 1" },
+  { src: "/home/hero-animation/home-animation-5.avif", alt: "Touchstone Home Animation 2" },
+  { src: "/home/hero-animation/home-animation-3.avif", alt: "Touchstone Home Animation 3" },
+  { src: "/home/hero-animation/home-animation-4.avif", alt: "Touchstone Home Animation 4" },
+  { src: "/home/hero-animation/home-animation-2.avif", alt: "Touchstone Home Animation 5" },
+  { src: "/home/hero-animation/home-animation-6.avif", alt: "Touchstone Home Animation 6" },
+  { src: "/home/hero-animation/home-animation-7.avif", alt: "Touchstone Home Animation 7" },
+  { src: "/home/hero-animation/home-animation-8.avif", alt: "Touchstone Home Animation 8" },
 ];
 
 const HeroSection: React.FC = () => {

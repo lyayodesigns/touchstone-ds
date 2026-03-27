@@ -73,7 +73,7 @@ export default function TouchstoneFamilySection() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent z-10"></div>
               <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-transparent to-background/20 z-10"></div>
               <Image
-                src="/our family.avif"
+                src="/home/our family.avif"
                 alt="Touchstone Family"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

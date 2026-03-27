@@ -83,7 +83,7 @@ const DigitalYearbooksHero = () => {
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
                 <img
-                  src="/Digital Yearbooks.jpg"
+                  src="/home/school's legacy/Digital Yearbooks.avif"
                   alt="Digital Yearbooks"
                   className="w-full rounded-lg shadow-xl"
                 />

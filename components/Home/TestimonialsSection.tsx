@@ -15,42 +15,42 @@ const testimonials: TestimonialProps[] = [
       "Alumni love staying connected with our programs, and our digital Hall of Fame makes it easy. Whether they're across the country or in the stands, they can relive their glory days and see how their legacy continues.",
     author: "Seton Hall Prep (NJ)",
     role: "Athletic Director",
-    logo: "/clients/SHP.png"
+    logo: "/clients/SHP.avif"
   },
   {
     quote:
       "When recruits visit our facilities, they don't just see trophies—they experience the history of our program in a dynamic, interactive way. It makes an impact that a traditional display never could.",
     author: "Brown University (RI)",
     role: "Associate Director of Athletics",
-    logo: "/clients/brown.png"
+    logo: "/clients/brown.avif"
   },
   {
     quote:
       "This is more than just a display—it's a storytelling tool. Our students don't just see names and pictures; they see the legacy they're part of and the greatness they can aspire to.",
     author: "Mooresville High School (IN)",
     role: "Athletic Director",
-    logo: "/clients/mooresville.png"
+    logo: "/clients/mooresville.avif"
   },
   {
     quote:
       "Touchstone took the time to understand our program's legacy and built a system that truly honors our athletes, past and present. It's more than software—it's a living tribute to our team's championship history.",
     author: "Bishop Guertin High School (NH)",
     role: "Men's Varsity Lacrosse Coach",
-    logo: "/clients/bishop.png"
+    logo: "/clients/bishop.avif"
   },
   {
     quote:
       "I love how Touchstone allows our alumni to stay connected. They can revisit their achievements anytime, from anywhere—it's like our school spirit lives on forever.",
     author: "The Whitfield School (MO)",
     role: "Director of Athletics",
-    logo: "/clients/whitefield.png"
+    logo: "/clients/whitefield.avif"
   },
   {
     quote:
       "Touchstone went above and beyond to deliver their platform for us. With our digital Trophy Case and Hall of Fame, we no longer worry about space limitations. Every achievement, past and present, is preserved and easily accessible for future generations.",
     author: "New Bedford High School (MA)",
     role: "Athletic Director",
-    logo: "/clients/bedford.png"
+    logo: "/clients/bedford.avif"
   },
 ];
 

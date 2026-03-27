@@ -20,15 +20,12 @@ const PhotoCarouselSection: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    "/TDS Cover - 1.jpg",
-    "/TDS Cover - 2.jpg",
-    "/TDS Cover - 3.jpg",
-    "/TDS Cover - 4.jpg",
-    "/TDS Cover - 5.jpg",
-    "/TDS Cover - 6.jpg",
-    "/TDS Cover - 7.jpg",
-    "/TDS Cover - 8.jpg",
-    "/TDS Cover - 9.jpg",
+    "/home/carousel/TDS Cover - 7.avif",
+    "/home/carousel/TDS Cover - 2.avif",
+    "/home/carousel/TDS Cover - 3.avif",
+    "/home/carousel/TDS Cover - 4.avif",
+    "/home/carousel/TDS Cover - 5.avif",
+    "/home/carousel/TDS Cover - 6.avif",
   ];
 
   const imageDescriptions = [

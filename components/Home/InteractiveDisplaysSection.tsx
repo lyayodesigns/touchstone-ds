@@ -216,7 +216,7 @@ const InteractiveDisplaysSection: React.FC = () => {
             {/* Full image display without background card */}
             <div className="relative w-full h-full overflow-hidden rounded-lg">
               <img
-                src="/TDS Cover - 5.jpg"
+                src="/home/carousel/TDS Cover - 5.avif"
                 alt="Interactive Display"
                 className="w-full h-auto object-contain"
               />

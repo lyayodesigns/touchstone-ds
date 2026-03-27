@@ -31,7 +31,7 @@ const DigitalHallOfFameSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
             <img
-              src="/TDS Cover - 1.jpg"
+              src="/home/carousel/TDS Cover - 1.avif"
               alt="Digital Hall of Fame Display"
               className="w-full rounded-lg sm:rounded-xl object-contain"
             />
@@ -66,7 +66,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Your history on demand, right at your fingertips
               </p>
               <img
-                src="/Digital Yearbooks.jpg"
+                src="/home/school's legacy/Digital Yearbooks.avif"
                 alt="Digital Yearbooks"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -84,7 +84,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Whether it is current or historic, display it with pride
               </p>
               <img
-                src="/Football Roster.avif"
+                src="/home/school's legacy/Football Roster.avif"
                 alt="Team Rosters"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -111,7 +111,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Tens of thousands of records searchable in seconds
               </p>
               <img
-                src="/Digital Record Boards.avif"
+                src="/home/school's legacy/Digital Record Boards.avif"
                 alt="Digital Record Boards"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -129,7 +129,7 @@ const DigitalHallOfFameSection: React.FC = () => {
                 Highlight centuries of important moments, big and small
               </p>
               <img
-                src="/Interactive Timelines.avif"
+                src="/home/school's legacy/Interactive Timelines.avif"
                 alt="Interactive Timelines"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />

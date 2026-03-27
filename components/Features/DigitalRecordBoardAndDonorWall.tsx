@@ -197,7 +197,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/TDS Cover - 1.jpg" 
+                      src="/home/carousel/TDS Cover - 1.avif" 
                       alt="Digital Hall of Fame Display" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
@@ -349,7 +349,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/TDS Cover - 7.jpg" 
+                      src="/home/carousel/TDS Cover - 7.avif" 
                       alt="Digital Record Board" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
@@ -395,7 +395,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/TDS Cover - 3.jpg" 
+                      src="/home/carousel/TDS Cover - 3.avif" 
                       alt="Digital Trophy Case Display" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
