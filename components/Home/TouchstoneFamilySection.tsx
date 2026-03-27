@@ -78,7 +78,7 @@ export default function TouchstoneFamilySection() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                priority
+                loading="lazy"
               />
             </div>
             

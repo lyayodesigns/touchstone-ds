@@ -138,6 +138,7 @@ const PhotoCarouselSection: React.FC = () => {
                     <img
                       src={img}
                       alt={imageDescriptions[index % firstRow.length]}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       onLoad={() => handleImageLoad(index % firstRow.length)}
                       onError={() => handleImageError(index % firstRow.length)}
@@ -192,6 +193,7 @@ const PhotoCarouselSection: React.FC = () => {
                           (index % secondRow.length) + firstRow.length
                         ]
                       }
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       onLoad={() =>
                         handleImageLoad(
@@ -230,6 +232,7 @@ const PhotoCarouselSection: React.FC = () => {
           <img
             src={selectedImage}
             alt="Preview"
+            loading="lazy"
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />

@@ -33,6 +33,7 @@ const DigitalHallOfFameSection: React.FC = () => {
             <img
               src="/home/carousel/TDS Cover - 1.avif"
               alt="Digital Hall of Fame Display"
+              loading="lazy"
               className="w-full rounded-lg sm:rounded-xl object-contain"
             />
           </div>
@@ -68,6 +69,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               <img
                 src="/home/school's legacy/Digital Yearbooks.avif"
                 alt="Digital Yearbooks"
+                loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
             </div>
@@ -86,6 +88,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               <img
                 src="/home/school's legacy/Football Roster.avif"
                 alt="Team Rosters"
+                loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
             </div>
@@ -113,6 +116,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               <img
                 src="/home/school's legacy/Digital Record Boards.avif"
                 alt="Digital Record Boards"
+                loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
             </div>
@@ -131,6 +135,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               <img
                 src="/home/school's legacy/Interactive Timelines.avif"
                 alt="Interactive Timelines"
+                loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
             </div>

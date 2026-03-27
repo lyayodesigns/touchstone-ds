@@ -105,6 +105,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
+                      loading="lazy"
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -116,6 +117,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
+                      loading="lazy"
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -133,6 +135,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
+                      loading="lazy"
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -144,6 +147,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
+                      loading="lazy"
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -167,6 +171,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
+                    loading="lazy"
                     className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
@@ -182,6 +187,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
+                    loading="lazy"
                     className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>

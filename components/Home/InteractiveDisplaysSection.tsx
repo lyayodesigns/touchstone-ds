@@ -218,6 +218,7 @@ const InteractiveDisplaysSection: React.FC = () => {
               <img
                 src="/home/carousel/TDS Cover - 5.avif"
                 alt="Interactive Display"
+                loading="lazy"
                 className="w-full h-auto object-contain"
               />
               {/* Touch interaction visualization */}
