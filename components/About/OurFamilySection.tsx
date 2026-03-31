@@ -134,7 +134,7 @@ export const OurFamilySection = () => {
                                 >
                                     <Image
                                         src="/home/our family.avif"
-                                        alt="The Touchstone Digital Solutions Family"
+                                        alt="Touchstone Digital Solutions family team – school Digital Hall of Fame company"
                                         width={600}
                                         height={500}
                                         className="w-full h-auto object-cover"

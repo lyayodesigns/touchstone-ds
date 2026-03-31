@@ -88,7 +88,7 @@ export const WhoWeAreSection = () => {
                 >
                   <img 
                     src="/home/carousel/TDS Cover - 4.avif" 
-                    alt="Touchstone Digital Solutions Founders" 
+                    alt="Touchstone interactive digital Hall of Fame display – school recognition software" 
                     className="w-full h-[350px] object-cover"
                   />
                 </motion.div>

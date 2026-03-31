@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 
 const DigitalRecordBoardsHero = () => {
@@ -86,9 +87,11 @@ const DigitalRecordBoardsHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <img 
+            <Image 
               src="/digital record boards/record-board-2.avif" 
-              alt="Digital Record Board Display"
+              alt="Interactive digital record board touchscreen display for schools and athletic departments"
+              width={1200}
+              height={675}
               className="w-full h-auto rounded-lg shadow-2xl"
             />
           </motion.div>

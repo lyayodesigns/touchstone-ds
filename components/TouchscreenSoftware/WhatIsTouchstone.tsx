@@ -198,7 +198,7 @@ const WhatIsTouchstone = () => {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/touchscreen%20software/Kiosk%20Mockup%20-%20Trial.webp"
-                    alt="Touchstone kiosk mockup - trial"
+                    alt="Touchstone touchscreen kiosk software mockup for school digital recognition displays"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain"

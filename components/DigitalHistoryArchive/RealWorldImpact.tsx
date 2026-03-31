@@ -85,7 +85,7 @@ const RealWorldImpact = () => {
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/digital history archives/after.avif"
-                alt="Digital History Archive Results"
+                alt="Digital history archive results — institutions experiencing improved access and heritage preservation"
                 fill
                 className="object-cover"
                 priority={false}

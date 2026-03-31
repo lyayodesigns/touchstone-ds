@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 
 const TrophyCaseDigitalAge = () => {
@@ -113,9 +114,11 @@ const TrophyCaseDigitalAge = () => {
             variants={itemVariants}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+              <Image 
                 src="/digital trophy case/digital trophy case.webp" 
-                alt="Digital trophy case display"
+                alt="Interactive digital trophy case platform — showcasing school and athletic achievements on touchscreen display"
+                width={1200}
+                height={675}
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

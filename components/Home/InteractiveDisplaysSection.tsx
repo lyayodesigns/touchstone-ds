@@ -217,7 +217,7 @@ const InteractiveDisplaysSection: React.FC = () => {
             <div className="relative w-full h-full overflow-hidden rounded-lg">
               <img
                 src="/home/carousel/TDS Cover - 5.avif"
-                alt="Interactive Display"
+                alt="Touchstone interactive touchscreen display for school athletic programs and Hall of Fame"
                 loading="lazy"
                 className="w-full h-auto object-contain"
               />

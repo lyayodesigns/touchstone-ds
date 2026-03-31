@@ -74,7 +74,7 @@ export default function TouchstoneFamilySection() {
               <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-transparent to-background/20 z-10"></div>
               <Image
                 src="/home/our family.avif"
-                alt="Touchstone Family"
+                alt="Touchstone Digital Solutions team – school Digital Hall of Fame provider"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 50vw"

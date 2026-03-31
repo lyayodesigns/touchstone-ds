@@ -126,7 +126,7 @@ const HardwareSizeGrid: React.FC = () => {
                   <div className="relative w-full h-full flex items-center justify-center p-2">
                     <Image 
                       src={getImageForSize(hardware.size)}
-                      alt={`${hardware.size} Interactive Display`}
+                      alt={`Touchstone ${hardware.size} interactive touchscreen display for school digital recognition`}
                       fill
                       style={{ objectFit: 'contain' }}
                       className="rounded-2xl hover:scale-105 transition-transform duration-500"

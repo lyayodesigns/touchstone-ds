@@ -138,7 +138,7 @@ const AllinOneSection = () => {
                 <div className="rounded-2xl overflow-hidden shadow-xl transform scale-110 mx-auto max-w-[120%]">
                   <img 
                     src="/features/Touchstone Mobile Mockup.webp" 
-                    alt="Touchstone Mobile Mockup" 
+                    alt="Touchstone Digital Solutions mobile-friendly touchscreen software interface mockup" 
                     className="w-full h-auto object-cover" 
                     loading="lazy"
                   />

@@ -166,7 +166,7 @@ const WhyChooseTouchstone = () => {
                     <div className="relative aspect-[4/3]">
                       <Image
                         src="/touchscreen%20software/Touchstone%20Rendering%20-%20Touch%20Stone%20-%20Stand.webp"
-                        alt="Touchstone interactive kiosk stand rendering"
+                        alt="Touchstone Digital Solutions interactive touchscreen kiosk stand for school Hall of Fame displays"
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"

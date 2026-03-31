@@ -63,7 +63,7 @@ const WhoIsYearbookScanning = () => {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/Yearbook%20Scanning/stacked%20yearbooks.avif"
-                  alt="Touchstone Yearbook Scanning Service"
+                  alt="Stacked school yearbooks ready for professional yearbook scanning and digitization"
                   fill
                   className="object-cover"
                 />

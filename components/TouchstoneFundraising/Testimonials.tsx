@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
@@ -78,9 +79,11 @@ const Testimonials = () => {
             >
               {/* Logo */}
               <div className="mb-6 flex items-center justify-center h-24">
-                <img 
+                <Image 
                   src={testimonial.logo} 
-                  alt={testimonial.org}
+                  alt={`${testimonial.org} logo`}
+                  width={120}
+                  height={96}
                   className={`max-h-full max-w-full object-contain ${index === 2 ? 'scale-150' : ''}`}
                 />
               </div>

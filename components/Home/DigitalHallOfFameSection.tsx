@@ -32,7 +32,7 @@ const DigitalHallOfFameSection: React.FC = () => {
           }`}>
             <img
               src="/home/carousel/TDS Cover - 1.avif"
-              alt="Digital Hall of Fame Display"
+              alt="School Digital Hall of Fame touchscreen display by Touchstone Digital Solutions"
               loading="lazy"
               className="w-full rounded-lg sm:rounded-xl object-contain"
             />
@@ -68,7 +68,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </p>
               <img
                 src="/home/school's legacy/Digital Yearbooks.avif"
-                alt="Digital Yearbooks"
+                alt="Interactive digital yearbook display for schools – Touchstone"
                 loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -87,7 +87,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </p>
               <img
                 src="/home/school's legacy/Football Roster.avif"
-                alt="Team Rosters"
+                alt="Digital team roster display for high school and college athletics"
                 loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -115,7 +115,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </p>
               <img
                 src="/home/school's legacy/Digital Record Boards.avif"
-                alt="Digital Record Boards"
+                alt="Interactive digital record boards for school athletics – Touchstone"
                 loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />
@@ -134,7 +134,7 @@ const DigitalHallOfFameSection: React.FC = () => {
               </p>
               <img
                 src="/home/school's legacy/Interactive Timelines.avif"
-                alt="Interactive Timelines"
+                alt="Interactive school history timeline display – Touchstone Digital Solutions"
                 loading="lazy"
                 className="w-full rounded-lg sm:rounded-xl object-cover"
               />

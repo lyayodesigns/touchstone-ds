@@ -198,7 +198,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   >
                     <img 
                       src="/home/carousel/TDS Cover - 1.avif" 
-                      alt="Digital Hall of Fame Display" 
+                      alt="Touchstone interactive Digital Hall of Fame display for schools and colleges" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
                   </motion.div>
@@ -350,7 +350,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   >
                     <img 
                       src="/home/carousel/TDS Cover - 7.avif" 
-                      alt="Digital Record Board" 
+                      alt="Touchstone interactive digital record board for school and college athletics" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
                   </motion.div>
@@ -396,7 +396,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   >
                     <img 
                       src="/home/carousel/TDS Cover - 3.avif" 
-                      alt="Digital Trophy Case Display" 
+                      alt="Touchstone digital trophy case display – interactive school championship showcase" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
                   </motion.div>
@@ -548,7 +548,7 @@ const DigitalRecordBoardAndDonorWall = () => {
                   >
                     <img 
                       src="/Donor-Wall-Layout.jpg" 
-                      alt="Digital Donor Wall" 
+                      alt="Touchstone interactive digital donor wall for school and university fundraising recognition" 
                       className="rounded-lg w-full h-auto object-cover"
                     />
                   </motion.div>

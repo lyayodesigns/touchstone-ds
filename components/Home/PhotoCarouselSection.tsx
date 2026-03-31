@@ -231,7 +231,7 @@ const PhotoCarouselSection: React.FC = () => {
         >
           <img
             src={selectedImage}
-            alt="Preview"
+            alt="Touchstone Digital Hall of Fame display – full screen preview"
             loading="lazy"
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}

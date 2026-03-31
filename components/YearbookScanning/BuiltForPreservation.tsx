@@ -41,7 +41,7 @@ const BuiltForPreservation = () => {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/Yearbook%20Scanning/yearbook-scanning-1.avif"
-                alt="Yearbook Scanning Service"
+                alt="Professional yearbook scanning process — non-destructive digitization for school archives"
                 fill
                 className="object-cover"
               />

@@ -176,7 +176,7 @@ const Testimonials = () => {
                       <div className={`flex-shrink-0 relative ${testimonial.logoClass || 'w-20 h-14'}`}>
                         <Image
                           src={testimonial.logo}
-                          alt={testimonial.organization}
+                          alt={`${testimonial.organization} — yearbook scanning customer logo`}
                           fill
                           className="object-contain object-left"
                         />

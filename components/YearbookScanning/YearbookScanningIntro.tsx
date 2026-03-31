@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '../ui/container';
 
@@ -68,9 +69,11 @@ const YearbookScanningIntro = () => {
             variants={itemVariants}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+              <Image 
                 src="/Yearbook%20Scanning/yearbook%20scanning.avif" 
                 alt="Yearbook scanning and digitization service"
+                width={1200}
+                height={675}
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

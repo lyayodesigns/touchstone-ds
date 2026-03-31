@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 
 const DigitalYearbooksHero = () => {
@@ -82,9 +83,11 @@ const DigitalYearbooksHero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
               >
-                <img
+                <Image
                   src="/home/school's legacy/Digital Yearbooks.avif"
-                  alt="Digital Yearbooks"
+                  alt="Digital yearbooks — searchable online archive of school yearbooks preserved for students and alumni"
+                  width={1200}
+                  height={675}
                   className="w-full rounded-lg shadow-xl"
                 />
               </motion.div>

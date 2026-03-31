@@ -131,7 +131,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                     >
                       <Image 
                         src="/hardware/mount-picture.png" 
-                        alt="Mounting Bracket"
+                        alt="Touchstone touchscreen display wall mounting bracket for school kiosk installation"
                         fill
                         style={{ objectFit: 'contain' }}
                         className="drop-shadow-md"
@@ -147,7 +147,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                     >
                       <Image 
                         src="/hardware/remote.png" 
-                        alt="Remote & Accessories"
+                        alt="Touchstone touchscreen display remote control and accessories bundle"
                         fill
                         style={{ objectFit: 'contain' }}
                         className="drop-shadow-md"
@@ -163,7 +163,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                     >
                       <Image 
                         src="/digital%20record%20boards/record-board-2.avif" 
-                        alt="Warranty Protection"
+                        alt="Touchstone Digital Solutions 3-year warranty coverage for interactive touchscreen displays"
                         fill
                         style={{ objectFit: 'contain' }}
                         className="drop-shadow-md"
@@ -179,7 +179,7 @@ const HardwareIncludesSection: React.FC<HardwareIncludesSectionProps> = ({
                     >
                       <Image 
                         src="/hardware/free%20shipping.avif" 
-                        alt="Free Shipping"
+                        alt="Free nationwide shipping for Touchstone touchscreen display hardware"
                         fill
                         style={{ objectFit: 'contain', background: 'transparent' }}
                         className="mix-blend-multiply"

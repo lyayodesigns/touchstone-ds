@@ -140,7 +140,7 @@ const FullCustomization = () => {
                 <div className="rounded-xl overflow-hidden shadow-lg border border-white/10 transform scale-110">
                   <img 
                     src="/features/Touchstone Web UI - Yearbooks.webp" 
-                    alt="Touchstone Web UI - Yearbooks" 
+                    alt="Touchstone customizable digital yearbook web interface for schools" 
                     className="w-full h-auto object-cover" 
                     loading="lazy"
                   />

@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 
 const TheSolution = () => {
@@ -77,9 +78,11 @@ const TheSolution = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <img 
+            <Image 
               src="/digital record boards/record-board-1.avif" 
-              alt="Digital Record Board Example"
+              alt="Digital record boards solution — searchable athletic records displayed on modern touchscreen"
+              width={1200}
+              height={675}
               className="w-full h-auto rounded-lg shadow-xl"
             />
           </motion.div>

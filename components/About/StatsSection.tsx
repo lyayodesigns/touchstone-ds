@@ -91,7 +91,7 @@ export const AboutStatsSection = () => {
                   <div className="relative overflow-hidden">
                     <img 
                       src="/hero-banner.jpg" 
-                      alt="Our Story" 
+                      alt="Touchstone Digital Solutions story – interactive touchscreen recognition software for schools" 
                       className="w-full h-[220px] object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-blue-900/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>

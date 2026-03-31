@@ -9,14 +9,14 @@ import Link from "next/link";
 
 const titleWords = ["Touchscreen", "Touchstone"];
 const carouselImages = [
-  { src: "/home/hero-animation/home-animation-1.avif", alt: "Touchstone Home Animation 1" },
-  { src: "/home/hero-animation/home-animation-5.avif", alt: "Touchstone Home Animation 2" },
-  { src: "/home/hero-animation/home-animation-3.avif", alt: "Touchstone Home Animation 3" },
-  { src: "/home/hero-animation/home-animation-4.avif", alt: "Touchstone Home Animation 4" },
-  { src: "/home/hero-animation/home-animation-2.avif", alt: "Touchstone Home Animation 5" },
-  { src: "/home/hero-animation/home-animation-6.avif", alt: "Touchstone Home Animation 6" },
-  { src: "/home/hero-animation/home-animation-7.avif", alt: "Touchstone Home Animation 7" },
-  { src: "/home/hero-animation/home-animation-8.avif", alt: "Touchstone Home Animation 8" },
+  { src: "/home/hero-animation/home-animation-1.avif", alt: "Touchstone Digital Hall of Fame touchscreen display for schools" },
+  { src: "/home/hero-animation/home-animation-5.avif", alt: "Interactive athletic record board display for high schools and colleges" },
+  { src: "/home/hero-animation/home-animation-3.avif", alt: "School donor recognition wall touchscreen software by Touchstone" },
+  { src: "/home/hero-animation/home-animation-4.avif", alt: "Digital trophy case and championship display for school athletics" },
+  { src: "/home/hero-animation/home-animation-2.avif", alt: "Interactive digital yearbook display for K-12 schools – Touchstone" },
+  { src: "/home/hero-animation/home-animation-6.avif", alt: "Touchstone touchscreen software for school Hall of Fame and alumni recognition" },
+  { src: "/home/hero-animation/home-animation-7.avif", alt: "Digital Hall of Fame kiosk display for university athletic programs" },
+  { src: "/home/hero-animation/home-animation-8.avif", alt: "Interactive school history and achievements display – Touchstone Digital Solutions" },
 ];
 
 const HeroSection: React.FC = () => {

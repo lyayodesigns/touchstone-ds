@@ -88,7 +88,7 @@ const FutureOfHeritage = () => {
                 </div>
                 <Image
                   src="/digital history archives/before.avif"
-                  alt="Before: Physical archive storage"
+                  alt="Before: Cluttered physical records and documents before digital history archive digitization"
                   width={600}
                   height={400}
                   className="w-full h-auto cursor-pointer"
@@ -111,7 +111,7 @@ const FutureOfHeritage = () => {
                 </div>
                 <Image
                   src="/digital history archives/after.avif"
-                  alt="After: Digital archive platform"
+                  alt="After: Searchable digital history archive platform replacing physical storage"
                   width={600}
                   height={400}
                   className="w-full h-auto cursor-pointer"

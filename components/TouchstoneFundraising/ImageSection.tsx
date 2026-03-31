@@ -6,7 +6,7 @@ export default function ImageSection() {
       <div className="absolute inset-0">
         <Image
           src="/touchstone fundraising/fundraising-3.jpg"
-          alt="Fundraising"
+          alt="Community fundraising event with team members collaborating"
           fill
           className="object-cover"
           priority={false}

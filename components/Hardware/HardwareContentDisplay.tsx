@@ -135,7 +135,7 @@ const HardwareContentDisplay: React.FC<HardwareContentDisplayProps> = ({
             >
               <Image 
                 src="/hardware/touchscreen-picture.png" 
-                alt={`${activeSize} Interactive Touchscreen Display`}
+                alt={`Touchstone ${activeSize} interactive touchscreen display for school Hall of Fame and recognition software`}
                 fill
                 style={{ objectFit: 'contain' }}
                 priority

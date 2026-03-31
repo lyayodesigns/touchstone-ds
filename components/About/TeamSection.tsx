@@ -106,7 +106,7 @@ export const TeamSection = () => {
               >
                 <img 
                   src="/About Us.avif" 
-                  alt="Touchstone team" 
+                  alt="Touchstone Digital Solutions founders at their first conference – school recognition software team" 
                   className="w-full h-auto object-cover"
                 />
                 <motion.div 
