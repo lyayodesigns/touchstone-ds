@@ -63,7 +63,7 @@ const AlumniRecognitionSection: React.FC = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Why Leading Schools Are Choosing Us:
+            Why Leading Schools Are Choosing Our Digital Hall of Fame:
           </h3>
         </div>
         <div 

@@ -21,14 +21,14 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
-  description: "Transform donor recognition, records, trophies & awards with Touchstone Digital's interactive Hall of Fame for schools, universities & more.",
+  description: "Build a Digital Hall of Fame for your school with Touchstone — interactive donor recognition, record boards, trophies & awards for K–12, colleges & more.",
   alternates: {
     canonical: '/',
   },
   metadataBase: new URL('https://touchstone-ds.com'),
   openGraph: {
     title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
-    description: "Transform donor recognition, records, trophies & awards with Touchstone Digital's interactive Hall of Fame for schools, universities & more.",
+    description: "Build a Digital Hall of Fame for your school with Touchstone — interactive donor recognition, record boards, trophies & awards for K–12, colleges & more.",
     url: 'https://touchstone-ds.com/',
     siteName: 'Touchstone Digital Solutions',
     images: [
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'Touchstone Digital Solutions - Interactive Digital Halls of Fame',
-    description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Halls of Fame for schools, teams, and communities.",
+    title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
+    description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Hall of Fame for schools, teams, and communities.",
     images: ['/og-image.jpg'],
   },
 };

@@ -148,17 +148,22 @@ const HeroSection: React.FC = () => {
                   </span>
                   <span className="ml-2 inline-block">Display Software</span>
                 </div>
+                <div className="text-center md:text-left">
+                  <span className="text-base sm:text-lg md:text-xl font-bold text-foreground/70">
+                    Your school&apos;s Digital Hall of Fame, reimagined.
+                  </span>
+                </div>
               </h1>
             </div>
 
             <div
-              className={`text-sm sm:text-base md:text-lg text-foreground/70 text-center md:text-left transition-all duration-700 delay-500 ${
+              className={`-mt-4 md:-mt-6 text-sm sm:text-base md:text-lg text-foreground/70 text-center md:text-left transition-all duration-700 delay-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <p>The all-in-one interactive recognition platform built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.</p>
+              <p>The all-in-one Digital Hall of Fame platform built to elevate your legacy, captivate your audience, and seamlessly integrate with your brand. Designed for those who demand more than just a display, we transform achievements into immersive, unforgettable experiences.</p>
             </div>
 
             <div 

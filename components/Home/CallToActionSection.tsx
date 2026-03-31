@@ -88,7 +88,7 @@ const CallToActionSection: React.FC = () => {
           </h2>
 
           <p className="text-foreground/70 text-base sm:text-lg mt-4 sm:mt-6">
-            👉 Book Your Free Demo and see how a Digital Touchscreen Display can transform your campus.
+            👉 Book Your Free Demo and see how a Digital Hall of Fame can transform your campus.
           </p>
         </div>
 

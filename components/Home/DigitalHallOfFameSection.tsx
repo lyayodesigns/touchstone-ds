@@ -43,7 +43,7 @@ const DigitalHallOfFameSection: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}>
             <p className="text-lg font-medium text-foreground">
-              Your school's story deserves more than a plaque—it deserves a spotlight.
+              Your school's story deserves more than a plaque — it deserves a Digital Hall of Fame that puts the spotlight where it belongs.
             </p>
           </div>
 

@@ -14,13 +14,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Touchscreen Software | Touchstone Digital Solutions',
-  description: "Discover Touchstone's interactive touchscreen software for schools. Create digital halls of fame, donor walls, and more with our customizable platform.",
+  description: "Discover Touchstone's interactive touchscreen software for schools. Create digital hall of fame, donor walls, and more with our customizable platform.",
   alternates: {
     canonical: 'https://touchstone-ds.com/touchscreen-software/'
   },
   openGraph: {
     title: 'Touchscreen Software | Touchstone Digital Solutions',
-    description: "Discover Touchstone's interactive touchscreen software for schools. Create digital halls of fame, donor walls, and more with our customizable platform.",
+    description: "Discover Touchstone's interactive touchscreen software for schools. Create digital hall of fame, donor walls, and more with our customizable platform.",
     url: 'https://touchstone-ds.com/touchscreen-software/',
     siteName: 'Touchstone Digital Solutions',
     locale: 'en_US',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Touchscreen Software | Touchstone Digital Solutions',
-    description: "Discover Touchstone's interactive touchscreen software for schools. Create digital halls of fame, donor walls, and more with our customizable platform.",
+    description: "Discover Touchstone's interactive touchscreen software for schools. Create digital hall of fame, donor walls, and more with our customizable platform.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

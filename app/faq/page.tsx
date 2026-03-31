@@ -62,8 +62,8 @@ const faqData = [
         answer: "Digital displays let schools and organizations consolidate decades of achievements into one sleek, interactive hub. Instead of filling walls with plaques and trophies, everything is housed in a central, touchscreen or web-accessible display. With wall-mounted, freestanding, or even QR code-only options, Touchstone helps you save space without sacrificing recognition—perfect for hallways, lobbies, gyms, or anywhere stories deserve to be told.",
       },
       {
-        question: "What type of schools use digital Halls of Fame?",
-        answer: `Digital Halls of Fame are used by a wide range of schools and organizations, including public and private middle schools, high schools, college athletic departments, college history programs, community organizations, and nonprofits.\nTouchstone Digital Solutions proudly serves K–12 schools, colleges, universities, and community groups nationwide, offering scalable, fully customized touchscreen displays that celebrate legacies and achievements of all kinds.\nWhether you're a small public middle school recognizing student success, a private high school honoring athletic excellence, a university looking to showcase alumni history, or a nonprofit highlighting community impact, our digital displays are built to reflect your unique story. With no cost to build or maintain, our platform is accessible, affordable, and designed to grow with your institution.`,
+        question: "What type of schools use digital Hall of Fame?",
+        answer: `Digital Hall of Fame are used by a wide range of schools and organizations, including public and private middle schools, high schools, college athletic departments, college history programs, community organizations, and nonprofits.\nTouchstone Digital Solutions proudly serves K–12 schools, colleges, universities, and community groups nationwide, offering scalable, fully customized touchscreen displays that celebrate legacies and achievements of all kinds.\nWhether you're a small public middle school recognizing student success, a private high school honoring athletic excellence, a university looking to showcase alumni history, or a nonprofit highlighting community impact, our digital displays are built to reflect your unique story. With no cost to build or maintain, our platform is accessible, affordable, and designed to grow with your institution.`,
       },
       {
         question: "Can digital displays be used outside of athletic recognition?",
@@ -202,7 +202,7 @@ const faqData = [
       },
       {
         question: "Does Touchstone offer free product demos or consultations?",
-        answer: `Yes! We offer free 15-minute guided demos where you’ll get a personalized walkthrough of our software and see real examples of Digital Halls of Fame in action. You can ask questions, explore features, and learn how Touchstone can help your school or organization.\n[Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website)`,
+        answer: `Yes! We offer free 15-minute guided demos where you’ll get a personalized walkthrough of our software and see real examples of Digital Hall of Fame in action. You can ask questions, explore features, and learn how Touchstone can help your school or organization.\n[Schedule your free demo today](https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website)`,
       },  
       {
         question: "Can we start small and expand later?",

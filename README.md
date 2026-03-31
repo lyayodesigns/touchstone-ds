@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a modern, responsive web application for Touchstone Digital Solutions, a company specializing in interactive digital recognition systems for schools, including digital Halls of Fame, touchscreen displays, and cloud-based recognition platforms.
+This project is a modern, responsive web application for Touchstone Digital Solutions, a company specializing in interactive digital recognition systems for schools, including digital Hall of Fame, touchscreen displays, and cloud-based recognition platforms.
 
 ## Features
 
