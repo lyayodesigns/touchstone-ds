@@ -28,13 +28,22 @@ async function generateSitemap() {
   try {
     // Get all blog posts from Sanity with a more comprehensive query
     const posts = await client.fetch(
-      `*[_type == "post" && defined(slug.current)] | order(_updatedAt desc) [0...100] { 
+      `*[_type == "post" && defined(slug.current) && count(categories[defined(@->title) && (@->title match "press*release" || @->title == "press-release" || @->title == "press release")]) == 0] | order(_updatedAt desc) [0...100] { 
         "slug": slug.current, 
         publishedAt, 
         _updatedAt 
       }`
     );
     console.log(`Fetched ${posts.length} posts from Sanity for sitemap`);
+
+    const pressReleasePosts = await client.fetch(
+      `*[_type == "post" && defined(slug.current) && count(categories[defined(@->title) && (@->title match "press*release" || @->title == "press-release" || @->title == "press release")]) > 0] | order(_updatedAt desc) [0...100] { 
+        "slug": slug.current, 
+        publishedAt, 
+        _updatedAt 
+      }`
+    );
+    console.log(`Fetched ${pressReleasePosts.length} press release posts from Sanity for sitemap`);
     
     // Base URL from environment variable or default
     const baseUrl = (process.env.SITE_URL || 'https://touchstone-ds.com').replace(/\/$/, '');
@@ -128,13 +137,13 @@ async function generateSitemap() {
         priority: '0.9' 
       },
       { 
-        loc: `${baseUrl}/compare-us/`, 
+        loc: `${baseUrl}/news/`, 
         lastmod: formatDate(new Date()), 
-        changefreq: 'monthly', 
+        changefreq: 'weekly', 
         priority: '0.8' 
       },
       { 
-        loc: `${baseUrl}/touchstone-vs-gipper/`, 
+        loc: `${baseUrl}/compare-us/`, 
         lastmod: formatDate(new Date()), 
         changefreq: 'monthly', 
         priority: '0.8' 
@@ -183,8 +192,20 @@ async function generateSitemap() {
         };
       });
     
-    // Combine static pages and blog pages
-    const allPages = [...staticPages, ...blogEntries];
+    // Create sitemap entries for press release posts under /news/
+    const newsEntries = pressReleasePosts
+      .filter(post => post.slug)
+      .map(post => {
+        return {
+          loc: `${baseUrl}/news/${post.slug}/`,
+          lastmod: formatDate(post._updatedAt || post.publishedAt || new Date()),
+          changefreq: 'monthly',
+          priority: '0.6'
+        };
+      });
+
+    // Combine static pages, blog pages, and news pages
+    const allPages = [...staticPages, ...blogEntries, ...newsEntries];
     
     // Generate XML
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';

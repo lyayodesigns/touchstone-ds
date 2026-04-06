@@ -162,7 +162,7 @@ const IndividualHardwarePage: React.FC<IndividualHardwarePageProps> = ({ size })
                   Book a Demo
                 </motion.button>
               </Link>
-              <Link href="/hardware">
+              <Link href="/touchscreen-hardware">
                 <motion.button
                   className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 font-semibold rounded-2xl border border-gray-200 hover:bg-white hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -2 }}
