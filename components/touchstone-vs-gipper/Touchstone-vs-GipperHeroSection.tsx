@@ -98,7 +98,7 @@ const touchstoneVsGipperHeroSection: React.FC = () => {
             <div className="relative group">
               <div className="relative overflow-hidden rounded-2xl hover:scale-[1.03] transition-all duration-500">
                 <img
-                  src="/touchstonevsgipper.png"
+                  src="/touchstone vs gipper/touchstonevsgipper.webp"
                   alt="Touchstone vs Gipper Comparison"
                   className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700 drop-shadow-2xl"
                   onError={(e) => {
