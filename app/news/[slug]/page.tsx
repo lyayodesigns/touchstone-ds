@@ -12,6 +12,8 @@ import { SeoType } from "../../../lib/sanity/types";
 import Link from "next/link";
 import { Metadata } from "next";
 import { formatDate, calculateReadingTime } from "../../../lib/utils";
+import JsonLd from "../../../components/JsonLd";
+import { articleSchema, breadcrumbSchema } from "../../../lib/schema";
 
 import type { PortableTextBlock } from "@portabletext/types";
 
@@ -189,8 +191,31 @@ async function NewsPage({ params }: NewsPageProps) {
     return notFound();
   }
 
+  const newsUrl = `https://touchstone-ds.com/news/${post.slug.current}/`;
+  const newsImageUrl = post.mainImage
+    ? urlFor(post.mainImage).width(1200).height(675).url()
+    : undefined;
+
+  const newsArticleSchema = articleSchema({
+    title: post.title,
+    description:
+      post.seo?.metaDescription || `Read the news: ${post.title} from Touchstone Digital Solutions.`,
+    url: newsUrl,
+    imageUrl: newsImageUrl,
+    publishedAt: post.publishedAt,
+    authorName: post.author?.name,
+    isNewsArticle: true,
+  });
+
+  const newsBreadcrumbSchema = breadcrumbSchema([
+    { name: 'Home', url: 'https://touchstone-ds.com/' },
+    { name: 'News', url: 'https://touchstone-ds.com/news/' },
+    { name: post.title, url: newsUrl },
+  ]);
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd schema={[newsArticleSchema, newsBreadcrumbSchema]} />
       <Navbar />
       <BlogHeroSection
         title={post.title}

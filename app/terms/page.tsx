@@ -2,6 +2,8 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Container } from '../../components/ui/container';
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -36,7 +38,10 @@ const Terms = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'Terms of Service', url: 'https://touchstone-ds.com/terms/' },
+      ])} />
       <Navbar />
       
       {/* Hero Section */}

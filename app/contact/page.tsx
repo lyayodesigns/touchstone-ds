@@ -5,6 +5,8 @@ import IntroPacketForm from '../../components/Contact/IntroPacketForm';
 import { Container } from '../../components/ui/container';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -38,7 +40,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground pb-20 md:pb-0">
-
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'Contact', url: 'https://touchstone-ds.com/contact/' },
+      ])} />
       <Navbar />
       {/* Hero Section */}
       <section 

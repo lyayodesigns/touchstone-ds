@@ -8,6 +8,8 @@ import { postsQuery } from "../../lib/sanity/queries";
 import Link from "next/link";
 import { Metadata } from "next";
 import type { Post } from "../../lib/sanity/types";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -62,6 +64,10 @@ export default async function NewsPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'News', url: 'https://touchstone-ds.com/news/' },
+      ])} />
       <Navbar />
       <BlogHeroSection
         title="News"

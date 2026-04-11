@@ -3,6 +3,8 @@ import Footer from '../../../components/Footer';
 import IndividualHardwarePage from '../../../components/Hardware/IndividualHardwarePage';
 import { Metadata } from 'next';
 import CallToActionSection from '../../../components/Home/CallToActionSection';
+import JsonLd from '../../../components/JsonLd';
+import { productSchema, breadcrumbSchema } from '../../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -36,6 +38,18 @@ export const metadata: Metadata = {
 export default function Hardware55InchTouchscreenDisplayPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd schema={[
+        productSchema({
+          name: '55" Interactive Touchscreen Display',
+          description: 'Industrial-grade 55" interactive touchscreen display with PCAP touch technology, comprehensive 3-year warranty, designed for digital hall of fame and recognition installations.',
+          url: 'https://touchstone-ds.com/touchscreen-hardware/55-inch-touchscreen-display/',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', url: 'https://touchstone-ds.com/' },
+          { name: 'Touchscreen Hardware', url: 'https://touchstone-ds.com/touchscreen-hardware/' },
+          { name: '55" Display', url: 'https://touchstone-ds.com/touchscreen-hardware/55-inch-touchscreen-display/' },
+        ]),
+      ]} />
       <Navbar />
       <main className="overflow-hidden">
         <IndividualHardwarePage size='55"' />

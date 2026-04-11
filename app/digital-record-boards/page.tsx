@@ -14,6 +14,8 @@ import FAQ from '../../components/DigitalRecordBoards/FAQ';
 import TrustReassurance from '../../components/DigitalRecordBoards/TrustReassurance';
 import CTASection from '../../components/DigitalRecordBoards/CTASection';
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { serviceSchema, faqPageSchema, breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -44,9 +46,33 @@ export const metadata: Metadata = {
   }
 };
 
+const recordBoardFaqs = [
+  { question: 'What are digital record boards?', answer: 'Digital record boards are cloud-based records displayed on touchscreen displays that showcase athletic and academic records, milestones, and achievements in a modern, searchable, and interactive format. Updates happen in seconds with no data limits.' },
+  { question: 'How are records updated?', answer: 'Records can be updated instantly from any device. Authorized staff can log in, make changes, and see them reflected immediately on the displays.' },
+  { question: 'What Is the Implementation Timeline?', answer: 'Implementation typically takes a few days to two weeks, depending on system complexity and the amount of data to migrate. If you\'re working with a tight deadline, we\'ll meet it.' },
+  { question: 'Can we transfer our old records?', answer: 'Yes. We securely migrate your historical records into the system so nothing is lost and everything is organized and searchable.' },
+  { question: 'What Makes Our Digital Record Boards Different?', answer: 'Unlike traditional boards, our cloud-based touchscreen displays are interactive, multimedia ready, and always up to date. They store your entire history so no records are ever lost, and updates take seconds instead of hours or weeks.' },
+  { question: 'What Type of Training Do You Offer?', answer: 'We provide full training, including system administration, team instruction, new feature demonstrations, and troubleshooting. Our easy-to-use interface ensures your team becomes a confident super user as quickly as possible.' },
+  { question: 'What Is Your Customer Support Like?', answer: 'Every customer has access to 24/7 live support — call, text, email, or FaceTime. When you need help, you\'ll connect with someone from our team you know and trust.' },
+  { question: 'Do we need to buy new equipment?', answer: 'No, you can use any touchscreens you prefer. However, we also offer beautiful, industry-leading hardware at unbeatable prices.' },
+];
+
 export default function DigitalRecordBoardsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd schema={[
+        serviceSchema({
+          name: 'Digital Record Boards',
+          description: "Transform your record displays with Touchstone's innovative Digital Record Boards. Interactive touchscreen technology that motivates, involves and glorifies achievement. Perfect for schools, universities, and organizations.",
+          url: 'https://touchstone-ds.com/digital-record-boards/',
+          serviceType: 'Digital Record Board Software',
+        }),
+        faqPageSchema(recordBoardFaqs),
+        breadcrumbSchema([
+          { name: 'Home', url: 'https://touchstone-ds.com/' },
+          { name: 'Digital Record Boards', url: 'https://touchstone-ds.com/digital-record-boards/' },
+        ]),
+      ]} />
       <Navbar />
       <main className="overflow-hidden">
         <DigitalRecordBoardsHero />

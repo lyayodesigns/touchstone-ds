@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { organizationSchema, websiteSchema } from '../lib/schema';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,6 +43,10 @@ export default function RootLayout({
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="DIaGnoRCPzT0LmMVeM0VeQ" async></script>
         {/* Leadsy AI tracking */}
         <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="81MfBpd6ogtvjpwR" data-version="062024"></script>
+        {/* JSON-LD: Organization */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+        {/* JSON-LD: WebSite */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }} />
       </head>
       <body suppressHydrationWarning>
         {children}

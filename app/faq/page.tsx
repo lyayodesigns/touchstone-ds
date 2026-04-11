@@ -3,6 +3,8 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import { Metadata } from 'next';
+import JsonLd from 'components/JsonLd';
+import { faqPageSchema, breadcrumbSchema } from 'lib/schema';
 
 export const metadata: Metadata = {
   title: 'FAQ | Touchstone Digital Solutions',
@@ -216,9 +218,21 @@ const faqData = [
   },
 ];
 
+const faqAllQuestions = faqData.flatMap((cat) =>
+  cat.faqs.map((f) => ({ question: f.question, answer: f.answer }))
+);
+
+const faqPageJsonLd = faqPageSchema(faqAllQuestions);
+
+const faqBreadcrumbJsonLd = breadcrumbSchema([
+  { name: 'Home', url: 'https://touchstone-ds.com/' },
+  { name: 'FAQ', url: 'https://touchstone-ds.com/faq/' },
+]);
+
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd schema={[faqPageJsonLd, faqBreadcrumbJsonLd]} />
       <Navbar />
 
       <main>

@@ -2,6 +2,8 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Container } from '../../components/ui/container';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumbSchema } from '../../lib/schema';
 
 export const metadata = {
   title: 'Privacy Policy | Touchstone Digital Solutions',
@@ -30,7 +32,10 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'Privacy Policy', url: 'https://touchstone-ds.com/privacy/' },
+      ])} />
       <Navbar />
       
       {/* Hero Section */}

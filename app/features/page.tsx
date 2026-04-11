@@ -10,6 +10,8 @@ import VisualFidelity from '../../components/Features/VisualFidelity';
 import BuiltByGaming from '../../components/Features/BuiltByGaming';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
+import { serviceSchema, breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -43,7 +45,18 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-
+      <JsonLd schema={[
+        serviceSchema({
+          name: 'Digital Hall of Fame Platform Features',
+          description: "Explore Touchstone's interactive digital recognition platform features — fully customizable displays, cloud-based management, record boards, donor walls, and seamless integration for schools and institutions.",
+          url: 'https://touchstone-ds.com/features/',
+          serviceType: 'Digital Recognition Software',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', url: 'https://touchstone-ds.com/' },
+          { name: 'Features', url: 'https://touchstone-ds.com/features/' },
+        ]),
+      ]} />
       <Navbar />
       <main className="overflow-hidden">
         <FeaturesHeroSection />

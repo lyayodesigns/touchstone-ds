@@ -9,6 +9,8 @@ import TeamSection from '../../components/About/TeamSection';
 import WhoWeAreSection from '../../components/About/WhoWeAreSection';
 import { CallToAction } from '../../components/About/CallToAction';
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -42,7 +44,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'About Us', url: 'https://touchstone-ds.com/about/' },
+      ])} />
       <Navbar />
       <main className="overflow-hidden">
         <AboutHeroSection />

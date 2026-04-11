@@ -5,6 +5,8 @@ import ComparisonSection from '../../components/CompareUs/ComparisonSection';
 import CallToActionSection from '../../components/Home/CallToActionSection';
 import WhyChooseTouchstone from '../../components/CompareUs/WhyChooseTouchstone';
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumbSchema } from '../../lib/schema';
 
 export const dynamic = 'force-static';
 
@@ -42,6 +44,10 @@ export const metadata: Metadata = {
 export default function CompareUs() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd schema={breadcrumbSchema([
+        { name: 'Home', url: 'https://touchstone-ds.com/' },
+        { name: 'Compare Us', url: 'https://touchstone-ds.com/compare-us/' },
+      ])} />
       <Navbar />
       <main className="overflow-hidden">
         <CompareUsHeroSection />

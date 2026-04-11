@@ -12,6 +12,8 @@ import { SeoType } from "../../../lib/sanity/types";
 import Link from "next/link";
 import { Metadata } from "next";
 import { formatDate, calculateReadingTime } from '../../../lib/utils';
+import JsonLd from '../../../components/JsonLd';
+import { articleSchema, breadcrumbSchema } from '../../../lib/schema';
 
 import type { PortableTextBlock } from '@portabletext/types';
 
@@ -117,9 +119,30 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   // Post is guaranteed to exist at this point
+  const postUrl = `https://touchstone-ds.com/blog/${post.slug.current}/`;
+  const postImageUrl = post.mainImage
+    ? urlFor(post.mainImage).width(1200).height(675).url()
+    : undefined;
+
+  const blogArticleSchema = articleSchema({
+    title: post.title,
+    description:
+      post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+    url: postUrl,
+    imageUrl: postImageUrl,
+    publishedAt: post.publishedAt,
+    authorName: post.author?.name,
+  });
+
+  const blogBreadcrumbSchema = breadcrumbSchema([
+    { name: 'Home', url: 'https://touchstone-ds.com/' },
+    { name: 'Blog', url: 'https://touchstone-ds.com/blog/' },
+    { name: post.title, url: postUrl },
+  ]);
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <JsonLd schema={[blogArticleSchema, blogBreadcrumbSchema]} />
       <Navbar />
       <BlogHeroSection
         title={post.title}

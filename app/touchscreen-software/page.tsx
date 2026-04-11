@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { serviceSchema, breadcrumbSchema } from '../../lib/schema';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import TouchscreenHeroSection from '../../components/TouchscreenSoftware/TouchscreenHeroSection';
@@ -43,6 +45,18 @@ export const metadata: Metadata = {
 export default function TouchscreenSoftwarePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd schema={[
+        serviceSchema({
+          name: 'Touchscreen Hall of Fame Software',
+          description: "Touchstone's interactive touchscreen software for schools — create digital hall of fame displays, donor walls, record boards, and more with a fully customizable cloud-based platform.",
+          url: 'https://touchstone-ds.com/touchscreen-software/',
+          serviceType: 'Interactive Touchscreen Software',
+        }),
+        breadcrumbSchema([
+          { name: 'Home', url: 'https://touchstone-ds.com/' },
+          { name: 'Touchscreen Software', url: 'https://touchstone-ds.com/touchscreen-software/' },
+        ]),
+      ]} />
       <Navbar />
       <main className="overflow-hidden">
         <TouchscreenHeroSection />
