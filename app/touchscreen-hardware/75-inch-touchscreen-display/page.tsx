@@ -10,13 +10,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: '75" Interactive Display Hardware | Touchstone Digital Solutions',
-  description: 'The 75" Touchstone interactive display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+  description: 'The 75" Touchstone display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
   alternates: {
     canonical: 'https://touchstone-ds.com/touchscreen-hardware/75-inch-touchscreen-display/'
   },
   openGraph: {
     title: '75" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'The 75" Touchstone interactive display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+    description: 'The 75" Touchstone display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     url: 'https://touchstone-ds.com/touchscreen-hardware/75-inch-touchscreen-display/',
     type: 'website',
     images: [{
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: '75" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'The 75" Touchstone interactive display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+    description: 'The 75" Touchstone display commands attention in athletic facilities and large lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

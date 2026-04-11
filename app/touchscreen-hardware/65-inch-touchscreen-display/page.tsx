@@ -10,13 +10,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: '65" Interactive Display Hardware | Touchstone Digital Solutions',
-  description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies and common areas — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+  description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
   alternates: {
     canonical: 'https://touchstone-ds.com/touchscreen-hardware/65-inch-touchscreen-display/'
   },
   openGraph: {
     title: '65" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies and common areas — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+    description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     url: 'https://touchstone-ds.com/touchscreen-hardware/65-inch-touchscreen-display/',
     type: 'website',
     images: [{
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: '65" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies and common areas — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
+    description: 'The 65" Touchstone interactive display delivers strong visual impact in lobbies — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

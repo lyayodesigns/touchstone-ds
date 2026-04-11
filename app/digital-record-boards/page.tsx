@@ -21,13 +21,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Digital Record Boards | Touchstone Digital Solutions',
-  description: "Display athletic and academic records on Touchstone's interactive Digital Record Boards — motivating, updatable touchscreens for schools, universities, and sports organizations.",
+  description: "Touchstone's Digital Record Boards display athletic and academic records on interactive touchscreens — motivating students at schools, universities, and more.",
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-record-boards/'
   },
   openGraph: {
     title: 'Digital Record Boards | Touchstone Digital Solutions',
-    description: "Display athletic and academic records on Touchstone's interactive Digital Record Boards — motivating, updatable touchscreens for schools, universities, and sports organizations.",
+    description: "Touchstone's Digital Record Boards display athletic and academic records on interactive touchscreens — motivating students at schools, universities, and more.",
     url: 'https://touchstone-ds.com/digital-record-boards/',
     type: 'website',
     images: [{
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital Record Boards | Touchstone Digital Solutions',
-    description: "Display athletic and academic records on Touchstone's interactive Digital Record Boards — motivating, updatable touchscreens for schools, universities, and sports organizations.",
+    description: "Touchstone's Digital Record Boards display athletic and academic records on interactive touchscreens — motivating students at schools, universities, and more.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

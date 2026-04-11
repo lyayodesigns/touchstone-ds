@@ -17,13 +17,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Yearbook Scanning | Touchstone Digital Solutions',
-  description: "Convert printed yearbooks into searchable digital archives with Touchstone's non-destructive scanning service. High-quality, secure delivery for schools, libraries, and alumni organizations.",
+  description: "Turn printed yearbooks into searchable digital archives. Touchstone's non-destructive scanning delivers secure results for schools, libraries, and alumni.",
   alternates: {
     canonical: 'https://touchstone-ds.com/yearbook-scanning/'
   },
   openGraph: {
     title: 'Yearbook Scanning | Touchstone Digital Solutions',
-    description: "Convert printed yearbooks into searchable digital archives with Touchstone's non-destructive scanning service. High-quality, secure delivery for schools, libraries, and alumni organizations.",
+    description: "Turn printed yearbooks into searchable digital archives. Touchstone's non-destructive scanning delivers secure results for schools, libraries, and alumni.",
     url: 'https://touchstone-ds.com/yearbook-scanning/',
     type: 'website',
     images: [{
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Yearbook Scanning | Touchstone Digital Solutions',
-    description: "Convert printed yearbooks into searchable digital archives with Touchstone's non-destructive scanning service. High-quality, secure delivery for schools, libraries, and alumni organizations.",
+    description: "Turn printed yearbooks into searchable digital archives. Touchstone's non-destructive scanning delivers secure results for schools, libraries, and alumni.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };
