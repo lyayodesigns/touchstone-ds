@@ -15,14 +15,14 @@ import { breadcrumbSchema } from '../../lib/schema';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'About Us | Touchstone Digital Solutions',
-  description: "Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems.",
+  title: 'About Touchstone Digital Solutions | Digital Hall of Fame Provider',
+  description: "Touchstone builds interactive digital Hall of Fame systems, donor walls, and record boards for K–12 schools, universities, and sports organizations.",
   alternates: {
     canonical: 'https://touchstone-ds.com/about/'
   },
   openGraph: {
-    title: 'About Us | Touchstone Digital Solutions',
-    description: "Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems.",
+    title: 'About Touchstone Digital Solutions | Digital Hall of Fame Provider',
+    description: "Touchstone builds interactive digital Hall of Fame systems, donor walls, and record boards for K–12 schools, universities, and sports organizations.",
     url: 'https://touchstone-ds.com/about/',
     type: 'website',
     images: [{
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'About Us | Touchstone Digital Solutions',
-    description: "Learn about Touchstone Digital Solutions, our mission, values, and the team behind our interactive digital recognition systems.",
+    title: 'About Touchstone Digital Solutions | Digital Hall of Fame Provider',
+    description: "Touchstone builds interactive digital Hall of Fame systems, donor walls, and record boards for K–12 schools, universities, and sports organizations.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

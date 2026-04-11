@@ -18,13 +18,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Digital Trophy Case | Touchstone Digital Solutions',
-  description: "Transform your trophy displays with Touchstone's innovative Digital Trophy Case software. Interactive, secure, and accessible from anywhere. Perfect for schools, athletes, and organizations.",
+  description: "Touchstone's Digital Trophy Case replaces aging cabinets with interactive touchscreens for championships, retired numbers, and Hall of Fame inductees.",
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-trophy-case/'
   },
   openGraph: {
     title: 'Digital Trophy Case | Touchstone Digital Solutions',
-    description: "Transform your trophy displays with Touchstone's innovative Digital Trophy Case software. Interactive, secure, and accessible from anywhere. Perfect for schools, athletes, and organizations.",
+    description: "Touchstone's Digital Trophy Case replaces aging cabinets with interactive touchscreens for championships, retired numbers, and Hall of Fame inductees.",
     url: 'https://touchstone-ds.com/digital-trophy-case/',
     type: 'website',
     images: [{
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital Trophy Case | Touchstone Digital Solutions',
-    description: "Transform your trophy displays with Touchstone's innovative Digital Trophy Case software. Interactive, secure, and accessible from anywhere. Perfect for schools, athletes, and organizations.",
+    description: "Touchstone's Digital Trophy Case replaces aging cabinets with interactive touchscreens for championships, retired numbers, and Hall of Fame inductees.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };
@@ -59,7 +59,7 @@ export default function DigitalTrophyCasePage() {
       <JsonLd schema={[
         serviceSchema({
           name: 'Digital Trophy Case Software',
-          description: "Transform your trophy displays with Touchstone's innovative Digital Trophy Case software. Interactive, secure, and accessible from anywhere. Perfect for schools, athletes, and organizations.",
+          description: "Touchstone's Digital Trophy Case replaces aging cabinets with interactive touchscreens for championships, retired numbers, and Hall of Fame inductees.",
           url: 'https://touchstone-ds.com/digital-trophy-case/',
           serviceType: 'Digital Trophy Case Software',
         }),

@@ -19,13 +19,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Digital Yearbooks | Touchstone Digital Solutions',
-  description: "Transform your prized school yearbooks into searchable digital archives. Professional yearbook scanning and digitization services for schools, libraries, and individuals. Preserve memories forever with Touchstone Digital Solutions.",
+  description: "Instant digital access to every school yearbook with Touchstone — browse, search, and share memories from any device. Permanently preserved online.",
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-yearbooks/'
   },
   openGraph: {
     title: 'Digital Yearbooks | Touchstone Digital Solutions',
-    description: "Transform your prized school yearbooks into searchable digital archives. Professional yearbook scanning and digitization services for schools, libraries, and individuals. Preserve memories forever with Touchstone Digital Solutions.",
+    description: "Instant digital access to every school yearbook with Touchstone — browse, search, and share memories from any device. Permanently preserved online.",
     url: 'https://touchstone-ds.com/digital-yearbooks/',
     type: 'website',
     images: [{
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital Yearbooks | Touchstone Digital Solutions',
-    description: "Transform your prized school yearbooks into searchable digital archives. Professional yearbook scanning and digitization services for schools, libraries, and individuals. Preserve memories forever with Touchstone Digital Solutions.",
+    description: "Instant digital access to every school yearbook with Touchstone — browse, search, and share memories from any device. Permanently preserved online.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

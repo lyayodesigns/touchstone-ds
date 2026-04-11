@@ -10,13 +10,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: '55" Interactive Display Hardware | Touchstone Digital Solutions',
-  description: 'Explore our 55" interactive display with PCAP touch technology, industrial-grade construction, and comprehensive 3-year warranty for your digital recognition needs.',
+  description: 'The 55" Touchstone interactive display is ideal for hallways and compact spaces — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
   alternates: {
     canonical: 'https://touchstone-ds.com/touchscreen-hardware/55-inch-touchscreen-display/'
   },
   openGraph: {
     title: '55" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'Explore our 55" interactive display with PCAP touch technology, industrial-grade construction, and comprehensive 3-year warranty for your digital recognition needs.',
+    description: 'The 55" Touchstone interactive display is ideal for hallways and compact spaces — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     url: 'https://touchstone-ds.com/touchscreen-hardware/55-inch-touchscreen-display/',
     type: 'website',
     images: [{
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: '55" Interactive Display Hardware | Touchstone Digital Solutions',
-    description: 'Explore our 55" interactive display with PCAP touch technology, industrial-grade construction, and comprehensive 3-year warranty for your digital recognition needs.',
+    description: 'The 55" Touchstone interactive display is ideal for hallways and compact spaces — PCAP multi-touch, commercial 24/7 operation, and a 3-year warranty.',
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

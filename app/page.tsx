@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Touchstone Digital Solutions - Interactive Digital Hall of Fame',
-    description: "Transform how you celebrate achievement with Touchstone Digital Solutions' interactive digital Hall of Fame for schools, teams, and communities.",
+    description: "Build a Digital Hall of Fame for your school with Touchstone — interactive donor recognition, record boards, trophies & awards for K–12, colleges & more.",
     images: ['/og-image.jpg'],
   },
 };

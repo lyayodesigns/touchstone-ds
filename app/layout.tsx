@@ -4,6 +4,10 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://touchstone-ds.com'),
+};
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',

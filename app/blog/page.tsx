@@ -17,10 +17,10 @@ export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: 'Blog | Touchstone Digital Solutions',
-  description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
+  description: 'Explore case studies, tips, and insights on digital Hall of Fame systems, interactive donor walls, record boards, and touchscreen displays from Touchstone Digital Solutions.',
   openGraph: {
     title: 'Blog | Touchstone Digital Solutions',
-    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
+    description: 'Explore case studies, tips, and insights on digital Hall of Fame systems, interactive donor walls, record boards, and touchscreen displays from Touchstone Digital Solutions.',
     url: 'https://touchstone-ds.com/blog/',
     type: 'website',
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Blog | Touchstone Digital Solutions',
-    description: 'Stay updated with the latest news, insights, innovations and project highlights from Touchstone Digital Solutions, your partner in interactive digital displays.',
+    description: 'Explore case studies, tips, and insights on digital Hall of Fame systems, interactive donor walls, record boards, and touchscreen displays from Touchstone Digital Solutions.',
     images: ['https://touchstone-ds.com/og-image.jpg'],
   },
   alternates: {

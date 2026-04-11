@@ -19,14 +19,14 @@ import { serviceSchema, faqPageSchema, breadcrumbSchema } from '../../lib/schema
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Touchstone Fundraising | Fundraising Software for Nonprofits, Schools & Churches — Touchstone Digital Solutions',
-  description: "Touchstone Fundraising by Touchstone Digital Solutions: the all-in-one fundraising platform for nonprofits, schools, churches, and community organizations. Launch campaigns, engage donors, and raise more — smarter.",
+  title: 'Touchstone Fundraising | All-in-One Fundraising Software',
+  description: "The all-in-one fundraising software for nonprofits, schools, and churches. Launch campaigns, engage donors, and raise more with Touchstone Fundraising.",
   alternates: {
     canonical: 'https://touchstone-ds.com/touchstone-fundraising/'
   },
   openGraph: {
-    title: 'Touchstone Fundraising | Fundraising Software for Nonprofits, Schools & Churches — Touchstone Digital Solutions',
-    description: "Touchstone Fundraising by Touchstone Digital Solutions: the all-in-one fundraising platform for nonprofits, schools, churches, and community organizations. Launch campaigns, engage donors, and raise more — smarter.",
+    title: 'Touchstone Fundraising | All-in-One Fundraising Software',
+    description: "The all-in-one fundraising software for nonprofits, schools, and churches. Launch campaigns, engage donors, and raise more with Touchstone Fundraising.",
     url: 'https://touchstone-ds.com/touchstone-fundraising/',
     type: 'website',
     images: [{
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'Touchstone Fundraising | Fundraising Software for Nonprofits, Schools & Churches — Touchstone Digital Solutions',
-    description: "Touchstone Fundraising by Touchstone Digital Solutions: the all-in-one fundraising platform for nonprofits, schools, churches, and community organizations. Launch campaigns, engage donors, and raise more — smarter.",
+    title: 'Touchstone Fundraising | All-in-One Fundraising Software',
+    description: "The all-in-one fundraising software for nonprofits, schools, and churches. Launch campaigns, engage donors, and raise more with Touchstone Fundraising.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

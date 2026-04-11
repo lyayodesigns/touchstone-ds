@@ -17,13 +17,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Digital History Archive | Touchstone Digital Solutions',
-  description: "Preserve, protect, and share your institutional history with Touchstone's Digital History Archive. Transform records, artifacts, and cultural heritage into a searchable, secure digital archive accessible to researchers worldwide.",
+  description: "Touchstone's Digital History Archive transforms records, photos, and artifacts into a searchable, secure digital archive for schools and institutions.",
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-history-archive/'
   },
   openGraph: {
     title: 'Digital History Archive | Touchstone Digital Solutions',
-    description: "Preserve, protect, and share your institutional history with Touchstone's Digital History Archive. Transform records, artifacts, and cultural heritage into a searchable, secure digital archive accessible to researchers worldwide.",
+    description: "Touchstone's Digital History Archive transforms records, photos, and artifacts into a searchable, secure digital archive for schools and institutions.",
     url: 'https://touchstone-ds.com/digital-history-archive/',
     type: 'website',
     images: [{
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital History Archive | Touchstone Digital Solutions',
-    description: "Preserve, protect, and share your institutional history with Touchstone's Digital History Archive. Transform records, artifacts, and cultural heritage into a searchable, secure digital archive accessible to researchers worldwide.",
+    description: "Touchstone's Digital History Archive transforms records, photos, and artifacts into a searchable, secure digital archive for schools and institutions.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

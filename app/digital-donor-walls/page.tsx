@@ -19,13 +19,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Digital Donor Walls | Touchstone Digital Solutions',
-  description: "Touchstone Digital Solutions carries a line of elegant and interactive Digital Donor Walls for universities, hospitals, and schools throughout the USA. See examples, garner ideas, and weigh cheap alternatives. Honor your donors in a way they have never been honored before.",
+  description: "Touchstone's elegant, interactive Digital Donor Walls honor donors at universities, hospitals, and schools with real-time touchscreen recognition. Browse examples and pricing.",
   alternates: {
     canonical: 'https://touchstone-ds.com/digital-donor-walls/'
   },
   openGraph: {
     title: 'Digital Donor Walls | Touchstone Digital Solutions',
-    description: "Touchstone Digital Solutions carries a line of elegant and interactive Digital Donor Walls for universities, hospitals, and schools throughout the USA. See examples, garner ideas, and weigh cheap alternatives. Honor your donors in a way they have never been honored before.",
+    description: "Touchstone's elegant, interactive Digital Donor Walls honor donors at universities, hospitals, and schools with real-time touchscreen recognition. Browse examples and pricing.",
     url: 'https://touchstone-ds.com/digital-donor-walls/',
     type: 'website',
     images: [{
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital Donor Walls | Touchstone Digital Solutions',
-    description: "Touchstone Digital Solutions carries a line of elegant and interactive Digital Donor Walls for universities, hospitals, and schools throughout the USA. See examples, garner ideas, and weigh cheap alternatives. Honor your donors in a way they have never been honored before.",
+    description: "Touchstone's elegant, interactive Digital Donor Walls honor donors at universities, hospitals, and schools with real-time touchscreen recognition. Browse examples and pricing.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };

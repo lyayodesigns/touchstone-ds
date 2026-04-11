@@ -15,13 +15,13 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "News | Touchstone Digital Solutions",
+  title: "News & Press Releases | Touchstone Digital Solutions",
   description:
-    "Official announcements and updates from Touchstone Digital Solutions.",
+    "Official news and product updates from Touchstone — the leader in digital Hall of Fame and recognition display systems for schools and institutions.",
   openGraph: {
-    title: "News | Touchstone Digital Solutions",
+    title: "News & Press Releases | Touchstone Digital Solutions",
     description:
-      "Official announcements and updates from Touchstone Digital Solutions.",
+      "Official news and product updates from Touchstone — the leader in digital Hall of Fame and recognition display systems for schools and institutions.",
     url: "https://touchstone-ds.com/news/",
     type: "website",
     images: [
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@touchstone_ds",
-    title: "News | Touchstone Digital Solutions",
+    title: "News & Press Releases | Touchstone Digital Solutions",
     description:
-      "Official announcements and updates from Touchstone Digital Solutions.",
+      "Official news and product updates from Touchstone — the leader in digital Hall of Fame and recognition display systems for schools and institutions.",
     images: ["https://touchstone-ds.com/og-image.jpg"],
   },
   alternates: {

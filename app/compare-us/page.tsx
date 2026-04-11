@@ -11,16 +11,16 @@ import { breadcrumbSchema } from '../../lib/schema';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Touchstone vs Rocket Alumni Solutions - Compare Digital Recognition Platforms',
-  description: "Detailed comparison of Touchstone and Rocket Alumni Solutions. Compare pricing, features, support, and see why institutions choose Touchstone over Rocket Alumni Solutions for their digital recognition needs.",
+  title: 'Touchstone vs Rocket Alumni Solutions | Compare Platforms',
+  description: "Touchstone vs Rocket Alumni Solutions — a full side-by-side comparison of features, pricing, and support for digital Hall of Fame and recognition displays.",
   keywords: 'Rocket Alumni Solutions, Touchstone vs Rocket Alumni Solutions, Rocket Alumni Solutions alternative, digital recognition platform comparison, touchscreen software comparison, alumni recognition software',
   alternates: {
     canonical: '/compare-us',
   },
   metadataBase: new URL('https://touchstone-ds.com'),
   openGraph: {
-    title: 'Touchstone vs Rocket Alumni Solutions - Platform Comparison',
-    description: "Compare Touchstone and Rocket Alumni Solutions side-by-side. See features, pricing, and support differences between these digital recognition platforms.",
+    title: 'Touchstone vs Rocket Alumni Solutions | Compare Platforms',
+    description: "Touchstone vs Rocket Alumni Solutions — a full side-by-side comparison of features, pricing, and support for digital Hall of Fame and recognition displays.",
     url: 'https://touchstone-ds.com/compare-us',
     siteName: 'Touchstone Digital Solutions',
     images: [
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'Touchstone vs Rocket Alumni Solutions Comparison',
-    description: "Comprehensive comparison of Touchstone and Rocket Alumni Solutions digital recognition platforms. Compare features, pricing, and support.",
+    title: 'Touchstone vs Rocket Alumni Solutions | Compare Platforms',
+    description: "Touchstone vs Rocket Alumni Solutions — a full side-by-side comparison of features, pricing, and support for digital Hall of Fame and recognition displays.",
     images: ['/og-image.jpg'],
   },
 };

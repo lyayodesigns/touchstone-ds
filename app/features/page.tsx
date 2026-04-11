@@ -16,14 +16,14 @@ import { serviceSchema, breadcrumbSchema } from '../../lib/schema';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'Features | Touchstone Digital Solutions',
-  description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+  title: 'Digital Hall of Fame Software Features | Touchstone Digital Solutions',
+  description: "Touchstone's Hall of Fame software features interactive touchscreens, donor walls, record boards, alumni spotlights, custom branding, and cloud management.",
   alternates: {
     canonical: 'https://touchstone-ds.com/features/'
   },
   openGraph: {
-    title: 'Features | Touchstone Digital Solutions',
-    description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+    title: 'Digital Hall of Fame Software Features | Touchstone Digital Solutions',
+    description: "Touchstone's Hall of Fame software features interactive touchscreens, donor walls, record boards, alumni spotlights, custom branding, and cloud management.",
     url: 'https://touchstone-ds.com/features/',
     type: 'website',
     images: [{
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@touchstone_ds',
-    title: 'Features | Touchstone Digital Solutions',
-    description: "Explore the innovative features of Touchstone's digital recognition systems, including interactive displays, customization options, and seamless integration.",
+    title: 'Digital Hall of Fame Software Features | Touchstone Digital Solutions',
+    description: "Touchstone's Hall of Fame software features interactive touchscreens, donor walls, record boards, alumni spotlights, custom branding, and cloud management.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };
