@@ -178,6 +178,12 @@ async function generateSitemap() {
         changefreq: 'monthly', 
         priority: '0.9' 
       },
+      {
+        loc: `${baseUrl}/digital-hall-of-fame-buyers-guide.pdf`,
+        lastmod: '2026-04-11',
+        changefreq: 'yearly',
+        priority: '0.7'
+      },
     ];
     
     // Create sitemap entries for blog posts

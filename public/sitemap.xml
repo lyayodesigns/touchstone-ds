@@ -522,4 +522,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://touchstone-ds.com/digital-hall-of-fame-buyers-guide.pdf</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

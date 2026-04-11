@@ -99,6 +99,16 @@ const CallToActionSection: React.FC = () => {
           >
             Book Your Free Demo
           </button>
+          <div className="mt-4">
+            <a
+              href="/digital-hall-of-fame-buyers-guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/60 hover:text-foreground/90 text-sm sm:text-base underline underline-offset-4 transition-colors duration-200"
+            >
+              Download Our Digital Hall of Fame Buyer's Guide (PDF)
+            </a>
+          </div>
         </div>
 
         <div className={`mt-6 sm:mt-8 text-center transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
