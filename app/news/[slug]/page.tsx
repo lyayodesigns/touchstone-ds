@@ -121,17 +121,22 @@ export async function generateMetadata({
       };
     }
 
+    const postUrl = `https://touchstone-ds.com/news/${slug}/`;
     return {
       title:
         post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions`,
       description:
         post.seo?.metaDescription ||
         `Read the news: ${post.title} from Touchstone Digital Solutions.`,
+      alternates: {
+        canonical: postUrl,
+      },
       openGraph: {
         title: post.seo?.metaTitle || post.title,
         description:
           post.seo?.metaDescription ||
           `Read the news: ${post.title} from Touchstone Digital Solutions.`,
+        url: postUrl,
         type: "article",
         images: post.mainImage
           ? [

@@ -58,12 +58,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       };
     }
     
+    const postUrl = `https://touchstone-ds.com/blog/${slug}/`;
+    
     return {
       title: post.seo?.metaTitle || `${post.title} | Touchstone Digital Solutions Blog`,
       description: post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+      alternates: {
+        canonical: postUrl,
+      },
       openGraph: {
         title: post.seo?.metaTitle || post.title,
         description: post.seo?.metaDescription || `Read about ${post.title} on the Touchstone Digital Solutions blog.`,
+        url: postUrl,
         type: 'article',
         images: post.mainImage ? [
           {
