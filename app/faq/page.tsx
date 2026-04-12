@@ -8,10 +8,10 @@ import { faqPageSchema, breadcrumbSchema } from 'lib/schema';
 
 export const metadata: Metadata = {
   title: 'Digital Hall of Fame FAQ | Touchstone Digital Solutions',
-  description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, implementation timeline, hardware options, customization, and ongoing support.',
+  description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, timelines, hardware options, customization, and support.',
   openGraph: {
     title: 'Digital Hall of Fame FAQ | Touchstone Digital Solutions',
-    description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, implementation timeline, hardware options, customization, and ongoing support.',
+    description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, timelines, hardware options, customization, and support.',
     url: 'https://touchstone-ds.com/faq/',
     type: 'website',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Digital Hall of Fame FAQ | Touchstone Digital Solutions',
-    description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, implementation timeline, hardware options, customization, and ongoing support.',
+    description: 'Get answers to common questions about Touchstone\'s digital Hall of Fame systems — pricing, timelines, hardware options, customization, and support.',
     images: ['https://touchstone-ds.com/og-image.jpg'],
   },
   alternates: {

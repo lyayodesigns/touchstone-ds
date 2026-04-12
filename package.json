@@ -5,12 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "node scripts/generate-sitemap.js && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:dev": "node scripts/generate-sitemap.js && next build --mode development",
-    "preview": "next preview",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "build:dev": "next build --mode development",
+    "preview": "next preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

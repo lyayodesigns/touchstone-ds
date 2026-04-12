@@ -12,13 +12,13 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Contact Touchstone | Request a Digital Hall of Fame Demo',
-  description: "Schedule a demo or contact Touchstone Digital Solutions to explore interactive digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
+  description: "Schedule a demo or contact Touchstone to explore digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
   alternates: {
     canonical: 'https://touchstone-ds.com/contact/'
   },
   openGraph: {
     title: 'Contact Touchstone | Request a Digital Hall of Fame Demo',
-    description: "Schedule a demo or contact Touchstone Digital Solutions to explore interactive digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
+    description: "Schedule a demo or contact Touchstone to explore digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
     url: 'https://touchstone-ds.com/contact/',
     type: 'website',
     images: [{
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@touchstone_ds',
     title: 'Contact Touchstone | Request a Digital Hall of Fame Demo',
-    description: "Schedule a demo or contact Touchstone Digital Solutions to explore interactive digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
+    description: "Schedule a demo or contact Touchstone to explore digital Hall of Fame systems, donor walls, and record boards for your school or organization.",
     images: ['https://touchstone-ds.com/og-image.jpg']
   }
 };
