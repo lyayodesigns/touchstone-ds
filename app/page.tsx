@@ -16,7 +16,12 @@ import TrustedBySection from '../components/Home/TrustedBySection';
 import TouchstoneFamilySection from '../components/Home/TouchstoneFamilySection';
 import { Metadata } from 'next';
 import JsonLd from '../components/JsonLd';
-import { serviceSchema, faqPageSchema, breadcrumbSchema } from '../lib/schema';
+import {
+  serviceSchema,
+  faqPageSchema,
+  breadcrumbSchema,
+  softwareApplicationSchema,
+} from '../lib/schema';
 
 
 export const dynamic = 'force-static';
@@ -94,7 +99,14 @@ const homeBreadcrumbSchema = breadcrumbSchema([
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <JsonLd schema={[homeServiceSchema, homeFaqSchema, homeBreadcrumbSchema]} />
+      <JsonLd
+        schema={[
+          softwareApplicationSchema(),
+          homeServiceSchema,
+          homeFaqSchema,
+          homeBreadcrumbSchema,
+        ]}
+      />
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />
