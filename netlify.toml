@@ -10,6 +10,103 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Legacy blog post redirects
+[[redirects]]
+  from = "/blog/5-reasons-why-every-college-sports-team-needs-a-digital-hall-of-fame/"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-universities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/5-reasons-why-every-college-sports-team-needs-a-digital-hall-of-fame"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-universities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/digital-hall-of-fame-display-for-high-school-sports-team/"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/digital-hall-of-fame-display-for-high-school-sports-team"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/honor-student-athletes-with-a-digital-hall-of-fame-board-in-your-gym/"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/honor-student-athletes-with-a-digital-hall-of-fame-board-in-your-gym"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ideas-for-setting-up-a-digital-showcase-for-high-school-sports-trophies/"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ideas-for-setting-up-a-digital-showcase-for-high-school-sports-trophies"
+  to = "/blog/digital-hall-of-fame-the-ultimate-buying-guide-for-high-schools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/tips-for-designing-an-effective-donor-recognition-wall/"
+  to = "/blog/10-interactive-digital-donor-wall-examples-that-boost-nonprofit-engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/tips-for-designing-an-effective-donor-recognition-wall"
+  to = "/blog/10-interactive-digital-donor-wall-examples-that-boost-nonprofit-engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-design-engaging-touchscreen-donor-walls/"
+  to = "/blog/10-interactive-digital-donor-wall-examples-that-boost-nonprofit-engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-design-engaging-touchscreen-donor-walls"
+  to = "/blog/10-interactive-digital-donor-wall-examples-that-boost-nonprofit-engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-affordable-yearbooks-a-step-by-step-guide/"
+  to = "/blog/how-much-does-inexpensive-yearbook-printing-really-cost/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-affordable-yearbooks-a-step-by-step-guide"
+  to = "/blog/how-much-does-inexpensive-yearbook-printing-really-cost/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-personalized-cheap-yearbooks-in-5-easy-steps/"
+  to = "/blog/how-much-does-inexpensive-yearbook-printing-really-cost/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-create-personalized-cheap-yearbooks-in-5-easy-steps"
+  to = "/blog/how-much-does-inexpensive-yearbook-printing-really-cost/"
+  status = 301
+  force = true
+
 # Handle trailing slashes as per our config
 [[redirects]]
   from = "/*"
