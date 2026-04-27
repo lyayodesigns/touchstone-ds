@@ -31,6 +31,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/compare-us/`,                                           changeFrequency: 'monthly', priority: 0.8 },
   { url: `${BASE_URL}/digital-yearbooks/`,                                    changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/digital-trophy-case/`,                                  changeFrequency: 'monthly', priority: 0.9 },
+  { url: `${BASE_URL}/digital-athletic-hall-of-fame/`,                        changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/digital-donor-walls/`,                                  changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/digital-history-archive/`,                              changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE_URL}/digital-record-boards/`,                                changeFrequency: 'monthly', priority: 0.9 },

@@ -16,6 +16,7 @@ const NAV_ITEMS = [
     href: "#",
     submenu: [
       { name: "Touchscreen Software", href: "/touchscreen-software/" },
+      { name: "Digital Athletic Hall of Fame", href: "/digital-athletic-hall-of-fame/" },
       { name: "Digital Trophy Case", href: "/digital-trophy-case/" },
       { name: "Digital Record Boards", href: "/digital-record-boards/" },
       { name: "Digital Donor Walls", href: "/digital-donor-walls/" },
