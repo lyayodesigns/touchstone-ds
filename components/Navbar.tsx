@@ -16,12 +16,12 @@ const NAV_ITEMS = [
     href: "#",
     submenu: [
       { name: "Touchscreen Software", href: "/touchscreen-software/" },
-      { name: "Digital Athletic Hall of Fame", href: "/digital-athletic-hall-of-fame/" },
       { name: "Digital Trophy Case", href: "/digital-trophy-case/" },
       { name: "Digital Record Boards", href: "/digital-record-boards/" },
       { name: "Digital Donor Walls", href: "/digital-donor-walls/" },
       { name: "Digital Yearbooks", href: "/digital-yearbooks/" },
       { name: "Digital History Archive", href: "/digital-history-archive/" },
+      { name: "Digital Athletic Hall of Fame", href: "/digital-athletic-hall-of-fame/" },
     ],
   },
   { name: "Hardware", href: "/touchscreen-hardware/" },
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                     </button>
                     <div
                       className={cn(
-                        "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-56 transition-all duration-200",
+                        "absolute top-full left-0 mt-1 bg-white shadow-lg rounded-md py-2 w-72 transition-all duration-200",
                         openDropdown === item.name ? "opacity-100 visible" : "opacity-0 invisible"
                       )}
                       onMouseLeave={() => setOpenDropdown(null)}

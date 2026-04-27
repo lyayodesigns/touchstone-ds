@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Container } from '../ui/container';
 
 const HowItWorks = () => {
@@ -91,6 +92,30 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
+
+        <motion.div
+          className="mt-16 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+            <Image
+              src="/touchscreen software/Touchstone Rendering - Touch Stone - Stand.webp"
+              alt="digital athletic hall of fame touchscreen display installed in school facility"
+              width={1600}
+              height={900}
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 max-w-md">
+              <p className="text-white text-base md:text-lg font-light leading-relaxed">
+                <span className="font-semibold">Launch day, ready to wow.</span> Your touchscreen, your stories, your athletes, installed and live before your next home game.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </Container>
     </section>
   );
