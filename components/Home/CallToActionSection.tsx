@@ -92,23 +92,24 @@ const CallToActionSection: React.FC = () => {
           </p>
         </div>
 
-        <div className={`mt-8 sm:mt-10 md:mt-12 text-center transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className={`mt-8 sm:mt-10 md:mt-12 flex flex-col items-center gap-4 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <button 
             onClick={() => window.open('https://calendly.com/touchstone-ds/custom-guided-tour?utm_source=website', '_blank')}
             className="bg-gradient-to-r from-purple-400 to-blue-500 text-foreground font-medium rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg transition-all hover:shadow-glow hover:scale-105 active:scale-95 touch-manipulation"
           >
             Book Your Free Demo
           </button>
-          <div className="mt-4">
-            <a
-              href="/digital-hall-of-fame-buyers-guide.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-foreground/90 text-sm sm:text-base underline underline-offset-4 transition-colors duration-200"
-            >
-              Download Our Digital Hall of Fame Buyer's Guide (PDF)
-            </a>
-          </div>
+          <a
+            href="/digital-hall-of-fame-buyers-guide.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-full px-6 py-2.5 transition-all duration-300 shadow-blue hover:shadow-blue-lg touch-manipulation"
+          >
+            Download Our Digital Hall of Fame Buyer&apos;s Guide (PDF)
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} className="ml-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
 
         <div className={`mt-6 sm:mt-8 text-center transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
