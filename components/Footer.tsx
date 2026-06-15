@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
               <h3 className="text-lg font-bold text-[#335DEB] mb-2">
                 TOUCHSTONE DIGITAL SOLUTIONS
               </h3>
-              <p className="text-foreground/70 max-w-md">
-                Dynamic. Interactive. Unforgettable. Creating immersive displays for schools, teams, and communities nationwide.
+              <p className="text-sm text-foreground/70 max-w-md">
+                Touchstone is a family owned and operated company that creates memorable, custom Hall of Fame, Donor Wall, Team Wall, and other touchscreen experiences for schools, colleges, and universities, trusted by programs across the ACC, Big Ten, Ivy League, and beyond.
               </p>
             </div>
             

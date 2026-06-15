@@ -75,7 +75,7 @@ const AboutHeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-base md:text-lg text-gray-700 mb-3 md:mb-6 max-w-3xl mx-auto">
-              The industry leader in fully customized <Link href="/touchscreen-software" className="text-blue-700 hover:underline underline-offset-2">interactive touchscreen recognition software</Link>
+              Touchstone is a family owned and operated company that creates memorable, custom Hall of Fame, Donor Wall, Team Wall, and other <Link href="/touchscreen-software" className="text-blue-700 hover:underline underline-offset-2">touchscreen experiences</Link> for schools, colleges, and universities, trusted by programs across the ACC, Big Ten, Ivy League, and beyond.
             </p>
             {/* Decorative line */}
             <motion.div 

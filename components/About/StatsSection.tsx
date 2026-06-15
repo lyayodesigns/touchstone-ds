@@ -100,7 +100,7 @@ export const AboutStatsSection = () => {
                     <h3 className="text-xl font-bold mb-1 group-hover:text-blue-300 transition-colors duration-300">Our Story</h3>
                     <div className="h-1 w-10 bg-blue-500 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-blue-400"></div>
                     <p className="text-white/70 text-xs flex items-center gap-1">
-                      After years in the industry, we saw an opportunity to do more. While others rush through the process, Touchstone takes the time to listen. We are a relationship-first company that happens to deliver <Link href="/touchscreen-software" className="text-blue-300 hover:underline underline-offset-2">exceptional software</Link>.
+                      After years in the industry, we saw an opportunity to do more. While others rush through the process, Touchstone takes the time to listen. We are a relationship-first company that happens to deliver exceptional software.
                     </p>
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export const AboutStatsSection = () => {
                   stiffness: 100
                 }}
               >
-                150+
+                250+
               </motion.h2>
               <motion.div 
                 className="h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-3 mx-auto"
