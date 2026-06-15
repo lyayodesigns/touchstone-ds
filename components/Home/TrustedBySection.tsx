@@ -22,6 +22,8 @@ const TrustedBySection = () => {
     { src: '/trusted-by/Laconia.avif', alt: 'Laconia High School', name: 'Laconia' },
     { src: '/trusted-by/New Bedford.avif', alt: 'New Bedford High School', name: 'New Bedford' },
     { src: '/trusted-by/Loudoun Valley.avif', alt: 'Loudoun Valley High School', name: 'Loudoun Valley' },
+    { src: '/trusted-by/GE Vernova.avif', alt: 'GE Vernova', name: 'GE Vernova' },
+    { src: '/trusted-by/UNC Chapel Hill.avif', alt: 'UNC Chapel Hill', name: 'UNC Chapel Hill' },
   ];
 
   useEffect(() => {
@@ -96,8 +98,8 @@ const TrustedBySection = () => {
           {/* Mobile: Two rows */}
           <div className="md:hidden space-y-4">
             {/* First row */}
-            <div className="overflow-hidden relative">
-              <div className="flex animate-scroll-logos">
+            <div className="overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+              <div className="flex w-max animate-scroll-logos">
                 {allLogos.slice(0, 6).map((logo, index) => (
                   <div key={`mobile-row1-1-${index}`} className="flex-shrink-0 px-4 py-2">
                     <Image
@@ -105,7 +107,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
-                      loading="lazy"
+                      unoptimized
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -117,7 +119,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
-                      loading="lazy"
+                      unoptimized
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -126,8 +128,8 @@ const TrustedBySection = () => {
             </div>
             
             {/* Second row */}
-            <div className="overflow-hidden relative">
-              <div className="flex animate-scroll-logos-reverse">
+            <div className="overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+              <div className="flex w-max animate-scroll-logos-reverse">
                 {allLogos.slice(6).map((logo, index) => (
                   <div key={`mobile-row2-1-${index}`} className="flex-shrink-0 px-4 py-2">
                     <Image
@@ -135,7 +137,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
-                      loading="lazy"
+                      unoptimized
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -147,7 +149,7 @@ const TrustedBySection = () => {
                       alt={logo.alt}
                       width={110}
                       height={80}
-                      loading="lazy"
+                      unoptimized
                       className="w-20 h-16 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                     />
                   </div>
@@ -157,10 +159,9 @@ const TrustedBySection = () => {
           </div>
 
           {/* Desktop: Single row */}
-          <div className="hidden md:block overflow-hidden relative">
+          <div className="hidden md:block overflow-hidden relative" style={{ maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)' }}>
             {/* Scrolling container */}
-            <div className="flex animate-scroll-logos">
-              {/* First set of logos */}
+            <div className="flex w-max animate-scroll-logos">
               {allLogos.map((logo, index) => (
                 <div
                   key={`logo-1-${index}`}
@@ -171,12 +172,11 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    loading="lazy"
+                    unoptimized
                     className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
               ))}
-              {/* Duplicate set for seamless loop */}
               {allLogos.map((logo, index) => (
                 <div
                   key={`logo-2-${index}`}
@@ -187,7 +187,7 @@ const TrustedBySection = () => {
                     alt={logo.alt}
                     width={110}
                     height={80}
-                    loading="lazy"
+                    unoptimized
                     className="w-28 h-24 object-contain filter brightness-90 hover:brightness-100 transition-all duration-300 hover:scale-105"
                   />
                 </div>
