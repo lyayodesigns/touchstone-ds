@@ -228,7 +228,7 @@
 }
 
 .animate-scroll-logos {
-  animation: scroll-logos 30s linear infinite;
+  animation: scroll-logos 40s linear infinite;
 }
 
 .animate-scroll-logos:hover {
@@ -245,7 +245,7 @@
 }
 
 .animate-scroll-logos-reverse {
-  animation: scroll-logos-reverse 30s linear infinite;
+  animation: scroll-logos-reverse 40s linear infinite;
 }
 
 .animate-scroll-logos-reverse:hover {

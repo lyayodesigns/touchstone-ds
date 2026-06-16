@@ -14,16 +14,16 @@ const TrustedBySection = () => {
     { src: '/trusted-by/UNH.avif', alt: 'University of New Hampshire', name: 'UNH' },
     { src: '/trusted-by/Seton Hall Prep.avif', alt: 'Seton Hall Preparatory', name: 'Seton Hall Prep' },
     { src: '/trusted-by/Upen.avif', alt: 'University of Pennsylvania', name: 'UPenn' },
+    { src: '/trusted-by/UNC Chapel Hill.avif', alt: 'UNC Chapel Hill', name: 'UNC Chapel Hill' },
     { src: '/trusted-by/whitefield.avif', alt: 'Whitefield School', name: 'Whitefield' },
     { src: '/trusted-by/brown.avif', alt: 'Brown University', name: 'Brown' },
     { src: '/trusted-by/csub.avif', alt: 'California State University Bakersfield', name: 'CSUB' },
+    { src: '/trusted-by/GE Vernova.avif', alt: 'GE Vernova', name: 'GE Vernova' },
     { src: '/clients/mooresville.avif', alt: 'Mooresville High School', name: 'Mooresville' },
     { src: '/trusted-by/Bremen.avif', alt: 'Bremen High School', name: 'Bremen' },
     { src: '/trusted-by/Laconia.avif', alt: 'Laconia High School', name: 'Laconia' },
     { src: '/trusted-by/New Bedford.avif', alt: 'New Bedford High School', name: 'New Bedford' },
     { src: '/trusted-by/Loudoun Valley.avif', alt: 'Loudoun Valley High School', name: 'Loudoun Valley' },
-    { src: '/trusted-by/GE Vernova.avif', alt: 'GE Vernova', name: 'GE Vernova' },
-    { src: '/trusted-by/UNC Chapel Hill.avif', alt: 'UNC Chapel Hill', name: 'UNC Chapel Hill' },
   ];
 
   useEffect(() => {
