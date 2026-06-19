@@ -53,6 +53,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'faqSchema',
+      title: 'FAQ Schema (JSON-LD)',
+      type: 'text',
+      rows: 10,
+      description: 'Paste the FAQ JSON-LD object here (just the JSON, without the <script> tags). This will be injected as a FAQPage schema on the blog post.',
+    }),
+    defineField({
       name: 'seo',
       title: 'SEO',
       type: 'seoMetaFields',

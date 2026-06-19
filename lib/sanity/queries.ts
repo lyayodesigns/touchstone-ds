@@ -104,6 +104,7 @@ export const postQuery = /* groq */ `
         }
       }
     },
+    faqSchema,
     ${seo}
   }
 `;

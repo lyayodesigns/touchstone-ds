@@ -36,6 +36,7 @@ interface Post {
   author: { name: string; image: SanityImage; bio: PortableTextBlock[] };
   categories: Array<{ title: string }>;
   body: PortableTextBlock[];
+  faqSchema?: string;
   seo?: SeoType;
 }
 
@@ -146,9 +147,18 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     { name: post.title, url: postUrl },
   ]);
 
+  let parsedFaqSchema: object | null = null;
+  if (post.faqSchema) {
+    try {
+      parsedFaqSchema = JSON.parse(post.faqSchema);
+    } catch {
+      console.warn('Invalid FAQ schema JSON for post:', post.slug.current);
+    }
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <JsonLd schema={[blogArticleSchema, blogBreadcrumbSchema]} />
+      <JsonLd schema={parsedFaqSchema ? [blogArticleSchema, blogBreadcrumbSchema, parsedFaqSchema] : [blogArticleSchema, blogBreadcrumbSchema]} />
       <Navbar />
       <BlogHeroSection
         title={post.title}
