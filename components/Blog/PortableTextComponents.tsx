@@ -54,6 +54,7 @@ const PortableTextComponents: Partial<PortableTextReactComponents> = {
                   {row.cell4 && <td className="border border-gray-300 px-4 py-2">{row.cell4}</td>}
                   {row.cell5 && <td className="border border-gray-300 px-4 py-2">{row.cell5}</td>}
                   {row.cell6 && <td className="border border-gray-300 px-4 py-2">{row.cell6}</td>}
+                  {row.cell7 && <td className="border border-gray-300 px-4 py-2">{row.cell7}</td>}
                 </tr>
               );
             })}

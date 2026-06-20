@@ -96,6 +96,7 @@ export default defineType({
                 { name: 'cell4', type: 'string', title: 'Column 4' },
                 { name: 'cell5', type: 'string', title: 'Column 5' },
                 { name: 'cell6', type: 'string', title: 'Column 6' },
+                { name: 'cell7', type: 'string', title: 'Column 7' },
               ],
               preview: {
                 select: {

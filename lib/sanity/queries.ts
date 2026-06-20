@@ -100,7 +100,8 @@ export const postQuery = /* groq */ `
           cell3,
           cell4,
           cell5,
-          cell6
+          cell6,
+          cell7
         }
       }
     },
