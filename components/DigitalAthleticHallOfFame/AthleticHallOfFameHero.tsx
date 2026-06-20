@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const AthleticHallOfFameHero = () => {
@@ -111,13 +110,6 @@ const AthleticHallOfFameHero = () => {
             >
               Schedule a Free Demo
             </a>
-            <Link
-              href="/digital-hall-of-fame-buyers-guide.pdf"
-              target="_blank"
-              className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-800 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200"
-            >
-              Download the Buyer's Guide
-            </Link>
           </motion.div>
         </div>
       </Container>

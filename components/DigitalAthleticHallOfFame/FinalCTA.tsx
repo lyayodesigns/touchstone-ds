@@ -43,14 +43,6 @@ const FinalCTA = () => {
             >
               Schedule a Free Demo
             </a>
-            <a
-              href="/digital-hall-of-fame-buyers-guide.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-800 font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200"
-            >
-              Download the Buyer's Guide
-            </a>
           </div>
 
           <p className="mt-10 text-foreground/70 text-base font-medium">
